@@ -1,0 +1,9 @@
+{
+  "name": "professional-craft",
+  "version": "0.1.0",
+  "description": "Skills for professional writing: documents, presentations, and emails in house style.",
+  "author": {
+    "name": "Acme"
+  },
+  "keywords": ["writing", "documents", "presentations", "email"]
+}

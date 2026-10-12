@@ -1,0 +1,26 @@
+{
+  "name": "acme-skills",
+  "owner": {
+    "name": "Acme"
+  },
+  "metadata": {
+    "description": "Skills for the engineering lifecycle and everyday professional writing.",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "engineering-lifecycle",
+      "source": "./plugins/engineering-lifecycle",
+      "description": "Requirements, system design, code review, and testing skills.",
+      "version": "0.1.0",
+      "category": "development"
+    },
+    {
+      "name": "professional-craft",
+      "source": "./plugins/professional-craft",
+      "description": "Documents, presentations, and email skills that follow house style.",
+      "version": "0.1.0",
+      "category": "productivity"
+    }
+  ]
+}

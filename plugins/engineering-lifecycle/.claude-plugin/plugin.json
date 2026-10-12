@@ -1,0 +1,9 @@
+{
+  "name": "engineering-lifecycle",
+  "version": "0.1.0",
+  "description": "Skills covering the software lifecycle: writing requirements, designing systems, reviewing code, and writing tests.",
+  "author": {
+    "name": "Acme"
+  },
+  "keywords": ["requirements", "design", "code-review", "testing"]
+}
