@@ -67,6 +67,8 @@ class EvalSuiteTests(unittest.TestCase):
 
     def test_every_plugin_has_should_not_fire_cases(self):
         for plugin in plugin_dirs():
+            if not skill_dirs(plugin):
+                continue  # nothing to trigger; see test_rules.py for rule plugins
             negatives = [
                 fm for case in cases(plugin) for fm, _ in graders(case).values()
                 if fm.get("type") == "tool_used" and fm.get("max") == "0"

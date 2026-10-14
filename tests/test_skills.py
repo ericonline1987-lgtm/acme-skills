@@ -72,7 +72,10 @@ class SkillTests(unittest.TestCase):
             for skill in skill_dirs(plugin):
                 _, body = self.frontmatter(skill)
                 body = re.sub(r"<[^<>\n]+>", "", body)  # <placeholders> are not files
-                for ref in set(FILE_REF.findall(body)):
+                # Only paths in code spans or link targets are references; prose may
+                # name a kind of file ("a CLAUDE.md") without pointing at one.
+                spans = re.findall(r"`([^`\n]+)`", body) + re.findall(r"\]\(([^)\s]+)\)", body)
+                for ref in {r for span in spans for r in FILE_REF.findall(span)}:
                     if ref.startswith(("docs/", "plugins/")):
                         continue
                     with self.subTest(skill=skill.name, ref=ref):

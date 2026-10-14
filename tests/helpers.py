@@ -21,7 +21,8 @@ def plugin_dirs() -> list[Path]:
 
 def skill_dirs(plugin: Path | None = None) -> list[Path]:
     plugins = [plugin] if plugin else plugin_dirs()
-    return sorted(s for p in plugins for s in (p / "skills").iterdir() if (s / "SKILL.md").is_file())
+    return sorted(s for p in plugins if (p / "skills").is_dir()
+                  for s in (p / "skills").iterdir() if (s / "SKILL.md").is_file())
 
 
 def all_skill_names() -> set[str]:

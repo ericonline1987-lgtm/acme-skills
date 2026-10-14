@@ -49,7 +49,7 @@ FIGURE = re.compile(
 # ("all", "every", "only") are left out on purpose: they are mostly not claims,
 # and a checker that flags every plan line gets ignored.
 ABSOLUTE = re.compile(
-    r"\b(always|never|guaranteed|proven|impossible|zero|"
+    r"\b(always|never|guaranteed|proven|impossible|zero)\b(?!-)|\b("
     r"fastest|slowest|cheapest|best|worst|largest|smallest|leading|unique|"
     r"industry[- ]standard|state[- ]of[- ]the[- ]art)\b",
     re.I,

@@ -14,18 +14,24 @@ for that action, then cut everything that doesn't serve it.
 
 1. **Fix the reader and their job.** Who reads it, what they already know, and whether
    they must decide, do, look up or understand. One document, one job.
-2. **Pick the skeleton and budget** from the table below. The budget is a ceiling;
-   detail beyond it goes to one appendix or linked page.
+2. **Pick the skeleton and budget** from the table below, or from
+   `references/skeletons.md` for design docs, READMEs, release notes, QA hand-off notes,
+   agent instruction files (CLAUDE.md, AGENTS.md), notices and reference pages. The
+   budget is a ceiling; detail beyond it goes to one appendix or linked page.
 3. **Lead with the bottom line.** The first two sentences carry the conclusion, the ask,
    or the action. Don't describe the document or its audience.
 4. **Write headings that summarise.** Read only the headings: they should tell the story.
 5. **Use the right form.** A table for values compared on the same fields, a numbered
-   list for steps, a diagram for flows and structures, a sentence for one fact.
+   list for steps, a diagram for flows and structures, a sentence for one fact. When the
+   document has a figure, or is an HTML page or deck, read `references/figures-and-html.md`.
 6. **Keep source truth.** Numbers, names, owners and dates use the source's wording;
    delivered and planned items are labelled; unknowns are TBD, never invented. Grade or
    cite load-bearing claims (see `tracing-claims` if installed).
 7. **Cut to budget.** Delete every sentence whose removal loses no fact, every hedge
-   that doesn't carry real uncertainty, and every summary of what was just said.
+   that doesn't carry real uncertainty, and every summary of what was just said. Then run
+   `python3 scripts/doc_check.py <file.md> --budget <words>` for the mechanical defects
+   (slow opening, meta-commentary, long sentences, label headings, hedging, open
+   placeholders), and report its count when you deliver.
 8. **Run the fresh-reader test.** Hand the draft to someone (or a fresh agent) who
    hasn't seen your context, with only the reader's job: "decide whether to approve" or
    "follow these steps". Fix whatever they ask about or get wrong. Report that you ran it,

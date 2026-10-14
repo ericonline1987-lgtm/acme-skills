@@ -42,6 +42,14 @@ and leaves the next person understanding more than you did when you started.
 - Prove it at the rung you'll claim (see `proving-outcomes` if installed).
 - Re-review any fix that came out of a review round; fixes create new decisions.
 
+## Load more only when the change needs it
+
+- Touches a shared function, public API, config or schema, module dependencies, a file
+  copied across repositories, or a step that runs more than once: read
+  `references/boundaries.md`.
+- Involves formatting, naming, input validation, config file syntax, comments, or
+  deleting a test or guard: read `references/style-and-validation.md`.
+
 ## Stop and ask when
 
 - History shows the code sits on an unresolved design, security or contract decision.

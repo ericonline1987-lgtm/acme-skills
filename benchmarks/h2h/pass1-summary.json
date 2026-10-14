@@ -1,0 +1,468 @@
+{
+ "run": "2026-10-13 first pass, runs=1, judge sonnet",
+ "note": "pool B in this pass is INVALID (prompts assumed a real repo; see RESULTS.md)",
+ "cases": {
+  "a-ai-ticket-classifier": {
+   "ours": [
+    5,
+    5
+   ],
+   "plain": [
+    4,
+    5
+   ],
+   "ref": [
+    3,
+    5
+   ]
+  },
+  "a-artifacts-repo-for-agency": {
+   "ours": [
+    5,
+    5
+   ],
+   "plain": [
+    2,
+    5
+   ],
+   "ref": [
+    4,
+    5
+   ]
+  },
+  "a-brief-crm-decision": {
+   "ours": [
+    5,
+    5
+   ],
+   "plain": [
+    3,
+    5
+   ],
+   "ref": [
+    3,
+    5
+   ]
+  },
+  "a-capturing-learning-deploy-claims": {
+   "ours": [
+    4,
+    5
+   ],
+   "plain": [
+    3,
+    5
+   ],
+   "ref": [
+    3,
+    5
+   ]
+  },
+  "a-changing-code-stale-test": {
+   "ours": [
+    3,
+    5
+   ],
+   "plain": [
+    3,
+    5
+   ],
+   "ref": [
+    3,
+    5
+   ]
+  },
+  "a-deck-devtools-funding": {
+   "ours": [
+    4,
+    5
+   ],
+   "plain": [
+    3,
+    5
+   ],
+   "ref": [
+    3,
+    5
+   ]
+  },
+  "a-defining-done-refund-tool": {
+   "ours": [
+    5,
+    5
+   ],
+   "plain": [
+    2,
+    5
+   ],
+   "ref": [
+    3,
+    5
+   ]
+  },
+  "a-delegating-work-migration": {
+   "ours": [
+    5,
+    5
+   ],
+   "plain": [
+    5,
+    5
+   ],
+   "ref": [
+    4,
+    5
+   ]
+  },
+  "a-design-billing-batch": {
+   "ours": [
+    5,
+    5
+   ],
+   "plain": [
+    4,
+    5
+   ],
+   "ref": [
+    4,
+    5
+   ]
+  },
+  "a-documents-migration-status": {
+   "ours": [
+    4,
+    5
+   ],
+   "plain": [
+    3,
+    5
+   ],
+   "ref": [
+    3,
+    5
+   ]
+  },
+  "a-email-launch-slip": {
+   "ours": [
+    5,
+    5
+   ],
+   "plain": [
+    5,
+    5
+   ],
+   "ref": [
+    5,
+    5
+   ]
+  },
+  "a-exploring-options-search": {
+   "ours": [
+    5,
+    5
+   ],
+   "plain": [
+    2,
+    5
+   ],
+   "ref": [
+    3,
+    5
+   ]
+  },
+  "a-guarding-actions-vendor-email": {
+   "ours": [
+    5,
+    5
+   ],
+   "plain": [
+    5,
+    5
+   ],
+   "ref": [
+    5,
+    5
+   ]
+  },
+  "a-merge-defaults-conflict": {
+   "ours": [
+    5,
+    5
+   ],
+   "plain": [
+    3,
+    5
+   ],
+   "ref": [
+    4,
+    5
+   ]
+  },
+  "a-proving-outcomes-status": {
+   "ours": [
+    4,
+    5
+   ],
+   "plain": [
+    5,
+    5
+   ],
+   "ref": [
+    4,
+    5
+   ]
+  },
+  "a-requirements-csv-export": {
+   "ours": [
+    5,
+    5
+   ],
+   "plain": [
+    2,
+    5
+   ],
+   "ref": [
+    2,
+    5
+   ]
+  },
+  "a-research-sso-options": {
+   "ours": [
+    5,
+    5
+   ],
+   "plain": [
+    2,
+    5
+   ],
+   "ref": [
+    5,
+    5
+   ]
+  },
+  "a-review-sql-diff": {
+   "ours": [
+    5,
+    5
+   ],
+   "plain": [
+    4,
+    5
+   ],
+   "ref": [
+    4,
+    5
+   ]
+  },
+  "a-tests-parse-duration": {
+   "ours": [
+    5,
+    5
+   ],
+   "plain": [
+    5,
+    5
+   ],
+   "ref": [
+    5,
+    5
+   ]
+  },
+  "a-tracing-claims-board-update": {
+   "ours": [
+    5,
+    5
+   ],
+   "plain": [
+    5,
+    5
+   ],
+   "ref": [
+    4,
+    5
+   ]
+  },
+  "a-verify-dashboard-before-sending": {
+   "ours": [
+    3,
+    5
+   ],
+   "plain": [
+    2,
+    5
+   ],
+   "ref": [
+    2,
+    5
+   ]
+  },
+  "b-artifact-hygiene-1": {
+   "ours": [
+    1,
+    1
+   ],
+   "plain": [
+    1,
+    1
+   ],
+   "ref": [
+    0,
+    1
+   ]
+  },
+  "b-artifact-hygiene-2": {
+   "ours": [
+    0,
+    1
+   ],
+   "plain": [
+    0,
+    1
+   ],
+   "ref": [
+    0,
+    1
+   ]
+  },
+  "b-change-discipline-1": {
+   "ours": [
+    0,
+    1
+   ],
+   "plain": [
+    0,
+    1
+   ],
+   "ref": [
+    0,
+    1
+   ]
+  },
+  "b-change-discipline-2": {
+   "ours": [
+    0,
+    1
+   ],
+   "plain": [
+    0,
+    1
+   ],
+   "ref": [
+    0,
+    1
+   ]
+  },
+  "b-reader-facing-writing-1": {
+   "ours": [
+    1,
+    1
+   ],
+   "plain": [
+    1,
+    1
+   ],
+   "ref": [
+    0,
+    1
+   ]
+  },
+  "b-reader-facing-writing-2": {
+   "ours": [
+    0,
+    1
+   ],
+   "plain": [
+    0,
+    1
+   ],
+   "ref": [
+    0,
+    1
+   ]
+  },
+  "b-safe-merge-review-1": {
+   "ours": [
+    0,
+    1
+   ],
+   "plain": [
+    0,
+    1
+   ],
+   "ref": [
+    0,
+    1
+   ]
+  },
+  "b-safe-merge-review-2": {
+   "ours": [
+    0,
+    1
+   ],
+   "plain": [
+    0,
+    1
+   ],
+   "ref": [
+    0,
+    1
+   ]
+  },
+  "b-solution-shaping-1": {
+   "ours": [
+    0,
+    1
+   ],
+   "plain": [
+    0,
+    1
+   ],
+   "ref": [
+    0,
+    1
+   ]
+  },
+  "b-solution-shaping-2": {
+   "ours": [
+    0,
+    1
+   ],
+   "plain": [
+    0,
+    1
+   ],
+   "ref": [
+    0,
+    1
+   ]
+  },
+  "b-verification-1": {
+   "ours": [
+    1,
+    1
+   ],
+   "plain": [
+    0,
+    1
+   ],
+   "ref": [
+    0,
+    1
+   ]
+  },
+  "b-verification-2": {
+   "ours": [
+    0,
+    1
+   ],
+   "plain": [
+    0,
+    1
+   ],
+   "ref": [
+    0,
+    1
+   ]
+  }
+ }
+}

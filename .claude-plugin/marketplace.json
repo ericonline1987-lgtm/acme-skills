@@ -28,6 +28,13 @@
       "description": "Documents, decision briefs, research, presentations and emails aimed at the reader's next action.",
       "version": "1.0.0",
       "category": "productivity"
+    },
+    {
+      "name": "core-rules",
+      "source": "./plugins/core-rules",
+      "description": "Optional: six always-on working rules injected at session start. Adds about 200 tokens to every session.",
+      "version": "1.1.0",
+      "category": "productivity"
     }
   ]
 }
