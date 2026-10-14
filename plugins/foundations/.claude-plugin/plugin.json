@@ -1,0 +1,9 @@
+{
+  "name": "foundations",
+  "version": "1.0.0",
+  "description": "The work loop every task shares: define done as an outcome, explore options, delegate and accept, prove the rung reached, trace claims, guard actions, and capture learning.",
+  "author": {
+    "name": "Acme"
+  },
+  "keywords": ["outcomes", "verification", "delegation", "provenance", "safety", "learning"]
+}

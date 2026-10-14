@@ -1,19 +1,34 @@
 ---
 name: writing-emails
-description: Draft clear, appropriately toned work emails, including requests, follow-ups, updates, and difficult messages. Use when someone asks to write, reply to, or improve an email.
+description: Draft work emails that get the intended response — one clear outcome, the ask in the subject and first two lines, the right tone for the relationship and stakes, and a follow-up plan. Use when someone asks to write, reply to, shorten or improve an email, especially requests, follow-ups, updates and difficult messages.
 ---
 
 # Writing emails
 
 Follow `../../shared/style-guide.md` for voice.
 
+An email is done when the reader does what it was for. Write for that response.
+
 ## Process
-1. **Identify the one outcome** the email should produce (a reply, a decision, awareness).
-2. **Subject line states the topic and any ask:** "Decision needed by Fri: Q4 vendor choice".
-3. **First two lines carry the point.** Put the ask or news up front.
-4. **Keep the body short:** context only as needed, bullets for multiple items, a clear deadline if one exists.
-5. **Match tone to the relationship and stakes.** For difficult messages, offer two versions (e.g. direct vs. softer) and say what each trades off.
+
+1. **Name the one outcome**: a reply, a decision, an action by a date, or awareness.
+   If there are two, consider two emails.
+2. **Subject line states topic and ask**: "Decision needed by Fri: Q4 vendor choice".
+3. **First two lines carry the point.** The ask or the news goes first; context after.
+4. **Make the ask easy to say yes to**: specific, with a deadline, and with what you
+   need from them in the smallest form (a yes/no, a choice between two options, a
+   15-minute slot).
+5. **Keep the body short**: only the context they need, bullets for multiple items,
+   links rather than attachments where possible.
+6. **Match tone to the relationship and stakes.** For difficult messages (bad news,
+   declining, pushing back), offer two versions — for example direct and softer — and
+   say what each trades off. Don't send anything that commits the person to something
+   they haven't agreed.
+7. **Plan the follow-up.** Say when to follow up if there's no reply, and draft the
+   one-line nudge if the stakes warrant it.
 
 ## Checks
-- Could the reader act on it from a phone preview? If not, tighten the opening.
-- Names, dates, and attachments referenced are correct.
+
+- Readable from a phone preview: the outcome is clear without opening the email.
+- Names, dates, numbers and attachments referenced are correct.
+- Nothing is sent on the person's behalf without their go-ahead.

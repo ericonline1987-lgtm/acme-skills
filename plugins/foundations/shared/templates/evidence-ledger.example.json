@@ -1,0 +1,29 @@
+{
+  "claim": "Checkout timeouts are fixed",
+  "claimed_rung": 3,
+  "evidence": [
+    {
+      "rung": 1,
+      "check": "pytest tests/test_checkout.py",
+      "result": "14 passed, 0 failed",
+      "source": "local run on commit 4f2a9c1"
+    },
+    {
+      "rung": 2,
+      "check": "deployed image tag read back from the cluster",
+      "result": "checkout:4f2a9c1 running on 3/3 pods",
+      "source": "kubectl get pods -o jsonpath output"
+    },
+    {
+      "rung": 3,
+      "check": "replayed 200 real checkout requests from yesterday's access log against old and new builds",
+      "result": "old: 17 timeouts; new: 0 timeouts; responses otherwise identical",
+      "source": "replay script output, saved in the ticket"
+    }
+  ],
+  "follow_up": {
+    "due": "2026-10-27",
+    "check": "checkout timeouts per day under 5 on the payments dashboard for 7 days",
+    "owner": "payments on-call"
+  }
+}

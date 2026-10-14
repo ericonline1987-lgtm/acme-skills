@@ -1,0 +1,5 @@
+__pycache__/
+*.pyc
+# Eval runs write here; results belong in benchmarks/RESULTS.md, not in git.
+plugins/*/evals/results/
+evals/results/

@@ -1,0 +1,21 @@
+name: ci
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  contract-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Offline contract and script tests
+        run: python3 -m unittest discover -s tests -v
+      - name: Docs pass their own claim check
+        run: |
+          for f in docs/PLAN.md benchmarks/RESULTS.md benchmarks/README.md; do
+            python3 plugins/foundations/skills/tracing-claims/scripts/claim_check.py "$f"
+          done

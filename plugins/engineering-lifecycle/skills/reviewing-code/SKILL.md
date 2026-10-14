@@ -1,26 +1,48 @@
 ---
 name: reviewing-code
-description: Review a diff, pull request, or file for correctness, security, readability, and test coverage, and give prioritized, actionable feedback. Use when someone asks for a code review, PR review, or feedback on code.
+description: Review a diff or pull request for whether it achieves its intent safely — correctness, security, callers and history, tests that would catch a regression — with comments grouped by severity and a clear verdict. Use whenever someone shares a diff, PR, patch or snippet and asks for a review, feedback, "is this OK" or "any issues".
 ---
 
 # Reviewing code
 
+A review answers one question: should this change go in as it is? Every comment should
+help answer it.
+
 ## Process
-1. **Understand intent.** Read the PR description or ask what the change is meant to do.
-2. **Check correctness first:** logic errors, edge cases (empty, null, large, concurrent), error handling.
-3. **Check security:** input validation, injection, secrets in code, authz checks, unsafe deserialization.
-4. **Check tests:** does a test fail if the change is reverted? Are edge cases covered?
-5. **Then readability:** naming, function size, dead code, comments that explain *why*.
 
-## Feedback format
-Group comments by severity and point to file and line:
-- **Blocking** — bugs, security issues, missing tests for new behavior.
-- **Should fix** — maintainability problems likely to cost time later.
-- **Nit** — style or preference; mark clearly as optional.
+1. **Understand intent.** Read the description and linked issue; restate the change's
+   outcome in one sentence. If you can't, ask before reviewing.
+2. **Check it achieves the intent.** Logic, edge cases (empty, null, huge, concurrent,
+   repeated), error handling, and what happens when a dependency fails.
+3. **Check what it touches.** Grep callers of every changed signature, config key or
+   contract. Check history on lines whose behaviour changed (`git log -L`) for a past
+   fix being undone.
+4. **Check security and data.** Input validation, injection, authorisation, secrets in
+   code or logs, personal data handling, unsafe deserialisation, new dependencies.
+5. **Check the tests.** Would a test fail if the change were reverted? Are the edge
+   cases from step 2 covered? Do tests assert behaviour, not implementation?
+6. **Check legibility.** Names, size, dead code, and comments that explain *why*. Is a
+   non-obvious decision recorded?
+7. **Verify, don't trust.** Run the tests or the change when you can, and say whether
+   you did.
 
-For each: what's wrong, why it matters, and a suggested fix (code snippet when short).
+## Comments
 
-End with a one-line verdict: approve, approve with nits, or request changes.
+Group by severity, each with file and line:
 
-## Tone
-Comment on the code, not the author. Acknowledge one thing done well when it's genuine.
+- **Blocking** — bugs, security issues, missing tests for new behaviour, undone past fixes.
+- **Should fix** — problems that will cost time later.
+- **Nit** — optional; label it.
+
+Each comment: what's wrong, why it matters, and a concrete fix (a snippet when short).
+Comment on the code, not the author. Note one genuinely good thing when there is one.
+
+## Verdict
+
+End with: **approve**, **approve with nits**, or **request changes**, plus what you
+verified yourself (ran tests, ran the code, read only) and what you didn't check.
+
+## Re-reviews
+
+Review the fixes from the previous round as new changes. A fix that changes a name,
+an order, an identity or a concurrency property is a new design decision.

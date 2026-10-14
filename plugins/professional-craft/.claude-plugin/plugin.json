@@ -1,9 +1,9 @@
 {
   "name": "professional-craft",
-  "version": "0.1.0",
-  "description": "Skills for professional writing: documents, presentations, and emails in house style.",
+  "version": "1.0.0",
+  "description": "Professional writing aimed at the reader's next action: documents within a page budget, decision briefs, trustworthy research, presentations and emails, in house style.",
   "author": {
     "name": "Acme"
   },
-  "keywords": ["writing", "documents", "presentations", "email"]
+  "keywords": ["writing", "documents", "decisions", "research", "presentations", "email"]
 }
