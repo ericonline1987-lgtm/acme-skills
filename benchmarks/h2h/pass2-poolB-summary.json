@@ -1,0 +1,65 @@
+{
+ "run": "2026-10-14 pool B pass 2 (no-environment note), runs=1, judge sonnet",
+ "cases": {
+  "b-artifact-hygiene-1": {
+   "ours": 1,
+   "plain": 0,
+   "ref": 1
+  },
+  "b-artifact-hygiene-2": {
+   "ours": 0,
+   "plain": 0,
+   "ref": 0
+  },
+  "b-change-discipline-1": {
+   "ours": 0,
+   "plain": 0,
+   "ref": 0
+  },
+  "b-change-discipline-2": {
+   "ours": 0,
+   "plain": 0,
+   "ref": 0
+  },
+  "b-reader-facing-writing-1": {
+   "ours": 1,
+   "plain": 0,
+   "ref": 1
+  },
+  "b-reader-facing-writing-2": {
+   "ours": 0,
+   "plain": 0,
+   "ref": 0
+  },
+  "b-safe-merge-review-1": {
+   "ours": 1,
+   "plain": 0,
+   "ref": 0
+  },
+  "b-safe-merge-review-2": {
+   "ours": 1,
+   "plain": 0,
+   "ref": 1
+  },
+  "b-solution-shaping-1": {
+   "ours": 0,
+   "plain": 0,
+   "ref": 0
+  },
+  "b-solution-shaping-2": {
+   "ours": 0,
+   "plain": 0,
+   "ref": 0
+  },
+  "b-verification-1": {
+   "ours": 0,
+   "plain": 1,
+   "ref": 0
+  },
+  "b-verification-2": {
+   "ours": 1,
+   "plain": 1,
+   "ref": 0
+  }
+ }
+}

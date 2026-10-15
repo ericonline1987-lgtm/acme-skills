@@ -53,7 +53,11 @@ The person has a fixed usage quota and does not plan to raise it, so:
 5. Head-to-head runs (paid, quota-aware).
 6. Fix any case where ours loses, then document, version to 1.1.0 and deliver.
 
-## 6. Decisions that are yours
+## 6. Status (2026-10-14)
+
+Done. Every row of the parity matrix is built and tested. The gate passed: ours matched or beat the reference on every one of its own author's cases (5 of 12 against 3 of 12), and scored higher on ours. The one case that exposed a gap led to a fix in `changing-code`. `core-rules` showed +0.12 mean lift from one rule [observed] and stays optional. Details: `benchmarks/RESULTS.md`.
+
+## 7. Decisions that are yours
 
 - Whether to install `core-rules` by default (it adds text to every session).
 - Whether to run the release-gate eval after v1.1 is delivered.

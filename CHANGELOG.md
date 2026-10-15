@@ -1,5 +1,22 @@
 # Changelog
 
+## 1.1.0 (2026-10-14)
+
+Full coverage of the reference set (`ly87ing/agent-skills`), measured head-to-head. See docs/PLAN-v1.1.md and benchmarks/RESULTS.md.
+
+### Added
+- `verifying-interfaces` (engineering-lifecycle): browser and rendered-UI evidence, Playwright practice, rendered-surface checks, `validate_svg.py`.
+- `handling-artifacts` (foundations): file placement, cleanup, redaction for the widest reader, packaging deliverables, repository weight, `repo_weight.py`.
+- `core-rules` plugin (optional): six always-on rules injected at session start, with eval cases.
+- `merging-safely`: `merge_evidence.py` (flags changes dropped by a merge even when ancestry checks pass), post-merge error patterns, merge-request resolution, multi-repo reporting.
+- `changing-code`: boundary and style references; a stop step before speculative abstractions.
+- `writing-documents`: more skeletons (README, release notes, QA hand-off, agent instruction files), figures and HTML guidance, `doc_check.py`.
+- `designing-systems`: replaced-mechanism inventory (loud or silent) and a completeness check.
+- `benchmarks/h2h/`: bundle builder, shared cases, results.
+
+### Changed
+- All plugins at 1.1.0. Tests now cover plugins without skills and the rules plugin's contract.
+
 ## 1.0.0 (2026-10-13)
 
 Goals move from output quality to outcomes, trust, compounding learning and human decision rights. See docs/PLAN.md.

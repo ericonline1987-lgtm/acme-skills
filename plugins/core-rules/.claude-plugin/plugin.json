@@ -5,5 +5,10 @@
   "author": {
     "name": "Acme"
   },
-  "keywords": ["rules", "always-on", "verification", "safety"]
+  "keywords": [
+    "rules",
+    "always-on",
+    "verification",
+    "safety"
+  ]
 }

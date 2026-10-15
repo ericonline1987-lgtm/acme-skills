@@ -1,6 +1,6 @@
 ---
 name: changing-code
-description: Change existing code safely — learn from git history why it is the way it is, treat failing tests and bug reports as leads not specs, check every caller, make the smallest change, record why. Use whenever someone asks to fix a bug or failing test, change a default or config value, refactor, or "just change X" in existing code.
+description: Change existing code safely — learn from git history why it is the way it is, treat failing tests and bug reports as leads not specs, check every caller, make the smallest change, record why. Use whenever someone asks to fix a bug or failing test, change a default, config value or signature, refactor, extract an abstraction, or "just change X" in existing code.
 ---
 
 # Changing code
@@ -25,6 +25,11 @@ and leaves the next person understanding more than you did when you started.
 5. **Choose the scope**: never a special case for the reported example; a general rule
    inside the component you own; never a new obligation on teams you don't control
    without asking.
+6. **Stop before speculative abstraction.** Asked to extract a shared abstraction, base
+   class or framework that only one place uses today? Say so first: with one user you'd
+   be guessing at the others' needs. Recommend keeping it local (or extracting only what
+   that one user needs, in place) until a second real user appears, and name what would
+   justify extracting. Build the general version only if the person still wants it.
 
 ## The change
 
