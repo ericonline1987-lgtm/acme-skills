@@ -35,7 +35,8 @@ plugins/foundations/shared/             outcome contract, hand-off, decision rec
 plugins/professional-craft/shared/      house style guide
 benchmarks/                             outcome log, scorer, results, head-to-head bundles and cases
 tests/                                  offline contract and script tests (CI)
-docs/PLAN.md                            goals, principles, architecture, roadmap
+docs/PLAN.md, docs/PLAN-v1.1.md        goals, principles, architecture, roadmap, coverage plan
+NOTICE                                  third-party material and its licence
 ```
 
 ### Checks that are code, not prose

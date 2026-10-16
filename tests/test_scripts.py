@@ -175,6 +175,12 @@ class ClaimCheckTests(unittest.TestCase):
     def test_table_rows_are_checked(self):
         self.assertTrue(self.flagged("| Metric | Value |\n|---|---|\n| Churn | 30% |\n"))
 
+    def test_untraced_claim_after_a_traced_sentence_is_still_found(self):
+        # Regression: a sentence starting lowercase or after "e.g." was merged into the
+        # previous, traced sentence, and the untraced claim slipped through.
+        self.assertTrue(self.flagged("Revenue grew 12% [observed: dashboard]. v2 costs 30% more than v1."))
+        self.assertTrue(self.flagged("Churn fell 12% (source: Q3 pack). e.g. our rival is the fastest."))
+
     def test_table_header_rows_are_not_claims(self):
         self.assertFalse(self.flagged("| Always-on cost | Best case |\n|---|---|\n| low | high [estimate] |\n"))
 

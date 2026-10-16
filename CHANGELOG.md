@@ -1,5 +1,22 @@
 # Changelog
 
+## 1.1.1 (2026-10-15)
+
+Pre-publication audit.
+
+### Fixed
+- `claim_check.py` missed an untraced claim when it followed a sourced sentence and started lowercase or after "e.g."; sentences are now split at every full stop. Regression test added.
+- `doc_check.py` reported inline HTML such as `<span>` as an unfilled placeholder. Regression test added.
+
+### Changed
+- `merge_evidence.py` finds dropped changes with one tree diff instead of one git call per file.
+- `verifying-interfaces` description names "make sure it works" and browser or end-to-end tests; it now triggered in 2 of 2 runs on the dashboard case, with no trigger on the CSS question [observed].
+- `writing-tests` covers browser tests (UI surface and success criteria first, then Playwright); `changing-code` asks for the stale-test reason in the commit message.
+- Personal email removed from `marketplace.json`.
+
+### Added
+- `NOTICE` for the reference author's MIT-licensed eval text in `benchmarks/h2h/cases/b-*`.
+
 ## 1.1.0 (2026-10-14)
 
 Full coverage of the reference set (`ly87ing/agent-skills`), measured head-to-head. See docs/PLAN-v1.1.md and benchmarks/RESULTS.md.

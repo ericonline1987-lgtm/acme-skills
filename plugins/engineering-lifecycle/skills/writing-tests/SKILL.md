@@ -17,14 +17,15 @@ numbers are a side effect.
    Prioritise by what would hurt users most if broken.
 3. **One behaviour per test**, named for what it checks (`rejects_expired_token`, not
    `test_token_2`). Arrange, act, assert.
-4. **Use realistic inputs.** Take shapes from real data, logs or fixtures where possible;
+4. **For browser behaviour**, first name the page, the state and the user-visible success criteria, then write a Playwright (or the project's end-to-end tool) test with role-based locators and auto-waiting assertions; see `verifying-interfaces` for evidence and rendered checks.
+5. **Use realistic inputs.** Take shapes from real data, logs or fixtures where possible;
    invented inputs miss what production sends.
-5. **Mock only at boundaries** (network, clock, filesystem, third-party services). Never
+6. **Mock only at boundaries** (network, clock, filesystem, third-party services). Never
    mock the unit under test.
-6. **Prove each test can fail.** For a bug fix, run it without the fix and see it fail,
+7. **Prove each test can fail.** For a bug fix, run it without the fix and see it fail,
    then with the fix and see it pass. For new tests on existing code, break the
    behaviour briefly and confirm the test catches it.
-7. **Run and read the real result**, not a piped exit code. Compare failures with the
+8. **Run and read the real result**, not a piped exit code. Compare failures with the
    same tests before your change and report "no new failures" rather than "all pass"
    when old failures exist.
 

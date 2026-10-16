@@ -159,6 +159,10 @@ class DocCheckTests(unittest.TestCase):
         self.assertNotIn("over budget", self.kinds(text, budget=100))
         self.assertIn("over budget", self.kinds(text, budget=20))
 
+    def test_inline_html_is_not_a_placeholder(self):
+        self.assertNotIn("open placeholder", self.kinds('# T\n\nThe fix shipped. See <span class="x">here</span>.\n'))
+        self.assertIn("open placeholder", self.kinds("# T\n\nOwner: <name of the owner>.\n"))
+
     def test_hedging_and_bold(self):
         self.assertIn("heavy hedging", self.kinds("# T\n\nIt might perhaps possibly work, arguably.\n"))
         self.assertIn("bold overuse", self.kinds("# T\n\n**A** **B** **C** text.\n"))

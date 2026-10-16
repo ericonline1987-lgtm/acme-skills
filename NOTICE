@@ -1,0 +1,35 @@
+# Third-party material
+
+## benchmarks/h2h/cases/b-*
+
+The prompts and expected-behaviour text in the twelve `b-*` cases are taken from the eval files of
+[ly87ing/agent-skills](https://github.com/ly87ing/agent-skills) (`skills/*/evals/evals.json`), used to compare
+skill sets on cases written by that set's author. A one-line note saying no environment is available was
+added to each prompt; nothing else was changed. That material is covered by the following licence:
+
+```
+MIT License
+
+Copyright (c) 2026 ly87ing
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
+
+No skill text from that repository is included here; ideas adapted from it were rewritten in this
+repository's own words.

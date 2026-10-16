@@ -86,10 +86,10 @@ def collect(repo: Path, source: str, target: str, pre_merge: str | None, max_lis
         not_in_target = [l[2:] for l in lines(git(repo, "cherry", target_sha, source_sha)) if l.startswith("+")]
         facts["source_commits_not_in_target_by_patch"] = not_in_target
         facts["landed_files"] = sorted(changed(repo, model_target, target_sha))
-        dropped = [
-            path for path in sorted(source_files - target_files)
-            if git(repo, "diff", "--name-only", source_sha, target_sha, "--", path)
-        ]
+        # Files only the source changed must equal the source tip after a plain merge.
+        # One diff of the two trees, intersected, instead of one git call per file.
+        differs = changed(repo, source_sha, target_sha)
+        dropped = sorted((source_files - target_files) & differs)
         facts["dropped_suspects"] = dropped
         if not contained and not_in_target:
             facts["flags"].append(f"source not contained: {len(not_in_target)} commit(s) by patch")

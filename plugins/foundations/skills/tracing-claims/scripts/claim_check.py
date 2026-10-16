@@ -64,7 +64,7 @@ TRACE = re.compile(
     r"|\[(target|goal|estimate|example)\])",
     re.I,
 )
-SENTENCE_END = re.compile(r"(?<=[.!?])\s+(?=[A-Z0-9\"'(\[*])")
+SENTENCE_END = re.compile(r"(?<=[.!?])\s+(?=\S)")  # over-split: a merged sentence could hide an untraced claim
 LIST_MARKER = re.compile(r"^\s*([-*+]|\d+[.)])\s+")
 REF_DEFINITION = re.compile(r"^\s*\[[^\]]+\]:\s+\S+")
 FENCE = re.compile(r"^\s*(```|~~~)")

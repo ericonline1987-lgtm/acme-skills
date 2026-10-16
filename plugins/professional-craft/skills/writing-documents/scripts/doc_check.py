@@ -47,7 +47,7 @@ LABEL_HEADINGS = {"overview", "background", "introduction", "details", "miscella
 HEDGES = re.compile(r"\b(might|perhaps|possibly|somewhat|fairly|quite|relatively|arguably|"
                     r"seemingly|potentially|kind of|sort of)\b", re.I)
 BOLD = re.compile(r"\*\*[^*\n]+\*\*|__[^_\n]+__")
-PLACEHOLDER = re.compile(r"\bTODO\b|\bTBD\b|\[fill in[^\]]*\]|<[a-z][^<>\n]{3,}>", re.I)
+PLACEHOLDER = re.compile(r"\bTODO\b|\bTBD\b|\[fill in[^\]]*\]|<(?!/?(?:a|b|i|br|em|strong|code|kbd|sub|sup|span|div|p|img|details|summary|table|tr|td|th|ul|ol|li)\b)[a-z][^<>\n]{3,}>", re.I)
 SENTENCE_SPLIT = re.compile(r"(?<=[.!?])\s+(?=\S)")  # over-splitting only shortens sentences
 WORD = re.compile(r"[A-Za-z0-9][A-Za-z0-9'’-]*")
 
