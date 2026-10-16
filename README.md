@@ -18,7 +18,7 @@ Each plugin works alone. `foundations` holds the shared work loop (define done â
 ## Install (Claude Code)
 
 ```
-/plugin marketplace add <your-github-org>/acme-skills
+/plugin marketplace add ericonline1987-lgtm/acme-skills
 /plugin install foundations@acme-skills
 /plugin install engineering-lifecycle@acme-skills
 /plugin install professional-craft@acme-skills
@@ -36,7 +36,7 @@ plugins/professional-craft/shared/      house style guide
 benchmarks/                             outcome log, scorer, results, head-to-head bundles and cases
 tests/                                  offline contract and script tests (CI)
 docs/PLAN.md, docs/PLAN-v1.1.md        goals, principles, architecture, roadmap, coverage plan
-NOTICE                                  third-party material and its licence
+LICENSE, NOTICE, SECURITY.md            licence, third-party material, how to report problems
 ```
 
 ### Checks that are code, not prose
@@ -65,9 +65,12 @@ python3 benchmarks/score_outcomes.py benchmarks/outcomes.csv           # weekly,
 
 See [benchmarks/README.md](benchmarks/README.md).
 
-## Before publishing
+## Make it yours
 
-- Replace "Acme" and the owner email in `.claude-plugin/marketplace.json` and each `plugin.json`.
-- Fill in the terminology table in `plugins/professional-craft/shared/style-guide.md`.
+Fork it and fill in the terminology table in `plugins/professional-craft/shared/style-guide.md` with your own product names and preferred terms.
 
-Contributing: [CONTRIBUTING.md](CONTRIBUTING.md). Changes: [CHANGELOG.md](CHANGELOG.md).
+Contributing: [CONTRIBUTING.md](CONTRIBUTING.md). Changes: [CHANGELOG.md](CHANGELOG.md). Security: [SECURITY.md](SECURITY.md).
+
+## License
+
+MIT, see [LICENSE](LICENSE). Third-party material is listed in [NOTICE](NOTICE).
