@@ -23,11 +23,15 @@ class SkillTests(unittest.TestCase):
         lines, body = split_frontmatter((skill / "SKILL.md").read_text(encoding="utf-8"))
         return parse_simple_frontmatter(lines), body
 
-    def test_frontmatter_has_only_name_and_description(self):
+    def test_frontmatter_fields_follow_the_agent_skills_spec(self):
+        # agentskills.io specification: required name and description; these optional
+        # fields only. Codex reads only name and description, so they carry the trigger.
+        allowed = {"name", "description", "license", "compatibility", "metadata", "allowed-tools"}
         for skill in self.skills:
             with self.subTest(skill=skill.name):
                 fields, _ = self.frontmatter(skill)
-                self.assertEqual(set(fields), {"name", "description"})
+                self.assertTrue({"name", "description"} <= set(fields))
+                self.assertTrue(set(fields) <= allowed, set(fields) - allowed)
 
     def test_name_rules(self):
         for skill in self.skills:
@@ -38,6 +42,7 @@ class SkillTests(unittest.TestCase):
                 self.assertRegex(name, NAME)
                 self.assertLessEqual(len(name), NAME_MAX_CHARS)
                 self.assertNotRegex(name, r"claude|anthropic")
+                self.assertNotIn("--", name, "the spec forbids consecutive hyphens")
 
     def test_skill_names_are_unique_across_plugins(self):
         names = [s.name for s in self.skills]
@@ -48,7 +53,7 @@ class SkillTests(unittest.TestCase):
             with self.subTest(skill=skill.name):
                 description = self.frontmatter(skill)[0]["description"]
                 self.assertLessEqual(len(description), DESCRIPTION_MAX_CHARS)
-                self.assertRegex(description, r"\bUse (when|whenever)\b",
+                self.assertRegex(description, r"\b(Use|Always use) (this skill )?(when|whenever|before)\b",
                                  "say when to use the skill; it is what triggers it")
 
     def test_description_is_valid_plain_yaml(self):

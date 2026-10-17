@@ -1,0 +1,26 @@
+[
+  {
+    "query": "should we use Postgres full text search or Elasticsearch for 2M products, team of 4",
+    "should_trigger": true
+  },
+  {
+    "query": "We need background jobs in our Django app. What should we use?",
+    "should_trigger": true
+  },
+  {
+    "query": "I'm torn between rewriting the billing service in Go or just fixing the Python one. thoughts?",
+    "should_trigger": true
+  },
+  {
+    "query": "list the options for the `git log` command",
+    "should_trigger": false
+  },
+  {
+    "query": "explain what a feature flag is",
+    "should_trigger": false
+  },
+  {
+    "query": "I already chose Redis; write the docker-compose service for it",
+    "should_trigger": false
+  }
+]

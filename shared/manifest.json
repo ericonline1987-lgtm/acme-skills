@@ -1,0 +1,20 @@
+{
+  "_comment": "Single source of truth for files several skills use. tools/sync_shared.py copies each source into the listed skills; never edit the copies. Skills must be self-contained because Codex and Antigravity install skill folders on their own.",
+  "copies": {
+    "templates/outcome-contract.md": ["foundations/defining-done/assets/outcome-contract.md"],
+    "templates/handoff-report.md": ["foundations/proving-outcomes/assets/handoff-report.md"],
+    "templates/evidence-ledger.example.json": ["foundations/proving-outcomes/assets/evidence-ledger.example.json"],
+    "templates/delegation-brief.md": ["foundations/delegating-work/assets/delegation-brief.md"],
+    "templates/decision-record.md": [
+      "foundations/exploring-options/assets/decision-record.md",
+      "foundations/capturing-learning/assets/decision-record.md"
+    ],
+    "scripts/check_sections.py": ["foundations/defining-done/scripts/check_sections.py"],
+    "style-guide.md": [
+      "professional-craft/writing-documents/references/style-guide.md",
+      "professional-craft/briefing-decisions/references/style-guide.md",
+      "professional-craft/building-presentations/references/style-guide.md",
+      "professional-craft/writing-emails/references/style-guide.md"
+    ]
+  }
+}

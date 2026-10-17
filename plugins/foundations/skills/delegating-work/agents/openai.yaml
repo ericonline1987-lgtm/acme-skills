@@ -1,0 +1,4 @@
+interface:
+  display_name: "Delegating Work"
+  short_description: "Brief helpers and accept work independently"
+  default_prompt: "Use $delegating-work to brief helper agents on this task and accept their results."

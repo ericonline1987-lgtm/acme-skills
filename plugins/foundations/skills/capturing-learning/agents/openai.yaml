@@ -1,0 +1,4 @@
+interface:
+  display_name: "Capturing Learning"
+  short_description: "Turn a repeated mistake into a checked rule"
+  default_prompt: "Use $capturing-learning to turn this recurring problem into a test and a fix."

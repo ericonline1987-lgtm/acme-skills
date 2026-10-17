@@ -1,6 +1,6 @@
 ---
 name: merging-safely
-description: Merge a branch, or judge whether one is ready to merge, and prove the result is complete and correct rather than merely conflict-free — model the diff, review files both sides changed, resolve conflicts from three-way evidence, and gate the push. Use when merging branches, resolving conflicts, auditing a past merge, or checking a fix landed on a release line.
+description: Use this skill whenever someone merges branches, resolves merge conflicts, asks whether a branch is ready to merge or safe to push after merging, or wants to confirm a fix landed on a release line. It proves the merge is complete and correct, not merely conflict-free — modelling the diff, reviewing files both sides changed and flagging changes the merge dropped.
 ---
 
 # Merging safely

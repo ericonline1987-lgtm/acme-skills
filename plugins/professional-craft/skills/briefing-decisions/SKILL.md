@@ -1,11 +1,11 @@
 ---
 name: briefing-decisions
-description: Prepare a decision brief that lets a decision-maker choose well and quickly — the decision and its deadline, options compared on the same fields, a recommendation with what would change it, and who decides. Use when someone needs a recommendation, a go/no-go, a choice between vendors, plans or approaches, or a pre-read for a decision meeting.
+description: Use this skill whenever someone needs a recommendation, a go/no-go, a choice between vendors, plans or projects, or something a boss or executive will decide from, even if they just say "write it up for my boss". It produces a one-page brief — decision, decider and deadline up front, options on the same fields, a recommendation and what would change it.
 ---
 
 # Briefing decisions
 
-Follow `../../shared/style-guide.md` for voice.
+Follow `references/style-guide.md` for voice.
 
 A brief is judged by the decision it produces, not by how much it covers. The reader
 should be able to decide from the first screen and check the reasoning below it.

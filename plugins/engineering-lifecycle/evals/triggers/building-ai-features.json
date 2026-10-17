@@ -1,0 +1,26 @@
+[
+  {
+    "query": "we want an LLM to auto-sort support tickets into 12 categories, how should we build it",
+    "should_trigger": true
+  },
+  {
+    "query": "Our RAG chatbot gives wrong answers sometimes. How do we make it reliably better?",
+    "should_trigger": true
+  },
+  {
+    "query": "pick a model for summarising sales calls, cost matters",
+    "should_trigger": true
+  },
+  {
+    "query": "what is a transformer in machine learning?",
+    "should_trigger": false
+  },
+  {
+    "query": "write a Python function that calls the OpenAI API",
+    "should_trigger": false
+  },
+  {
+    "query": "explain what tokens are",
+    "should_trigger": false
+  }
+]

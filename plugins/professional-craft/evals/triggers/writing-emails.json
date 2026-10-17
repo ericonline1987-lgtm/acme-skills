@@ -1,0 +1,26 @@
+[
+  {
+    "query": "write an email telling a client their launch slips two weeks because their API keys came late",
+    "should_trigger": true
+  },
+  {
+    "query": "Reply to this recruiter and politely decline.",
+    "should_trigger": true
+  },
+  {
+    "query": "chase the vendor who hasn't answered in a week, nicely",
+    "should_trigger": true
+  },
+  {
+    "query": "what's the difference between CC and BCC?",
+    "should_trigger": false
+  },
+  {
+    "query": "set up email forwarding in Gmail",
+    "should_trigger": false
+  },
+  {
+    "query": "write a regex to validate email addresses",
+    "should_trigger": false
+  }
+]

@@ -1,6 +1,6 @@
 ---
 name: researching-topics
-description: Research a question and deliver a sourced synthesis — answer first, findings with confidence levels, conflicts shown, time-sensitive facts dated, gaps named. Use whenever someone asks what the options are, how others do something, to compare tools or vendors, or to research, investigate or find out about a topic.
+description: Always use this skill when someone wants to find out about something they will decide or act on — options on the market, how other companies handle a practice, a competitor's pricing or product, a policy or vendor — even if it sounds like a quick lookup. It delivers a sourced answer first, findings with confidence levels, conflicting sources shown, dated facts and named gaps.
 ---
 
 # Researching topics

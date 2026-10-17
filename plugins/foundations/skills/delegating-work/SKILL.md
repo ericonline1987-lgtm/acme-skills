@@ -1,6 +1,6 @@
 ---
 name: delegating-work
-description: Write standalone briefs for AI agents, subagents or people taking part of a task, and accept their results only after independent checks. Use whenever work is split across agents or teammates, handed to a contractor or another session, or someone's "done" needs checking before it is trusted.
+description: Use this skill whenever work is being split across AI agents, subagents, teammates or contractors, or someone else says a task is finished and it needs checking before it is trusted or paid for. It writes standalone briefs with outcome, permissions and done criteria, then accepts results only after independent checks.
 ---
 
 # Delegating work
@@ -19,7 +19,7 @@ easy and the acceptance makes a wrong one visible.
 
 ## Brief
 
-Use `../../shared/templates/delegation-brief.md`. The brief must stand alone: the worker
+Use `assets/delegation-brief.md`. The brief must stand alone: the worker
 has none of your context. Include:
 
 - **Outcome** and why it matters, so the worker can make sensible local calls.

@@ -1,0 +1,273 @@
+{
+ "model": "sonnet",
+ "spent_usd": 1.88,
+ "stopped_early": false,
+ "results": [
+  {
+   "skill": "defining-done",
+   "query": "rename the variable `done` to `isComplete` in this function",
+   "should_trigger": false,
+   "invoked": []
+  },
+  {
+   "skill": "defining-done",
+   "query": "mark this jira ticket as done and close the sprint",
+   "should_trigger": false,
+   "invoked": []
+  },
+  {
+   "skill": "defining-done",
+   "query": "what's the difference between a definition of done and acceptance criteria in scrum?",
+   "should_trigger": false,
+   "invoked": []
+  },
+  {
+   "skill": "defining-done",
+   "query": "my boss wants 'better onboarding' by next month, where do I even start",
+   "should_trigger": true,
+   "invoked": []
+  },
+  {
+   "skill": "defining-done",
+   "query": "can you help me get started on an internal tool so finance can approve expense reports without emailing spreadsheets around",
+   "should_trigger": true,
+   "invoked": [
+    "defining-done"
+   ]
+  },
+  {
+   "skill": "proving-outcomes",
+   "query": "CI is green and the deploy job passed, write the slack message saying the fix is live",
+   "should_trigger": true,
+   "invoked": []
+  },
+  {
+   "skill": "defining-done",
+   "query": "We're about to build a customer-facing referral programme. Before anyone writes code, help me pin down what success looks like.",
+   "should_trigger": true,
+   "invoked": [
+    "defining-done"
+   ]
+  },
+  {
+   "skill": "proving-outcomes",
+   "query": "what does 'deployment frequency' mean in DORA metrics?",
+   "should_trigger": false,
+   "invoked": []
+  },
+  {
+   "skill": "proving-outcomes",
+   "query": "give me a status code for 'resource created'",
+   "should_trigger": false,
+   "invoked": []
+  },
+  {
+   "skill": "proving-outcomes",
+   "query": "can you verify my change to the rate limiter actually works in staging before I tell the team",
+   "should_trigger": true,
+   "invoked": []
+  },
+  {
+   "skill": "proving-outcomes",
+   "query": "Draft release notes saying the login timeout bug is resolved.",
+   "should_trigger": true,
+   "invoked": []
+  },
+  {
+   "skill": "proving-outcomes",
+   "query": "write a unit test for this rate limiter function",
+   "should_trigger": false,
+   "invoked": []
+  },
+  {
+   "skill": "changing-code",
+   "query": "Change the default page size from 50 to 100 in our API.",
+   "should_trigger": true,
+   "invoked": []
+  },
+  {
+   "skill": "changing-code",
+   "query": "what does this function do?",
+   "should_trigger": false,
+   "invoked": []
+  },
+  {
+   "skill": "changing-code",
+   "query": "test_sanitize_filename fails because ';' isn't stripped anymore. should I just add it back?",
+   "should_trigger": true,
+   "invoked": []
+  },
+  {
+   "skill": "changing-code",
+   "query": "extract a generic RequestContext so other services can reuse it later, only orders uses it now",
+   "should_trigger": true,
+   "invoked": []
+  },
+  {
+   "skill": "changing-code",
+   "query": "explain the difference between refactoring and rewriting",
+   "should_trigger": false,
+   "invoked": []
+  },
+  {
+   "skill": "reviewing-code",
+   "query": "review this PR: ```diff +rows = db.execute(f\"SELECT * FROM orders WHERE email = '{email}'\")```",
+   "should_trigger": true,
+   "invoked": []
+  },
+  {
+   "skill": "reviewing-code",
+   "query": "is this OK? <pastes a 40-line patch>",
+   "should_trigger": true,
+   "invoked": []
+  },
+  {
+   "skill": "reviewing-code",
+   "query": "Can you look over my changes before I merge? Anything wrong?",
+   "should_trigger": true,
+   "invoked": [
+    "reviewing-code"
+   ]
+  },
+  {
+   "skill": "reviewing-code",
+   "query": "format this file with black",
+   "should_trigger": false,
+   "invoked": []
+  },
+  {
+   "skill": "reviewing-code",
+   "query": "what makes a good code review culture?",
+   "should_trigger": false,
+   "invoked": []
+  },
+  {
+   "skill": "reviewing-code",
+   "query": "write a pull request description for these commits",
+   "should_trigger": false,
+   "invoked": []
+  },
+  {
+   "skill": "writing-tests",
+   "query": "Add a test that reproduces the bug where empty carts can be submitted.",
+   "should_trigger": true,
+   "invoked": []
+  },
+  {
+   "skill": "changing-code",
+   "query": "write a brand new CLI tool that converts JSON to YAML",
+   "should_trigger": false,
+   "invoked": []
+  },
+  {
+   "skill": "writing-tests",
+   "query": "what is TDD?",
+   "should_trigger": false,
+   "invoked": []
+  },
+  {
+   "skill": "writing-tests",
+   "query": "coverage on utils/dates.py is 20%, can you fix that",
+   "should_trigger": true,
+   "invoked": []
+  },
+  {
+   "skill": "researching-topics",
+   "query": "find out whether our competitor's new pricing is per seat or usage based",
+   "should_trigger": true,
+   "invoked": []
+  },
+  {
+   "skill": "writing-tests",
+   "query": "write pytest tests for this parse_duration function",
+   "should_trigger": true,
+   "invoked": []
+  },
+  {
+   "skill": "writing-tests",
+   "query": "fix this failing test by updating the snapshot",
+   "should_trigger": false,
+   "invoked": []
+  },
+  {
+   "skill": "researching-topics",
+   "query": "what's 15% of 240?",
+   "should_trigger": false,
+   "invoked": []
+  },
+  {
+   "skill": "researching-topics",
+   "query": "define 'single sign-on' in one sentence",
+   "should_trigger": false,
+   "invoked": []
+  },
+  {
+   "skill": "writing-tests",
+   "query": "set up GitHub Actions to run our tests",
+   "should_trigger": false,
+   "invoked": []
+  },
+  {
+   "skill": "researching-topics",
+   "query": "summarise this article I pasted",
+   "should_trigger": false,
+   "invoked": []
+  },
+  {
+   "skill": "researching-topics",
+   "query": "what are the main options for adding SSO to a B2B SaaS app and which should a 10 person startup pick",
+   "should_trigger": true,
+   "invoked": []
+  },
+  {
+   "skill": "researching-topics",
+   "query": "How do other companies handle on-call compensation? Need this for a proposal.",
+   "should_trigger": true,
+   "invoked": []
+  }
+ ],
+ "summary": {
+  "defining-done": {
+   "pos": 3,
+   "hit": 2,
+   "neg": 3,
+   "clean": 3,
+   "instead": {}
+  },
+  "proving-outcomes": {
+   "pos": 3,
+   "hit": 0,
+   "neg": 3,
+   "clean": 3,
+   "instead": {}
+  },
+  "changing-code": {
+   "pos": 3,
+   "hit": 0,
+   "neg": 3,
+   "clean": 3,
+   "instead": {}
+  },
+  "reviewing-code": {
+   "pos": 3,
+   "hit": 1,
+   "neg": 3,
+   "clean": 3,
+   "instead": {}
+  },
+  "writing-tests": {
+   "pos": 3,
+   "hit": 0,
+   "neg": 3,
+   "clean": 3,
+   "instead": {}
+  },
+  "researching-topics": {
+   "pos": 3,
+   "hit": 0,
+   "neg": 3,
+   "clean": 3,
+   "instead": {}
+  }
+ }
+}

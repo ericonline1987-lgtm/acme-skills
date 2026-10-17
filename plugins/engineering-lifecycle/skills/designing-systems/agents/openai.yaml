@@ -1,0 +1,4 @@
+interface:
+  display_name: "Designing Systems"
+  short_description: "Designs that compare options and plan rollback"
+  default_prompt: "Use $designing-systems to write a design for this change with options and a rollout plan."

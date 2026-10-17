@@ -1,0 +1,5 @@
+{
+  "$schema": "https://antigravity.google/schemas/v1/plugin.json",
+  "name": "engineering-lifecycle",
+  "description": "Engineering skills aimed at outcomes: requirements with success measures, designs that compare real options, safe code changes, reviews, tests that catch regressions, provably complete merges, and AI features built on evals."
+}

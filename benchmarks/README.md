@@ -24,6 +24,16 @@ The runner adds a no-plugin baseline arm and reports the delta. Every run uses t
 
 **To compare with another skill set:** package its skills as a plugin (a folder with `.claude-plugin/plugin.json` and `skills/`), copy one of our `evals/` folders into it, and run the same command against it. Same prompts and same graders keep the comparison fair.
 
+## 2b. Trigger recall and precision (when descriptions change)
+
+Each skill has `plugins/<plugin>/evals/triggers/<skill>.json`, prompts labelled `should_trigger` true or false in the Agent Skills format. Near-miss negatives share keywords with the skill but need something else.
+
+```
+python3 tools/run_triggers.py --skills <skill> [<skill> ...] --max-cost-usd 5
+```
+
+Each query runs in a fresh Claude Code session with all skill plugins loaded. The runner reports, per skill, how many should-trigger prompts loaded it, how many near-misses correctly didn't, and which other skill fired instead. Results so far are in `benchmarks/triggers/`.
+
 ## 3. Outcome log (weekly, on real work)
 
 Evals test responses to prompts. The outcome log tests whether real work achieved what it was for.

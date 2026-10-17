@@ -1,6 +1,6 @@
 ---
 name: handling-artifacts
-description: Decide where generated files go, what gets cleaned up, what must be redacted before sharing, and how a deliverable is packaged so it works elsewhere — including screenshots, recordings, downloads, debug output and repos bloated by binaries. Use whenever work creates files, a deliverable is handed over or shared, or a repository has grown too large.
+description: Use this skill whenever work produces or ships files — screenshots, recordings, traces, exports, debug scripts, reports — or a repository or deliverable is about to be shared outside the team or has grown too large. It decides where each file belongs, what to clean up, what to redact for the widest reader, and how to package a deliverable so it works elsewhere.
 ---
 
 # Handling artifacts

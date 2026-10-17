@@ -1,0 +1,4 @@
+interface:
+  display_name: "Exploring Options"
+  short_description: "Compare real alternatives before committing"
+  default_prompt: "Use $exploring-options to compare two or three approaches and recommend one."

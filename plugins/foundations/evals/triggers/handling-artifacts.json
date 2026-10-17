@@ -1,0 +1,26 @@
+[
+  {
+    "query": "we're giving our demo repo to an outside agency, it has admin screenshots and is 2GB, help me get it ready",
+    "should_trigger": true
+  },
+  {
+    "query": "Playwright left traces and videos everywhere after debugging. Should any of this be committed?",
+    "should_trigger": true
+  },
+  {
+    "query": "package this HTML report so my colleague can open it on their laptop",
+    "should_trigger": true
+  },
+  {
+    "query": "what's the difference between .gitignore and .git/info/exclude?",
+    "should_trigger": false
+  },
+  {
+    "query": "how do I take a screenshot on a Mac?",
+    "should_trigger": false
+  },
+  {
+    "query": "write a function that zips a folder in Python",
+    "should_trigger": false
+  }
+]

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Tracing Claims"
+  short_description: "Source or grade every load-bearing claim"
+  default_prompt: "Use $tracing-claims to make every figure in this draft traceable."

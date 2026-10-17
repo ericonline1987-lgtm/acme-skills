@@ -1,0 +1,40 @@
+{
+  "name": "engineering-lifecycle",
+  "version": "1.2.0",
+  "description": "Engineering skills aimed at outcomes: requirements with success measures, designs that compare real options, safe code changes, reviews, tests that catch regressions, provably complete merges, and AI features built on evals.",
+  "author": {
+    "name": "ericonline1987-lgtm",
+    "url": "https://github.com/ericonline1987-lgtm"
+  },
+  "homepage": "https://github.com/ericonline1987-lgtm/acme-skills",
+  "repository": "https://github.com/ericonline1987-lgtm/acme-skills",
+  "license": "MIT",
+  "keywords": [
+    "requirements",
+    "design",
+    "code-change",
+    "code-review",
+    "testing",
+    "merge",
+    "llm",
+    "evals"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Engineering Lifecycle",
+    "shortDescription": "Requirements, design, changes, review, merges",
+    "longDescription": "Engineering skills aimed at outcomes: requirements with success measures, designs that compare real options, safe code changes, reviews, tests that catch regressions, provably complete merges, and AI features built on evals.",
+    "developerName": "ericonline1987-lgtm",
+    "category": "Developer Tools",
+    "capabilities": [
+      "Interactive",
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "Review this pull request.",
+      "Help me merge this branch safely."
+    ],
+    "websiteURL": "https://github.com/ericonline1987-lgtm/acme-skills"
+  }
+}

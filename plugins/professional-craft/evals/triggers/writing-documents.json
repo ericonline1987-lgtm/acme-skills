@@ -1,0 +1,26 @@
+[
+  {
+    "query": "write a status update for leadership: 14 of 20 services moved, billing blocked by vendor licence (Priya, answer by Oct 20), $12k over, now Nov 14",
+    "should_trigger": true
+  },
+  {
+    "query": "Turn these meeting scribbles into a one-pager I can send to the VP.",
+    "should_trigger": true
+  },
+  {
+    "query": "this proposal is 6 pages and nobody reads it, can you fix it",
+    "should_trigger": true
+  },
+  {
+    "query": "give me three synonyms for 'important'",
+    "should_trigger": false
+  },
+  {
+    "query": "fix the grammar: 'me and him goes to the store'",
+    "should_trigger": false
+  },
+  {
+    "query": "convert this markdown to a PDF",
+    "should_trigger": false
+  }
+]

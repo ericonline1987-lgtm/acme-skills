@@ -1,0 +1,44 @@
+{
+  "name": "acme-skills",
+  "interface": {
+    "displayName": "acme-skills"
+  },
+  "plugins": [
+    {
+      "name": "foundations",
+      "source": {
+        "source": "local",
+        "path": "./plugins/foundations"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    },
+    {
+      "name": "engineering-lifecycle",
+      "source": {
+        "source": "local",
+        "path": "./plugins/engineering-lifecycle"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Developer Tools"
+    },
+    {
+      "name": "professional-craft",
+      "source": {
+        "source": "local",
+        "path": "./plugins/professional-craft"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

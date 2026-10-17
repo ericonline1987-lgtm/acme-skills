@@ -1,0 +1,26 @@
+[
+  {
+    "query": "write requirements for letting users export their data as CSV",
+    "should_trigger": true
+  },
+  {
+    "query": "Turn this Slack thread about 'saved searches' into user stories with acceptance criteria.",
+    "should_trigger": true
+  },
+  {
+    "query": "PM is out, I need a PRD section for team invites by tomorrow",
+    "should_trigger": true
+  },
+  {
+    "query": "what's the difference between functional and non-functional requirements?",
+    "should_trigger": false
+  },
+  {
+    "query": "install the requirements.txt for this project",
+    "should_trigger": false
+  },
+  {
+    "query": "pin the versions in requirements.txt",
+    "should_trigger": false
+  }
+]

@@ -1,5 +1,22 @@
 # Changelog
 
+## 1.2.0 (2026-10-16)
+
+First-class Codex and Antigravity support, and descriptions tuned for trigger recall. See docs/RUNTIMES.md and benchmarks/RESULTS.md.
+
+### Added
+- Codex packaging: `.codex-plugin/plugin.json` per plugin, `.agents/plugins/marketplace.json`, and `agents/openai.yaml` for every skill.
+- Antigravity packaging: root `plugin.json` per plugin; `core-rules` loads as a native Antigravity rule.
+- `tools/install.py`: installs into Claude Code, Codex or Antigravity at user or project scope, optionally adding the core rules to `CLAUDE.md`, `AGENTS.md` or Antigravity's rules; idempotent, never replaces a skill it didn't install.
+- `tools/build_manifests.py` and `tools/sync_shared.py`: generate the per-runtime manifests and copy shared files into skills, each with a `--check` mode run by the tests.
+- Trigger query sets (`plugins/*/evals/triggers/`, 126 queries with near-miss negatives) and `tools/run_triggers.py`.
+- `docs/RUNTIMES.md`, `tests/test_portability.py`, `tests/test_install.py`; the official `skills-ref` validator in CI.
+
+### Changed
+- Skills are self-contained: templates, the section checker and the style guide are copied into the skills that use them, from one source in `shared/`. No skill references a file outside its own folder.
+- All 21 descriptions lead with the user's intent ("Use this skill whenever…"); trigger recall on short prompts rose from 3 of 18 to about 44 of 63 with no false triggers, at the same length cap.
+- The frontmatter test now allows the specification's optional fields and rejects consecutive hyphens in names.
+
 ## 1.1.1 (2026-10-15)
 
 Pre-publication audit.

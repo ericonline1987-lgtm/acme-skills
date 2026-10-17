@@ -1,0 +1,4 @@
+interface:
+  display_name: "Proving Outcomes"
+  short_description: "Report the rung of evidence actually reached"
+  default_prompt: "Use $proving-outcomes to write an honest status update for this change."

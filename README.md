@@ -15,7 +15,11 @@ In a head-to-head on cases written by another skill set's author, these skills p
 
 Each plugin works alone. `foundations` holds the shared work loop (define done → explore → do → prove → hand off → learn), and the other two work better alongside it.
 
-## Install (Claude Code)
+## Install
+
+Works in **Claude Code, Codex and Antigravity** from the same skill folders. Details and sources: [docs/RUNTIMES.md](docs/RUNTIMES.md).
+
+**Claude Code**
 
 ```
 /plugin marketplace add ericonline1987-lgtm/acme-skills
@@ -25,17 +29,42 @@ Each plugin works alone. `foundations` holds the shared work loop (define done �
 /plugin install core-rules@acme-skills        # optional
 ```
 
+**Codex**
+
+```
+codex plugin marketplace add ericonline1987-lgtm/acme-skills
+```
+
+Then install the plugins from the Plugins Directory. For the optional rules, run `python3 tools/install.py --runtime codex --rules`, which adds them to `AGENTS.md`.
+
+**Antigravity**
+
+```
+git clone https://github.com/ericonline1987-lgtm/acme-skills && cd acme-skills
+agy plugin install ./plugins/foundations      # and the others; ./plugins/core-rules adds the rules
+```
+
+**Any runtime, without a marketplace**
+
+```
+python3 tools/install.py --runtime all --scope project --project ~/code/my-app --rules --dry-run
+```
+
+It copies the self-contained skill folders into each runtime's skill directory. It skips any skill it didn't install (tested in tests/test_install.py), and a dry run shows every action first.
+
 ## What's in the box
 
 ```
 .claude-plugin/marketplace.json        lists the four plugins
-plugins/<plugin>/skills/<skill>/        SKILL.md, plus scripts/ or templates/ where needed
-plugins/<plugin>/evals/                 behaviour evals: one should-fire case per skill, should-not-fire cases
-plugins/foundations/shared/             outcome contract, hand-off, decision record, delegation brief, evidence ledger
-plugins/professional-craft/shared/      house style guide
+plugins/<plugin>/skills/<skill>/        SKILL.md, agents/openai.yaml, plus scripts/, assets/ or references/
+plugins/<plugin>/evals/                 behaviour evals, plus triggers/<skill>.json query sets
+plugins/<plugin>/{plugin.json, .codex-plugin/}   Antigravity and Codex manifests (generated)
+.agents/plugins/marketplace.json        Codex marketplace (generated)
+shared/                                 single source for files several skills use (synced into skills)
+tools/                                  installer, manifest generator, shared-file sync, trigger runner
 benchmarks/                             outcome log, scorer, results, head-to-head bundles and cases
 tests/                                  offline contract and script tests (CI)
-docs/PLAN.md, docs/PLAN-v1.1.md        goals, principles, architecture, roadmap, coverage plan
+docs/PLAN.md, PLAN-v1.1.md, RUNTIMES.md  goals, roadmap, coverage plan, runtime support
 LICENSE, NOTICE, SECURITY.md            licence, third-party material, how to report problems
 ```
 
@@ -49,7 +78,7 @@ LICENSE, NOTICE, SECURITY.md            licence, third-party material, how to re
 | `foundations/skills/handling-artifacts/scripts/repo_weight.py` | Which objects take the most space in a repository's history, including files deleted from the tree but still taking space |
 | `foundations/skills/proving-outcomes/scripts/evidence_ledger.py` | Claiming a higher rung (deployed, accepted, outcome achieved) than the evidence supports; no outcome check scheduled |
 | `foundations/skills/tracing-claims/scripts/claim_check.py` | Figures and absolutes in Markdown with no source or evidence grade |
-| `foundations/shared/scripts/check_sections.py` | Contracts, hand-offs and briefs with missing, empty or unfilled sections |
+| `foundations/skills/defining-done/scripts/check_sections.py` | Contracts, hand-offs and briefs with missing, empty or unfilled sections |
 | `foundations/skills/capturing-learning/scripts/add_eval_case.py` | Turns a failure into an eval case, so the fix is measured |
 | `benchmarks/score_outcomes.py` | Overclaim rate and outcome achievement on real work, with confidence intervals |
 
@@ -59,6 +88,7 @@ All scripts use only the Python standard library, and each one states what it ca
 
 ```
 python3 -m unittest discover -s tests                                  # every commit (CI)
+python3 tools/run_triggers.py --max-cost-usd 10                        # trigger recall and precision
 claude plugin eval plugins/foundations --runs 3 --judge-model sonnet   # every release; adds a no-plugin baseline
 python3 benchmarks/score_outcomes.py benchmarks/outcomes.csv           # weekly, on real work
 ```
@@ -67,7 +97,7 @@ See [benchmarks/README.md](benchmarks/README.md).
 
 ## Make it yours
 
-Fork it and fill in the terminology table in `plugins/professional-craft/shared/style-guide.md` with your own product names and preferred terms.
+Fork it, fill in the terminology table in `shared/style-guide.md` with your own product names and preferred terms, and run `python3 tools/sync_shared.py` to copy it into the writing skills.
 
 Contributing: [CONTRIBUTING.md](CONTRIBUTING.md). Changes: [CHANGELOG.md](CHANGELOG.md). Security: [SECURITY.md](SECURITY.md).
 

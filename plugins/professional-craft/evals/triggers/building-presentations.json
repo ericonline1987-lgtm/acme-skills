@@ -1,0 +1,26 @@
+[
+  {
+    "query": "outline a 10 minute deck to get leadership to fund a 2 person dev tooling team",
+    "should_trigger": true
+  },
+  {
+    "query": "Make slides for my talk on our migration at the engineering all-hands.",
+    "should_trigger": true
+  },
+  {
+    "query": "I have to pitch this idea to the board Thursday, help",
+    "should_trigger": true
+  },
+  {
+    "query": "how do I add a slide number in PowerPoint?",
+    "should_trigger": false
+  },
+  {
+    "query": "what's the best font for slides?",
+    "should_trigger": false
+  },
+  {
+    "query": "convert this PPTX to PDF",
+    "should_trigger": false
+  }
+]

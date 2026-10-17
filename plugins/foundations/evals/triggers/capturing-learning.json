@@ -1,0 +1,26 @@
+[
+  {
+    "query": "third time this month the agent said a deploy was done when it wasn't. how do we stop this happening",
+    "should_trigger": true
+  },
+  {
+    "query": "We keep making the same mistake with timezone handling in reports. What should we do so it sticks?",
+    "should_trigger": true
+  },
+  {
+    "query": "you did the thing I told you not to do again — make sure it doesn't happen next time",
+    "should_trigger": true
+  },
+  {
+    "query": "what is machine learning?",
+    "should_trigger": false
+  },
+  {
+    "query": "summarise what we did in this session",
+    "should_trigger": false
+  },
+  {
+    "query": "write a retro agenda for Friday",
+    "should_trigger": false
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "query": "test_sanitize_filename fails because ';' isn't stripped anymore. should I just add it back?",
+    "should_trigger": true
+  },
+  {
+    "query": "Change the default page size from 50 to 100 in our API.",
+    "should_trigger": true
+  },
+  {
+    "query": "extract a generic RequestContext so other services can reuse it later, only orders uses it now",
+    "should_trigger": true
+  },
+  {
+    "query": "what does this function do?",
+    "should_trigger": false
+  },
+  {
+    "query": "write a brand new CLI tool that converts JSON to YAML",
+    "should_trigger": false
+  },
+  {
+    "query": "explain the difference between refactoring and rewriting",
+    "should_trigger": false
+  }
+]

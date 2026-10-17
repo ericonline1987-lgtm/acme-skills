@@ -1,0 +1,4 @@
+interface:
+  display_name: "Handling Artifacts"
+  short_description: "Place, redact and package generated files"
+  default_prompt: "Use $handling-artifacts to get this repository ready to share outside the team."

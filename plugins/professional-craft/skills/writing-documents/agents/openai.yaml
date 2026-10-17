@@ -1,0 +1,4 @@
+interface:
+  display_name: "Writing Documents"
+  short_description: "Documents a reader can act on in one read"
+  default_prompt: "Use $writing-documents to turn these notes into a one-page status update."

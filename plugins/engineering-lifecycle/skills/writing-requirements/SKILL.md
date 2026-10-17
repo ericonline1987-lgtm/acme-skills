@@ -1,6 +1,6 @@
 ---
 name: writing-requirements
-description: Turn a feature idea, ticket or conversation into requirements that start from the outcome and its success measure, then user stories with testable acceptance criteria. Use when someone asks for requirements, a PRD section, user stories, acceptance criteria, or to scope a feature.
+description: Use this skill whenever someone asks for requirements, a PRD section, user stories, acceptance criteria or a spec, or wants a feature idea or thread turned into something a team can build. It starts from the problem and a measurable success outcome, then writes stories with testable Given/When/Then criteria, edge cases, privacy needs and what is out of scope.
 ---
 
 # Writing requirements

@@ -1,0 +1,26 @@
+[
+  {
+    "query": "I'm going to have three agents work in parallel on the migration: one exports, one transforms, one loads. write their instructions",
+    "should_trigger": true
+  },
+  {
+    "query": "Our contractor says the payments integration is finished. How do I check before we pay the invoice?",
+    "should_trigger": true
+  },
+  {
+    "query": "split this refactor across a couple of subagents and make sure what they hand back is actually right",
+    "should_trigger": true
+  },
+  {
+    "query": "what does the delegate pattern mean in Swift?",
+    "should_trigger": false
+  },
+  {
+    "query": "write a function that delegates logging to a Logger class",
+    "should_trigger": false
+  },
+  {
+    "query": "how many direct reports should an engineering manager have?",
+    "should_trigger": false
+  }
+]

@@ -1,0 +1,38 @@
+{
+  "name": "professional-craft",
+  "version": "1.2.0",
+  "description": "Professional writing aimed at the reader's next action: documents within a page budget, decision briefs, trustworthy research, presentations and emails, in house style.",
+  "author": {
+    "name": "ericonline1987-lgtm",
+    "url": "https://github.com/ericonline1987-lgtm"
+  },
+  "homepage": "https://github.com/ericonline1987-lgtm/acme-skills",
+  "repository": "https://github.com/ericonline1987-lgtm/acme-skills",
+  "license": "MIT",
+  "keywords": [
+    "writing",
+    "documents",
+    "decisions",
+    "research",
+    "presentations",
+    "email"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Professional Craft",
+    "shortDescription": "Documents, decision briefs, research, email",
+    "longDescription": "Professional writing aimed at the reader's next action: documents within a page budget, decision briefs, trustworthy research, presentations and emails, in house style.",
+    "developerName": "ericonline1987-lgtm",
+    "category": "Productivity",
+    "capabilities": [
+      "Interactive",
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "Write a one-page decision brief for my manager.",
+      "Research the options and recommend one."
+    ],
+    "websiteURL": "https://github.com/ericonline1987-lgtm/acme-skills"
+  }
+}

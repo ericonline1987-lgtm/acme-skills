@@ -1,6 +1,6 @@
 ---
 name: tracing-claims
-description: Keep figures, superlatives and claims traceable — attribute them, mark them observed, inferred or unverified, and never invent support. Use whenever turning notes, research or hearsay into text others will rely on — board or investor updates, reports, summaries, marketing copy — especially when numbers or "we're the best / fastest" claims appear.
+description: Use this skill whenever notes, numbers or hearsay are being turned into text others will rely on — board or investor updates, case studies, reports, summaries, marketing copy — especially with stats or "best / fastest" claims, even if the person only asks to polish it. It attributes or grades every figure as observed, inferred or unverified and never invents support.
 ---
 
 # Tracing claims

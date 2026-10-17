@@ -1,0 +1,4 @@
+interface:
+  display_name: "Building Presentations"
+  short_description: "Decks built from takeaway headlines"
+  default_prompt: "Use $building-presentations to outline a ten-minute deck for this proposal."

@@ -1,6 +1,6 @@
 ---
 name: writing-tests
-description: Write tests that would catch real regressions — match the project's framework, one behaviour per test with descriptive names, edge and invalid cases, shown to fail without the fix, real results reported. Use whenever someone asks for tests, unit tests, pytest or Jest cases, more coverage, or a test that reproduces a bug.
+description: Always use this skill when someone wants tests written or coverage improved — unit tests, pytest or Jest cases, a test reproducing a bug, "coverage is low, fix it" — even for one small function. It matches the project's framework, writes one behaviour per test with descriptive names and edge cases, proves each test fails without the fix, and reports the real results.
 ---
 
 # Writing tests

@@ -1,6 +1,6 @@
 ---
 name: reviewing-code
-description: Review a diff or pull request for whether it achieves its intent safely — correctness, security, callers and history, tests that would catch a regression — with comments grouped by severity and a clear verdict. Use whenever someone shares a diff, PR, patch or snippet and asks for a review, feedback, "is this OK" or "any issues".
+description: Always use this skill when someone shares code, a diff, a patch or a pull request and wants an opinion — "review this", "is this OK", "anything wrong", "look over my changes before I merge" — even for a few lines. It checks the change achieves its intent safely — correctness, callers and history, security, tests that would catch a regression — and ends with severity-grouped comments and a verdict.
 ---
 
 # Reviewing code

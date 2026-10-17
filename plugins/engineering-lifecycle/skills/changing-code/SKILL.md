@@ -1,6 +1,6 @@
 ---
 name: changing-code
-description: Change existing code safely — learn from git history why it is the way it is, treat failing tests and bug reports as leads not specs, check every caller, make the smallest change, record why. Use whenever someone asks to fix a bug or failing test, change a default, config value or signature, refactor, extract an abstraction, or "just change X" in existing code.
+description: Use this skill whenever someone asks to fix a bug or failing test, change a default, config value or signature, refactor, extract an abstraction, or "just change X" in existing code, even for one-line changes. It finds out from git history why the code is the way it is, treats the symptom as a lead not the spec, checks every caller and makes the smallest change, recording why.
 ---
 
 # Changing code

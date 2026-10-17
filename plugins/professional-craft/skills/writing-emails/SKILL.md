@@ -1,11 +1,11 @@
 ---
 name: writing-emails
-description: Draft work emails that get the intended response — one clear outcome, the ask in the subject and first two lines, the right tone for the relationship and stakes, and a follow-up plan. Use when someone asks to write, reply to, shorten or improve an email, especially requests, follow-ups, updates and difficult messages.
+description: Always use this skill when drafting, replying to or improving any work email or message, even a short one — requests, follow-ups, chasers, updates, declines, recruiter replies and bad news. It aims at the one response the email is for, puts the ask in the subject and first two lines, matches tone to the relationship and stakes, and plans the follow-up.
 ---
 
 # Writing emails
 
-Follow `../../shared/style-guide.md` for voice.
+Follow `references/style-guide.md` for voice.
 
 An email is done when the reader does what it was for. Write for that response.
 

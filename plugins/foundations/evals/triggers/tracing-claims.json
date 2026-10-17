@@ -1,0 +1,26 @@
+[
+  {
+    "query": "turn these notes into a board update: churn down maybe 30%, Sam said tickets halved, we're the fastest growing in the segment",
+    "should_trigger": true
+  },
+  {
+    "query": "Write the 'Results' paragraph for our case study from these numbers our sales lead sent.",
+    "should_trigger": true
+  },
+  {
+    "query": "polish this investor update, it has a bunch of stats in it",
+    "should_trigger": true
+  },
+  {
+    "query": "what's a good citation style for a computer science paper?",
+    "should_trigger": false
+  },
+  {
+    "query": "convert this table of numbers to CSV",
+    "should_trigger": false
+  },
+  {
+    "query": "fix the typos in this paragraph, don't change anything else",
+    "should_trigger": false
+  }
+]

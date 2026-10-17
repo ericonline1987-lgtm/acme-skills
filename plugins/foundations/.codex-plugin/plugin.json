@@ -1,0 +1,38 @@
+{
+  "name": "foundations",
+  "version": "1.2.0",
+  "description": "The work loop every task shares: define done as an outcome, explore options, delegate and accept, prove the rung reached, trace claims, guard actions, and capture learning.",
+  "author": {
+    "name": "ericonline1987-lgtm",
+    "url": "https://github.com/ericonline1987-lgtm"
+  },
+  "homepage": "https://github.com/ericonline1987-lgtm/acme-skills",
+  "repository": "https://github.com/ericonline1987-lgtm/acme-skills",
+  "license": "MIT",
+  "keywords": [
+    "outcomes",
+    "verification",
+    "delegation",
+    "provenance",
+    "safety",
+    "learning"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Foundations",
+    "shortDescription": "Define done, prove outcomes, trace claims",
+    "longDescription": "The work loop every task shares: define done as an outcome, explore options, delegate and accept, prove the rung reached, trace claims, guard actions, and capture learning.",
+    "developerName": "ericonline1987-lgtm",
+    "category": "Productivity",
+    "capabilities": [
+      "Interactive",
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "Help me define what done means for this task.",
+      "Write an honest status update for this change."
+    ],
+    "websiteURL": "https://github.com/ericonline1987-lgtm/acme-skills"
+  }
+}

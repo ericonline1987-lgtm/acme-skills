@@ -1,0 +1,4 @@
+interface:
+  display_name: "Reviewing Code"
+  short_description: "Prioritised review with a clear verdict"
+  default_prompt: "Use $reviewing-code to review this diff and give a verdict."

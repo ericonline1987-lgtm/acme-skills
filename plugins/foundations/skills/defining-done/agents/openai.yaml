@@ -1,0 +1,4 @@
+interface:
+  display_name: "Defining Done"
+  short_description: "Agree an observable outcome before building"
+  default_prompt: "Use $defining-done to turn this request into an outcome contract before we start."

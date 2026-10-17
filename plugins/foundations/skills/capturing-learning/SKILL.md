@@ -1,6 +1,6 @@
 ---
 name: capturing-learning
-description: Turn a repeated mistake, correction or lesson into a checkable rule placed where it is enforced — an eval or test case, an automated check, or a proposed skill or instruction change. Use whenever someone says a problem keeps happening, asks how to stop it recurring, or corrects how an agent behaved.
+description: Use this skill whenever someone says a mistake keeps happening, asks how to stop a problem recurring, or corrects how an agent behaved ("you did it again"). It turns the lesson into a specific, checkable rule and puts it where it will be enforced — an eval or test case, an automated check, or a proposed skill or instruction change.
 ---
 
 # Capturing learning
@@ -23,7 +23,7 @@ transcript; this skill puts them where they will be used.
    | Lesson type | Destination |
    |---|---|
    | An agent behaviour that went wrong or right | An eval case (step 3), then a skill change |
-   | Why a choice was made | A decision record: `../../shared/templates/decision-record.md` |
+   | Why a choice was made | A decision record: `assets/decision-record.md` |
    | A fact about this codebase or team | The project's own docs or agent instructions file |
    | A recurring multi-step procedure | A new skill, proposed to the person |
    | A one-off | Nothing. Say so. |
@@ -34,7 +34,9 @@ transcript; this skill puts them where they will be used.
    --criteria "..." --criteria "..." --skill <skill> --source "<what happened, when>"`,
    one `--criteria` per observable thing a good answer does.
    Use `--should-not-fire` when the lesson is that a skill triggered where it shouldn't.
-   Then change the skill and run `claude plugin eval <plugin> --case <case>`.
+   Then change the skill and re-run the case with your runtime's eval runner (in Claude
+   Code: `claude plugin eval <plugin> --case <case>`; elsewhere, run the prompt and check
+   each criterion against the answer).
 4. **Keep the person in charge.** Propose changes to shared skills, docs and instruction
    files; don't apply them silently. Say what changes for future tasks.
 5. **Record it in the hand-off** under "Learned", with where it went.

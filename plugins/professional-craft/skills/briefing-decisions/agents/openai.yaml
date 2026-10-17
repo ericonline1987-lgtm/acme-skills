@@ -1,0 +1,4 @@
+interface:
+  display_name: "Briefing Decisions"
+  short_description: "One-page briefs that lead to a decision"
+  default_prompt: "Use $briefing-decisions to write a decision brief comparing these options."

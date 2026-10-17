@@ -1,0 +1,4 @@
+interface:
+  display_name: "Writing Requirements"
+  short_description: "Requirements that start from a success measure"
+  default_prompt: "Use $writing-requirements to write requirements and acceptance criteria for this feature."

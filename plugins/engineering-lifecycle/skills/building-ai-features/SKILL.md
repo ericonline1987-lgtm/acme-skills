@@ -1,6 +1,6 @@
 ---
 name: building-ai-features
-description: Design, build and evaluate features powered by language models — define quality with an eval set before writing prompts, design context and tools, choose models on measured quality and cost, guard against prompt injection, and monitor in production. Use when building or improving an LLM feature, agent, prompt, RAG pipeline or AI workflow.
+description: Use this skill whenever someone is building or improving a feature powered by a language model — an LLM classifier, chatbot, RAG pipeline, agent or prompt — or choosing a model for one, including when answers are "sometimes wrong". It defines quality with an eval set before tuning prompts, compares models on measured quality and cost, guards against prompt injection and plans monitoring.
 ---
 
 # Building AI features

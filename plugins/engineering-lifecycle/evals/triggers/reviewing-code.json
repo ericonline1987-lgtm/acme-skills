@@ -1,0 +1,26 @@
+[
+  {
+    "query": "review this PR: ```diff +rows = db.execute(f\"SELECT * FROM orders WHERE email = '{email}'\")```",
+    "should_trigger": true
+  },
+  {
+    "query": "Can you look over my changes before I merge? Anything wrong?",
+    "should_trigger": true
+  },
+  {
+    "query": "is this OK? <pastes a 40-line patch>",
+    "should_trigger": true
+  },
+  {
+    "query": "what makes a good code review culture?",
+    "should_trigger": false
+  },
+  {
+    "query": "format this file with black",
+    "should_trigger": false
+  },
+  {
+    "query": "write a pull request description for these commits",
+    "should_trigger": false
+  }
+]

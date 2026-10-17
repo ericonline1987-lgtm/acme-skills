@@ -1,0 +1,4 @@
+interface:
+  display_name: "Changing Code"
+  short_description: "Learn why code exists before changing it"
+  default_prompt: "Use $changing-code to fix this failing test without undoing a deliberate change."

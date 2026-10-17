@@ -1,6 +1,6 @@
 ---
 name: proving-outcomes
-description: Decide what a claim of done can honestly say — checked, delivered, working in real use, accepted, or outcome achieved — and plan the outcome check. Use whenever writing a status update, release note or "it's done / fixed / deployed / shipped" message, or verifying a change, even when tests and deploys are green.
+description: Use this skill whenever someone wants to say work is done, fixed, live, shipped or resolved — status updates, Slack messages, release notes — or asks to verify a change works, even when CI and the deploy are green. It reports only the rung of evidence actually reached (checked, delivered, working in real use, accepted, outcome achieved) and schedules the outcome check.
 ---
 
 # Proving outcomes
@@ -29,13 +29,13 @@ it" is not "it mattered". Name the rung you reached; never borrow a higher one.
    inputs from real use (logs, recent requests, actual documents) and include the case
    that should fail or be rejected.
 4. **Record a ledger** for anything beyond a small task, in the format of
-   `../../shared/templates/evidence-ledger.example.json`, and run
+   `assets/evidence-ledger.example.json`, and run
    `python3 scripts/evidence_ledger.py <ledger.json>`. It reports the highest supported
    rung and fails on an overclaim or a missing follow-up.
 5. **Schedule the outcome check.** Below rung 5, write the follow-up date, check and
    owner into the hand-off. Offer to set a reminder or scheduled task if the platform
    supports it.
-6. **Hand off** with `../../shared/templates/handoff-report.md`: result, rung reached
+6. **Hand off** with `assets/handoff-report.md`: result, rung reached
    and the next one, evidence, decisions for the person, what was not checked,
    follow-up, what was learned.
 

@@ -1,5 +1,41 @@
 # Results
 
+## v1.2: trigger recall on short, casual prompts (2026-10-16)
+
+**Bottom line:** on short, everyday prompts the skills were accurate but reticent. A baseline sample fired on 3 of 18 should-trigger queries [observed]. Rewriting every description to lead with the user's intent, following the Agent Skills guide, raised that to about 44 of 63 across all 21 skills, with no false triggers on any of the 63 near-miss queries [observed: benchmarks/triggers/]. Three queries per skill, one model (Sonnet): indicative, not a release gate.
+
+### Method
+
+- `tools/run_triggers.py`: each query from `plugins/*/evals/triggers/<skill>.json` goes to a fresh `claude -p` session with all three skill plugins loaded, read-only tools, six turns; a skill counts as triggered if the agent invoked it.
+- Six turns, not two: with two, agents spent their turns searching the empty sandbox for the code a prompt mentioned and did not reach a skill, which undercounted triggering [observed].
+- Near-miss negatives share keywords with the skill but need something else ("what's the difference between merge and rebase?" for `merging-safely`).
+
+### Results by round
+
+| Round | Skills measured | Recall (should fire) | Precision (near-misses left alone) |
+|---|---|---|---|
+| Baseline descriptions | 6 (sample) | 3 of 18 [observed] | 18 of 18 [observed] |
+| Intent-first descriptions | same 6 | 10 of 18 [observed] | 18 of 18 [observed] |
+| Intent-first, all skills | 21 | 37 of 63 [observed] | 63 of 63 [observed] |
+| "Always use … even for a quick one", weakest 9 | 9 | 16 of 27, up from 6 [observed] | 27 of 27 [observed] |
+| Combined estimate, all skills | 21 | about 44 of 63 [inferred: round 3 plus the round-4 gains] | 63 of 63 [observed] |
+
+The three skills left unchanged during round 4 scored exactly as in round 3, which suggests the gains are not run-to-run noise [observed].
+
+### What still doesn't trigger
+
+`writing-documents` and `guarding-agent-actions` stayed at 0 of 3, and `writing-emails` at 1 of 3: on short prompts the model writes the email or document itself. That matches the Agent Skills guide's warning that agents skip skills for tasks they believe they can do alone. Richer prompts do trigger them (see the v1.0 behaviour evals below). `guarding-agent-actions` matters most when an agent has real tools; its cases need tool access to measure fairly.
+
+### Portability checks (static)
+
+- Every skill folder works when copied alone, passes the specification's naming and field rules, and has Codex metadata [observed: tests/test_portability.py, tests/test_skills.py].
+- Generated Codex and Antigravity manifests match their sources [observed: `tools/build_manifests.py --check`].
+- Live loading in Codex and Antigravity was not tested; no CLI for either was available.
+
+### Spend
+
+About $17 of eval runs for this round [observed: runner cost totals].
+
 ## v1.1: head-to-head with the reference set (2026-10-14)
 
 **Bottom line:** on cases written by the reference set's own author, the v1.1 skills passed 5 of 12 against 3 of 12 for the reference skills and 2 of 12 for plain Claude, and matched or beat the reference on every case [observed: benchmarks/h2h/pass2-poolB-summary.json]. On our own 21 cases the gap is wider (92% against 72% and 69% of criteria), but those cases were written for our skills, so they count for less [observed: benchmarks/h2h/pass1-summary.json]. One run per case: indicative, not a release gate.

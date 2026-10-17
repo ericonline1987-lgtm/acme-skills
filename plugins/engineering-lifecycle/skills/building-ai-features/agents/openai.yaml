@@ -1,0 +1,4 @@
+interface:
+  display_name: "Building AI Features"
+  short_description: "LLM features built on evals before prompts"
+  default_prompt: "Use $building-ai-features to plan this LLM feature, starting from an eval set."

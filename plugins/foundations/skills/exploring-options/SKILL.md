@@ -1,6 +1,6 @@
 ---
 name: exploring-options
-description: Compare two or three real alternatives on the same fields, attack the favourite, and propose a small spike before committing. Use whenever someone asks what to use, which tool or approach to pick, "should we do X or Y", or how to solve something with several possible answers — even if they only ask for a recommendation.
+description: Always use this skill when someone is choosing between tools, libraries, services, architectures or approaches — "what should we use", "X or Y", "rewrite or fix", "thoughts?" — even if they only want a one-line answer. It compares two or three real alternatives on the same fields, argues against the favourite and proposes a small, cheap test before committing.
 ---
 
 # Exploring options
@@ -30,7 +30,7 @@ the expensive habit. Explore wide, then commit hard.
    reviewer who saw the whole discussion is not independent; say so if none is available.
 7. **Decide, or hand the decision over.** If the choice is the person's (see
    `defining-done`), present the comparison with a recommendation and stop. Otherwise
-   decide, and record it with `../../shared/templates/decision-record.md` when others
+   decide, and record it with `assets/decision-record.md` when others
    will later wonder why.
 
 ## Output

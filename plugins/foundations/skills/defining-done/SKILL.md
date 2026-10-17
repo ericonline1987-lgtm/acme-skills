@@ -1,6 +1,6 @@
 ---
 name: defining-done
-description: Turn a request into an outcome contract before building — the observable result, how success is measured, what is out of scope, and which decisions stay with the user. Use whenever someone asks to start, build, set up or "help me get started on" a tool, feature, project or process, especially one touching money, customers or data.
+description: Use this skill whenever someone wants to start, build, set up or plan a tool, feature, project or process, or says "where do I start" or "help me get going", even if they never mention requirements or success. It turns the request into an outcome contract first — the observable result, how it will be measured and checked, what is out of scope, and which decisions stay with the person.
 ---
 
 # Defining done
@@ -34,8 +34,8 @@ the outcome, not the output.
 | Medium (hours, or shared with others) | The template, briefly |
 | Large or irreversible | The full template, confirmed before work starts |
 
-Template: `../../shared/templates/outcome-contract.md`. Check a filled one with
-`python3 ../../shared/scripts/check_sections.py <file> --template ../../shared/templates/outcome-contract.md`.
+Template: `assets/outcome-contract.md`. Check a filled one with
+`python3 scripts/check_sections.py <file> --template assets/outcome-contract.md`.
 
 ## Quality bar
 

@@ -1,0 +1,26 @@
+[
+  {
+    "query": "help me write something so our COO can decide between renewing Salesforce or moving to HubSpot by Nov 15",
+    "should_trigger": true
+  },
+  {
+    "query": "I need a go/no-go doc for launching in Germany next quarter.",
+    "should_trigger": true
+  },
+  {
+    "query": "should we take on this client project? write it up for my boss",
+    "should_trigger": true
+  },
+  {
+    "query": "what is a decision matrix?",
+    "should_trigger": false
+  },
+  {
+    "query": "book a meeting with the COO for Friday",
+    "should_trigger": false
+  },
+  {
+    "query": "what's the capital of Germany?",
+    "should_trigger": false
+  }
+]

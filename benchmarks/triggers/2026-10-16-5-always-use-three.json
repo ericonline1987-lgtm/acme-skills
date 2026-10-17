@@ -1,0 +1,150 @@
+{
+ "model": "sonnet",
+ "spent_usd": 1.32,
+ "stopped_early": false,
+ "results": [
+  {
+   "skill": "reviewing-code",
+   "query": "is this OK? <pastes a 40-line patch>",
+   "should_trigger": true,
+   "invoked": []
+  },
+  {
+   "skill": "reviewing-code",
+   "query": "format this file with black",
+   "should_trigger": false,
+   "invoked": []
+  },
+  {
+   "skill": "reviewing-code",
+   "query": "review this PR: ```diff +rows = db.execute(f\"SELECT * FROM orders WHERE email = '{email}'\")```",
+   "should_trigger": true,
+   "invoked": []
+  },
+  {
+   "skill": "reviewing-code",
+   "query": "what makes a good code review culture?",
+   "should_trigger": false,
+   "invoked": []
+  },
+  {
+   "skill": "reviewing-code",
+   "query": "write a pull request description for these commits",
+   "should_trigger": false,
+   "invoked": []
+  },
+  {
+   "skill": "reviewing-code",
+   "query": "Can you look over my changes before I merge? Anything wrong?",
+   "should_trigger": true,
+   "invoked": [
+    "reviewing-code"
+   ]
+  },
+  {
+   "skill": "verifying-interfaces",
+   "query": "I built an HTML dashboard I'm emailing to leadership tomorrow, make sure it actually works",
+   "should_trigger": true,
+   "invoked": [
+    "verifying-interfaces"
+   ]
+  },
+  {
+   "skill": "verifying-interfaces",
+   "query": "what CSS property makes text bold?",
+   "should_trigger": false,
+   "invoked": []
+  },
+  {
+   "skill": "verifying-interfaces",
+   "query": "screenshot the order status page in the admin panel as proof it shows 'shipped'",
+   "should_trigger": true,
+   "invoked": [
+    "verifying-interfaces"
+   ]
+  },
+  {
+   "skill": "verifying-interfaces",
+   "query": "write the HTML for a contact form",
+   "should_trigger": false,
+   "invoked": []
+  },
+  {
+   "skill": "verifying-interfaces",
+   "query": "Write a Playwright test that an empty cart can't be submitted at checkout.",
+   "should_trigger": true,
+   "invoked": []
+  },
+  {
+   "skill": "writing-tests",
+   "query": "Add a test that reproduces the bug where empty carts can be submitted.",
+   "should_trigger": true,
+   "invoked": []
+  },
+  {
+   "skill": "writing-tests",
+   "query": "what is TDD?",
+   "should_trigger": false,
+   "invoked": []
+  },
+  {
+   "skill": "writing-tests",
+   "query": "coverage on utils/dates.py is 20%, can you fix that",
+   "should_trigger": true,
+   "invoked": [
+    "writing-tests"
+   ]
+  },
+  {
+   "skill": "verifying-interfaces",
+   "query": "design a colour palette for our dashboard",
+   "should_trigger": false,
+   "invoked": [
+    "dataviz"
+   ]
+  },
+  {
+   "skill": "writing-tests",
+   "query": "fix this failing test by updating the snapshot",
+   "should_trigger": false,
+   "invoked": []
+  },
+  {
+   "skill": "writing-tests",
+   "query": "write pytest tests for this parse_duration function",
+   "should_trigger": true,
+   "invoked": [
+    "writing-tests"
+   ]
+  },
+  {
+   "skill": "writing-tests",
+   "query": "set up GitHub Actions to run our tests",
+   "should_trigger": false,
+   "invoked": []
+  }
+ ],
+ "summary": {
+  "reviewing-code": {
+   "pos": 3,
+   "hit": 1,
+   "neg": 3,
+   "clean": 3,
+   "instead": {}
+  },
+  "verifying-interfaces": {
+   "pos": 3,
+   "hit": 2,
+   "neg": 3,
+   "clean": 3,
+   "instead": {}
+  },
+  "writing-tests": {
+   "pos": 3,
+   "hit": 2,
+   "neg": 3,
+   "clean": 3,
+   "instead": {}
+  }
+ }
+}

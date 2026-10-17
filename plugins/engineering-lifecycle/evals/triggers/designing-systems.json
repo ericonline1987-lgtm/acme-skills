@@ -1,0 +1,26 @@
+[
+  {
+    "query": "design how we should move our nightly 4-hour billing cron to something reliable",
+    "should_trigger": true
+  },
+  {
+    "query": "We need an RFC for splitting the monolith's notification code into its own service.",
+    "should_trigger": true
+  },
+  {
+    "query": "how should we architect multi-region failover for the API?",
+    "should_trigger": true
+  },
+  {
+    "query": "what is the CAP theorem?",
+    "should_trigger": false
+  },
+  {
+    "query": "draw me a logo for our system",
+    "should_trigger": false
+  },
+  {
+    "query": "rename the class SystemDesigner to Architect",
+    "should_trigger": false
+  }
+]

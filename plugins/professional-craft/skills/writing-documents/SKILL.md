@@ -1,11 +1,11 @@
 ---
 name: writing-documents
-description: Draft or revise business documents — memos, reports, proposals, plans, status updates, one-pagers, how-tos — so the reader can decide or act correctly on a first read, in house style, within a page budget. Use when someone asks to write, restructure, shorten or improve a document meant for colleagues, leadership or clients.
+description: Always use this skill when writing or reworking any document someone else will read — a memo, report, proposal, plan, status update, one-pager, how-to — even a short one or a quick tidy of notes. It writes for the reader's decision or action, bottom line first and within a page budget, keeps every number and name exactly as given, invents nothing, then cuts and checks it.
 ---
 
 # Writing documents
 
-Follow `../../shared/style-guide.md` for voice, formatting and terminology.
+Follow `references/style-guide.md` for voice, formatting and terminology.
 
 A document succeeds when its reader does the right thing after reading it once. Write
 for that action, then cut everything that doesn't serve it.

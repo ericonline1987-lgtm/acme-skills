@@ -1,0 +1,26 @@
+[
+  {
+    "query": "can you help me get started on an internal tool so finance can approve expense reports without emailing spreadsheets around",
+    "should_trigger": true
+  },
+  {
+    "query": "We're about to build a customer-facing referral programme. Before anyone writes code, help me pin down what success looks like.",
+    "should_trigger": true
+  },
+  {
+    "query": "my boss wants 'better onboarding' by next month, where do I even start",
+    "should_trigger": true
+  },
+  {
+    "query": "what's the difference between a definition of done and acceptance criteria in scrum?",
+    "should_trigger": false
+  },
+  {
+    "query": "mark this jira ticket as done and close the sprint",
+    "should_trigger": false
+  },
+  {
+    "query": "rename the variable `done` to `isComplete` in this function",
+    "should_trigger": false
+  }
+]

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Writing Emails"
+  short_description: "Emails that get the intended response"
+  default_prompt: "Use $writing-emails to draft this email with the ask up front."

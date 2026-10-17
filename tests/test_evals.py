@@ -9,7 +9,8 @@ GRADER_TYPES = {"regex", "tool_order", "tool_used", "file_exists", "llm", "basel
 
 def cases(plugin):
     evals = plugin / "evals"
-    return sorted(c for c in evals.iterdir() if c.is_dir() and c.name != "results") if evals.is_dir() else []
+    return sorted(c for c in evals.iterdir()
+                  if c.is_dir() and c.name not in ("results", "triggers")) if evals.is_dir() else []
 
 
 def graders(case):
@@ -83,6 +84,25 @@ class EvalSuiteTests(unittest.TestCase):
         for plugin in plugin_dirs():
             with self.subTest(plugin=plugin.name):
                 self.assertFalse((plugin / "evals" / "results").exists())
+
+
+class TriggerSetTests(unittest.TestCase):
+    """Trigger query sets in the Agent Skills format ({query, should_trigger}), one per skill."""
+
+    def test_every_skill_has_a_balanced_trigger_set_with_near_misses(self):
+        import json
+        for plugin in plugin_dirs():
+            for skill in skill_dirs(plugin):
+                with self.subTest(skill=skill.name):
+                    path = plugin / "evals" / "triggers" / f"{skill.name}.json"
+                    rows = json.loads(path.read_text(encoding="utf-8"))
+                    self.assertTrue(all(set(r) == {"query", "should_trigger"} for r in rows))
+                    positives = [r for r in rows if r["should_trigger"]]
+                    negatives = [r for r in rows if not r["should_trigger"]]
+                    self.assertGreaterEqual(len(positives), 3)
+                    self.assertGreaterEqual(len(negatives), 3)
+                    queries = [r["query"].strip().lower() for r in rows]
+                    self.assertEqual(len(queries), len(set(queries)), "duplicate query")
 
 
 if __name__ == "__main__":

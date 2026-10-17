@@ -1,0 +1,4 @@
+interface:
+  display_name: "Verifying Interfaces"
+  short_description: "Check pages and UI as people will see them"
+  default_prompt: "Use $verifying-interfaces to make sure this page works before I share it."

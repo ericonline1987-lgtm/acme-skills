@@ -1,0 +1,26 @@
+[
+  {
+    "query": "CI is green and the deploy job passed, write the slack message saying the fix is live",
+    "should_trigger": true
+  },
+  {
+    "query": "Draft release notes saying the login timeout bug is resolved.",
+    "should_trigger": true
+  },
+  {
+    "query": "can you verify my change to the rate limiter actually works in staging before I tell the team",
+    "should_trigger": true
+  },
+  {
+    "query": "what does 'deployment frequency' mean in DORA metrics?",
+    "should_trigger": false
+  },
+  {
+    "query": "write a unit test for this rate limiter function",
+    "should_trigger": false
+  },
+  {
+    "query": "give me a status code for 'resource created'",
+    "should_trigger": false
+  }
+]

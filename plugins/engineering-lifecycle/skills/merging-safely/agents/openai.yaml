@@ -1,0 +1,4 @@
+interface:
+  display_name: "Merging Safely"
+  short_description: "Prove a merge is complete, not just clean"
+  default_prompt: "Use $merging-safely to merge this branch and prove nothing was dropped."

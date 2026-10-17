@@ -1,11 +1,11 @@
 ---
 name: building-presentations
-description: Plan and write slide decks that move an audience to a specific belief or action — storyline of takeaway headlines first, one idea per slide, evidence on every claim, speaker notes, and a rehearsal check. Use when someone asks for a presentation, slide deck, pitch, talk, or meeting slides.
+description: Always use this skill when someone needs slides, a deck, a pitch, a talk or anything they will present, even a rough outline or a last-minute "help, I'm presenting Thursday". It designs backwards from what the audience should believe or do — takeaway headlines, one idea per slide with evidence, answers to the hardest questions, speaker notes and an explicit ask.
 ---
 
 # Building presentations
 
-Follow `../../shared/style-guide.md` for voice and terminology.
+Follow `references/style-guide.md` for voice and terminology.
 
 A deck is a means to an outcome: after it, the audience believes or does something
 specific. Design backwards from that.

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Researching Topics"
+  short_description: "Sourced answers with confidence and gaps"
+  default_prompt: "Use $researching-topics to research the options and recommend one with sources."

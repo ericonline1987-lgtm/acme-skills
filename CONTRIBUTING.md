@@ -18,10 +18,22 @@ A change is accepted when it is measured, not when it reads well.
    Paste the case table into the pull request.
 5. **Bump the version** in the plugin's `plugin.json` and in `.claude-plugin/marketplace.json` together, and add a CHANGELOG line.
 
+## Files several skills share
+
+Edit them in `shared/` only, then run `python3 tools/sync_shared.py`. The copies inside skills are generated; CI fails if they drift. Skills must never reference `../` paths, because Codex and Antigravity install skill folders on their own.
+
+## Manifests for Codex and Antigravity
+
+Edit `.claude-plugin/plugin.json` and `tools/skill_ui.json`, then run `python3 tools/build_manifests.py`. Never hand-edit `plugin.json`, `.codex-plugin/plugin.json`, `agents/openai.yaml` or `.agents/plugins/marketplace.json`.
+
+## Trigger queries
+
+Every skill has `plugins/<plugin>/evals/triggers/<skill>.json`: realistic prompts that should load the skill, and near-misses that share its keywords but need something else. When a description changes, run `python3 tools/run_triggers.py --skills <skill>` and paste the recall and precision into the pull request.
+
 ## Rules the tests enforce
 
-- **Name:** lowercase-hyphenated, matches the folder, at most 64 characters, unique across plugins, no "claude" or "anthropic".
-- **Frontmatter:** only `name` and `description`. The description is plain YAML (no `: ` inside it), at most 400 characters, and contains "Use when" or "Use whenever".
+- **Name:** lowercase-hyphenated with no double hyphens, matches the folder, at most 64 characters, unique across plugins, no "claude" or "anthropic".
+- **Frontmatter:** `name` and `description`, plus only the optional fields the Agent Skills specification allows. The description is plain YAML (no `: ` inside it), at most 400 characters, and leads with when to use the skill ("Use this skill whenever…").
 - **Body:** at most 900 words. Move detail into files beside it.
 - **References** stay inside the plugin. Installed plugins can't see each other's files, so refer to other plugins' skills by name, never by path.
 - **Scripts** start with a usage docstring, use only the standard library, and say what they can't check.

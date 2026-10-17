@@ -1,0 +1,5 @@
+{
+  "$schema": "https://antigravity.google/schemas/v1/plugin.json",
+  "name": "core-rules",
+  "description": "Six always-on working rules injected at session start: outcome and checks first, smallest change, real verification, claim only what evidence supports, sources over hearsay, and a go-ahead before outward or irreversible actions."
+}

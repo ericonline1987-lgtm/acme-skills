@@ -1,0 +1,4 @@
+interface:
+  display_name: "Writing Tests"
+  short_description: "Tests that fail when behaviour breaks"
+  default_prompt: "Use $writing-tests to add tests for this function that would catch a regression."

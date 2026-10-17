@@ -1,0 +1,26 @@
+[
+  {
+    "query": "what are the main options for adding SSO to a B2B SaaS app and which should a 10 person startup pick",
+    "should_trigger": true
+  },
+  {
+    "query": "How do other companies handle on-call compensation? Need this for a proposal.",
+    "should_trigger": true
+  },
+  {
+    "query": "find out whether our competitor's new pricing is per seat or usage based",
+    "should_trigger": true
+  },
+  {
+    "query": "what's 15% of 240?",
+    "should_trigger": false
+  },
+  {
+    "query": "define 'single sign-on' in one sentence",
+    "should_trigger": false
+  },
+  {
+    "query": "summarise this article I pasted",
+    "should_trigger": false
+  }
+]

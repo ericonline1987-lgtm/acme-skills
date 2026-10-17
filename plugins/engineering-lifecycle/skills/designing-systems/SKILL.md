@@ -1,6 +1,6 @@
 ---
 name: designing-systems
-description: Produce a technical design for a feature, service, migration or architecture change by collecting constraints, comparing real options, attacking the favourite, and recording the decision with rollout and rollback. Use when someone asks for a design doc, RFC, architecture proposal, migration plan, or "how should we build X".
+description: Use this skill whenever someone asks how to build, architect, migrate, split or re-platform something, or wants a design doc or RFC. It collects constraints, compares at least two real options, attacks the favourite, names failure modes and blast radius, and plans rollout and rollback, recording the decision for the next engineer.
 ---
 
 # Designing systems

@@ -10,10 +10,10 @@ from pathlib import Path
 from helpers import PLUGINS_DIR, ROOT, load_module
 
 FOUNDATIONS = PLUGINS_DIR / "foundations"
-TEMPLATES = FOUNDATIONS / "shared" / "templates"
+TEMPLATES = ROOT / "shared" / "templates"
 
 ledger = load_module(FOUNDATIONS / "skills/proving-outcomes/scripts/evidence_ledger.py", "evidence_ledger")
-sections = load_module(FOUNDATIONS / "shared/scripts/check_sections.py", "check_sections")
+sections = load_module(ROOT / "shared/scripts/check_sections.py", "check_sections")
 claims = load_module(FOUNDATIONS / "skills/tracing-claims/scripts/claim_check.py", "claim_check")
 add_case = load_module(FOUNDATIONS / "skills/capturing-learning/scripts/add_eval_case.py", "add_eval_case")
 outcomes = load_module(ROOT / "benchmarks/score_outcomes.py", "score_outcomes")

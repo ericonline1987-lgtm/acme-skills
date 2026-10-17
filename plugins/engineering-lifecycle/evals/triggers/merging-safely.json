@@ -1,0 +1,26 @@
+[
+  {
+    "query": "merge release/2.4 into main, I resolved the conflict by taking main's version, can I push?",
+    "should_trigger": true
+  },
+  {
+    "query": "Is feature/tenant-migration ready to merge into main?",
+    "should_trigger": true
+  },
+  {
+    "query": "check that the hotfix from last week actually landed on the 3.1 release branch",
+    "should_trigger": true
+  },
+  {
+    "query": "what's the difference between merge and rebase?",
+    "should_trigger": false
+  },
+  {
+    "query": "merge these two Python dictionaries",
+    "should_trigger": false
+  },
+  {
+    "query": "combine these two CSV files into one",
+    "should_trigger": false
+  }
+]

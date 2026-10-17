@@ -12,10 +12,18 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Offline contract and script tests
+      - name: Offline contract, portability and script tests
         run: python3 -m unittest discover -s tests -v
+      - name: Generated manifests and shared copies are current
+        run: |
+          python3 tools/build_manifests.py --check
+          python3 tools/sync_shared.py --check
+      - name: Agent Skills specification (official skills-ref validator)
+        run: |
+          pip install "skills-ref @ git+https://github.com/agentskills/agentskills@69ef37e9424c0a7ea9dd2293b559e43ec8176379#subdirectory=skills-ref"
+          for skill in plugins/*/skills/*/; do skills-ref validate "$skill"; done
       - name: Docs pass their own claim check
         run: |
-          for f in docs/PLAN.md docs/PLAN-v1.1.md README.md benchmarks/RESULTS.md benchmarks/README.md; do
+          for f in docs/PLAN.md docs/PLAN-v1.1.md docs/RUNTIMES.md README.md benchmarks/RESULTS.md benchmarks/README.md; do
             python3 plugins/foundations/skills/tracing-claims/scripts/claim_check.py "$f"
           done

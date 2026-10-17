@@ -1,0 +1,26 @@
+[
+  {
+    "query": "I built an HTML dashboard I'm emailing to leadership tomorrow, make sure it actually works",
+    "should_trigger": true
+  },
+  {
+    "query": "Write a Playwright test that an empty cart can't be submitted at checkout.",
+    "should_trigger": true
+  },
+  {
+    "query": "screenshot the order status page in the admin panel as proof it shows 'shipped'",
+    "should_trigger": true
+  },
+  {
+    "query": "what CSS property makes text bold?",
+    "should_trigger": false
+  },
+  {
+    "query": "design a colour palette for our dashboard",
+    "should_trigger": false
+  },
+  {
+    "query": "write the HTML for a contact form",
+    "should_trigger": false
+  }
+]
