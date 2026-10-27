@@ -1,6 +1,6 @@
 ---
 name: researching-topics
-description: Always use this skill when someone wants to find out about something they will decide or act on — options on the market, how other companies handle a practice, a competitor's pricing or product, a policy or vendor — even if it sounds like a quick lookup. It delivers a sourced answer first, findings with confidence levels, conflicting sources shown, dated facts and named gaps.
+description: Always use this skill when someone asks you to find out, look into or check something about the outside world they will act on — how others do it, what a product costs, what a rule says now, a competitor, vendor or market — even a quick lookup. It gives a sourced answer first, confidence per finding, conflicting sources, dates and named gaps.
 ---
 
 # Researching topics

@@ -5,35 +5,35 @@
   },
   "metadata": {
     "description": "Skills that aim past output quality: real outcomes, trustworthy work, compounding learning, and people kept in charge.",
-    "version": "1.3.0"
+    "version": "1.4.0"
   },
   "plugins": [
     {
       "name": "foundations",
       "source": "./plugins/foundations",
       "description": "The shared work loop: define done, explore options, delegate and accept, prove the outcome, trace claims, guard actions, capture learning.",
-      "version": "1.2.0",
+      "version": "1.3.0",
       "category": "productivity"
     },
     {
       "name": "engineering-lifecycle",
       "source": "./plugins/engineering-lifecycle",
       "description": "Requirements, design, safe code changes, review, tests, merges, and AI features built on evals.",
-      "version": "1.3.0",
+      "version": "1.4.0",
       "category": "development"
     },
     {
       "name": "professional-craft",
       "source": "./plugins/professional-craft",
       "description": "Documents, decision briefs, research, presentations and emails aimed at the reader's next action.",
-      "version": "1.2.0",
+      "version": "1.3.0",
       "category": "productivity"
     },
     {
       "name": "core-rules",
       "source": "./plugins/core-rules",
-      "description": "Optional: six always-on working rules injected at session start. Adds about 200 tokens to every session.",
-      "version": "1.2.0",
+      "description": "Optional: seven always-on working rules injected at session start, including one that makes agents load the matching skill. Adds about 260 tokens to every session.",
+      "version": "1.3.0",
       "category": "productivity"
     }
   ]

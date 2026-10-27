@@ -38,6 +38,7 @@ class CoreRulesTests(unittest.TestCase):
         self.assertTrue(any("must not add process" in s for s in sources), "need a no-bloat case")
         # Rules 2 and 6 are behaviour a text-only eval cannot exercise (edits, outward actions);
         # they are covered by the skills' own cases (changing-code, guarding-agent-actions).
+        # Rule 7 (load the matching skill) is measured by tools/run_triggers.py --with-rules.
         self.assertTrue({1, 3, 4, 5} <= covered, f"rules with cases: {sorted(covered)} of {rule_count}")
 
 

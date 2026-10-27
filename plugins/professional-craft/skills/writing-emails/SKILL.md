@@ -1,6 +1,6 @@
 ---
 name: writing-emails
-description: Always use this skill when drafting, replying to or improving any work email or message, even a short one — requests, follow-ups, chasers, updates, declines, recruiter replies and bad news. It aims at the one response the email is for, puts the ask in the subject and first two lines, matches tone to the relationship and stakes, and plans the follow-up.
+description: Always use this skill when someone wants an email or work message drafted, answered, chased or softened — a request, reply, follow-up, decline or bad news, to anyone from a colleague to a client — even two lines. It aims at the one response the message is for, puts the ask first, offers two tones for hard news, commits the person to nothing and plans the follow-up.
 ---
 
 # Writing emails

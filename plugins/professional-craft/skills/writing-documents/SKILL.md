@@ -1,6 +1,6 @@
 ---
 name: writing-documents
-description: Always use this skill when writing or reworking any document someone else will read — a memo, report, proposal, plan, status update, one-pager, how-to — even a short one or a quick tidy of notes. It writes for the reader's decision or action, bottom line first and within a page budget, keeps every number and name exactly as given, invents nothing, then cuts and checks it.
+description: Always use this skill when someone wants a document other people will read written, reworked, shortened or tidied — a status update, one-pager, memo, report, proposal, plan or how-to, or rough notes turned into one — even a short one. It writes for the reader's decision, bottom line first within a page budget, keeps every number and name as given, then cuts and checks it.
 ---
 
 # Writing documents

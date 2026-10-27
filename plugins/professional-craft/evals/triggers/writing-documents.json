@@ -22,5 +22,21 @@
   {
     "query": "convert this markdown to a PDF",
     "should_trigger": false
+  },
+  {
+    "query": "write up yesterday's outage for the wider team: checkout down 40 min, bad config push, rolled back, alerting gap",
+    "should_trigger": true
+  },
+  {
+    "query": "draft a one-page proposal for moving our internal docs to Notion",
+    "should_trigger": true
+  },
+  {
+    "query": "clean up these onboarding notes into a how-to for new hires: laptop, accounts, VPN, first PR",
+    "should_trigger": true
+  },
+  {
+    "query": "what's a good font for printed reports?",
+    "should_trigger": false
   }
 ]

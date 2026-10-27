@@ -47,6 +47,7 @@ LABEL_HEADINGS = {"overview", "background", "introduction", "details", "miscella
 HEDGES = re.compile(r"\b(might|perhaps|possibly|somewhat|fairly|quite|relatively|arguably|"
                     r"seemingly|potentially|kind of|sort of)\b", re.I)
 BOLD = re.compile(r"\*\*[^*\n]+\*\*|__[^_\n]+__")
+INLINE_CODE = re.compile(r"`[^`\n]*`")
 PLACEHOLDER = re.compile(r"\bTODO\b|\bTBD\b|\[fill in[^\]]*\]|<(?!/?(?:a|b|i|br|em|strong|code|kbd|sub|sup|span|div|p|img|details|summary|table|tr|td|th|ul|ol|li)\b)[a-z][^<>\n]{3,}>", re.I)
 SENTENCE_SPLIT = re.compile(r"(?<=[.!?])\s+(?=\S)")  # over-splitting only shortens sentences
 WORD = re.compile(r"[A-Za-z0-9][A-Za-z0-9'’-]*")
@@ -113,7 +114,8 @@ def check(text: str, budget: int, max_sentence: int) -> dict:
                 add("long sentence", number, f"{count} words")
         hedges += len(HEDGES.findall(line))
         bolds += len(BOLD.findall(line))
-        for match in PLACEHOLDER.finditer(line):
+        # Inline code shows syntax (`git log -S "<value>"`), not an unfilled gap.
+        for match in PLACEHOLDER.finditer(INLINE_CODE.sub("", line)):
             add("open placeholder", number, match.group(0))
 
     if main_words > budget:

@@ -22,11 +22,15 @@ from here to there. Every claim in it carries its evidence.
    default and fallback, and each channel it writes (files, environment, arguments,
    databases, DNS, caches). Mark each effect as failing **loudly** or **silently** if lost.
    Where two live implementations exist, diff them before choosing either as the baseline.
-3. **Compare at least two options** on the same fields (see `exploring-options` if
-   installed): what each achieves, cost, risk, how it's undone, evidence. Spike the
-   riskiest part when argument alone can't settle it.
-4. **Recommend one, tied to the constraints**, and attack it: the strongest case for the
-   runner-up, the likeliest failure once built, and what evidence would overturn it.
+3. **Compare at least two options and recommend one**, using the method in
+   `exploring-options` if installed: the same fields for each (achieves, cost, risk,
+   undo, graded evidence), a spike where argument can't settle it, and an attack on the
+   favourite. Tie the recommendation to the constraints.
+4. **Get an independent challenge for a high-impact design**: one that migrates or
+   deletes data, is hard to undo, or changes what other teams depend on. Give a reviewer
+   who hasn't seen the discussion only the constraints, options and evidence, and ask
+   how the recommendation fails. A reviewer who watched the design form isn't
+   independent; if none is available, say so in the decision.
 5. **Detail the recommendation**: components, data model, APIs and contracts, failure
    modes (what happens when each dependency is slow or down), observability (logs,
    metrics, alerts), security and privacy.
@@ -45,9 +49,9 @@ from here to there. Every claim in it carries its evidence.
 Before calling the design complete, confirm: every constraint has a source; every
 inventory item has evidence and every "dead" has a baseline; replaced effects are listed
 and marked loud or silent; every blast-radius row is marked; every load-bearing claim is
-graded; the recommendation was attacked and each objection ruled on; each mitigation
-says when it fires, what it checks and what happens on failure; open decisions have
-owners; the first step is named. A design missing a row is reported incomplete, not
+graded; the recommendation was attacked and each objection ruled on, independently for
+a high-impact design; each mitigation says when it fires, what it checks and what
+happens on failure; open decisions have owners; the first step is named. A design missing a row is reported incomplete, not
 padded. A "no gaps" verdict says what was enumerated and how, because a search for
 missing topics cannot find a class no one listed.
 

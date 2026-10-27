@@ -22,5 +22,21 @@
   {
     "query": "write a regex to validate email addresses",
     "should_trigger": false
+  },
+  {
+    "query": "draft a message to my manager asking to move our 1:1 to Thursday",
+    "should_trigger": true
+  },
+  {
+    "query": "customer is angry their refund is two weeks late, help me reply",
+    "should_trigger": true
+  },
+  {
+    "query": "write a follow-up to the investor I met on Tuesday",
+    "should_trigger": true
+  },
+  {
+    "query": "what's the difference between reply and reply-all?",
+    "should_trigger": false
   }
 ]

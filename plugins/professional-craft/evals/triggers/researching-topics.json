@@ -22,5 +22,21 @@
   {
     "query": "summarise this article I pasted",
     "should_trigger": false
+  },
+  {
+    "query": "look into whether we need SOC 2 before we can sell to banks",
+    "should_trigger": true
+  },
+  {
+    "query": "What do Stripe and Adyen charge for EU card payments these days?",
+    "should_trigger": true
+  },
+  {
+    "query": "check what GDPR currently says about storing IP addresses in logs",
+    "should_trigger": true
+  },
+  {
+    "query": "explain what SOC 2 is in two sentences",
+    "should_trigger": false
   }
 ]

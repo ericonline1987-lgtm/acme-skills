@@ -163,6 +163,10 @@ class DocCheckTests(unittest.TestCase):
         self.assertNotIn("open placeholder", self.kinds('# T\n\nThe fix shipped. See <span class="x">here</span>.\n'))
         self.assertIn("open placeholder", self.kinds("# T\n\nOwner: <name of the owner>.\n"))
 
+    def test_placeholders_inside_inline_code_are_syntax(self):
+        self.assertNotIn("open placeholder", self.kinds('# T\n\nThe fix shipped. Run `git log -S "<value>"` to see why.\n'))
+        self.assertIn("open placeholder", self.kinds('# T\n\nRun `make` then ask <the owner name>.\n'))
+
     def test_hedging_and_bold(self):
         self.assertIn("heavy hedging", self.kinds("# T\n\nIt might perhaps possibly work, arguably.\n"))
         self.assertIn("bold overuse", self.kinds("# T\n\n**A** **B** **C** text.\n"))
