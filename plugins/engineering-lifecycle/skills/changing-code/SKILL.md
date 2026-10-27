@@ -16,8 +16,9 @@ and leaves the next person understanding more than you did when you started.
    tests, schemas and docs, and say that history was unavailable.
 2. **Treat the symptom as a lead, not the spec.** A failing test, a bug report or
    another agent's diagnosis says where to look. Decide direction from history and the
-   real contract: if the code is a later deliberate decision, the test is stale; update it
-   and say in the commit message which commit or issue made it stale.
+   real contract: if the code is a later deliberate decision, the test is stale; update it.
+   Whichever way you go, the commit message says why and cites the evidence (the commit
+   or issue that made the test stale, or that shows the code regressed).
 3. **Confirm the cause** with two independent lines of evidence (a reproduction and a
    trace, or a trace and the code path) before a non-obvious or large fix.
 4. **Find every caller.** Grep the symbol, config key, route or path as a literal string
