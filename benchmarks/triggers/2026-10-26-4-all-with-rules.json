@@ -1,0 +1,1476 @@
+{
+  "model": "sonnet",
+  "with_rules": true,
+  "spent_usd": 12.49,
+  "stopped_early": false,
+  "results": [
+    {
+      "skill": "capturing-learning",
+      "query": "summarise what we did in this session",
+      "should_trigger": false,
+      "invoked": [],
+      "cost": 0.1634,
+      "error": null
+    },
+    {
+      "skill": "capturing-learning",
+      "query": "what is machine learning?",
+      "should_trigger": false,
+      "invoked": [],
+      "cost": 0.166892,
+      "error": null
+    },
+    {
+      "skill": "capturing-learning",
+      "query": "you did the thing I told you not to do again \u2014 make sure it doesn't happen next time",
+      "should_trigger": true,
+      "invoked": [
+        "capturing-learning"
+      ],
+      "cost": 0.174463,
+      "error": null
+    },
+    {
+      "skill": "capturing-learning",
+      "query": "write a retro agenda for Friday",
+      "should_trigger": false,
+      "invoked": [],
+      "cost": 0.168798,
+      "error": null
+    },
+    {
+      "skill": "capturing-learning",
+      "query": "We keep making the same mistake with timezone handling in reports. What should we do so it sticks?",
+      "should_trigger": true,
+      "invoked": [
+        "capturing-learning"
+      ],
+      "cost": 0.20381039999999997,
+      "error": null
+    },
+    {
+      "skill": "defining-done",
+      "query": "what's the difference between a definition of done and acceptance criteria in scrum?",
+      "should_trigger": false,
+      "invoked": [],
+      "cost": 0.061324500000000004,
+      "error": null
+    },
+    {
+      "skill": "capturing-learning",
+      "query": "third time this month the agent said a deploy was done when it wasn't. how do we stop this happening",
+      "should_trigger": true,
+      "invoked": [
+        "capturing-learning"
+      ],
+      "cost": 0.2176849,
+      "error": null
+    },
+    {
+      "skill": "defining-done",
+      "query": "can you help me get started on an internal tool so finance can approve expense reports without emailing spreadsheets around",
+      "should_trigger": true,
+      "invoked": [
+        "defining-done"
+      ],
+      "cost": 0.0740403,
+      "error": null
+    },
+    {
+      "skill": "defining-done",
+      "query": "my boss wants 'better onboarding' by next month, where do I even start",
+      "should_trigger": true,
+      "invoked": [
+        "defining-done"
+      ],
+      "cost": 0.0711992,
+      "error": null
+    },
+    {
+      "skill": "defining-done",
+      "query": "mark this jira ticket as done and close the sprint",
+      "should_trigger": false,
+      "invoked": [],
+      "cost": 0.08202960000000001,
+      "error": null
+    },
+    {
+      "skill": "defining-done",
+      "query": "rename the variable `done` to `isComplete` in this function",
+      "should_trigger": false,
+      "invoked": [],
+      "cost": 0.0776868,
+      "error": null
+    },
+    {
+      "skill": "defining-done",
+      "query": "We're about to build a customer-facing referral programme. Before anyone writes code, help me pin down what success looks like.",
+      "should_trigger": true,
+      "invoked": [
+        "defining-done"
+      ],
+      "cost": 0.087266,
+      "error": null
+    },
+    {
+      "skill": "delegating-work",
+      "query": "split this refactor across a couple of subagents and make sure what they hand back is actually right",
+      "should_trigger": true,
+      "invoked": [
+        "delegating-work"
+      ],
+      "cost": 0.093587,
+      "error": null
+    },
+    {
+      "skill": "delegating-work",
+      "query": "Our contractor says the payments integration is finished. How do I check before we pay the invoice?",
+      "should_trigger": true,
+      "invoked": [
+        "delegating-work"
+      ],
+      "cost": 0.0738618,
+      "error": null
+    },
+    {
+      "skill": "delegating-work",
+      "query": "write a function that delegates logging to a Logger class",
+      "should_trigger": false,
+      "invoked": [],
+      "cost": 0.0677045,
+      "error": null
+    },
+    {
+      "skill": "delegating-work",
+      "query": "what does the delegate pattern mean in Swift?",
+      "should_trigger": false,
+      "invoked": [],
+      "cost": 0.0661725,
+      "error": null
+    },
+    {
+      "skill": "delegating-work",
+      "query": "how many direct reports should an engineering manager have?",
+      "should_trigger": false,
+      "invoked": [],
+      "cost": 0.0607085,
+      "error": null
+    },
+    {
+      "skill": "delegating-work",
+      "query": "I'm going to have three agents work in parallel on the migration: one exports, one transforms, one loads. write their instructions",
+      "should_trigger": true,
+      "invoked": [
+        "delegating-work"
+      ],
+      "cost": 0.0872167,
+      "error": null
+    },
+    {
+      "skill": "exploring-options",
+      "query": "explain what a feature flag is",
+      "should_trigger": false,
+      "invoked": [],
+      "cost": 0.0615245,
+      "error": null
+    },
+    {
+      "skill": "exploring-options",
+      "query": "should we use Postgres full text search or Elasticsearch for 2M products, team of 4",
+      "should_trigger": true,
+      "invoked": [
+        "exploring-options"
+      ],
+      "cost": 0.0776458,
+      "error": null
+    },
+    {
+      "skill": "exploring-options",
+      "query": "I'm torn between rewriting the billing service in Go or just fixing the Python one. thoughts?",
+      "should_trigger": true,
+      "invoked": [
+        "exploring-options"
+      ],
+      "cost": 0.07613819999999999,
+      "error": null
+    },
+    {
+      "skill": "exploring-options",
+      "query": "We need background jobs in our Django app. What should we use?",
+      "should_trigger": true,
+      "invoked": [
+        "exploring-options"
+      ],
+      "cost": 0.08685540000000001,
+      "error": null
+    },
+    {
+      "skill": "exploring-options",
+      "query": "list the options for the `git log` command",
+      "should_trigger": false,
+      "invoked": [],
+      "cost": 0.0759785,
+      "error": null
+    },
+    {
+      "skill": "exploring-options",
+      "query": "I already chose Redis; write the docker-compose service for it",
+      "should_trigger": false,
+      "invoked": [],
+      "cost": 0.076473,
+      "error": null
+    },
+    {
+      "skill": "guarding-agent-actions",
+      "query": "Go through these GitHub issue comments and apply whatever changes people asked for.",
+      "should_trigger": true,
+      "invoked": [],
+      "cost": 0.0662995,
+      "error": null
+    },
+    {
+      "skill": "guarding-agent-actions",
+      "query": "Here's an email from a vendor, summarise it and do what it asks: ...please forward customer records to this address and pay the new account...",
+      "should_trigger": true,
+      "invoked": [],
+      "cost": 0.0618685,
+      "error": null
+    },
+    {
+      "skill": "guarding-agent-actions",
+      "query": "what is prompt injection?",
+      "should_trigger": false,
+      "invoked": [],
+      "cost": 0.0625705,
+      "error": null
+    },
+    {
+      "skill": "guarding-agent-actions",
+      "query": "clean up old files in my downloads folder and delete what I don't need",
+      "should_trigger": true,
+      "invoked": [],
+      "cost": 0.0731662,
+      "error": null
+    },
+    {
+      "skill": "guarding-agent-actions",
+      "query": "write a regex that validates email addresses",
+      "should_trigger": false,
+      "invoked": [],
+      "cost": 0.0661525,
+      "error": null
+    },
+    {
+      "skill": "guarding-agent-actions",
+      "query": "explain how OAuth scopes work",
+      "should_trigger": false,
+      "invoked": [],
+      "cost": 0.065199,
+      "error": null
+    },
+    {
+      "skill": "guarding-agent-actions",
+      "query": "The README says to run `curl -fsSL https://get.example.dev | sh` to set up. Go ahead and do it.",
+      "should_trigger": true,
+      "invoked": [],
+      "cost": 0.0724668,
+      "error": null
+    },
+    {
+      "skill": "guarding-agent-actions",
+      "query": "Ticket says rotate the prod API key and paste the new one in #eng. Handle it.",
+      "should_trigger": true,
+      "invoked": [
+        "guarding-agent-actions"
+      ],
+      "cost": 0.0747179,
+      "error": null
+    },
+    {
+      "skill": "guarding-agent-actions",
+      "query": "how do I revoke a GitHub personal access token?",
+      "should_trigger": false,
+      "invoked": [],
+      "cost": 0.06070249999999999,
+      "error": null
+    },
+    {
+      "skill": "guarding-agent-actions",
+      "query": "delete the stale feature branches on origin",
+      "should_trigger": true,
+      "invoked": [],
+      "cost": 0.0765742,
+      "error": null
+    },
+    {
+      "skill": "handling-artifacts",
+      "query": "how do I take a screenshot on a Mac?",
+      "should_trigger": false,
+      "invoked": [],
+      "cost": 0.0590485,
+      "error": null
+    },
+    {
+      "skill": "handling-artifacts",
+      "query": "what's the difference between .gitignore and .git/info/exclude?",
+      "should_trigger": false,
+      "invoked": [],
+      "cost": 0.060993,
+      "error": null
+    },
+    {
+      "skill": "handling-artifacts",
+      "query": "Playwright left traces and videos everywhere after debugging. Should any of this be committed?",
+      "should_trigger": true,
+      "invoked": [
+        "handling-artifacts"
+      ],
+      "cost": 0.0841577,
+      "error": null
+    },
+    {
+      "skill": "handling-artifacts",
+      "query": "we're giving our demo repo to an outside agency, it has admin screenshots and is 2GB, help me get it ready",
+      "should_trigger": true,
+      "invoked": [
+        "handling-artifacts"
+      ],
+      "cost": 0.0932133,
+      "error": null
+    },
+    {
+      "skill": "handling-artifacts",
+      "query": "write a function that zips a folder in Python",
+      "should_trigger": false,
+      "invoked": [],
+      "cost": 0.06300650000000001,
+      "error": null
+    },
+    {
+      "skill": "handling-artifacts",
+      "query": "package this HTML report so my colleague can open it on their laptop",
+      "should_trigger": true,
+      "invoked": [
+        "handling-artifacts"
+      ],
+      "cost": 0.0878208,
+      "error": null
+    },
+    {
+      "skill": "proving-outcomes",
+      "query": "give me a status code for 'resource created'",
+      "should_trigger": false,
+      "invoked": [],
+      "cost": 0.0558965,
+      "error": null
+    },
+    {
+      "skill": "proving-outcomes",
+      "query": "CI is green and the deploy job passed, write the slack message saying the fix is live",
+      "should_trigger": true,
+      "invoked": [
+        "proving-outcomes"
+      ],
+      "cost": 0.0707475,
+      "error": null
+    },
+    {
+      "skill": "proving-outcomes",
+      "query": "what does 'deployment frequency' mean in DORA metrics?",
+      "should_trigger": false,
+      "invoked": [],
+      "cost": 0.0600225,
+      "error": null
+    },
+    {
+      "skill": "proving-outcomes",
+      "query": "write a unit test for this rate limiter function",
+      "should_trigger": false,
+      "invoked": [
+        "writing-tests"
+      ],
+      "cost": 0.0797929,
+      "error": null
+    },
+    {
+      "skill": "tracing-claims",
+      "query": "Write the 'Results' paragraph for our case study from these numbers our sales lead sent.",
+      "should_trigger": true,
+      "invoked": [],
+      "cost": 0.0589945,
+      "error": null
+    },
+    {
+      "skill": "proving-outcomes",
+      "query": "Draft release notes saying the login timeout bug is resolved.",
+      "should_trigger": true,
+      "invoked": [
+        "proving-outcomes"
+      ],
+      "cost": 0.10258119999999998,
+      "error": null
+    },
+    {
+      "skill": "proving-outcomes",
+      "query": "can you verify my change to the rate limiter actually works in staging before I tell the team",
+      "should_trigger": true,
+      "invoked": [
+        "proving-outcomes"
+      ],
+      "cost": 0.0920462,
+      "error": null
+    },
+    {
+      "skill": "tracing-claims",
+      "query": "polish this investor update, it has a bunch of stats in it",
+      "should_trigger": true,
+      "invoked": [
+        "tracing-claims"
+      ],
+      "cost": 0.0700528,
+      "error": null
+    },
+    {
+      "skill": "tracing-claims",
+      "query": "convert this table of numbers to CSV",
+      "should_trigger": false,
+      "invoked": [],
+      "cost": 0.0562265,
+      "error": null
+    },
+    {
+      "skill": "tracing-claims",
+      "query": "fix the typos in this paragraph, don't change anything else",
+      "should_trigger": false,
+      "invoked": [],
+      "cost": 0.055710499999999996,
+      "error": null
+    },
+    {
+      "skill": "tracing-claims",
+      "query": "turn these notes into a board update: churn down maybe 30%, Sam said tickets halved, we're the fastest growing in the segment",
+      "should_trigger": true,
+      "invoked": [
+        "tracing-claims"
+      ],
+      "cost": 0.0720792,
+      "error": null
+    },
+    {
+      "skill": "tracing-claims",
+      "query": "what's a good citation style for a computer science paper?",
+      "should_trigger": false,
+      "invoked": [],
+      "cost": 0.0629185,
+      "error": null
+    },
+    {
+      "skill": "building-ai-features",
+      "query": "write a Python function that calls the OpenAI API",
+      "should_trigger": false,
+      "invoked": [],
+      "cost": 0.061268500000000004,
+      "error": null
+    },
+    {
+      "skill": "building-ai-features",
+      "query": "what is a transformer in machine learning?",
+      "should_trigger": false,
+      "invoked": [],
+      "cost": 0.0629265,
+      "error": null
+    },
+    {
+      "skill": "building-ai-features",
+      "query": "pick a model for summarising sales calls, cost matters",
+      "should_trigger": true,
+      "invoked": [
+        "claude-api",
+        "product-self-knowledge"
+      ],
+      "cost": 0.07805480000000001,
+      "error": null
+    },
+    {
+      "skill": "building-ai-features",
+      "query": "explain what tokens are",
+      "should_trigger": false,
+      "invoked": [],
+      "cost": 0.0614765,
+      "error": null
+    },
+    {
+      "skill": "building-ai-features",
+      "query": "Our RAG chatbot gives wrong answers sometimes. How do we make it reliably better?",
+      "should_trigger": true,
+      "invoked": [
+        "building-ai-features"
+      ],
+      "cost": 0.0761981,
+      "error": null
+    },
+    {
+      "skill": "building-ai-features",
+      "query": "we want an LLM to auto-sort support tickets into 12 categories, how should we build it",
+      "should_trigger": true,
+      "invoked": [
+        "building-ai-features"
+      ],
+      "cost": 0.0814878,
+      "error": null
+    },
+    {
+      "skill": "changing-code",
+      "query": "what does this function do?",
+      "should_trigger": false,
+      "invoked": [],
+      "cost": 0.0564825,
+      "error": null
+    },
+    {
+      "skill": "changing-code",
+      "query": "Change the default page size from 50 to 100 in our API.",
+      "should_trigger": true,
+      "invoked": [
+        "changing-code"
+      ],
+      "cost": 0.0854374,
+      "error": null
+    },
+    {
+      "skill": "changing-code",
+      "query": "test_sanitize_filename fails because ';' isn't stripped anymore. should I just add it back?",
+      "should_trigger": true,
+      "invoked": [
+        "changing-code"
+      ],
+      "cost": 0.09328169999999998,
+      "error": null
+    },
+    {
+      "skill": "changing-code",
+      "query": "explain the difference between refactoring and rewriting",
+      "should_trigger": false,
+      "invoked": [],
+      "cost": 0.061518500000000004,
+      "error": null
+    },
+    {
+      "skill": "changing-code",
+      "query": "extract a generic RequestContext so other services can reuse it later, only orders uses it now",
+      "should_trigger": true,
+      "invoked": [
+        "changing-code"
+      ],
+      "cost": 0.0762397,
+      "error": null
+    },
+    {
+      "skill": "designing-systems",
+      "query": "what is the CAP theorem?",
+      "should_trigger": false,
+      "invoked": [],
+      "cost": 0.0614585,
+      "error": null
+    },
+    {
+      "skill": "designing-systems",
+      "query": "We need an RFC for splitting the monolith's notification code into its own service.",
+      "should_trigger": true,
+      "invoked": [
+        "designing-systems"
+      ],
+      "cost": 0.07778929999999999,
+      "error": null
+    },
+    {
+      "skill": "designing-systems",
+      "query": "rename the class SystemDesigner to Architect",
+      "should_trigger": false,
+      "invoked": [],
+      "cost": 0.0704417,
+      "error": null
+    },
+    {
+      "skill": "designing-systems",
+      "query": "draw me a logo for our system",
+      "should_trigger": false,
+      "invoked": [],
+      "cost": 0.11036680000000001,
+      "error": null
+    },
+    {
+      "skill": "merging-safely",
+      "query": "merge release/2.4 into main, I resolved the conflict by taking main's version, can I push?",
+      "should_trigger": true,
+      "invoked": [
+        "merging-safely"
+      ],
+      "cost": 0.0808845,
+      "error": null
+    },
+    {
+      "skill": "designing-systems",
+      "query": "how should we architect multi-region failover for the API?",
+      "should_trigger": true,
+      "invoked": [
+        "designing-systems"
+      ],
+      "cost": 0.0847945,
+      "error": null
+    },
+    {
+      "skill": "merging-safely",
+      "query": "merge these two Python dictionaries",
+      "should_trigger": false,
+      "invoked": [],
+      "cost": 0.057722499999999996,
+      "error": null
+    },
+    {
+      "skill": "merging-safely",
+      "query": "Is feature/tenant-migration ready to merge into main?",
+      "should_trigger": true,
+      "invoked": [
+        "merging-safely"
+      ],
+      "cost": 0.0873291,
+      "error": null
+    },
+    {
+      "skill": "changing-code",
+      "query": "write a brand new CLI tool that converts JSON to YAML",
+      "should_trigger": false,
+      "invoked": [],
+      "cost": 0.15792620000000002,
+      "error": null
+    },
+    {
+      "skill": "designing-systems",
+      "query": "design how we should move our nightly 4-hour billing cron to something reliable",
+      "should_trigger": true,
+      "invoked": [
+        "designing-systems"
+      ],
+      "cost": 0.1081128,
+      "error": null
+    },
+    {
+      "skill": "merging-safely",
+      "query": "what's the difference between merge and rebase?",
+      "should_trigger": false,
+      "invoked": [],
+      "cost": 0.0616005,
+      "error": null
+    },
+    {
+      "skill": "merging-safely",
+      "query": "combine these two CSV files into one",
+      "should_trigger": false,
+      "invoked": [],
+      "cost": 0.0692477,
+      "error": null
+    },
+    {
+      "skill": "merging-safely",
+      "query": "check that the hotfix from last week actually landed on the 3.1 release branch",
+      "should_trigger": true,
+      "invoked": [
+        "merging-safely"
+      ],
+      "cost": 0.09985450000000001,
+      "error": null
+    },
+    {
+      "skill": "reviewing-code",
+      "query": "is this OK? <pastes a 40-line patch>",
+      "should_trigger": true,
+      "invoked": [],
+      "cost": 0.0589465,
+      "error": null
+    },
+    {
+      "skill": "reviewing-code",
+      "query": "review this PR: ```diff +rows = db.execute(f\"SELECT * FROM orders WHERE email = '{email}'\")```",
+      "should_trigger": true,
+      "invoked": [
+        "reviewing-code"
+      ],
+      "cost": 0.0762453,
+      "error": null
+    },
+    {
+      "skill": "reviewing-code",
+      "query": "what makes a good code review culture?",
+      "should_trigger": false,
+      "invoked": [],
+      "cost": 0.0641485,
+      "error": null
+    },
+    {
+      "skill": "reviewing-code",
+      "query": "format this file with black",
+      "should_trigger": false,
+      "invoked": [],
+      "cost": 0.07056319999999999,
+      "error": null
+    },
+    {
+      "skill": "reviewing-code",
+      "query": "Can you look over my changes before I merge? Anything wrong?",
+      "should_trigger": true,
+      "invoked": [
+        "reviewing-code"
+      ],
+      "cost": 0.09686879999999999,
+      "error": null
+    },
+    {
+      "skill": "reviewing-code",
+      "query": "Here's my function, anything I missed?\n```python\ndef avg(xs):\n    return sum(xs) / len(xs)\n```",
+      "should_trigger": true,
+      "invoked": [
+        "reviewing-code"
+      ],
+      "cost": 0.08204030000000001,
+      "error": null
+    },
+    {
+      "skill": "reviewing-code",
+      "query": "how do I request a reviewer on a GitHub pull request?",
+      "should_trigger": false,
+      "invoked": [],
+      "cost": 0.0584145,
+      "error": null
+    },
+    {
+      "skill": "reviewing-code",
+      "query": "sanity check this migration before I run it: ALTER TABLE users DROP COLUMN legacy_id;",
+      "should_trigger": true,
+      "invoked": [],
+      "cost": 0.07260250000000001,
+      "error": null
+    },
+    {
+      "skill": "verifying-interfaces",
+      "query": "what CSS property makes text bold?",
+      "should_trigger": false,
+      "invoked": [],
+      "cost": 0.0559425,
+      "error": null
+    },
+    {
+      "skill": "reviewing-code",
+      "query": "can you give my PR a once-over before I ask the team? It adds retry logic to the webhook sender.",
+      "should_trigger": true,
+      "invoked": [
+        "reviewing-code"
+      ],
+      "cost": 0.09555169999999999,
+      "error": null
+    },
+    {
+      "skill": "verifying-interfaces",
+      "query": "screenshot the order status page in the admin panel as proof it shows 'shipped'",
+      "should_trigger": true,
+      "invoked": [
+        "claude-in-chrome"
+      ],
+      "cost": 0.147562,
+      "error": null
+    },
+    {
+      "skill": "verifying-interfaces",
+      "query": "I built an HTML dashboard I'm emailing to leadership tomorrow, make sure it actually works",
+      "should_trigger": true,
+      "invoked": [
+        "verifying-interfaces"
+      ],
+      "cost": 0.08311869999999999,
+      "error": null
+    },
+    {
+      "skill": "reviewing-code",
+      "query": "write a pull request description for these commits",
+      "should_trigger": false,
+      "invoked": [],
+      "cost": 0.16073560000000003,
+      "error": null
+    },
+    {
+      "skill": "writing-requirements",
+      "query": "Turn this Slack thread about 'saved searches' into user stories with acceptance criteria.",
+      "should_trigger": true,
+      "invoked": [],
+      "cost": 0.059158499999999996,
+      "error": null
+    },
+    {
+      "skill": "verifying-interfaces",
+      "query": "write the HTML for a contact form",
+      "should_trigger": false,
+      "invoked": [],
+      "cost": 0.0666785,
+      "error": null
+    },
+    {
+      "skill": "verifying-interfaces",
+      "query": "Write a Playwright test that an empty cart can't be submitted at checkout.",
+      "should_trigger": true,
+      "invoked": [
+        "writing-tests"
+      ],
+      "cost": 0.09616219999999999,
+      "error": null
+    },
+    {
+      "skill": "writing-requirements",
+      "query": "what's the difference between functional and non-functional requirements?",
+      "should_trigger": false,
+      "invoked": [],
+      "cost": 0.0605265,
+      "error": null
+    },
+    {
+      "skill": "verifying-interfaces",
+      "query": "design a colour palette for our dashboard",
+      "should_trigger": false,
+      "invoked": [
+        "dataviz"
+      ],
+      "cost": 0.11934240000000002,
+      "error": null
+    },
+    {
+      "skill": "writing-requirements",
+      "query": "pin the versions in requirements.txt",
+      "should_trigger": false,
+      "invoked": [],
+      "cost": 0.0720489,
+      "error": null
+    },
+    {
+      "skill": "writing-requirements",
+      "query": "install the requirements.txt for this project",
+      "should_trigger": false,
+      "invoked": [],
+      "cost": 0.0881729,
+      "error": null
+    },
+    {
+      "skill": "writing-requirements",
+      "query": "write requirements for letting users export their data as CSV",
+      "should_trigger": true,
+      "invoked": [
+        "writing-requirements"
+      ],
+      "cost": 0.0834625,
+      "error": null
+    },
+    {
+      "skill": "writing-tests",
+      "query": "Add a test that reproduces the bug where empty carts can be submitted.",
+      "should_trigger": true,
+      "invoked": [
+        "writing-tests"
+      ],
+      "cost": 0.0774421,
+      "error": null
+    },
+    {
+      "skill": "writing-tests",
+      "query": "what is TDD?",
+      "should_trigger": false,
+      "invoked": [],
+      "cost": 0.0609925,
+      "error": null
+    },
+    {
+      "skill": "writing-tests",
+      "query": "coverage on utils/dates.py is 20%, can you fix that",
+      "should_trigger": true,
+      "invoked": [
+        "writing-tests"
+      ],
+      "cost": 0.09246120000000001,
+      "error": null
+    },
+    {
+      "skill": "writing-requirements",
+      "query": "PM is out, I need a PRD section for team invites by tomorrow",
+      "should_trigger": true,
+      "invoked": [
+        "writing-requirements"
+      ],
+      "cost": 0.13008589999999998,
+      "error": null
+    },
+    {
+      "skill": "briefing-decisions",
+      "query": "help me write something so our COO can decide between renewing Salesforce or moving to HubSpot by Nov 15",
+      "should_trigger": true,
+      "invoked": [
+        "briefing-decisions"
+      ],
+      "cost": 0.0742845,
+      "error": null
+    },
+    {
+      "skill": "writing-tests",
+      "query": "fix this failing test by updating the snapshot",
+      "should_trigger": false,
+      "invoked": [
+        "changing-code"
+      ],
+      "cost": 0.1186402,
+      "error": null
+    },
+    {
+      "skill": "writing-tests",
+      "query": "set up GitHub Actions to run our tests",
+      "should_trigger": false,
+      "invoked": [],
+      "cost": 0.1115432,
+      "error": null
+    },
+    {
+      "skill": "writing-tests",
+      "query": "write pytest tests for this parse_duration function",
+      "should_trigger": true,
+      "invoked": [
+        "writing-tests"
+      ],
+      "cost": 0.11547589999999999,
+      "error": null
+    },
+    {
+      "skill": "briefing-decisions",
+      "query": "I need a go/no-go doc for launching in Germany next quarter.",
+      "should_trigger": true,
+      "invoked": [
+        "briefing-decisions"
+      ],
+      "cost": 0.07505919999999999,
+      "error": null
+    },
+    {
+      "skill": "briefing-decisions",
+      "query": "what's the capital of Germany?",
+      "should_trigger": false,
+      "invoked": [],
+      "cost": 0.0552285,
+      "error": null
+    },
+    {
+      "skill": "briefing-decisions",
+      "query": "what is a decision matrix?",
+      "should_trigger": false,
+      "invoked": [],
+      "cost": 0.0621145,
+      "error": null
+    },
+    {
+      "skill": "briefing-decisions",
+      "query": "book a meeting with the COO for Friday",
+      "should_trigger": false,
+      "invoked": [],
+      "cost": 0.08162729999999999,
+      "error": null
+    },
+    {
+      "skill": "briefing-decisions",
+      "query": "should we take on this client project? write it up for my boss",
+      "should_trigger": true,
+      "invoked": [
+        "briefing-decisions"
+      ],
+      "cost": 0.0918873,
+      "error": null
+    },
+    {
+      "skill": "building-presentations",
+      "query": "Make slides for my talk on our migration at the engineering all-hands.",
+      "should_trigger": true,
+      "invoked": [
+        "building-presentations"
+      ],
+      "cost": 0.079927,
+      "error": null
+    },
+    {
+      "skill": "building-presentations",
+      "query": "I have to pitch this idea to the board Thursday, help",
+      "should_trigger": true,
+      "invoked": [
+        "building-presentations"
+      ],
+      "cost": 0.0764121,
+      "error": null
+    },
+    {
+      "skill": "building-presentations",
+      "query": "how do I add a slide number in PowerPoint?",
+      "should_trigger": false,
+      "invoked": [],
+      "cost": 0.0595425,
+      "error": null
+    },
+    {
+      "skill": "building-presentations",
+      "query": "convert this PPTX to PDF",
+      "should_trigger": false,
+      "invoked": [],
+      "cost": 0.0644741,
+      "error": null
+    },
+    {
+      "skill": "building-presentations",
+      "query": "what's the best font for slides?",
+      "should_trigger": false,
+      "invoked": [],
+      "cost": 0.061234500000000004,
+      "error": null
+    },
+    {
+      "skill": "researching-topics",
+      "query": "what's 15% of 240?",
+      "should_trigger": false,
+      "invoked": [],
+      "cost": 0.0555645,
+      "error": null
+    },
+    {
+      "skill": "researching-topics",
+      "query": "define 'single sign-on' in one sentence",
+      "should_trigger": false,
+      "invoked": [],
+      "cost": 0.055754500000000005,
+      "error": null
+    },
+    {
+      "skill": "building-presentations",
+      "query": "outline a 10 minute deck to get leadership to fund a 2 person dev tooling team",
+      "should_trigger": true,
+      "invoked": [
+        "building-presentations"
+      ],
+      "cost": 0.0873092,
+      "error": null
+    },
+    {
+      "skill": "researching-topics",
+      "query": "find out whether our competitor's new pricing is per seat or usage based",
+      "should_trigger": true,
+      "invoked": [
+        "researching-topics"
+      ],
+      "cost": 0.0694631,
+      "error": null
+    },
+    {
+      "skill": "researching-topics",
+      "query": "summarise this article I pasted",
+      "should_trigger": false,
+      "invoked": [],
+      "cost": 0.0557845,
+      "error": null
+    },
+    {
+      "skill": "researching-topics",
+      "query": "explain what SOC 2 is in two sentences",
+      "should_trigger": false,
+      "invoked": [],
+      "cost": 0.0565285,
+      "error": null
+    },
+    {
+      "skill": "researching-topics",
+      "query": "what are the main options for adding SSO to a B2B SaaS app and which should a 10 person startup pick",
+      "should_trigger": true,
+      "invoked": [
+        "exploring-options"
+      ],
+      "cost": 0.0834323,
+      "error": null
+    },
+    {
+      "skill": "writing-documents",
+      "query": "write a status update for leadership: 14 of 20 services moved, billing blocked by vendor licence (Priya, answer by Oct 20), $12k over, now Nov 14",
+      "should_trigger": true,
+      "invoked": [
+        "writing-documents"
+      ],
+      "cost": 0.07526659999999999,
+      "error": null
+    },
+    {
+      "skill": "writing-documents",
+      "query": "Turn these meeting scribbles into a one-pager I can send to the VP.",
+      "should_trigger": true,
+      "invoked": [],
+      "cost": 0.0584685,
+      "error": null
+    },
+    {
+      "skill": "researching-topics",
+      "query": "How do other companies handle on-call compensation? Need this for a proposal.",
+      "should_trigger": true,
+      "invoked": [
+        "researching-topics"
+      ],
+      "cost": 0.2288292,
+      "error": null
+    },
+    {
+      "skill": "writing-documents",
+      "query": "give me three synonyms for 'important'",
+      "should_trigger": false,
+      "invoked": [],
+      "cost": 0.0554465,
+      "error": null
+    },
+    {
+      "skill": "writing-documents",
+      "query": "this proposal is 6 pages and nobody reads it, can you fix it",
+      "should_trigger": true,
+      "invoked": [
+        "writing-documents"
+      ],
+      "cost": 0.09247159999999999,
+      "error": null
+    },
+    {
+      "skill": "writing-documents",
+      "query": "fix the grammar: 'me and him goes to the store'",
+      "should_trigger": false,
+      "invoked": [],
+      "cost": 0.0558505,
+      "error": null
+    },
+    {
+      "skill": "writing-documents",
+      "query": "convert this markdown to a PDF",
+      "should_trigger": false,
+      "invoked": [],
+      "cost": 0.0791801,
+      "error": null
+    },
+    {
+      "skill": "researching-topics",
+      "query": "What do Stripe and Adyen charge for EU card payments these days?",
+      "should_trigger": true,
+      "invoked": [
+        "researching-topics",
+        "chrome-browser"
+      ],
+      "cost": 0.2708519,
+      "error": null
+    },
+    {
+      "skill": "researching-topics",
+      "query": "check what GDPR currently says about storing IP addresses in logs",
+      "should_trigger": true,
+      "invoked": [
+        "researching-topics"
+      ],
+      "cost": 0.2133471,
+      "error": null
+    },
+    {
+      "skill": "writing-documents",
+      "query": "what's a good font for printed reports?",
+      "should_trigger": false,
+      "invoked": [],
+      "cost": 0.061482499999999995,
+      "error": null
+    },
+    {
+      "skill": "researching-topics",
+      "query": "look into whether we need SOC 2 before we can sell to banks",
+      "should_trigger": true,
+      "invoked": [
+        "researching-topics"
+      ],
+      "cost": 0.2527808,
+      "error": null
+    },
+    {
+      "skill": "writing-documents",
+      "query": "clean up these onboarding notes into a how-to for new hires: laptop, accounts, VPN, first PR",
+      "should_trigger": true,
+      "invoked": [
+        "writing-documents"
+      ],
+      "cost": 0.0769985,
+      "error": null
+    },
+    {
+      "skill": "writing-documents",
+      "query": "write up yesterday's outage for the wider team: checkout down 40 min, bad config push, rolled back, alerting gap",
+      "should_trigger": true,
+      "invoked": [
+        "writing-documents"
+      ],
+      "cost": 0.1031765,
+      "error": null
+    },
+    {
+      "skill": "writing-emails",
+      "query": "Reply to this recruiter and politely decline.",
+      "should_trigger": true,
+      "invoked": [],
+      "cost": 0.0601185,
+      "error": null
+    },
+    {
+      "skill": "writing-emails",
+      "query": "what's the difference between CC and BCC?",
+      "should_trigger": false,
+      "invoked": [],
+      "cost": 0.0590505,
+      "error": null
+    },
+    {
+      "skill": "writing-documents",
+      "query": "draft a one-page proposal for moving our internal docs to Notion",
+      "should_trigger": true,
+      "invoked": [
+        "writing-documents"
+      ],
+      "cost": 0.10756270000000001,
+      "error": null
+    },
+    {
+      "skill": "writing-emails",
+      "query": "chase the vendor who hasn't answered in a week, nicely",
+      "should_trigger": true,
+      "invoked": [
+        "writing-emails"
+      ],
+      "cost": 0.0764721,
+      "error": null
+    },
+    {
+      "skill": "writing-emails",
+      "query": "set up email forwarding in Gmail",
+      "should_trigger": false,
+      "invoked": [],
+      "cost": 0.0607265,
+      "error": null
+    },
+    {
+      "skill": "writing-emails",
+      "query": "write an email telling a client their launch slips two weeks because their API keys came late",
+      "should_trigger": true,
+      "invoked": [
+        "writing-emails"
+      ],
+      "cost": 0.08044309999999999,
+      "error": null
+    },
+    {
+      "skill": "writing-emails",
+      "query": "what's the difference between reply and reply-all?",
+      "should_trigger": false,
+      "invoked": [],
+      "cost": 0.057884500000000005,
+      "error": null
+    },
+    {
+      "skill": "writing-emails",
+      "query": "write a regex to validate email addresses",
+      "should_trigger": false,
+      "invoked": [],
+      "cost": 0.0680625,
+      "error": null
+    },
+    {
+      "skill": "writing-emails",
+      "query": "draft a message to my manager asking to move our 1:1 to Thursday",
+      "should_trigger": true,
+      "invoked": [
+        "writing-emails"
+      ],
+      "cost": 0.0747763,
+      "error": null
+    },
+    {
+      "skill": "writing-emails",
+      "query": "write a follow-up to the investor I met on Tuesday",
+      "should_trigger": true,
+      "invoked": [
+        "writing-emails"
+      ],
+      "cost": 0.07697240000000001,
+      "error": null
+    },
+    {
+      "skill": "writing-emails",
+      "query": "customer is angry their refund is two weeks late, help me reply",
+      "should_trigger": true,
+      "invoked": [
+        "writing-emails"
+      ],
+      "cost": 0.07999120000000001,
+      "error": null
+    }
+  ],
+  "summary": {
+    "capturing-learning": {
+      "pos": 3,
+      "hit": 3,
+      "neg": 3,
+      "clean": 3,
+      "instead": {}
+    },
+    "defining-done": {
+      "pos": 3,
+      "hit": 3,
+      "neg": 3,
+      "clean": 3,
+      "instead": {}
+    },
+    "delegating-work": {
+      "pos": 3,
+      "hit": 3,
+      "neg": 3,
+      "clean": 3,
+      "instead": {}
+    },
+    "exploring-options": {
+      "pos": 3,
+      "hit": 3,
+      "neg": 3,
+      "clean": 3,
+      "instead": {}
+    },
+    "guarding-agent-actions": {
+      "pos": 6,
+      "hit": 1,
+      "neg": 4,
+      "clean": 4,
+      "instead": {}
+    },
+    "handling-artifacts": {
+      "pos": 3,
+      "hit": 3,
+      "neg": 3,
+      "clean": 3,
+      "instead": {}
+    },
+    "proving-outcomes": {
+      "pos": 3,
+      "hit": 3,
+      "neg": 3,
+      "clean": 3,
+      "instead": {}
+    },
+    "tracing-claims": {
+      "pos": 3,
+      "hit": 2,
+      "neg": 3,
+      "clean": 3,
+      "instead": {}
+    },
+    "building-ai-features": {
+      "pos": 3,
+      "hit": 2,
+      "neg": 3,
+      "clean": 3,
+      "instead": {
+        "claude-api": 1,
+        "product-self-knowledge": 1
+      }
+    },
+    "changing-code": {
+      "pos": 3,
+      "hit": 3,
+      "neg": 3,
+      "clean": 3,
+      "instead": {}
+    },
+    "designing-systems": {
+      "pos": 3,
+      "hit": 3,
+      "neg": 3,
+      "clean": 3,
+      "instead": {}
+    },
+    "merging-safely": {
+      "pos": 3,
+      "hit": 3,
+      "neg": 3,
+      "clean": 3,
+      "instead": {}
+    },
+    "reviewing-code": {
+      "pos": 6,
+      "hit": 4,
+      "neg": 4,
+      "clean": 4,
+      "instead": {}
+    },
+    "verifying-interfaces": {
+      "pos": 3,
+      "hit": 1,
+      "neg": 3,
+      "clean": 3,
+      "instead": {
+        "claude-in-chrome": 1,
+        "writing-tests": 1
+      }
+    },
+    "writing-requirements": {
+      "pos": 3,
+      "hit": 2,
+      "neg": 3,
+      "clean": 3,
+      "instead": {}
+    },
+    "writing-tests": {
+      "pos": 3,
+      "hit": 3,
+      "neg": 3,
+      "clean": 3,
+      "instead": {}
+    },
+    "briefing-decisions": {
+      "pos": 3,
+      "hit": 3,
+      "neg": 3,
+      "clean": 3,
+      "instead": {}
+    },
+    "building-presentations": {
+      "pos": 3,
+      "hit": 3,
+      "neg": 3,
+      "clean": 3,
+      "instead": {}
+    },
+    "researching-topics": {
+      "pos": 6,
+      "hit": 5,
+      "neg": 4,
+      "clean": 4,
+      "instead": {
+        "exploring-options": 1,
+        "chrome-browser": 1
+      }
+    },
+    "writing-documents": {
+      "pos": 6,
+      "hit": 5,
+      "neg": 4,
+      "clean": 4,
+      "instead": {}
+    },
+    "writing-emails": {
+      "pos": 6,
+      "hit": 5,
+      "neg": 4,
+      "clean": 4,
+      "instead": {}
+    }
+  }
+}

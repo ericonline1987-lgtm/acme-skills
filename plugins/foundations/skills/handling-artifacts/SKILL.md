@@ -67,19 +67,12 @@ early turns your proof into their false alarm.
 
 ## 6. A repository grown heavy with binaries
 
-Classify media by role: keep maintained, reviewable assets under the project's policy
-(for example Git LFS); keep generated, sensitive or oversized files out of history.
-Deleting a file today doesn't shrink history. To reclaim space, in this order:
-
-1. Diagnose: `python3 scripts/repo_weight.py --repo <path>` lists the largest objects in
-   all history and whether each is still in the current tree. Old deleted binaries are
-   usually the real weight.
-2. Back up outside the repo: `git bundle create <path> --all` and `git bundle verify <path>`.
-3. Show the person exactly which paths will be removed; wait for an explicit yes.
-4. Rewrite with `git filter-repo`, naming only the diagnosed paths.
-5. Re-run step 1 and confirm the weight is gone and nothing else was.
-6. Agree the force-push with everyone who uses the repository; every clone must re-clone,
-   and an old clone pushed back restores what was removed.
+Deleting a file today doesn't shrink history, and rewriting history is irreversible for
+everyone who has a clone. Diagnose first with
+`python3 scripts/repo_weight.py --repo <path>`, then follow
+`references/rewriting-history.md` (back up, get an explicit yes on the exact paths,
+rewrite, re-check, agree the force-push). The same file covers a secret committed to
+history.
 
 ## Report
 

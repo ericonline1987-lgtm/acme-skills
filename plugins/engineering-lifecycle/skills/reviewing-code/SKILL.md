@@ -1,6 +1,6 @@
 ---
 name: reviewing-code
-description: Always use this skill when someone shares code, a diff, a patch or a pull request and wants an opinion — "review this", "is this OK", "anything wrong", "look over my changes before I merge" — even for a few lines. It checks the change achieves its intent safely — correctness, callers and history, security, tests that would catch a regression — and ends with severity-grouped comments and a verdict.
+description: Always use this skill when someone shares code, a diff, a patch or a pull request and wants any opinion on it — "review this", "is this OK", "anything wrong", "look over my changes" — even a few lines that look fine at a glance. It confirms each finding before reporting it, checks callers, history, project rules and tests, and ends with grouped findings and a merge recommendation.
 ---
 
 # Reviewing code
@@ -89,8 +89,9 @@ suggestion only when applying it fixes the problem completely. Otherwise describ
 fix. One comment per issue. Comment on the code, not the author.
 
 Keep two short sections apart from the findings: Suggestions (optional improvements,
-only if the person asked for a thorough review) and Noticed, out of scope. If nothing was confirmed, say so plainly: "No confirmed issues. Checked: bugs,
-introduced risks, callers and history, project rules, tests."
+only if the person asked for a thorough review) and Noticed, out of scope. If nothing
+was confirmed, say so plainly: "No confirmed issues. Checked: bugs, introduced risks,
+callers and history, project rules, tests."
 
 ## 6. Recommendation, not approval
 

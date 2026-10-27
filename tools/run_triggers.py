@@ -17,7 +17,7 @@ Codex and Antigravity: the same JSON files work with their non-interactive modes
 this runner only drives Claude Code. See docs/RUNTIMES.md.
 
 Usage:
-  tools/run_triggers.py [--model sonnet] [--max-turns 6] [--skills a b] [-j 6] [--max-cost-usd 8] [--out FILE]
+  tools/run_triggers.py [--model sonnet] [--max-turns 6] [--skills a b] [-j 6] [--max-cost-usd 8] [--with-rules] [--out FILE]
 
 Exit status: 0 completed, 2 claude CLI missing or bad input, 3 stopped at the cost ceiling.
 """
@@ -70,11 +70,11 @@ def invoked_skills(stream: str) -> tuple[list[str], float, bool]:
     return skills, cost, limited
 
 
-def run_one(row: dict, model: str, max_turns: int) -> dict:
+def run_one(row: dict, model: str, max_turns: int, with_rules: bool = False) -> dict:
     cmd = ["claude", "-p", row["query"], "--output-format", "stream-json", "--verbose",
            "--max-turns", str(max_turns), "--model", model,
            "--disallowedTools", "Bash,Write,Edit,NotebookEdit,WebFetch,WebSearch"]
-    for plugin in SKILL_PLUGINS:
+    for plugin in SKILL_PLUGINS + (["core-rules"] if with_rules else []):
         cmd += ["--plugin-dir", str(ROOT / "plugins" / plugin)]
     try:
         out = subprocess.run(cmd, capture_output=True, text=True, timeout=180, stdin=subprocess.DEVNULL).stdout
@@ -109,6 +109,8 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--skills", nargs="+")
     parser.add_argument("-j", "--concurrency", type=int, default=6)
     parser.add_argument("--max-cost-usd", type=float, default=8.0)
+    parser.add_argument("--with-rules", action="store_true",
+                        help="also load the optional core-rules plugin, to measure its effect on triggering")
     parser.add_argument("--out", type=Path, default=Path("trigger-results.json"))
     args = parser.parse_args(argv)
     if not shutil.which("claude"):
@@ -127,7 +129,7 @@ def main(argv: list[str] | None = None) -> int:
         while queue or pending:
             while queue and len(pending) < args.concurrency and not stopped:
                 row = queue.pop(0)
-                pending[pool.submit(run_one, row, args.model, args.max_turns)] = row
+                pending[pool.submit(run_one, row, args.model, args.max_turns, args.with_rules)] = row
             if not pending:
                 break
             done, _ = cf.wait(pending, return_when=cf.FIRST_COMPLETED)
@@ -143,7 +145,7 @@ def main(argv: list[str] | None = None) -> int:
                 queue.clear()
 
     per = summarise(results)
-    args.out.write_text(json.dumps({"model": args.model, "spent_usd": round(spent, 2),
+    args.out.write_text(json.dumps({"model": args.model, "with_rules": args.with_rules, "spent_usd": round(spent, 2),
                                     "stopped_early": stopped, "results": results, "summary": per}, indent=2))
     print(f"{'skill':24} recall  precision  loaded instead")
     tot = {"pos": 0, "hit": 0, "neg": 0, "clean": 0}

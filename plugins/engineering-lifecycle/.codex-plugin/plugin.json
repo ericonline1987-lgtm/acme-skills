@@ -1,6 +1,6 @@
 {
   "name": "engineering-lifecycle",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "description": "Engineering skills aimed at outcomes: requirements with success measures, designs that compare real options, safe code changes, reviews, tests that catch regressions, provably complete merges, and AI features built on evals.",
   "author": {
     "name": "ericonline1987-lgtm",

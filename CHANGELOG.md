@@ -1,5 +1,28 @@
 # Changelog
 
+## 1.4.0 (2026-10-26)
+
+Fixes from a review of all 21 skills: skills that rarely loaded, eval cases that couldn't tell a skill from plain Claude, and lessons that lived only in the results file. See benchmarks/RESULTS.md.
+
+### Changed
+- `core-rules` (1.3.0): rule 1 asks for a checkable outcome, with a target number where one applies; a seventh rule makes the agent load the matching skill before answering, even when the task looks simple; rule 6 also keeps passwords, tokens and keys out of output, logs and commits. Now recommended for every install.
+- Descriptions of `guarding-agent-actions`, `researching-topics`, `reviewing-code`, `writing-documents` and `writing-emails` name the request categories people actually use.
+- `guarding-agent-actions`: following a file's instructions authorises the task, not every command in it; stop on piping a download into a shell, sending data out or posting a secret.
+- `writing-emails`: unknowns stay bare placeholders, never guessed values; a chaser always carries a reply-by date.
+- `changing-code`: the commit message records the reason whichever way a stale-test question is decided.
+- `building-ai-features`: a new section on trusting an eval before its scores (check the grader by hand, check outputs exist, match the harness, keep cases that discriminate, test routing on its own), from this project's own measurement lessons.
+- `designing-systems`: the options method points to `exploring-options`; high-impact designs need an independent challenge.
+- `handling-artifacts`: the history-rewrite procedure moved to `references/rewriting-history.md`, which also covers secrets committed to history; `proving-outcomes` points to it rather than repeating the rule.
+- `merging-safely` uses the same verdicts as `reviewing-code`.
+- `doc_check.py` ignores placeholders inside inline code, which are syntax, not gaps. Regression test added.
+- `tools/run_triggers.py --with-rules` loads the core-rules plugin to measure its effect.
+
+### Added
+- Eval cases `email-partial-commitment`, `email-vendor-chaser` and `guarding-readme-setup`; four held-out trigger queries for each of the five reworded skills.
+
+### Fixed
+- `verify-dashboard-before-sending`: removed a criterion the prompt never asks for and reworded one the judge failed on correct answers.
+
 ## 1.3.0 (2026-10-26)
 
 `reviewing-code` adopts the Claude Code team's review practices. See benchmarks/RESULTS.md.

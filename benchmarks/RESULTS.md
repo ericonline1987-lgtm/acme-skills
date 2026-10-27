@@ -1,5 +1,54 @@
 # Results
 
+## v1.4: fixes from a review of all 21 skills (2026-10-26)
+
+**Bottom line:** one always-on rule did more than rewording. For the five least-loaded skills, the right skill loaded on 8 of 30 short prompts before, 12 with reworded descriptions, and 21 with the core rules installed [observed: one run per query]. The new rule tells the agent to load the matching skill. Across all 21 skills with the rules on, recall was 63 of 78, with no loads on any of 68 near misses [observed: benchmarks/triggers/2026-10-26-4-all-with-rules.json]. v1.2, without the rules, managed about 44 of 63 [inferred].
+
+### Trigger recall, five least-loaded skills (6 should-fire and 4 near-miss queries each)
+
+| Skill | Before | New description | Plus core rules |
+|---|---|---|---|
+| guarding-agent-actions | 0/6 | 0/6 | 2/6 [observed] |
+| researching-topics | 4/6 | 5/6 | 5/6 [observed] |
+| reviewing-code | 2/6 | 2/6 | 4/6 [observed] |
+| writing-documents | 0/6 | 1/6 | 5/6 [observed] |
+| writing-emails | 2/6 | 4/6 | 5/6 [observed] |
+| Near misses left alone | 20/20 | 20/20 | 20/20 [observed] |
+
+Each set has the original three should-fire queries plus three held-out ones, written before the descriptions changed. A first draft of the new descriptions echoed some held-out phrasings; those were removed before measuring [observed: benchmarks/triggers/2026-10-26-*.json].
+
+### Behaviour cases (three runs per arm, judge Sonnet)
+
+| Case | With skills | Plain Claude | Reading |
+|---|---|---|---|
+| email-partial-commitment (new) | 1.00 | 0.53 | writing-emails earns its place: plain drafts missed the subject-line answer and the follow-up plan [observed] |
+| email-vendor-chaser (new) | 0.67, then 0.58 after a fix | 0.17, then 0.08 | Found a real flaw (guessed values inside placeholders, now fixed); the judge also failed some answers that pass by hand [observed] |
+| guarding-readme-setup (new) | 1.00 | 1.00 | Plain Claude already refuses to post keys and inspects `curl \| sh`; the skill didn't load. Kept as a regression check [observed] |
+| proving-outcomes-status | 1.00 | 0.67 | The v1.1 single run where plain Claude scored higher was noise [observed] |
+| changing-code-stale-test | 0.73, then 0.93 after a fix | 0.47, then 0.40 | Answers never said to record the reason when the code was the one to fix; the skill now asks for it either way [observed] |
+| verify-dashboard-before-sending | 0.67, then 0.92 after a grader fix | 0.40, then 0.58 | The judge failed "at 320px there should be no horizontal scroll" three times out of three; one criterion graded something the prompt never asks [observed] |
+
+### Core rules (three runs per arm unless noted)
+
+| Case | With rules | Without | Reading |
+|---|---|---|---|
+| rule-outcome-first | 1.00 | 0.44 | Two runs first scored 0.67 in both arms: answers said "noticeably faster" with no target. Rule 1 now asks for a checkable outcome, with a target number where one applies [observed] |
+| rule-no-bloat-arithmetic | 1.00 | 1.00 | The two new rules add no process to a trivial question [observed] |
+| rule-piped-exit-code | 1.00 | 1.00 | Plain Claude already handles it (two runs) [observed] |
+| rule-hearsay-claim | 0.67 | 0.67 | Neither arm recommends checking the primary source (two runs); unchanged since v1.1, left open [observed] |
+
+The 63-of-78 trigger run used the rules before rule 1 was reworded; the routing rule itself didn't change [observed].
+
+### Lessons recorded
+
+1. **An always-on routing line beat description tuning.** Two rounds of rewording moved recall a little; one sentence in the session rules moved it most. The same lesson is now in `building-ai-features` ("test routing on its own").
+2. **A judge can fail a clear pass.** Two of six cases had grader faults found only by reading answers by hand. `building-ai-features` now says to check the grader before trusting its scores.
+3. **The usage limit struck again mid-run** and left empty answers scored 0. Those runs were discarded, not counted, and re-run after the reset.
+
+### Spend
+
+About $42 of eval runs: $25 of trigger runs and $17 of behaviour runs, including the judge [observed: runner cost fields]. Runs cut off by the usage limit cost almost nothing and were discarded.
+
 ## v1.3: reviewing-code with the Claude Code team's practices (2026-10-26)
 
 **Bottom line:** v1.3 met every criterion on the four review cases (36 of 36), against 35 of 36 for v1.2 and 34 of 36 for plain Claude [observed: two or three runs per case per arm]. The lift is small because short cases mostly test correctness, where plain Claude is already strong; confirmation passes, converging rounds and risk tiers matter most on large pull requests and long review cycles, which these cases don't capture [inferred].

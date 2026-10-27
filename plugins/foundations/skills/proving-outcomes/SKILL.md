@@ -44,6 +44,6 @@ it" is not "it mattered". Name the rung you reached; never borrow a higher one.
 - Report the supported rung in the first sentence of the hand-off.
 - "Not checked" is never empty by omission: name what the evidence does not cover.
 - Keep evidence the consumer will look at (a test upload, a probe file) until they
-  confirm; cleaning it up early turns your proof into their false alarm.
+  confirm (see `handling-artifacts`).
 - When a later rung contradicts an earlier one, the later rung wins; report the
   regression, don't explain it away.

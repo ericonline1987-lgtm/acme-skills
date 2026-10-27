@@ -17,7 +17,22 @@ quality as something you measure on every change, like latency.
   where the right answer is to refuse or ask. Add each production failure as a new case.
 - Choose graders per criterion: exact or programmatic checks where possible, a model
   grader with a written rubric where judgment is needed, human review for a sample.
+  One grader per criterion, not one pass/fail for the whole answer, so a disagreement
+  points at something specific.
 - Run every case several times; report rates with their spread, not single results.
+
+## Trust the eval before trusting its scores
+
+- **Check the grader.** Grade a sample by hand and compare. A small judge model, or a
+  rubric word like "briefly", can flip results at the margin; grade what matters.
+- **Check the outputs exist.** A rate limit, timeout or crash leaves empty or cut-off
+  answers that score as failures. Look for them before reading any score.
+- **Match the eval to where the feature runs.** A case that assumes files, tools or
+  context the harness doesn't provide measures the harness, not the feature.
+- **Keep cases that discriminate.** If the baseline (no change, a plain model) passes a
+  case too, it can't show the change helped; add one the baseline fails.
+- **Test routing on its own.** If the model chooses between tools, prompts or skills,
+  measure that choice with should-fire queries and near misses that share keywords.
 
 ## 2. Design the context, not just the prompt
 

@@ -77,5 +77,5 @@ source ref, context or a test command stops the set until resolved.
 
 repo · target · source ref · merge base · left/right counts · hotspots · conflicts and
 reasoning · completeness proof and method · tests run · push status · residual risks.
-A readiness check ends **green / yellow / red** with "merge as is", "merge after named
-fixes", or "do not merge".
+A readiness check ends with the same verdicts as `reviewing-code`: **merge**, **merge
+after fixes** (naming each), or **don't merge yet** (naming what blocks it).

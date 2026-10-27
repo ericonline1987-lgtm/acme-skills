@@ -22,5 +22,21 @@
   {
     "query": "write a pull request description for these commits",
     "should_trigger": false
+  },
+  {
+    "query": "Here's my function, anything I missed?\n```python\ndef avg(xs):\n    return sum(xs) / len(xs)\n```",
+    "should_trigger": true
+  },
+  {
+    "query": "sanity check this migration before I run it: ALTER TABLE users DROP COLUMN legacy_id;",
+    "should_trigger": true
+  },
+  {
+    "query": "can you give my PR a once-over before I ask the team? It adds retry logic to the webhook sender.",
+    "should_trigger": true
+  },
+  {
+    "query": "how do I request a reviewer on a GitHub pull request?",
+    "should_trigger": false
   }
 ]
