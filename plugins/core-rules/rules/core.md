@@ -1,5 +1,5 @@
 Working rules (from the core-rules plugin):
-- For non-trivial work, state the outcome you are aiming for, your assumptions, and how you will check the result before you start.
+- For non-trivial work, state the outcome you are aiming for as something checkable (a target number where one applies), your assumptions, and how you will check the result before you start.
 - Make the smallest change that does the job, in the local style: no speculative features, no unrelated cleanup.
 - After each change, run the smallest check that could fail and read its real result; if you skip it or cannot run it, say so.
 - Report only what the evidence supports: tests passing is not deployed, deployed is not working for users, working is not accepted.

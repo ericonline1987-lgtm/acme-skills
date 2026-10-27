@@ -2,7 +2,7 @@
 
 ## v1.4: fixes from a review of all 21 skills (2026-10-26)
 
-**Bottom line:** the biggest lever was not wording but one always-on rule. On short prompts for the five least-loaded skills, the right skill loaded on 8 of 30 queries before, 12 of 30 with reworded descriptions, and 21 of 30 once the core rules (with the new "load the matching skill" rule) were installed, with no false loads on 20 near misses [observed: one run per query]. FULL_SUITE_LINE
+**Bottom line:** one always-on rule did more than rewording. For the five least-loaded skills, the right skill loaded on 8 of 30 short prompts before, 12 with reworded descriptions, and 21 with the core rules installed [observed: one run per query]. The new rule tells the agent to load the matching skill. Across all 21 skills with the rules on, recall was 63 of 78, with no loads on any of 68 near misses [observed: benchmarks/triggers/2026-10-26-4-all-with-rules.json]. v1.2, without the rules, managed about 44 of 63 [inferred].
 
 ### Trigger recall, five least-loaded skills (6 should-fire and 4 near-miss queries each)
 
@@ -15,7 +15,7 @@
 | writing-emails | 2/6 | 4/6 | 5/6 [observed] |
 | Near misses left alone | 20/20 | 20/20 | 20/20 [observed] |
 
-Each set mixes the original three queries with three held out: written before the descriptions changed, and phrasings echoed by a first draft of the descriptions were removed so the held-out queries stayed unseen [observed: benchmarks/triggers/2026-10-26-*.json].
+Each set has the original three should-fire queries plus three held-out ones, written before the descriptions changed. A first draft of the new descriptions echoed some held-out phrasings; those were removed before measuring [observed: benchmarks/triggers/2026-10-26-*.json].
 
 ### Behaviour cases (three runs per arm, judge Sonnet)
 
@@ -28,6 +28,17 @@ Each set mixes the original three queries with three held out: written before th
 | changing-code-stale-test | 0.73, then 0.93 after a fix | 0.47, then 0.40 | Answers never said to record the reason when the code was the one to fix; the skill now asks for it either way [observed] |
 | verify-dashboard-before-sending | 0.67, then 0.92 after a grader fix | 0.40, then 0.58 | The judge failed "at 320px there should be no horizontal scroll" three times out of three; one criterion graded something the prompt never asks [observed] |
 
+### Core rules (three runs per arm unless noted)
+
+| Case | With rules | Without | Reading |
+|---|---|---|---|
+| rule-outcome-first | 1.00 | 0.44 | Two runs first scored 0.67 in both arms: answers said "noticeably faster" with no target. Rule 1 now asks for a checkable outcome, with a target number where one applies [observed] |
+| rule-no-bloat-arithmetic | 1.00 | 1.00 | The two new rules add no process to a trivial question [observed] |
+| rule-piped-exit-code | 1.00 | 1.00 | Plain Claude already handles it (two runs) [observed] |
+| rule-hearsay-claim | 0.67 | 0.67 | Neither arm recommends checking the primary source (two runs); unchanged since v1.1, left open [observed] |
+
+The 63-of-78 trigger run used the rules before rule 1 was reworded; the routing rule itself didn't change [observed].
+
 ### Lessons recorded
 
 1. **An always-on routing line beat description tuning.** Two rounds of rewording moved recall a little; one sentence in the session rules moved it most. The same lesson is now in `building-ai-features` ("test routing on its own").
@@ -36,7 +47,7 @@ Each set mixes the original three queries with three held out: written before th
 
 ### Spend
 
-SPEND_LINE
+About $42 of eval runs: $25 of trigger runs and $17 of behaviour runs, including the judge [observed: runner cost fields]. Runs cut off by the usage limit cost almost nothing and were discarded.
 
 ## v1.3: reviewing-code with the Claude Code team's practices (2026-10-26)
 

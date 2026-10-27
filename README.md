@@ -11,7 +11,7 @@ In a head-to-head on cases written by another skill set's author, these skills p
 | `foundations` | defining-done · exploring-options · delegating-work · proving-outcomes · tracing-claims · capturing-learning · guarding-agent-actions · handling-artifacts | ~878 tokens |
 | `engineering-lifecycle` | writing-requirements · designing-systems · changing-code · reviewing-code · writing-tests · merging-safely · verifying-interfaces · building-ai-features | ~971 tokens |
 | `professional-craft` | writing-documents · briefing-decisions · researching-topics · building-presentations · writing-emails | ~574 tokens |
-| `core-rules` (optional, recommended) | Seven always-on working rules injected at session start. One makes the agent load the matching skill: on short prompts for the five least-used skills, skills loaded on 21 of 30 queries with it against 12 of 30 without [observed, one run per query] | ~260 tokens |
+| `core-rules` (optional, recommended) | Seven always-on working rules injected at session start. One makes the agent load the matching skill: on short prompts, skills loaded on 21 of 30 queries for the five least-used skills with the rules against 12 of 30 without, and 63 of 78 across all skills, with no false loads [observed, one run per query] | ~260 tokens |
 
 Each plugin works alone. `foundations` holds the shared work loop (define done → explore → do → prove → hand off → learn), and the other two work better alongside it.
 

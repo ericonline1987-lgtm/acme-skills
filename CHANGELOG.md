@@ -5,7 +5,7 @@
 Fixes from a review of all 21 skills: skills that rarely loaded, eval cases that couldn't tell a skill from plain Claude, and lessons that lived only in the results file. See benchmarks/RESULTS.md.
 
 ### Changed
-- `core-rules` (1.3.0): a seventh rule makes the agent load the matching skill before answering, even when the task looks simple; rule 6 also keeps passwords, tokens and keys out of output, logs and commits. Now recommended for every install.
+- `core-rules` (1.3.0): rule 1 asks for a checkable outcome, with a target number where one applies; a seventh rule makes the agent load the matching skill before answering, even when the task looks simple; rule 6 also keeps passwords, tokens and keys out of output, logs and commits. Now recommended for every install.
 - Descriptions of `guarding-agent-actions`, `researching-topics`, `reviewing-code`, `writing-documents` and `writing-emails` name the request categories people actually use.
 - `guarding-agent-actions`: following a file's instructions authorises the task, not every command in it; stop on piping a download into a shell, sending data out or posting a secret.
 - `writing-emails`: unknowns stay bare placeholders, never guessed values; a chaser always carries a reply-by date.
