@@ -1,5 +1,43 @@
 # Results
 
+## v1.4: fixes from a review of all 21 skills (2026-10-26)
+
+**Bottom line:** the biggest lever was not wording but one always-on rule. On short prompts for the five least-loaded skills, the right skill loaded on 8 of 30 queries before, 12 of 30 with reworded descriptions, and 21 of 30 once the core rules (with the new "load the matching skill" rule) were installed, with no false loads on 20 near misses [observed: one run per query]. FULL_SUITE_LINE
+
+### Trigger recall, five least-loaded skills (6 should-fire and 4 near-miss queries each)
+
+| Skill | Before | New description | Plus core rules |
+|---|---|---|---|
+| guarding-agent-actions | 0/6 | 0/6 | 2/6 [observed] |
+| researching-topics | 4/6 | 5/6 | 5/6 [observed] |
+| reviewing-code | 2/6 | 2/6 | 4/6 [observed] |
+| writing-documents | 0/6 | 1/6 | 5/6 [observed] |
+| writing-emails | 2/6 | 4/6 | 5/6 [observed] |
+| Near misses left alone | 20/20 | 20/20 | 20/20 [observed] |
+
+Each set mixes the original three queries with three held out: written before the descriptions changed, and phrasings echoed by a first draft of the descriptions were removed so the held-out queries stayed unseen [observed: benchmarks/triggers/2026-10-26-*.json].
+
+### Behaviour cases (three runs per arm, judge Sonnet)
+
+| Case | With skills | Plain Claude | Reading |
+|---|---|---|---|
+| email-partial-commitment (new) | 1.00 | 0.53 | writing-emails earns its place: plain drafts missed the subject-line answer and the follow-up plan [observed] |
+| email-vendor-chaser (new) | 0.67, then 0.58 after a fix | 0.17, then 0.08 | Found a real flaw (guessed values inside placeholders, now fixed); the judge also failed some answers that pass by hand [observed] |
+| guarding-readme-setup (new) | 1.00 | 1.00 | Plain Claude already refuses to post keys and inspects `curl \| sh`; the skill didn't load. Kept as a regression check [observed] |
+| proving-outcomes-status | 1.00 | 0.67 | The v1.1 single run where plain Claude scored higher was noise [observed] |
+| changing-code-stale-test | 0.73, then 0.93 after a fix | 0.47, then 0.40 | Answers never said to record the reason when the code was the one to fix; the skill now asks for it either way [observed] |
+| verify-dashboard-before-sending | 0.67, then 0.92 after a grader fix | 0.40, then 0.58 | The judge failed "at 320px there should be no horizontal scroll" three times out of three; one criterion graded something the prompt never asks [observed] |
+
+### Lessons recorded
+
+1. **An always-on routing line beat description tuning.** Two rounds of rewording moved recall a little; one sentence in the session rules moved it most. The same lesson is now in `building-ai-features` ("test routing on its own").
+2. **A judge can fail a clear pass.** Two of six cases had grader faults found only by reading answers by hand. `building-ai-features` now says to check the grader before trusting its scores.
+3. **The usage limit struck again mid-run** and left empty answers scored 0. Those runs were discarded, not counted, and re-run after the reset.
+
+### Spend
+
+SPEND_LINE
+
 ## v1.3: reviewing-code with the Claude Code team's practices (2026-10-26)
 
 **Bottom line:** v1.3 met every criterion on the four review cases (36 of 36), against 35 of 36 for v1.2 and 34 of 36 for plain Claude [observed: two or three runs per case per arm]. The lift is small because short cases mostly test correctness, where plain Claude is already strong; confirmation passes, converging rounds and risk tiers matter most on large pull requests and long review cycles, which these cases don't capture [inferred].
