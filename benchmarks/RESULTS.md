@@ -1,5 +1,25 @@
 # Results
 
+## v1.3: reviewing-code with the Claude Code team's practices (2026-10-26)
+
+**Bottom line:** v1.3 met every criterion on the four review cases (36 of 36), against 35 of 36 for v1.2 and 34 of 36 for plain Claude [observed: two or three runs per case per arm]. The lift is small because short cases mostly test correctness, where plain Claude is already strong; confirmation passes, converging rounds and risk tiers matter most on large pull requests and long review cycles, which these cases don't capture [inferred].
+
+| Case | v1.3 | v1.2 | Plain Claude |
+|---|---|---|---|
+| Clean change beside a pre-existing bug (3 runs) | 12/12 | 12/12 | 12/12 [observed] |
+| Project rule violation | 6/6 | 6/6 | 6/6 [observed] |
+| SQL injection in a new endpoint | 10/10 | 10/10 | 8/10 [observed] |
+| Third round, recurring bug class | 8/8 | 7/8 | 8/8 [observed] |
+
+### Lessons recorded
+
+1. **An eval case can plant a real problem by accident.** The first pre-existing-bug case computed a discount in floating point. Both skill versions declined to recommend merging, correctly, because floats are a real risk for money; the case was rewritten around a change that is genuinely fine [observed].
+2. **Severity needs calibrating, not only finding.** One v1.3 run called missing boundary tests "Blocking". The skill now blocks only on new behaviour with no test at all; a missing edge case is a should-fix, in line with the Claude Code team treating coverage remarks as below the bar [observed].
+
+### Spend
+
+About $4.55 of eval runs [observed: runner cost lines].
+
 ## v1.2: trigger recall on short, casual prompts (2026-10-16)
 
 **Bottom line:** on short, everyday prompts the skills were accurate but reticent. A baseline sample fired on 3 of 18 should-trigger queries [observed]. Rewriting every description to lead with the user's intent, following the Agent Skills guide, raised that to about 44 of 63 across all 21 skills, with no false triggers on any of the 63 near-miss queries [observed: benchmarks/triggers/]. Three queries per skill, one model (Sonnet): indicative, not a release gate.

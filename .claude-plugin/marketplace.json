@@ -5,7 +5,7 @@
   },
   "metadata": {
     "description": "Skills that aim past output quality: real outcomes, trustworthy work, compounding learning, and people kept in charge.",
-    "version": "1.2.0"
+    "version": "1.3.0"
   },
   "plugins": [
     {
@@ -19,7 +19,7 @@
       "name": "engineering-lifecycle",
       "source": "./plugins/engineering-lifecycle",
       "description": "Requirements, design, safe code changes, review, tests, merges, and AI features built on evals.",
-      "version": "1.2.0",
+      "version": "1.3.0",
       "category": "development"
     },
     {

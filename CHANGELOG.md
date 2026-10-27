@@ -1,5 +1,15 @@
 # Changelog
 
+## 1.3.0 (2026-10-26)
+
+`reviewing-code` adopts the Claude Code team's review practices. See benchmarks/RESULTS.md.
+
+### Changed
+- `reviewing-code` (engineering-lifecycle 1.3.0): a risk tier set by what the change touches decides review depth and required human approval; findings come from separate single-purpose passes (bugs in the diff, introduced risks, callers and history, project rules, tests); every finding is confirmed independently before it is reported; an explicit list of things never to report (pre-existing problems, style, linter-enforced issues, generic advice, deliberately silenced issues); project rules files are checked by path and quoted; re-reviews look only at new changes, never repeat a finding, name the bug class and stop line-editing at round three; suggestions only when they fully fix the issue; the verdict is a recommendation, never a substitute for the human approval the tier requires.
+
+### Added
+- Eval cases `review-preexisting-bug`, `review-third-round` and `review-project-rule`.
+
 ## 1.2.0 (2026-10-16)
 
 First-class Codex and Antigravity support, and descriptions tuned for trigger recall. See docs/RUNTIMES.md and benchmarks/RESULTS.md.
