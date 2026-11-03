@@ -28,6 +28,8 @@ for that action, then cut everything that doesn't serve it.
    delivered and planned items are labelled; unknowns are TBD, never invented. Add
    nothing the source didn't say: no years, causes, dependencies, owners or actions. An
    inference you think matters goes in your note to the person, not into the document.
+   A figure you work out (a difference, a percentage, a total) is new too: leave it out
+   or say how it was derived.
    Grade or cite load-bearing claims (see `tracing-claims` if installed).
 7. **Cut to budget.** Delete every sentence whose removal loses no fact, every hedge
    that doesn't carry real uncertainty, and every summary of what was just said. Then run
@@ -44,7 +46,7 @@ for that action, then cut everything that doesn't serve it.
 | Document | Order | Budget |
 |---|---|---|
 | Decision memo | Recommendation and why now; options on the same fields; the ask | 1 page (use `briefing-decisions`) |
-| Status update | Takeaway; blockers and risks; numbers with their basis; next actions with owner and date | 1 page |
+| Status update | Takeaway; blockers and risks; numbers with their basis; next actions with owner and date, only those the source gives | 1 page |
 | Proposal | Problem; proposed approach; cost and timeline; risks; ask | 2 pages |
 | Report | Summary of findings; findings with evidence; implications; appendix | 2 pages + appendix |
 | How-to / runbook | When to use it; prerequisites; numbered steps each with its check; rollback; done when | 12 steps |

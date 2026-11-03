@@ -13,6 +13,15 @@ for pc in "$@"; do p=${pc%%:*}; c=${pc#*:}; f=$OUT/$c.json
   if clean $f; then echo "skip $c"; continue; fi
   claude plugin eval plugins/$p --case "$c" --runs 3 -j 6 --judge-model sonnet --trust-plugin --max-cost-usd 4 --json $f > $OUT/$c.log 2>&1
   rm -rf plugins/*/evals/results
-  if grep -qiE "hit your .{0,20}limit|usage limit|rate limit" $f $OUT/$c.log 2>/dev/null; then echo "LIMIT at $c"; exit 3; fi
+  # A limit shows up in run errors or failed judge calls, never in the answer text (answers may discuss limits).
+  if python3 - "$f" <<'PY'
+import json,re,sys
+try: d=json.load(open(sys.argv[1]))
+except Exception: sys.exit(1)
+msgs=[str(r.get('error') or '') for c in d['cases'] for a in c['arms'].values() for r in a]
+msgs+=[g.get('explanation','') for c in d['cases'] for a in c['arms'].values() for r in a for g in r['graders'] if 'grader threw' in g.get('explanation','')]
+sys.exit(0 if any(re.search(r'limit', m, re.I) for m in msgs) else 1)
+PY
+  then echo "LIMIT at $c"; exit 3; fi
   if clean $f; then echo "done $c"; else echo "unclean $c"; fi
 done; echo ALL-DONE

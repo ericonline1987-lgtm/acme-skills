@@ -18,7 +18,9 @@ transcript; this skill puts them where they will be used.
 
 1. **State the lesson in one sentence** as a rule someone could follow: "Check the
    deployed image tag, not the release name, before claiming rung 2." Not "be careful".
-2. **Decide where it belongs:**
+2. **Decide where it belongs, and pick one home.** An enforced check (a hook, a test, a
+   CI step) beats an instruction someone must remember; don't also copy the rule into
+   memory or a second instructions file, where copies drift. Say which home you chose:
 
    | Lesson type | Destination |
    |---|---|

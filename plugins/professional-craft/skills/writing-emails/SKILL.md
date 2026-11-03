@@ -27,8 +27,9 @@ An email is done when the reader does what it was for. Write for that response.
    declining, pushing back), offer two versions — for example direct and softer — and
    say what each trades off. Don't send anything that commits the person to something
    they haven't agreed.
-7. **Plan the follow-up.** Say when to follow up if there's no reply, and draft the
-   one-line nudge if the stakes warrant it.
+7. **Plan the follow-up** for each item left open: who to chase (the reader, or the
+   colleague who owns the answer) and when. Draft the one-line nudge if the stakes
+   warrant it.
 
 ## Checks
 
