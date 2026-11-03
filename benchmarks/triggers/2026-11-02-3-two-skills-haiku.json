@@ -1,0 +1,234 @@
+{
+  "model": "haiku",
+  "with_rules": false,
+  "spent_usd": 0.15,
+  "stopped_early": false,
+  "results": [
+    {
+      "skill": "changing-code",
+      "query": "what does this function do?",
+      "should_trigger": false,
+      "invoked": [],
+      "cost": 0.0030940900000000003,
+      "error": null
+    },
+    {
+      "skill": "changing-code",
+      "query": "explain the difference between refactoring and rewriting",
+      "should_trigger": false,
+      "invoked": [],
+      "cost": 0.0032258800000000004,
+      "error": null
+    },
+    {
+      "skill": "changing-code",
+      "query": "rename this function everywhere it's used",
+      "should_trigger": true,
+      "invoked": [],
+      "cost": 0.0030865400000000005,
+      "error": null
+    },
+    {
+      "skill": "changing-code",
+      "query": "Change the default page size from 50 to 100 in our API.",
+      "should_trigger": true,
+      "invoked": [
+        "changing-code"
+      ],
+      "cost": 0.00637737,
+      "error": null
+    },
+    {
+      "skill": "changing-code",
+      "query": "change the default page size from 50 to 200",
+      "should_trigger": true,
+      "invoked": [],
+      "cost": 0.00474086,
+      "error": null
+    },
+    {
+      "skill": "changing-code",
+      "query": "extract a generic RequestContext so other services can reuse it later, only orders uses it now",
+      "should_trigger": true,
+      "invoked": [
+        "changing-code"
+      ],
+      "cost": 0.005627780000000001,
+      "error": null
+    },
+    {
+      "skill": "changing-code",
+      "query": "test_sanitize_filename fails because ';' isn't stripped anymore. should I just add it back?",
+      "should_trigger": true,
+      "invoked": [
+        "changing-code"
+      ],
+      "cost": 0.00694453,
+      "error": null
+    },
+    {
+      "skill": "changing-code",
+      "query": "bump the requests library to the latest major version",
+      "should_trigger": true,
+      "invoked": [],
+      "cost": 0.00482453,
+      "error": null
+    },
+    {
+      "skill": "changing-code",
+      "query": "move this helper into utils.py and fix the imports",
+      "should_trigger": true,
+      "invoked": [],
+      "cost": 0.00620006,
+      "error": null
+    },
+    {
+      "skill": "changing-code",
+      "query": "change the HTTP client timeout from 30 to 60 seconds",
+      "should_trigger": true,
+      "invoked": [],
+      "cost": 0.006023400000000002,
+      "error": null
+    },
+    {
+      "skill": "changing-code",
+      "query": "upgrade React from 17 to 18 in our app",
+      "should_trigger": true,
+      "invoked": [
+        "changing-code"
+      ],
+      "cost": 0.00757862,
+      "error": null
+    },
+    {
+      "skill": "verifying-interfaces",
+      "query": "what CSS property makes text bold?",
+      "should_trigger": false,
+      "invoked": [],
+      "cost": 0.00294054,
+      "error": null
+    },
+    {
+      "skill": "verifying-interfaces",
+      "query": "I built an HTML dashboard I'm emailing to leadership tomorrow, make sure it actually works",
+      "should_trigger": true,
+      "invoked": [
+        "verifying-interfaces"
+      ],
+      "cost": 0.00616661,
+      "error": null
+    },
+    {
+      "skill": "verifying-interfaces",
+      "query": "screenshot the order status page in the admin panel as proof it shows 'shipped'",
+      "should_trigger": true,
+      "invoked": [],
+      "cost": 0.00902903,
+      "error": null
+    },
+    {
+      "skill": "verifying-interfaces",
+      "query": "design a colour palette for our dashboard",
+      "should_trigger": false,
+      "invoked": [
+        "dataviz"
+      ],
+      "cost": 0.007785660000000001,
+      "error": null
+    },
+    {
+      "skill": "verifying-interfaces",
+      "query": "my screenshot shows the cards overlapping, should I revert the CSS?",
+      "should_trigger": true,
+      "invoked": [],
+      "cost": 0.0059825699999999996,
+      "error": null
+    },
+    {
+      "skill": "verifying-interfaces",
+      "query": "write the HTML for a contact form",
+      "should_trigger": false,
+      "invoked": [],
+      "cost": 0.0048838300000000005,
+      "error": null
+    },
+    {
+      "skill": "verifying-interfaces",
+      "query": "make sure the new pricing page works on phones before we launch",
+      "should_trigger": true,
+      "invoked": [],
+      "cost": 0.0065801,
+      "error": null
+    },
+    {
+      "skill": "changing-code",
+      "query": "write a brand new CLI tool that converts JSON to YAML",
+      "should_trigger": false,
+      "invoked": [],
+      "cost": 0.015783725000000002,
+      "error": null
+    },
+    {
+      "skill": "verifying-interfaces",
+      "query": "take a screenshot of the new settings page so I can show my manager it works",
+      "should_trigger": true,
+      "invoked": [],
+      "cost": 0.00468146,
+      "error": null
+    },
+    {
+      "skill": "verifying-interfaces",
+      "query": "the checkout button looks cut off on my phone, can you check the page?",
+      "should_trigger": true,
+      "invoked": [],
+      "cost": 0.004814540000000001,
+      "error": null
+    },
+    {
+      "skill": "verifying-interfaces",
+      "query": "Write a Playwright test that an empty cart can't be submitted at checkout.",
+      "should_trigger": true,
+      "invoked": [],
+      "cost": 0.00939273,
+      "error": null
+    },
+    {
+      "skill": "verifying-interfaces",
+      "query": "write an end-to-end test for the signup flow",
+      "should_trigger": true,
+      "invoked": [
+        "writing-tests"
+      ],
+      "cost": 0.007168280000000001,
+      "error": null
+    },
+    {
+      "skill": "verifying-interfaces",
+      "query": "does our landing page pass basic accessibility checks?",
+      "should_trigger": true,
+      "invoked": [
+        "verifying-interfaces"
+      ],
+      "cost": 0.00671585,
+      "error": null
+    }
+  ],
+  "summary": {
+    "changing-code": {
+      "pos": 9,
+      "hit": 4,
+      "neg": 3,
+      "clean": 3,
+      "instead": {}
+    },
+    "verifying-interfaces": {
+      "pos": 9,
+      "hit": 2,
+      "neg": 3,
+      "clean": 3,
+      "instead": {
+        "writing-tests": 1
+      }
+    }
+  }
+}
