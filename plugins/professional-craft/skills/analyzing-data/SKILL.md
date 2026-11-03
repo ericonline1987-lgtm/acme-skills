@@ -34,6 +34,8 @@ decision it feeds; that decides how precise it needs to be.
 - Use the median and range for skewed data such as money and durations; a mean alone
   hides them.
 - Compare like with like: the same definition, the same period length, the same season.
+- When groups differ in mix (devices, regions, customer types), compare within each
+  segment as well as overall. An overall difference can reverse inside every segment.
 
 ## 4. Say what the numbers can't show
 

@@ -25,8 +25,9 @@ should be able to decide from the first screen and check the reasoning below it.
    - what would change the recommendation (the evidence that would flip it);
    - the main risk of the recommended option and how it is contained;
    - what is reversible and what isn't.
-6. **Make the ask explicit**: exactly what the decider needs to say yes or no to, and
-   what happens next in each case.
+6. **Make the ask explicit**: a line starting "Ask:" near the top that says exactly what
+   the decider needs to say yes or no to, and what happens next in each case. A brief
+   without that line isn't finished, even when the recommendation is clear.
 7. **Keep the decider in charge.** Present trade-offs honestly, including the best case
    for the option you didn't recommend. Don't hide an option to steer the choice.
 

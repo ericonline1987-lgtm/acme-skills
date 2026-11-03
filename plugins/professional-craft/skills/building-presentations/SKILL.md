@@ -26,7 +26,11 @@ specific. Design backwards from that.
    exact values, a diagram for a flow, a screenshot for proof something happened. If a
    sentence says it, skip the visual.
 6. **Write speaker notes** with what to say, not what's on the slide.
-7. **Close with the ask** or the one thing to remember, and what happens next.
+7. **Close with the ask, written out** as the last slide's headline: what you want
+   decided or done, with the amount, the owner, the timeframe and how success will be
+   judged ("Fund two engineers for six months; we report build time monthly"). A slide
+   titled "The ask" is not an ask. If it's not a decision, close with the one thing to
+   remember and what happens next.
 8. **Rehearsal check.** Read the headlines alone in under a minute: does the argument
    land? Time the full run against the slot at about one to two minutes per slide.
    Move what doesn't fit to the appendix.

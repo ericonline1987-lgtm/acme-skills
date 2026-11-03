@@ -11,6 +11,8 @@ this writes:
   plugins/<p>/skills/<s>/agents/openai.yaml  Codex UI metadata per skill
   .agents/plugins/marketplace.json           Codex marketplace (skill plugins only; rules
                                              reach Codex through AGENTS.md, see tools/install.py)
+  plugins/<p>/hooks/hooks.json, routing.md   Claude Code session-start line naming the plugin's
+                                             skills, so the agent loads them on short prompts
 
 Usage:
   tools/build_manifests.py          write the files
@@ -88,6 +90,13 @@ def plan() -> dict[Path, str]:
             "policy": {"installation": "AVAILABLE", "authentication": "ON_INSTALL"},
             "category": pui["category"],
         })
+
+        skill_names = sorted(p.name for p in (pdir / "skills").iterdir() if (p / "SKILL.md").is_file())
+        files[pdir / "hooks" / "routing.md"] = (
+            f"Skills from the {name} plugin: {', '.join(skill_names)}. When one covers the task, "
+            "load it before answering, even if the task looks simple.\n")
+        files[pdir / "hooks" / "hooks.json"] = dump({"hooks": {"SessionStart": [{"hooks": [
+            {"type": "command", "command": 'cat "${CLAUDE_PLUGIN_ROOT}/hooks/routing.md"'}]}]}})
 
         for skill_dir in sorted(p for p in (pdir / "skills").iterdir() if (p / "SKILL.md").is_file()):
             display, short, prompt = ui["skills"][skill_dir.name]

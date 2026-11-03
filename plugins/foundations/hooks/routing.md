@@ -1,0 +1,1 @@
+Skills from the foundations plugin: capturing-learning, defining-done, delegating-work, exploring-options, guarding-agent-actions, handling-artifacts, planning-work, proving-outcomes, running-long-tasks, tracing-claims. When one covers the task, load it before answering, even if the task looks simple.

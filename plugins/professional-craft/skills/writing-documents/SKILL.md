@@ -25,8 +25,10 @@ for that action, then cut everything that doesn't serve it.
    list for steps, a diagram for flows and structures, a sentence for one fact. When the
    document has a figure, or is an HTML page or deck, read `references/figures-and-html.md`.
 6. **Keep source truth.** Numbers, names, owners and dates use the source's wording;
-   delivered and planned items are labelled; unknowns are TBD, never invented. Grade or
-   cite load-bearing claims (see `tracing-claims` if installed).
+   delivered and planned items are labelled; unknowns are TBD, never invented. Add
+   nothing the source didn't say: no years, causes, dependencies, owners or actions. An
+   inference you think matters goes in your note to the person, not into the document.
+   Grade or cite load-bearing claims (see `tracing-claims` if installed).
 7. **Cut to budget.** Delete every sentence whose removal loses no fact, every hedge
    that doesn't carry real uncertainty, and every summary of what was just said. Then run
    `python3 scripts/doc_check.py <file.md> --budget <words>` for the mechanical defects

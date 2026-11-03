@@ -1,0 +1,1 @@
+Skills from the engineering-lifecycle plugin: authoring-skills, building-ai-features, changing-code, debugging-failures, designing-systems, merging-safely, reviewing-code, verifying-interfaces, writing-requirements, writing-tests. When one covers the task, load it before answering, even if the task looks simple.
