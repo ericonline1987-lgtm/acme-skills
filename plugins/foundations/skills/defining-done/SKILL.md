@@ -31,7 +31,7 @@ the outcome, not the output.
 | Task size | Contract |
 |---|---|
 | Small (minutes, easy to redo) | One sentence: outcome + how you will know |
-| Medium (hours, or shared with others) | The template, briefly |
+| Medium (hours, or shared with others) | One line per template heading, about 150 words, then start or ask the one question that blocks you |
 | Large or irreversible | The full template, confirmed before work starts |
 
 Template: `assets/outcome-contract.md`. Check a filled one with
