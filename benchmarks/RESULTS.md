@@ -1,5 +1,72 @@
 # Results
 
+## v2.0: release gate (2026-11-02)
+
+**Bottom line:** on the 59 cases that test a skill, answers scored 0.96 with the skills installed against 0.69 for plain Claude (share of criteria met, averaged over cases; three runs per arm on every case) [observed: benchmarks/gate/2026-11-02-summary.json]. Every shipped skill beats plain Claude on at least one case; `writing-tests` does so by the smallest margin. One drafted skill, `analyzing-data`, was dropped because plain Claude passed all of its cases on both Opus and Haiku. Trigger results on two models follow below once measured.
+
+### Method
+
+- `tools/run_gate.sh`: every case in every plugin, `claude plugin eval` with three runs per arm, with and without the plugin, judge Sonnet, one grader per criterion. The agent is the session's default model (Opus class) unless noted.
+- Each skill has at least two should-fire cases, written to find something plain Claude skips. Cases whose wording assumed a shell or files now say none is available.
+- Every failing answer with the skill was read by hand before deciding whether the skill or the grader was wrong. Eleven graders were reworded after failing correct answers, in most cases in both arms; each change and its reason is in that case's SOURCE.md.
+- Runs cut off by the usage limit, including failed judge calls, were discarded and re-run, never scored.
+
+### Per skill (mean case score; the case with the largest lift shown)
+
+| Skill | Cases | With skill | Plain Claude | Largest lift |
+|---|---|---|---|---|
+| authoring-skills | 2 | 1.00 | 0.50 | skill-commit-messages (1.00 vs 0.50) |
+| briefing-decisions | 2 | 0.94 | 0.47 | brief-crm-decision (1.00 vs 0.53) |
+| building-ai-features | 2 | 0.86 | 0.67 | ai-ticket-classifier (0.93 vs 0.67) |
+| building-presentations | 2 | 0.97 | 0.80 | deck-devtools-funding (1.00 vs 0.80) |
+| capturing-learning | 2 | 0.97 | 0.78 | learning-linter-again (1.00 vs 0.75) |
+| changing-code | 2 | 0.90 | 0.45 | change-page-size-default (1.00 vs 0.50) |
+| debugging-failures | 2 | 1.00 | 0.77 | debug-checkout-500s (1.00 vs 0.53) |
+| defining-done | 2 | 0.90 | 0.36 | done-weekly-sales-report (0.80 vs 0.13) |
+| delegating-work | 3 | 0.92 | 0.84 | delegate-parallel-fixes (0.83 vs 0.58) |
+| designing-systems | 2 | 0.97 | 0.70 | design-cron-to-kafka (1.00 vs 0.60) |
+| exploring-options | 2 | 1.00 | 0.48 | options-db-one-line (1.00 vs 0.44) |
+| guarding-agent-actions | 4 | 0.97 | 0.88 | guard-temp-admin-token (0.89 vs 0.67) |
+| handling-artifacts | 2 | 0.97 | 0.57 | artifacts-repo-for-agency (0.93 vs 0.47) |
+| merging-safely | 2 | 0.97 | 0.85 | merge-took-ours (1.00 vs 0.83) |
+| planning-work | 2 | 1.00 | 0.90 | plan-launch-order (1.00 vs 0.80) |
+| proving-outcomes | 2 | 0.97 | 0.67 | prove-email-template (1.00 vs 0.67) |
+| researching-topics | 2 | 0.94 | 0.80 | research-sso-options (0.87 vs 0.60) |
+| reviewing-code | 4 | 1.00 | 0.89 | review-sql-diff (1.00 vs 0.80) |
+| running-long-tasks | 2 | 0.96 | 0.57 | long-batch-overnight (1.00 vs 0.47) |
+| tracing-claims | 3 | 0.98 | 0.84 | claims-headline-scope (1.00 vs 0.58) |
+| verifying-interfaces | 2 | 1.00 | 0.71 | verify-dashboard-before-sending (1.00 vs 0.50) |
+| writing-documents | 2 | 0.97 | 0.60 | documents-migration-status (0.93 vs 0.53) |
+| writing-emails | 3 | 0.95 | 0.45 | email-vendor-chaser (0.92 vs 0.08) |
+| writing-requirements | 2 | 0.94 | 0.56 | requirements-csv-export (0.87 vs 0.40) |
+| writing-tests | 2 | 0.92 | 0.88 | tests-parse-percent (0.83 vs 0.75) |
+
+### Smaller model (Haiku), cases where the default model showed little or no lift
+
+Plain Haiku also passed most of them: all three `analyzing-data` cases, the delegation, case-study, vendor-email and project-rule cases scored the same with and without [observed]. `tests-parse-percent` rose from 0.75 to 0.92 and `debug-flaky-retry` from 0.92 to 1.00 with the skills [observed]. So the thin margins are not an artefact of a strong agent model.
+
+### What the gate changed
+
+- Skill fixes found by reading failed answers: documents add nothing the source didn't give (no years, derived figures or invented actions); briefs carry an "Ask:" line; decks close on a written-out ask; email asks are phrased as the small answer wanted, with a follow-up for every open item; contracts for medium tasks are five lines and name the decision a report feeds; one home per lesson; a claim keeps its strength ("fell after" never becomes "cut"); one-line option answers still name the flip condition and a cheap check; core rule 5 names its source.
+- A routing line in each skill plugin: `researching-topics` didn't load on the SSO question until it was added.
+- `analyzing-data` dropped (above).
+
+### Lessons recorded
+
+1. **A stop check must read error fields, never answer text.** One answer about rate limits stopped the gate; the trigger runner had the same bug in v1.2.
+2. **A usage limit also breaks judge calls,** which then score as ordinary failures inside runs that otherwise completed. Check grader errors too before reading any score.
+3. **Literal grader words fail good answers:** "ends with", "named explicitly", "checks" (when nothing can be run), "one behaviour per test" (against parametrized tests). Grade the substance.
+4. **Write the case before the skill.** Plain Claude already handled the data-analysis traps chosen for `analyzing-data`; testing first would have shown that before writing it.
+
+### Not verified
+
+- Codex and Antigravity: neither CLI could be installed in this environment. `tools/smoke_check.py` checks that a runtime sees every skill; run it where they're installed.
+- Cases are text-only: skills whose value is in tool use (running code on real files, acting in a real repository) are measured only by what the agent says it would do.
+
+### Spend
+
+Being totalled; see the next update.
+
 ## v1.4: fixes from a review of all 21 skills (2026-10-26)
 
 **Bottom line:** one always-on rule did more than rewording. For the five least-loaded skills, the right skill loaded on 8 of 30 short prompts before, 12 with reworded descriptions, and 21 with the core rules installed [observed: one run per query]. The new rule tells the agent to load the matching skill. Across all 21 skills with the rules on, recall was 63 of 78, with no loads on any of 68 near misses [observed: benchmarks/triggers/2026-10-26-4-all-with-rules.json]. v1.2, without the rules, managed about 44 of 63 [inferred].

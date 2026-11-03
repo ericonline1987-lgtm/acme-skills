@@ -2,7 +2,7 @@
 
 Agent skills for Claude that aim past output quality: the real outcome happened, people can trust the work without redoing it, each task leaves the next one easier, and the person stays in charge.
 
-In a head-to-head on cases written by another skill set's author, these skills passed 5 of 12 against 3 of 12 for that set and 2 of 12 for plain Claude, and matched or beat it on every case [observed, one run per case; see [benchmarks/RESULTS.md](benchmarks/RESULTS.md)].
+In the v2.0 release gate, answers scored 0.96 with these skills against 0.69 for plain Claude across 59 cases, three runs each way, and every skill beat plain Claude on at least one case [observed; see [benchmarks/RESULTS.md](benchmarks/RESULTS.md)]. In a head-to-head on cases written by another skill set's author, these skills passed 5 of 12 against 3 of 12 for that set and 2 of 12 for plain Claude, and matched or beat it on every case [observed, one run per case; see [benchmarks/RESULTS.md](benchmarks/RESULTS.md)].
 
 ## Plugins
 

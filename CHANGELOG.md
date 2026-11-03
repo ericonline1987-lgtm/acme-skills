@@ -19,7 +19,7 @@ Toward a full-score set: four new skills, a second case plain Claude is likely t
 ### Changed
 - `reviewing-code`: high-risk changes get a short threat model. `changing-code`: dependency upgrades. `proving-outcomes`: rollback known before a deploy, a watch window after it.
 - `writing-documents` and the shared style guide: add nothing the source didn't give, including years and actions. `briefing-decisions`: a required "Ask:" line. `building-presentations`: the closing ask is written out. `writing-emails`: the ask phrased as the small answer wanted. `defining-done`: a medium task's contract is about 150 words.
-- Six graders reworded after they failed correct answers; each change and its reason is in the case's SOURCE.md.
+- Eleven graders reworded after they failed correct answers; each change and its reason is in the case's SOURCE.md.
 
 ## 1.4.0 (2026-10-26)
 
