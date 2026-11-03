@@ -41,6 +41,7 @@ Core rules (optional): Claude Code uses the `core-rules` plugin (a session-start
 | Every skill works when its folder is copied alone | Verified by `tests/test_portability.py` |
 | Installer targets, idempotent rules, user skills protected | Verified by `tests/test_install.py` |
 | Skill triggering in Claude Code | Measured: see `benchmarks/RESULTS.md` |
+| Claude Code sees every skill installed by `tools/install.py` | Verified 2026-11-02: `tools/smoke_check.py --runtime claude` saw 25 of 25 |
 | Codex and Antigravity load and trigger the skills | **Not verified here**: neither CLI could be installed in the build environment (package registries unreachable), and both need their own sign-in. Manifests follow the vendors' published formats. Run the check below and report anything that doesn't load. |
 
 ## Check a runtime yourself

@@ -2,7 +2,7 @@
 
 ## v2.0: release gate (2026-11-02)
 
-**Bottom line:** on the 59 cases that test a skill, answers scored 0.96 with the skills installed against 0.69 for plain Claude (share of criteria met, averaged over cases; three runs per arm on every case) [observed: benchmarks/gate/2026-11-02-summary.json]. Every shipped skill beats plain Claude on at least one case; `writing-tests` does so by the smallest margin. One drafted skill, `analyzing-data`, was dropped because plain Claude passed all of its cases on both Opus and Haiku. Trigger results on two models follow below once measured.
+**Bottom line:** on the 59 cases that test a skill, answers scored 0.96 with the skills installed and 0.69 without [observed: benchmarks/gate/2026-11-02-summary.json]. A score is the share of criteria met, averaged over cases, with three runs per arm. Every shipped skill beats plain Claude on at least one case; `writing-tests` by the smallest margin. `analyzing-data` was dropped: plain Claude passed all its cases on Opus and Haiku. On short prompts, the right skill loaded for 90% of should-fire queries on Sonnet and 73% on Haiku. One near miss in 168 checks loaded a skill [observed, one run per query].
 
 ### Method
 
@@ -47,7 +47,13 @@ Plain Haiku also passed most of them: all three `analyzing-data` cases, the dele
 
 ### What the gate changed
 
-- Skill fixes found by reading failed answers: documents add nothing the source didn't give (no years, derived figures or invented actions); briefs carry an "Ask:" line; decks close on a written-out ask; email asks are phrased as the small answer wanted, with a follow-up for every open item; contracts for medium tasks are five lines and name the decision a report feeds; one home per lesson; a claim keeps its strength ("fell after" never becomes "cut"); one-line option answers still name the flip condition and a cheap check; core rule 5 names its source.
+- Skill fixes found by reading failed answers:
+  - documents add nothing the source didn't give: no years, derived figures or invented actions;
+  - briefs carry an "Ask:" line, and decks close on a written-out ask;
+  - email asks are phrased as the small answer wanted, with a follow-up for every open item;
+  - contracts for medium tasks are five lines and name the decision a report feeds;
+  - one home per lesson; a claim keeps its strength ("fell after" never becomes "cut");
+  - one-line option answers still name the flip condition and a cheap check; core rule 5 names its source.
 - A routing line in each skill plugin: `researching-topics` didn't load on the SSO question until it was added.
 - `analyzing-data` dropped (above).
 
@@ -58,14 +64,26 @@ Plain Haiku also passed most of them: all three `analyzing-data` cases, the dele
 3. **Literal grader words fail good answers:** "ends with", "named explicitly", "checks" (when nothing can be run), "one behaviour per test" (against parametrized tests). Grade the substance.
 4. **Write the case before the skill.** Plain Claude already handled the data-analysis traps chosen for `analyzing-data`; testing first would have shown that before writing it.
 
+### Triggering (all skill plugins installed, each with its routing line; one run per query)
+
+| Model | Should fire, loaded | Held-out queries only | Near misses left alone |
+|---|---|---|---|
+| Sonnet | 135 of 150 (90%) | 78 of 87 (90%) | 84 of 84 [observed] |
+| Haiku | 109 of 150 (73%) | 61 of 87 (70%) | 83 of 84 [observed] |
+| Haiku with core rules | 118 of 156 (76%) | — | 84 of 84 [observed] |
+
+- Held-out queries were written before the descriptions they test last changed. On Sonnet, four of the fifteen misses loaded a reasonable neighbour instead (an end-to-end test going to `writing-tests`, an outage post-mortem to `debugging-failures`, SSO options to `exploring-options`).
+- After these runs, the `changing-code` and `verifying-interfaces` descriptions were extended to name the requests they missed (renames, dependency upgrades, a page that looks wrong). On three fresh queries each, written before the change, Sonnet loaded them on 2 of 3 and 3 of 3, Haiku on 1 of 3 each [observed: benchmarks/triggers/2026-11-02-3-*.json].
+- **Open gap:** Haiku skips skills more often than Sonnet, weakest on `changing-code`, `verifying-interfaces` and `guarding-agent-actions`. The 90% target is met on Sonnet only.
+
 ### Not verified
 
-- Codex and Antigravity: neither CLI could be installed in this environment. `tools/smoke_check.py` checks that a runtime sees every skill; run it where they're installed.
+- Codex and Antigravity: neither CLI could be installed in this environment. The same check on Claude Code, installing by copy, saw 25 of 25 skills [observed]. `tools/smoke_check.py` checks that a runtime sees every skill; run it where they're installed.
 - Cases are text-only: skills whose value is in tool use (running code on real files, acting in a real repository) are measured only by what the agent says it would do.
 
 ### Spend
 
-Being totalled; see the next update.
+About $180 of eval runs for v2.0, against an estimate of $60–90. The saved results account for $158 [observed]. Earlier runs of re-run cases were overwritten and add about $25 [estimate]. The overrun came from the full re-runs after fixes and the Haiku checks.
 
 ## v1.4: fixes from a review of all 21 skills (2026-10-26)
 

@@ -11,7 +11,7 @@ In the v2.0 release gate, answers scored 0.96 with these skills against 0.69 for
 | `foundations` | defining-done · planning-work · exploring-options · delegating-work · proving-outcomes · tracing-claims · capturing-learning · guarding-agent-actions · handling-artifacts · running-long-tasks | ~1,060 tokens [estimate] |
 | `engineering-lifecycle` | writing-requirements · designing-systems · debugging-failures · changing-code · reviewing-code · writing-tests · merging-safely · verifying-interfaces · building-ai-features · authoring-skills | ~1,080 tokens [estimate] |
 | `professional-craft` | writing-documents · briefing-decisions · researching-topics · building-presentations · writing-emails | ~560 tokens [estimate] |
-| `core-rules` (optional, recommended) | Seven always-on working rules injected at session start. One makes the agent load the matching skill: on short prompts, skills loaded on 21 of 30 queries for the five least-used skills with the rules against 12 of 30 without, and 63 of 78 across all skills, with no false loads [observed, one run per query] | ~260 tokens |
+| `core-rules` (optional, recommended) | Seven always-on working rules injected at session start. One makes the agent load the matching skill; on Haiku it raised trigger recall from 73% to 76% on top of the plugins' own routing lines, with no false loads [observed, one run per query] | ~260 tokens |
 
 Each plugin works alone. `foundations` holds the shared work loop (define done → explore → do → prove → hand off → learn), and the other two work better alongside it.
 

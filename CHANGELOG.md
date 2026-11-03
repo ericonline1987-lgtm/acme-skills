@@ -1,6 +1,6 @@
 # Changelog
 
-## 2.0.0 (unreleased)
+## 2.0.0 (2026-11-02)
 
 Toward a full-score set: four new skills, a second case plain Claude is likely to fail for every skill, and a release-gate run of every case (three runs per arm). Results: benchmarks/RESULTS.md.
 
