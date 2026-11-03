@@ -1,0 +1,42 @@
+[
+  {
+    "query": "here's our sales CSV, what's the average order value by region?",
+    "should_trigger": true
+  },
+  {
+    "query": "did the new onboarding flow improve activation? numbers attached",
+    "should_trigger": true
+  },
+  {
+    "query": "make a chart of monthly signups from this spreadsheet",
+    "should_trigger": true
+  },
+  {
+    "query": "what's the trend in support tickets over the last 6 months? data below",
+    "should_trigger": true
+  },
+  {
+    "query": "compare churn between the monthly and annual plans in this table",
+    "should_trigger": true
+  },
+  {
+    "query": "quick: total revenue per customer from this export",
+    "should_trigger": true
+  },
+  {
+    "query": "what is a p-value?",
+    "should_trigger": false
+  },
+  {
+    "query": "convert this CSV to JSON",
+    "should_trigger": false
+  },
+  {
+    "query": "write a SQL query that creates a users table",
+    "should_trigger": false
+  },
+  {
+    "query": "what's 15% of 240?",
+    "should_trigger": false
+  }
+]

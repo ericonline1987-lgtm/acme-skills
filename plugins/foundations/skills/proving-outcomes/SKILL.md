@@ -27,7 +27,9 @@ it" is not "it mattered". Name the rung you reached; never borrow a higher one.
    look-alike and count it.
 3. **Collect evidence rung by rung**, starting at 1. Read real outputs. For rung 3, take
    inputs from real use (logs, recent requests, actual documents) and include the case
-   that should fail or be rejected.
+   that should fail or be rejected. Before a deploy, know the rollback (the previous
+   version, the command, and the signal that triggers it); after it, watch errors and
+   the key measure for a set window before claiming rung 2 or 3.
 4. **Record a ledger** for anything beyond a small task, in the format of
    `assets/evidence-ledger.example.json`, and run
    `python3 scripts/evidence_ledger.py <ledger.json>`. It reports the highest supported

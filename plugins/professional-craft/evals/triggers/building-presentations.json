@@ -22,5 +22,17 @@
   {
     "query": "convert this PPTX to PDF",
     "should_trigger": false
+  },
+  {
+    "query": "I have a 10-minute talk to the board on Thursday, help me build the deck",
+    "should_trigger": true
+  },
+  {
+    "query": "turn this report into slides for the all-hands",
+    "should_trigger": true
+  },
+  {
+    "query": "make a pitch deck for our seed round",
+    "should_trigger": true
   }
 ]

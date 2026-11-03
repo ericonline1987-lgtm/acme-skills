@@ -38,6 +38,9 @@ and leaves the next person understanding more than you did when you started.
 - Make the smallest change that meets the outcome, in the local style. No speculative
   options, unrelated cleanup, or new abstractions with one user.
 - Keep refactoring and behaviour changes in separate commits.
+- Upgrading a dependency: read its changelog for every version you skip, move one major
+  version at a time, run the full tests, and read the lockfile diff for unexpected
+  transitive changes.
 - Remove only code your change made dead.
 - **Leave it more legible**: a comment saying *why* where the reason isn't obvious, a
   test that pins the behaviour, and a decision note when you chose between real options.

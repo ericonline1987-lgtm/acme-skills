@@ -22,5 +22,17 @@
   {
     "query": "combine these two CSV files into one",
     "should_trigger": false
+  },
+  {
+    "query": "I merged main into my branch and took ours on settings.py, safe to push?",
+    "should_trigger": true
+  },
+  {
+    "query": "is this branch ready to merge?",
+    "should_trigger": true
+  },
+  {
+    "query": "check whether the hotfix landed on release-2.4",
+    "should_trigger": true
   }
 ]

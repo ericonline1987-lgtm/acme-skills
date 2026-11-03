@@ -22,5 +22,17 @@
   {
     "query": "fix the typos in this paragraph, don't change anything else",
     "should_trigger": false
+  },
+  {
+    "query": "polish this case study line: Acme cut deploy time 90% with our tool",
+    "should_trigger": true
+  },
+  {
+    "query": "write the investor update from these notes, include the growth numbers",
+    "should_trigger": true
+  },
+  {
+    "query": "turn these sales call notes into a customer quote for the website",
+    "should_trigger": true
   }
 ]

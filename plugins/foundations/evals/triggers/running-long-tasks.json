@@ -1,0 +1,42 @@
+[
+  {
+    "query": "run all 2,000 tickets through the classifier tonight and give me results in the morning",
+    "should_trigger": true
+  },
+  {
+    "query": "keep going on the migration while I'm away, I'll check back tomorrow",
+    "should_trigger": true
+  },
+  {
+    "query": "we hit the API rate limit halfway through the batch, what now?",
+    "should_trigger": true
+  },
+  {
+    "query": "process every PDF in this folder and extract the invoice totals, there are about 5,000",
+    "should_trigger": true
+  },
+  {
+    "query": "re-run the eval suite on all cases, but don't spend more than $20",
+    "should_trigger": true
+  },
+  {
+    "query": "translate our 800 help articles with the API",
+    "should_trigger": true
+  },
+  {
+    "query": "what does a rate limit mean in an API?",
+    "should_trigger": false
+  },
+  {
+    "query": "how do I write a for loop in Python?",
+    "should_trigger": false
+  },
+  {
+    "query": "what's the cheapest Claude model?",
+    "should_trigger": false
+  },
+  {
+    "query": "explain what a cron job is",
+    "should_trigger": false
+  }
+]

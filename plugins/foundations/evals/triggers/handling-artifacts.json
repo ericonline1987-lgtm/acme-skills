@@ -22,5 +22,17 @@
   {
     "query": "write a function that zips a folder in Python",
     "should_trigger": false
+  },
+  {
+    "query": "zip up this debugging folder so I can send it to the vendor",
+    "should_trigger": true
+  },
+  {
+    "query": "our repo is 3GB now, how do I shrink it?",
+    "should_trigger": true
+  },
+  {
+    "query": "where should I put these screenshots from the test run?",
+    "should_trigger": true
   }
 ]

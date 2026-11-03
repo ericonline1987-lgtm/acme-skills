@@ -22,5 +22,17 @@
   {
     "query": "I already chose Redis; write the docker-compose service for it",
     "should_trigger": false
+  },
+  {
+    "query": "Postgres or Mongo for our new app?",
+    "should_trigger": true
+  },
+  {
+    "query": "should we rewrite the billing service or keep patching it?",
+    "should_trigger": true
+  },
+  {
+    "query": "what should we use for feature flags?",
+    "should_trigger": true
   }
 ]

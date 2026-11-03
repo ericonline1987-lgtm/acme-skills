@@ -7,7 +7,7 @@ from contextlib import redirect_stdout
 from pathlib import Path
 from unittest import mock
 
-from helpers import ROOT, load_module
+from helpers import ROOT, load_module, skill_dirs
 
 install = load_module(ROOT / "tools" / "install.py", "install_tool")
 
@@ -46,7 +46,7 @@ class InstallTests(unittest.TestCase):
         code, _ = run("--runtime", "codex", "--scope", "project", "--project", str(self.project))
         self.assertEqual(code, 0)
         skills = self.project / ".agents" / "skills"
-        self.assertEqual(len([p for p in skills.iterdir() if (p / "SKILL.md").is_file()]), 21)
+        self.assertEqual(len([p for p in skills.iterdir() if (p / "SKILL.md").is_file()]), len(skill_dirs()))
         self.assertTrue((skills / "defining-done" / "assets" / "outcome-contract.md").is_file())
         self.assertTrue((skills / "defining-done" / "scripts" / "check_sections.py").is_file())
 

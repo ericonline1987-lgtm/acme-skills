@@ -22,5 +22,17 @@
   {
     "query": "rename the class SystemDesigner to Architect",
     "should_trigger": false
+  },
+  {
+    "query": "design an event-driven replacement for our nightly cron export",
+    "should_trigger": true
+  },
+  {
+    "query": "how should we split this monolith?",
+    "should_trigger": true
+  },
+  {
+    "query": "write an RFC for moving file storage to S3",
+    "should_trigger": true
   }
 ]

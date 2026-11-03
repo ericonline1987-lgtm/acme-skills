@@ -22,5 +22,17 @@
   {
     "query": "rename the variable `done` to `isComplete` in this function",
     "should_trigger": false
+  },
+  {
+    "query": "help me get started on an internal tool for tracking expenses",
+    "should_trigger": true
+  },
+  {
+    "query": "I want to set up a weekly report for the sales team",
+    "should_trigger": true
+  },
+  {
+    "query": "where do I even start with automating our onboarding?",
+    "should_trigger": true
   }
 ]

@@ -22,5 +22,17 @@
   {
     "query": "give me a status code for 'resource created'",
     "should_trigger": false
+  },
+  {
+    "query": "tell the team the email bug is fixed, the preview looks right now",
+    "should_trigger": true
+  },
+  {
+    "query": "CI is green, write the release note saying it's live",
+    "should_trigger": true
+  },
+  {
+    "query": "can I close this ticket? the deploy finished",
+    "should_trigger": true
   }
 ]

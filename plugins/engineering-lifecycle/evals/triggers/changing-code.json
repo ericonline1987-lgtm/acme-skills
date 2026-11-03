@@ -22,5 +22,17 @@
   {
     "query": "explain the difference between refactoring and rewriting",
     "should_trigger": false
+  },
+  {
+    "query": "change the default page size from 50 to 200",
+    "should_trigger": true
+  },
+  {
+    "query": "rename this function everywhere it's used",
+    "should_trigger": true
+  },
+  {
+    "query": "bump the requests library to the latest major version",
+    "should_trigger": true
   }
 ]

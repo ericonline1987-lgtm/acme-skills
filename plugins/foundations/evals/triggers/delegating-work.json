@@ -22,5 +22,17 @@
   {
     "query": "how many direct reports should an engineering manager have?",
     "should_trigger": false
+  },
+  {
+    "query": "my contractor says the migration is done, can I pay the invoice?",
+    "should_trigger": true
+  },
+  {
+    "query": "split this refactor across three subagents",
+    "should_trigger": true
+  },
+  {
+    "query": "the intern says the tests are fixed, can we trust that?",
+    "should_trigger": true
   }
 ]

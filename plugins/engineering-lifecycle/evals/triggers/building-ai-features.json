@@ -22,5 +22,17 @@
   {
     "query": "explain what tokens are",
     "should_trigger": false
+  },
+  {
+    "query": "our RAG chatbot gives wrong answers sometimes, how do we fix it?",
+    "should_trigger": true
+  },
+  {
+    "query": "which model should we use for our ticket triage feature?",
+    "should_trigger": true
+  },
+  {
+    "query": "help me improve the prompt for our summariser, users say it misses key points",
+    "should_trigger": true
   }
 ]

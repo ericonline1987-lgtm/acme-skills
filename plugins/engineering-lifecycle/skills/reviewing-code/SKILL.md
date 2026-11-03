@@ -36,6 +36,8 @@ description and diff; otherwise do them in turn without letting one steer the ne
 2. Problems the change introduces. Wrong behaviour on edge cases (empty, null, huge,
    concurrent, repeated), broken error handling, security (validation, injection,
    authorisation, secrets in code or logs, unsafe deserialisation, new dependencies).
+   High tier: also name who can reach the changed code, what input they control, and
+   what they could gain, and check each path.
 3. What it touches. Grep callers of every changed signature, config key or contract;
    run `git log -L` on changed lines to catch a past fix being undone (high tier: every
    changed line).
@@ -102,5 +104,4 @@ requires, and the person who asked for the change owns the outcome.
 
 ## After the review
 
-When a bug escapes review, add it as an eval case (see `capturing-learning`), so every
-later change to this skill is checked against it.
+When a bug escapes review, add it as an eval case (see `capturing-learning`).

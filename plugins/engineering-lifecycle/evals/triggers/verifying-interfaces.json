@@ -22,5 +22,17 @@
   {
     "query": "write the HTML for a contact form",
     "should_trigger": false
+  },
+  {
+    "query": "make sure the new pricing page works on phones before we launch",
+    "should_trigger": true
+  },
+  {
+    "query": "my screenshot shows the cards overlapping, should I revert the CSS?",
+    "should_trigger": true
+  },
+  {
+    "query": "write an end-to-end test for the signup flow",
+    "should_trigger": true
   }
 ]

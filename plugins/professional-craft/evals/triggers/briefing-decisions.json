@@ -22,5 +22,17 @@
   {
     "query": "what's the capital of Germany?",
     "should_trigger": false
+  },
+  {
+    "query": "should we renew Datadog or move to Grafana? my boss wants a recommendation",
+    "should_trigger": true
+  },
+  {
+    "query": "write up a go/no-go on launching in Germany this quarter for the exec team",
+    "should_trigger": true
+  },
+  {
+    "query": "we need to pick between two candidate vendors for payroll, help me present it to the CFO",
+    "should_trigger": true
   }
 ]

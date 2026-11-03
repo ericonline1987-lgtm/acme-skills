@@ -1,0 +1,4 @@
+interface:
+  display_name: "Running Long Tasks"
+  short_description: "Budgets, checkpoints and clean resumes for long jobs"
+  default_prompt: "Use $running-long-tasks to plan this batch job with a budget and checkpoints."

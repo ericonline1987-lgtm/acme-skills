@@ -22,5 +22,17 @@
   {
     "query": "set up GitHub Actions to run our tests",
     "should_trigger": false
+  },
+  {
+    "query": "write tests for this parse_percent function",
+    "should_trigger": true
+  },
+  {
+    "query": "coverage on the billing module is 40%, fix it",
+    "should_trigger": true
+  },
+  {
+    "query": "add a test that reproduces this bug before I fix it",
+    "should_trigger": true
   }
 ]

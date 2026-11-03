@@ -22,5 +22,17 @@
   {
     "query": "pin the versions in requirements.txt",
     "should_trigger": false
+  },
+  {
+    "query": "write acceptance criteria for password reset",
+    "should_trigger": true
+  },
+  {
+    "query": "turn this Slack thread into a spec the team can build",
+    "should_trigger": true
+  },
+  {
+    "query": "write user stories for exporting invoices to CSV",
+    "should_trigger": true
   }
 ]

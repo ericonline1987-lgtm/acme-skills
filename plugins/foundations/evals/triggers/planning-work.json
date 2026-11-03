@@ -1,0 +1,42 @@
+[
+  {
+    "query": "how long will it take to migrate our 12 services to Kubernetes?",
+    "should_trigger": true
+  },
+  {
+    "query": "break this project down into tasks: launch a partner portal",
+    "should_trigger": true
+  },
+  {
+    "query": "what order should we do these in before launch?",
+    "should_trigger": true
+  },
+  {
+    "query": "can we realistically ship the mobile app by March 1?",
+    "should_trigger": true
+  },
+  {
+    "query": "make me a roadmap for the next quarter from this list of features",
+    "should_trigger": true
+  },
+  {
+    "query": "give me a rough estimate for adding SSO",
+    "should_trigger": true
+  },
+  {
+    "query": "what is a Gantt chart?",
+    "should_trigger": false
+  },
+  {
+    "query": "schedule a meeting with the design team on Thursday",
+    "should_trigger": false
+  },
+  {
+    "query": "what's the difference between Scrum and Kanban?",
+    "should_trigger": false
+  },
+  {
+    "query": "set a reminder for 3pm",
+    "should_trigger": false
+  }
+]

@@ -22,5 +22,17 @@
   {
     "query": "write a retro agenda for Friday",
     "should_trigger": false
+  },
+  {
+    "query": "this is the third time you forgot to run the linter, stop doing that",
+    "should_trigger": true
+  },
+  {
+    "query": "how do we make sure this outage never happens again?",
+    "should_trigger": true
+  },
+  {
+    "query": "you keep overclaiming deploy status, fix it for good",
+    "should_trigger": true
   }
 ]
