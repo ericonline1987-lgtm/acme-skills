@@ -34,5 +34,17 @@
   {
     "query": "write an end-to-end test for the signup flow",
     "should_trigger": true
+  },
+  {
+    "query": "the checkout button looks cut off on my phone, can you check the page?",
+    "should_trigger": true
+  },
+  {
+    "query": "take a screenshot of the new settings page so I can show my manager it works",
+    "should_trigger": true
+  },
+  {
+    "query": "does our landing page pass basic accessibility checks?",
+    "should_trigger": true
   }
 ]

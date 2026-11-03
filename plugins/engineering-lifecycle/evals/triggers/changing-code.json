@@ -34,5 +34,17 @@
   {
     "query": "bump the requests library to the latest major version",
     "should_trigger": true
+  },
+  {
+    "query": "move this helper into utils.py and fix the imports",
+    "should_trigger": true
+  },
+  {
+    "query": "change the HTTP client timeout from 30 to 60 seconds",
+    "should_trigger": true
+  },
+  {
+    "query": "upgrade React from 17 to 18 in our app",
+    "should_trigger": true
   }
 ]

@@ -1,6 +1,6 @@
 ---
 name: verifying-interfaces
-description: Always use this skill when a web page, HTML file, dashboard, app screen or UI flow needs checking, testing or capturing — "make sure it works", a browser or end-to-end test, a screenshot as proof — even when it looks simple. It checks the right environment and login, settles animations before capture, and covers small screens, zoom, contrast, overflow and keyboard use.
+description: Always use this skill when a web page, HTML file, dashboard, app screen or UI flow needs checking, testing or capturing — "make sure it works", a browser check, a screenshot as proof, a page that looks wrong on some screen — even when it looks simple. It checks the right environment and login, settles animations before capture, and covers small screens, zoom, contrast, overflow and keyboard use.
 ---
 
 # Verifying interfaces
