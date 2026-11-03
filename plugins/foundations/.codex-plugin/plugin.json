@@ -1,7 +1,7 @@
 {
   "name": "foundations",
-  "version": "1.3.0",
-  "description": "The work loop every task shares: define done as an outcome, explore options, delegate and accept, prove the rung reached, trace claims, guard actions, and capture learning.",
+  "version": "2.0.0",
+  "description": "The work loop every task shares: define done as an outcome, plan and estimate honestly, explore options, delegate and accept, prove the rung reached, trace claims, guard actions, run long jobs safely, and capture learning.",
   "author": {
     "name": "ericonline1987-lgtm",
     "url": "https://github.com/ericonline1987-lgtm"
@@ -15,13 +15,15 @@
     "delegation",
     "provenance",
     "safety",
-    "learning"
+    "learning",
+    "planning",
+    "long-running"
   ],
   "skills": "./skills/",
   "interface": {
     "displayName": "Foundations",
     "shortDescription": "Define done, prove outcomes, trace claims",
-    "longDescription": "The work loop every task shares: define done as an outcome, explore options, delegate and accept, prove the rung reached, trace claims, guard actions, and capture learning.",
+    "longDescription": "The work loop every task shares: define done as an outcome, plan and estimate honestly, explore options, delegate and accept, prove the rung reached, trace claims, guard actions, run long jobs safely, and capture learning.",
     "developerName": "ericonline1987-lgtm",
     "category": "Productivity",
     "capabilities": [

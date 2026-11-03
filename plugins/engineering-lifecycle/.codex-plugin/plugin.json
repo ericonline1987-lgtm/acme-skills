@@ -1,7 +1,7 @@
 {
   "name": "engineering-lifecycle",
-  "version": "1.4.0",
-  "description": "Engineering skills aimed at outcomes: requirements with success measures, designs that compare real options, safe code changes, reviews, tests that catch regressions, provably complete merges, and AI features built on evals.",
+  "version": "2.0.0",
+  "description": "Engineering skills aimed at outcomes: requirements with success measures, designs that compare real options, debugging that proves the cause, safe code changes, reviews, tests that catch regressions, provably complete merges, AI features built on evals, and skills that measurably help.",
   "author": {
     "name": "ericonline1987-lgtm",
     "url": "https://github.com/ericonline1987-lgtm"
@@ -17,13 +17,16 @@
     "testing",
     "merge",
     "llm",
-    "evals"
+    "evals",
+    "debugging",
+    "incidents",
+    "agent-skills"
   ],
   "skills": "./skills/",
   "interface": {
     "displayName": "Engineering Lifecycle",
     "shortDescription": "Requirements, design, changes, review, merges",
-    "longDescription": "Engineering skills aimed at outcomes: requirements with success measures, designs that compare real options, safe code changes, reviews, tests that catch regressions, provably complete merges, and AI features built on evals.",
+    "longDescription": "Engineering skills aimed at outcomes: requirements with success measures, designs that compare real options, debugging that proves the cause, safe code changes, reviews, tests that catch regressions, provably complete merges, AI features built on evals, and skills that measurably help.",
     "developerName": "ericonline1987-lgtm",
     "category": "Developer Tools",
     "capabilities": [

@@ -1,7 +1,7 @@
 {
   "name": "professional-craft",
-  "version": "1.3.0",
-  "description": "Professional writing aimed at the reader's next action: documents within a page budget, decision briefs, trustworthy research, presentations and emails, in house style.",
+  "version": "2.0.0",
+  "description": "Professional work aimed at the reader's next action: documents within a page budget, decision briefs, trustworthy research, honest data analysis, presentations and emails, in house style.",
   "author": {
     "name": "ericonline1987-lgtm",
     "url": "https://github.com/ericonline1987-lgtm"
@@ -15,13 +15,15 @@
     "decisions",
     "research",
     "presentations",
-    "email"
+    "email",
+    "data-analysis",
+    "charts"
   ],
   "skills": "./skills/",
   "interface": {
     "displayName": "Professional Craft",
     "shortDescription": "Documents, decision briefs, research, email",
-    "longDescription": "Professional writing aimed at the reader's next action: documents within a page budget, decision briefs, trustworthy research, presentations and emails, in house style.",
+    "longDescription": "Professional work aimed at the reader's next action: documents within a page budget, decision briefs, trustworthy research, honest data analysis, presentations and emails, in house style.",
     "developerName": "ericonline1987-lgtm",
     "category": "Productivity",
     "capabilities": [
