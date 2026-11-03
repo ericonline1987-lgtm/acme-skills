@@ -1,0 +1,526 @@
+{
+ "date": "2026-11-02",
+ "judge": "sonnet",
+ "runs_per_arm": 3,
+ "agent_model": "session default (Opus class) unless noted",
+ "cases": {
+  "brief-crm-decision": {
+   "with": 1,
+   "without": 0.53,
+   "source": "pass 2/3",
+   "plugin": "professional-craft",
+   "skill": "briefing-decisions"
+  },
+  "brief-observability-vendor": {
+   "with": 0.87,
+   "without": 0.4,
+   "source": "pass 2/3",
+   "plugin": "professional-craft",
+   "skill": "briefing-decisions"
+  },
+  "deck-board-titles": {
+   "with": 0.93,
+   "without": 0.8,
+   "source": "pass 2/3",
+   "plugin": "professional-craft",
+   "skill": "building-presentations"
+  },
+  "deck-devtools-funding": {
+   "with": 1,
+   "without": 0.8,
+   "source": "pass 2/3",
+   "plugin": "professional-craft",
+   "skill": "building-presentations"
+  },
+  "doc-vp-status": {
+   "with": 1,
+   "without": 0.67,
+   "source": "pass 2/3",
+   "plugin": "professional-craft",
+   "skill": "writing-documents"
+  },
+  "documents-migration-status": {
+   "with": 0.93,
+   "without": 0.53,
+   "source": "pass 2/3",
+   "plugin": "professional-craft",
+   "skill": "writing-documents"
+  },
+  "email-launch-slip": {
+   "with": 0.93,
+   "without": 0.8,
+   "source": "pass 2/3",
+   "plugin": "professional-craft",
+   "skill": "writing-emails"
+  },
+  "email-partial-commitment": {
+   "with": 1,
+   "without": 0.47,
+   "source": "pass 2/3",
+   "plugin": "professional-craft",
+   "skill": "writing-emails"
+  },
+  "email-vendor-chaser": {
+   "with": 0.92,
+   "without": 0.08,
+   "source": "pass 2/3",
+   "plugin": "professional-craft",
+   "skill": "writing-emails"
+  },
+  "no-fire-grammar": {
+   "with": 0.92,
+   "without": 1,
+   "source": "pass 1 (tree c5f773d)",
+   "plugin": "professional-craft",
+   "skill": null
+  },
+  "no-fire-synonyms": {
+   "with": 1,
+   "without": 1,
+   "source": "pass 1 (tree c5f773d)",
+   "plugin": "professional-craft",
+   "skill": null
+  },
+  "research-copilot-price": {
+   "with": 1,
+   "without": 1,
+   "source": "pass 1 (tree c5f773d)",
+   "plugin": "professional-craft",
+   "skill": "researching-topics"
+  },
+  "research-sso-options": {
+   "with": 0.87,
+   "without": 0.6,
+   "source": "pass 1 (tree c5f773d)",
+   "plugin": "professional-craft",
+   "skill": "researching-topics"
+  },
+  "artifacts-repo-for-agency": {
+   "with": 0.93,
+   "without": 0.47,
+   "source": "pass 1 (tree c5f773d)",
+   "plugin": "foundations",
+   "skill": "handling-artifacts"
+  },
+  "artifacts-vendor-zip": {
+   "with": 1,
+   "without": 0.67,
+   "source": "pass 2/3",
+   "plugin": "foundations",
+   "skill": "handling-artifacts"
+  },
+  "capturing-learning-deploy-claims": {
+   "with": 0.93,
+   "without": 0.8,
+   "source": "pass 2/3",
+   "plugin": "foundations",
+   "skill": "capturing-learning"
+  },
+  "claims-case-study": {
+   "with": 1,
+   "without": 1,
+   "source": "pass 2/3",
+   "plugin": "foundations",
+   "skill": "tracing-claims"
+  },
+  "defining-done-refund-tool": {
+   "with": 1,
+   "without": 0.6,
+   "source": "pass 2/3",
+   "plugin": "foundations",
+   "skill": "defining-done"
+  },
+  "delegate-contractor-invoice": {
+   "with": 0.93,
+   "without": 0.93,
+   "source": "pass 1 (tree c5f773d)",
+   "plugin": "foundations",
+   "skill": "delegating-work"
+  },
+  "delegating-work-migration": {
+   "with": 1,
+   "without": 1,
+   "source": "pass 1 (tree c5f773d)",
+   "plugin": "foundations",
+   "skill": "delegating-work"
+  },
+  "done-weekly-sales-report": {
+   "with": 0.8,
+   "without": 0.13,
+   "source": "pass 2/3",
+   "plugin": "foundations",
+   "skill": "defining-done"
+  },
+  "ai-ticket-classifier": {
+   "with": 0.93,
+   "without": 0.67,
+   "source": "pass 2/3",
+   "plugin": "engineering-lifecycle",
+   "skill": "building-ai-features"
+  },
+  "no-fire-gitignore-question": {
+   "with": 1,
+   "without": 1,
+   "source": "pass 2/3",
+   "plugin": "foundations",
+   "skill": null
+  },
+  "ui-screenshot-overlap": {
+   "with": 1,
+   "without": 0.92,
+   "source": "pass 2/3",
+   "plugin": "engineering-lifecycle",
+   "skill": "verifying-interfaces"
+  },
+  "review-third-round": {
+   "with": 1,
+   "without": 0.83,
+   "source": "pass 2/3",
+   "plugin": "engineering-lifecycle",
+   "skill": "reviewing-code"
+  },
+  "plan-heroku-migration": {
+   "with": 1,
+   "without": 1,
+   "source": "pass 2/3",
+   "plugin": "foundations",
+   "skill": "planning-work"
+  },
+  "rule-piped-exit-code": {
+   "with": 1,
+   "without": 1,
+   "source": "pass 2/3",
+   "plugin": "core-rules",
+   "skill": null
+  },
+  "guarding-readme-setup": {
+   "with": 1,
+   "without": 0.92,
+   "source": "pass 2/3",
+   "plugin": "foundations",
+   "skill": "guarding-agent-actions"
+  },
+  "delegate-parallel-fixes": {
+   "with": 0.83,
+   "without": 0.58,
+   "source": "pass 2/3",
+   "plugin": "foundations",
+   "skill": "delegating-work"
+  },
+  "changing-code-stale-test": {
+   "with": 0.8,
+   "without": 0.4,
+   "source": "pass 2/3",
+   "plugin": "engineering-lifecycle",
+   "skill": "changing-code"
+  },
+  "plan-launch-order": {
+   "with": 1,
+   "without": 0.8,
+   "source": "pass 2/3",
+   "plugin": "foundations",
+   "skill": "planning-work"
+  },
+  "design-cron-to-kafka": {
+   "with": 1,
+   "without": 0.6,
+   "source": "pass 2/3",
+   "plugin": "engineering-lifecycle",
+   "skill": "designing-systems"
+  },
+  "no-fire-translation": {
+   "with": 1,
+   "without": 1,
+   "source": "pass 2/3",
+   "plugin": "foundations",
+   "skill": null
+  },
+  "requirements-csv-export": {
+   "with": 0.87,
+   "without": 0.4,
+   "source": "pass 2/3",
+   "plugin": "engineering-lifecycle",
+   "skill": "writing-requirements"
+  },
+  "rule-hearsay-claim": {
+   "with": 0.78,
+   "without": 0.67,
+   "source": "pass 2/3",
+   "plugin": "core-rules",
+   "skill": null
+  },
+  "review-sql-diff": {
+   "with": 1,
+   "without": 0.8,
+   "source": "pass 2/3",
+   "plugin": "engineering-lifecycle",
+   "skill": "reviewing-code"
+  },
+  "debug-flaky-retry": {
+   "with": 1,
+   "without": 1,
+   "source": "pass 2/3",
+   "plugin": "engineering-lifecycle",
+   "skill": "debugging-failures"
+  },
+  "rule-no-bloat-arithmetic": {
+   "with": 1,
+   "without": 1,
+   "source": "pass 2/3",
+   "plugin": "core-rules",
+   "skill": null
+  },
+  "prove-email-template": {
+   "with": 1,
+   "without": 0.67,
+   "source": "pass 2/3",
+   "plugin": "foundations",
+   "skill": "proving-outcomes"
+  },
+  "guarding-actions-vendor-email": {
+   "with": 1,
+   "without": 1,
+   "source": "pass 2/3",
+   "plugin": "foundations",
+   "skill": "guarding-agent-actions"
+  },
+  "skill-commit-messages": {
+   "with": 1,
+   "without": 0.5,
+   "source": "pass 2/3",
+   "plugin": "engineering-lifecycle",
+   "skill": "authoring-skills"
+  },
+  "merge-took-ours": {
+   "with": 1,
+   "without": 0.83,
+   "source": "pass 2/3",
+   "plugin": "engineering-lifecycle",
+   "skill": "merging-safely"
+  },
+  "debug-checkout-500s": {
+   "with": 1,
+   "without": 0.53,
+   "source": "pass 2/3",
+   "plugin": "engineering-lifecycle",
+   "skill": "debugging-failures"
+  },
+  "claims-headline-scope": {
+   "with": 1,
+   "without": 0.58,
+   "source": "pass 2/3",
+   "plugin": "foundations",
+   "skill": "tracing-claims"
+  },
+  "rule-outcome-first": {
+   "with": 1,
+   "without": 0.44,
+   "source": "pass 2/3",
+   "plugin": "core-rules",
+   "skill": null
+  },
+  "exploring-options-search": {
+   "with": 1,
+   "without": 0.53,
+   "source": "pass 2/3",
+   "plugin": "foundations",
+   "skill": "exploring-options"
+  },
+  "guard-temp-admin-token": {
+   "with": 0.89,
+   "without": 0.67,
+   "source": "pass 2/3",
+   "plugin": "foundations",
+   "skill": "guarding-agent-actions"
+  },
+  "proving-outcomes-status": {
+   "with": 0.93,
+   "without": 0.67,
+   "source": "pass 2/3",
+   "plugin": "foundations",
+   "skill": "proving-outcomes"
+  },
+  "merge-defaults-conflict": {
+   "with": 0.93,
+   "without": 0.87,
+   "source": "pass 2/3",
+   "plugin": "engineering-lifecycle",
+   "skill": "merging-safely"
+  },
+  "skill-never-triggers": {
+   "with": 1,
+   "without": 0.5,
+   "source": "pass 2/3",
+   "plugin": "engineering-lifecycle",
+   "skill": "authoring-skills"
+  },
+  "no-fire-css-bold": {
+   "with": 1,
+   "without": 1,
+   "source": "pass 2/3",
+   "plugin": "engineering-lifecycle",
+   "skill": null
+  },
+  "guard-dirty-worktree": {
+   "with": 1,
+   "without": 0.92,
+   "source": "pass 2/3",
+   "plugin": "foundations",
+   "skill": "guarding-agent-actions"
+  },
+  "change-page-size-default": {
+   "with": 1,
+   "without": 0.5,
+   "source": "pass 2/3",
+   "plugin": "engineering-lifecycle",
+   "skill": "changing-code"
+  },
+  "ai-prompt-tweaking": {
+   "with": 0.8,
+   "without": 0.67,
+   "source": "pass 2/3",
+   "plugin": "engineering-lifecycle",
+   "skill": "building-ai-features"
+  },
+  "no-fire-git-question": {
+   "with": 1,
+   "without": 1,
+   "source": "pass 2/3",
+   "plugin": "engineering-lifecycle",
+   "skill": null
+  },
+  "no-fire-python-question": {
+   "with": 1,
+   "without": 1,
+   "source": "pass 2/3",
+   "plugin": "foundations",
+   "skill": null
+  },
+  "tests-parse-duration": {
+   "with": 1,
+   "without": 1,
+   "source": "pass 2/3",
+   "plugin": "engineering-lifecycle",
+   "skill": "writing-tests"
+  },
+  "learning-linter-again": {
+   "with": 1,
+   "without": 0.75,
+   "source": "pass 2/3",
+   "plugin": "foundations",
+   "skill": "capturing-learning"
+  },
+  "req-password-reset": {
+   "with": 1,
+   "without": 0.73,
+   "source": "pass 2/3",
+   "plugin": "engineering-lifecycle",
+   "skill": "writing-requirements"
+  },
+  "tracing-claims-board-update": {
+   "with": 0.93,
+   "without": 0.93,
+   "source": "pass 2/3",
+   "plugin": "foundations",
+   "skill": "tracing-claims"
+  },
+  "options-db-one-line": {
+   "with": 1,
+   "without": 0.44,
+   "source": "pass 2/3",
+   "plugin": "foundations",
+   "skill": "exploring-options"
+  },
+  "long-limit-hit": {
+   "with": 0.92,
+   "without": 0.67,
+   "source": "pass 2/3",
+   "plugin": "foundations",
+   "skill": "running-long-tasks"
+  },
+  "tests-parse-percent": {
+   "with": 0.83,
+   "without": 0.75,
+   "source": "pass 2/3",
+   "plugin": "engineering-lifecycle",
+   "skill": "writing-tests"
+  },
+  "verify-dashboard-before-sending": {
+   "with": 1,
+   "without": 0.5,
+   "source": "pass 2/3",
+   "plugin": "engineering-lifecycle",
+   "skill": "verifying-interfaces"
+  },
+  "review-project-rule": {
+   "with": 1,
+   "without": 1,
+   "source": "pass 2/3",
+   "plugin": "engineering-lifecycle",
+   "skill": "reviewing-code"
+  },
+  "review-preexisting-bug": {
+   "with": 1,
+   "without": 0.92,
+   "source": "pass 2/3",
+   "plugin": "engineering-lifecycle",
+   "skill": "reviewing-code"
+  },
+  "design-billing-batch": {
+   "with": 0.93,
+   "without": 0.8,
+   "source": "pass 2/3",
+   "plugin": "engineering-lifecycle",
+   "skill": "designing-systems"
+  },
+  "no-fire-regex": {
+   "with": 1,
+   "without": 1,
+   "source": "pass 2/3",
+   "plugin": "engineering-lifecycle",
+   "skill": null
+  },
+  "long-batch-overnight": {
+   "with": 1,
+   "without": 0.47,
+   "source": "pass 2/3",
+   "plugin": "foundations",
+   "skill": "running-long-tasks"
+  }
+ },
+ "haiku": {
+  "plan-heroku-migration": {
+   "with": 0.93,
+   "without": 0.87
+  },
+  "debug-flaky-retry": {
+   "with": 1,
+   "without": 0.92
+  },
+  "guarding-actions-vendor-email": {
+   "with": 1,
+   "without": 1
+  },
+  "delegating-work-migration": {
+   "with": 1,
+   "without": 1
+  },
+  "tests-parse-duration": {
+   "with": 1,
+   "without": 1
+  },
+  "claims-case-study": {
+   "with": 1,
+   "without": 1
+  },
+  "tests-parse-percent": {
+   "with": 0.92,
+   "without": 0.75
+  },
+  "review-project-rule": {
+   "with": 1,
+   "without": 1
+  }
+ },
+ "missing": []
+}
