@@ -57,5 +57,6 @@ One page is about 400–500 words.
 ## Quality bar
 
 - The ask or conclusion is in the first two sentences.
-- Every action has one owner and an absolute date.
+- Every action listed has one owner and an absolute date, or TBD; no action is added
+  that the source didn't give.
 - No section exists only to introduce another section.

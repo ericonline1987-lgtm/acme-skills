@@ -17,8 +17,10 @@ An email is done when the reader does what it was for. Write for that response.
 3. **First two lines carry the point.** The ask or the news goes first; context after.
 4. **Make the ask easy to say yes to**: specific, with a deadline, and with what you
    need from them in the smallest form (a yes/no, a choice between two options, a
-   15-minute slot). A chaser needs a deadline too; if you don't know one, leave a
-   `[reply-by date]` slot in both the subject and the ask.
+   15-minute slot). Phrase the ask as that small answer ("Can you confirm yes or no
+   by…", "Which of these two dates works?"), not "could you reply". A chaser needs a
+   deadline too; if you don't know one, leave a `[reply-by date]` slot in the subject
+   and the ask.
 5. **Keep the body short**: only the context they need, bullets for multiple items,
    links rather than attachments where possible.
 6. **Match tone to the relationship and stakes.** For difficult messages (bad news,
