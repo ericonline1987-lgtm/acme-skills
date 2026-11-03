@@ -46,7 +46,7 @@ for that action, then cut everything that doesn't serve it.
 | Document | Order | Budget |
 |---|---|---|
 | Decision memo | Recommendation and why now; options on the same fields; the ask | 1 page (use `briefing-decisions`) |
-| Status update | Takeaway; blockers and risks; numbers with their basis; next actions with owner and date, only those the source gives | 1 page |
+| Status update | Takeaway; blockers and risks; numbers with their basis; next actions with owner and date, only those the source gives (none given: leave the section out) | 1 page |
 | Proposal | Problem; proposed approach; cost and timeline; risks; ask | 2 pages |
 | Report | Summary of findings; findings with evidence; implications; appendix | 2 pages + appendix |
 | How-to / runbook | When to use it; prerequisites; numbered steps each with its check; rollback; done when | 12 steps |
