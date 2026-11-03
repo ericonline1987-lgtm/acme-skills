@@ -1,0 +1,1248 @@
+{
+ "tree": "c5f773d",
+ "judge": "sonnet",
+ "runs_per_arm": 3,
+ "note": "Per-criterion pass counts; cases hit by the usage limit are omitted.",
+ "cases": {
+  "brief-crm-decision": {
+   "plugin": "professional-craft",
+   "with": 0.93,
+   "without": 0.53,
+   "criteria": {
+    "with": {
+     "c1-the-decision-the-decider-the": [
+      3,
+      3
+     ],
+     "c2-the-options-are-compared-on": [
+      2,
+      3
+     ],
+     "c3-the-95k-figure-is-treated": [
+      3,
+      3
+     ],
+     "c4-it-gives-a-recommendation-or": [
+      3,
+      3
+     ],
+     "c5-it-makes-an-explicit-ask": [
+      3,
+      3
+     ],
+     "skill-fired": [
+      3,
+      3
+     ]
+    },
+    "without": {
+     "c1-the-decision-the-decider-the": [
+      0,
+      3
+     ],
+     "c2-the-options-are-compared-on": [
+      0,
+      3
+     ],
+     "c3-the-95k-figure-is-treated": [
+      3,
+      3
+     ],
+     "c4-it-gives-a-recommendation-or": [
+      3,
+      3
+     ],
+     "c5-it-makes-an-explicit-ask": [
+      2,
+      3
+     ]
+    }
+   }
+  },
+  "brief-observability-vendor": {
+   "plugin": "professional-craft",
+   "with": 0.73,
+   "without": 0.33,
+   "criteria": {
+    "with": {
+     "c1-it-puts-the-decision-who": [
+      3,
+      3
+     ],
+     "c2-it-does-not-invent-a": [
+      2,
+      3
+     ],
+     "c3-it-states-what-evidence-would": [
+      3,
+      3
+     ],
+     "c4-it-states-the-strongest-case": [
+      0,
+      3
+     ],
+     "c5-it-ends-with-an-explicit": [
+      3,
+      3
+     ],
+     "skill-fired": [
+      3,
+      3
+     ]
+    },
+    "without": {
+     "c1-it-puts-the-decision-who": [
+      0,
+      3
+     ],
+     "c2-it-does-not-invent-a": [
+      2,
+      3
+     ],
+     "c3-it-states-what-evidence-would": [
+      3,
+      3
+     ],
+     "c4-it-states-the-strongest-case": [
+      0,
+      3
+     ],
+     "c5-it-ends-with-an-explicit": [
+      0,
+      3
+     ]
+    }
+   }
+  },
+  "data-duplicate-orders": {
+   "plugin": "professional-craft",
+   "with": 1,
+   "without": 1,
+   "criteria": {
+    "with": {
+     "c1-it-notices-that-order-1003": [
+      3,
+      3
+     ],
+     "c2-it-notices-that-order-1004": [
+      3,
+      3
+     ],
+     "c3-it-reports-south-as-125": [
+      3,
+      3
+     ],
+     "c4-it-reports-north-as-100": [
+      3,
+      3
+     ],
+     "c5-it-gives-the-number-of": [
+      3,
+      3
+     ],
+     "skill-fired": [
+      3,
+      3
+     ]
+    },
+    "without": {
+     "c1-it-notices-that-order-1003": [
+      3,
+      3
+     ],
+     "c2-it-notices-that-order-1004": [
+      3,
+      3
+     ],
+     "c3-it-reports-south-as-125": [
+      3,
+      3
+     ],
+     "c4-it-reports-north-as-100": [
+      3,
+      3
+     ],
+     "c5-it-gives-the-number-of": [
+      3,
+      3
+     ]
+    }
+   }
+  },
+  "data-segment-reversal": {
+   "plugin": "professional-craft",
+   "with": 1,
+   "without": 1,
+   "criteria": {
+    "with": {
+     "c1-it-computes-the-conversion-rate": [
+      3,
+      3
+     ],
+     "c2-it-points-out-that-a": [
+      3,
+      3
+     ],
+     "c3-it-does-not-declare-b": [
+      3,
+      3
+     ],
+     "c4-it-notes-the-differences-are": [
+      3,
+      3
+     ],
+     "skill-fired": [
+      3,
+      3
+     ]
+    },
+    "without": {
+     "c1-it-computes-the-conversion-rate": [
+      3,
+      3
+     ],
+     "c2-it-points-out-that-a": [
+      3,
+      3
+     ],
+     "c3-it-does-not-declare-b": [
+      3,
+      3
+     ],
+     "c4-it-notes-the-differences-are": [
+      3,
+      3
+     ]
+    }
+   }
+  },
+  "data-signups-causation": {
+   "plugin": "professional-craft",
+   "with": 0.75,
+   "without": 0.92,
+   "criteria": {
+    "with": {
+     "c1-it-does-not-state-as": [
+      3,
+      3
+     ],
+     "c2-it-names-at-least-one": [
+      3,
+      3
+     ],
+     "c3-it-suggests-how-the-effect": [
+      0,
+      3
+     ],
+     "c4-it-offers-an-accurate-one": [
+      3,
+      3
+     ],
+     "skill-fired": [
+      0,
+      3
+     ]
+    },
+    "without": {
+     "c1-it-does-not-state-as": [
+      3,
+      3
+     ],
+     "c2-it-names-at-least-one": [
+      3,
+      3
+     ],
+     "c3-it-suggests-how-the-effect": [
+      2,
+      3
+     ],
+     "c4-it-offers-an-accurate-one": [
+      3,
+      3
+     ]
+    }
+   }
+  },
+  "deck-board-titles": {
+   "plugin": "professional-craft",
+   "with": 0.93,
+   "without": 0.8,
+   "criteria": {
+    "with": {
+     "c1-it-replaces-topic-label-titles": [
+      3,
+      3
+     ],
+     "c2-it-asks-what-the-board": [
+      3,
+      3
+     ],
+     "c3-it-anticipates-the-hardest-questions": [
+      3,
+      3
+     ],
+     "c4-it-sizes-the-deck-to": [
+      3,
+      3
+     ],
+     "c5-it-does-not-invent-results": [
+      2,
+      3
+     ],
+     "skill-fired": [
+      3,
+      3
+     ]
+    },
+    "without": {
+     "c1-it-replaces-topic-label-titles": [
+      3,
+      3
+     ],
+     "c2-it-asks-what-the-board": [
+      3,
+      3
+     ],
+     "c3-it-anticipates-the-hardest-questions": [
+      0,
+      3
+     ],
+     "c4-it-sizes-the-deck-to": [
+      3,
+      3
+     ],
+     "c5-it-does-not-invent-results": [
+      3,
+      3
+     ]
+    }
+   }
+  },
+  "deck-devtools-funding": {
+   "plugin": "professional-craft",
+   "with": 0.8,
+   "without": 0.53,
+   "criteria": {
+    "with": {
+     "c1-slide-headlines-are-full-takeaway": [
+      3,
+      3
+     ],
+     "c2-the-number-of-slides-fits": [
+      3,
+      3
+     ],
+     "c3-it-anticipates-objections-leadership-is": [
+      3,
+      3
+     ],
+     "c4-it-ends-with-an-explicit": [
+      0,
+      3
+     ],
+     "c5-it-uses-placeholders-or-asks": [
+      3,
+      3
+     ],
+     "skill-fired": [
+      3,
+      3
+     ]
+    },
+    "without": {
+     "c1-slide-headlines-are-full-takeaway": [
+      0,
+      3
+     ],
+     "c2-the-number-of-slides-fits": [
+      3,
+      3
+     ],
+     "c3-it-anticipates-objections-leadership-is": [
+      3,
+      3
+     ],
+     "c4-it-ends-with-an-explicit": [
+      0,
+      3
+     ],
+     "c5-it-uses-placeholders-or-asks": [
+      2,
+      3
+     ]
+    }
+   }
+  },
+  "doc-vp-status": {
+   "plugin": "professional-craft",
+   "with": 1,
+   "without": 0.8,
+   "criteria": {
+    "with": {
+     "c1-the-first-two-sentences-carry": [
+      3,
+      3
+     ],
+     "c2-it-keeps-every-number-and": [
+      3,
+      3
+     ],
+     "c3-it-does-not-invent-facts": [
+      3,
+      3
+     ],
+     "c4-it-states-the-blocker-with": [
+      3,
+      3
+     ],
+     "c5-it-stays-short-about-one": [
+      3,
+      3
+     ],
+     "skill-fired": [
+      3,
+      3
+     ]
+    },
+    "without": {
+     "c1-the-first-two-sentences-carry": [
+      1,
+      3
+     ],
+     "c2-it-keeps-every-number-and": [
+      3,
+      3
+     ],
+     "c3-it-does-not-invent-facts": [
+      3,
+      3
+     ],
+     "c4-it-states-the-blocker-with": [
+      2,
+      3
+     ],
+     "c5-it-stays-short-about-one": [
+      3,
+      3
+     ]
+    }
+   }
+  },
+  "documents-migration-status": {
+   "plugin": "professional-craft",
+   "with": 0.8,
+   "without": 0.67,
+   "criteria": {
+    "with": {
+     "c1-the-first-two-sentences-give": [
+      3,
+      3
+     ],
+     "c2-all-figures-and-dates-are": [
+      0,
+      3
+     ],
+     "c3-the-blocker-is-stated-with": [
+      3,
+      3
+     ],
+     "c4-the-update-itself-is-concise": [
+      3,
+      3
+     ],
+     "c5-any-next-actions-have-an": [
+      3,
+      3
+     ],
+     "skill-fired": [
+      3,
+      3
+     ]
+    },
+    "without": {
+     "c1-the-first-two-sentences-give": [
+      2,
+      3
+     ],
+     "c2-all-figures-and-dates-are": [
+      0,
+      3
+     ],
+     "c3-the-blocker-is-stated-with": [
+      3,
+      3
+     ],
+     "c4-the-update-itself-is-concise": [
+      3,
+      3
+     ],
+     "c5-any-next-actions-have-an": [
+      2,
+      3
+     ]
+    }
+   }
+  },
+  "email-launch-slip": {
+   "plugin": "professional-craft",
+   "with": 0.93,
+   "without": 0.73,
+   "criteria": {
+    "with": {
+     "c1-the-subject-line-states-the": [
+      3,
+      3
+     ],
+     "c2-the-news-a-two-week": [
+      2,
+      3
+     ],
+     "c3-the-cause-is-stated-factually": [
+      3,
+      3
+     ],
+     "c4-it-gives-a-concrete-next": [
+      3,
+      3
+     ],
+     "c5-each-email-draft-is-short": [
+      3,
+      3
+     ],
+     "skill-fired": [
+      3,
+      3
+     ]
+    },
+    "without": {
+     "c1-the-subject-line-states-the": [
+      3,
+      3
+     ],
+     "c2-the-news-a-two-week": [
+      2,
+      3
+     ],
+     "c3-the-cause-is-stated-factually": [
+      3,
+      3
+     ],
+     "c4-it-gives-a-concrete-next": [
+      3,
+      3
+     ],
+     "c5-each-email-draft-is-short": [
+      0,
+      3
+     ]
+    }
+   }
+  },
+  "email-partial-commitment": {
+   "plugin": "professional-craft",
+   "with": 1,
+   "without": 0.53,
+   "criteria": {
+    "with": {
+     "c1-it-confirms-the-friday-ship": [
+      3,
+      3
+     ],
+     "c2-it-does-not-promise-imply": [
+      3,
+      3
+     ],
+     "c3-it-says-who-decides-the": [
+      3,
+      3
+     ],
+     "c4-the-subject-line-or-first": [
+      3,
+      3
+     ],
+     "c5-it-plans-a-follow-up": [
+      3,
+      3
+     ],
+     "skill-fired": [
+      3,
+      3
+     ]
+    },
+    "without": {
+     "c1-it-confirms-the-friday-ship": [
+      3,
+      3
+     ],
+     "c2-it-does-not-promise-imply": [
+      3,
+      3
+     ],
+     "c3-it-says-who-decides-the": [
+      2,
+      3
+     ],
+     "c4-the-subject-line-or-first": [
+      0,
+      3
+     ],
+     "c5-it-plans-a-follow-up": [
+      0,
+      3
+     ]
+    }
+   }
+  },
+  "email-vendor-chaser": {
+   "plugin": "professional-craft",
+   "with": 0.75,
+   "without": 0.08,
+   "criteria": {
+    "with": {
+     "c1-the-subject-line-names-the": [
+      3,
+      3
+     ],
+     "c2-it-asks-for-a-specific": [
+      0,
+      3
+     ],
+     "c3-it-does-not-invent-details": [
+      3,
+      3
+     ],
+     "c4-it-says-what-to-do": [
+      3,
+      3
+     ],
+     "skill-fired": [
+      3,
+      3
+     ]
+    },
+    "without": {
+     "c1-the-subject-line-names-the": [
+      0,
+      3
+     ],
+     "c2-it-asks-for-a-specific": [
+      0,
+      3
+     ],
+     "c3-it-does-not-invent-details": [
+      1,
+      3
+     ],
+     "c4-it-says-what-to-do": [
+      0,
+      3
+     ]
+    }
+   }
+  },
+  "no-fire-grammar": {
+   "plugin": "professional-craft",
+   "with": 0.92,
+   "without": 1,
+   "criteria": {
+    "with": {
+     "c1-it-gives-a-corrected-sentence": [
+      3,
+      3
+     ],
+     "c2-the-reply-is-brief-with": [
+      2,
+      3
+     ],
+     "not-writing-documents": [
+      3,
+      3
+     ],
+     "not-writing-emails": [
+      3,
+      3
+     ]
+    },
+    "without": {
+     "c1-it-gives-a-corrected-sentence": [
+      3,
+      3
+     ],
+     "c2-the-reply-is-brief-with": [
+      3,
+      3
+     ],
+     "not-writing-documents": [
+      3,
+      3
+     ],
+     "not-writing-emails": [
+      3,
+      3
+     ]
+    }
+   }
+  },
+  "no-fire-synonyms": {
+   "plugin": "professional-craft",
+   "with": 1,
+   "without": 1,
+   "criteria": {
+    "with": {
+     "c1-it-gives-three-reasonable-synonyms": [
+      3,
+      3
+     ],
+     "c2-the-reply-is-brief-with": [
+      3,
+      3
+     ],
+     "not-researching-topics": [
+      3,
+      3
+     ],
+     "not-writing-documents": [
+      3,
+      3
+     ]
+    },
+    "without": {
+     "c1-it-gives-three-reasonable-synonyms": [
+      3,
+      3
+     ],
+     "c2-the-reply-is-brief-with": [
+      3,
+      3
+     ],
+     "not-researching-topics": [
+      3,
+      3
+     ],
+     "not-writing-documents": [
+      3,
+      3
+     ]
+    }
+   }
+  },
+  "research-copilot-price": {
+   "plugin": "professional-craft",
+   "with": 1,
+   "without": 1,
+   "criteria": {
+    "with": {
+     "c1-it-does-not-present-a": [
+      3,
+      3
+     ],
+     "c2-it-points-to-the-primary": [
+      3,
+      3
+     ],
+     "c3-it-gives-a-confidence-level": [
+      3,
+      3
+     ],
+     "skill-fired": [
+      3,
+      3
+     ]
+    },
+    "without": {
+     "c1-it-does-not-present-a": [
+      3,
+      3
+     ],
+     "c2-it-points-to-the-primary": [
+      3,
+      3
+     ],
+     "c3-it-gives-a-confidence-level": [
+      3,
+      3
+     ]
+    }
+   }
+  },
+  "research-sso-options": {
+   "plugin": "professional-craft",
+   "with": 0.87,
+   "without": 0.6,
+   "criteria": {
+    "with": {
+     "c1-the-first-sentences-answer-the": [
+      1,
+      3
+     ],
+     "c2-it-covers-the-main-approaches": [
+      3,
+      3
+     ],
+     "c3-it-states-confidence-or-the": [
+      3,
+      3
+     ],
+     "c4-it-notes-that-time-sensitive": [
+      3,
+      3
+     ],
+     "c5-it-names-gaps-or-what": [
+      3,
+      3
+     ],
+     "skill-fired": [
+      1,
+      3
+     ]
+    },
+    "without": {
+     "c1-the-first-sentences-answer-the": [
+      0,
+      3
+     ],
+     "c2-it-covers-the-main-approaches": [
+      3,
+      3
+     ],
+     "c3-it-states-confidence-or-the": [
+      2,
+      3
+     ],
+     "c4-it-notes-that-time-sensitive": [
+      2,
+      3
+     ],
+     "c5-it-names-gaps-or-what": [
+      2,
+      3
+     ]
+    }
+   }
+  },
+  "artifacts-repo-for-agency": {
+   "plugin": "foundations",
+   "with": 0.93,
+   "without": 0.47,
+   "criteria": {
+    "with": {
+     "c1-it-treats-the-agency-as": [
+      3,
+      3
+     ],
+     "c2-it-points-out-that-text": [
+      3,
+      3
+     ],
+     "c3-it-recommends-removing-or-relocating": [
+      3,
+      3
+     ],
+     "c4-it-diagnoses-the-2-gb": [
+      2,
+      3
+     ],
+     "c5-any-history-rewrite-comes-only": [
+      3,
+      3
+     ],
+     "skill-fired": [
+      3,
+      3
+     ]
+    },
+    "without": {
+     "c1-it-treats-the-agency-as": [
+      1,
+      3
+     ],
+     "c2-it-points-out-that-text": [
+      0,
+      3
+     ],
+     "c3-it-recommends-removing-or-relocating": [
+      3,
+      3
+     ],
+     "c4-it-diagnoses-the-2-gb": [
+      2,
+      3
+     ],
+     "c5-any-history-rewrite-comes-only": [
+      1,
+      3
+     ]
+    }
+   }
+  },
+  "artifacts-vendor-zip": {
+   "plugin": "foundations",
+   "with": 0.75,
+   "without": 0.5,
+   "criteria": {
+    "with": {
+     "c1-it-raises-that-the-screenshots": [
+      3,
+      3
+     ],
+     "c2-it-notes-that-images-must": [
+      3,
+      3
+     ],
+     "c3-it-does-not-send-anything": [
+      3,
+      3
+     ],
+     "c4-it-proposes-sharing-only-the": [
+      0,
+      3
+     ],
+     "skill-fired": [
+      3,
+      3
+     ]
+    },
+    "without": {
+     "c1-it-raises-that-the-screenshots": [
+      3,
+      3
+     ],
+     "c2-it-notes-that-images-must": [
+      0,
+      3
+     ],
+     "c3-it-does-not-send-anything": [
+      3,
+      3
+     ],
+     "c4-it-proposes-sharing-only-the": [
+      0,
+      3
+     ]
+    }
+   }
+  },
+  "capturing-learning-deploy-claims": {
+   "plugin": "foundations",
+   "with": 1,
+   "without": 0.8,
+   "criteria": {
+    "with": {
+     "c1-the-lesson-is-turned-into": [
+      3,
+      3
+     ],
+     "c2-the-fix-is-placed-somewhere": [
+      3,
+      3
+     ],
+     "c3-it-recommends-reproducing-the-failure": [
+      3,
+      3
+     ],
+     "c4-changes-to-shared-instructions-or": [
+      3,
+      3
+     ],
+     "c5-the-answer-is-concise-and": [
+      3,
+      3
+     ],
+     "skill-fired": [
+      3,
+      3
+     ]
+    },
+    "without": {
+     "c1-the-lesson-is-turned-into": [
+      3,
+      3
+     ],
+     "c2-the-fix-is-placed-somewhere": [
+      3,
+      3
+     ],
+     "c3-it-recommends-reproducing-the-failure": [
+      0,
+      3
+     ],
+     "c4-changes-to-shared-instructions-or": [
+      3,
+      3
+     ],
+     "c5-the-answer-is-concise-and": [
+      3,
+      3
+     ]
+    }
+   }
+  },
+  "claims-case-study": {
+   "plugin": "foundations",
+   "with": 1,
+   "without": 1,
+   "criteria": {
+    "with": {
+     "c1-it-flags-the-90-figure": [
+      3,
+      3
+     ],
+     "c2-it-flags-fastest-shipping-team": [
+      3,
+      3
+     ],
+     "c3-it-offers-wording-that-keeps": [
+      3,
+      3
+     ],
+     "c4-it-does-not-invent-supporting": [
+      3,
+      3
+     ],
+     "skill-fired": [
+      3,
+      3
+     ]
+    },
+    "without": {
+     "c1-it-flags-the-90-figure": [
+      3,
+      3
+     ],
+     "c2-it-flags-fastest-shipping-team": [
+      3,
+      3
+     ],
+     "c3-it-offers-wording-that-keeps": [
+      3,
+      3
+     ],
+     "c4-it-does-not-invent-supporting": [
+      3,
+      3
+     ]
+    }
+   }
+  },
+  "defining-done-refund-tool": {
+   "plugin": "foundations",
+   "with": 1,
+   "without": 0.53,
+   "criteria": {
+    "with": {
+     "c1-before-going-deep-into-implementation": [
+      3,
+      3
+     ],
+     "c2-it-says-how-success-would": [
+      3,
+      3
+     ],
+     "c3-it-names-at-least-one": [
+      3,
+      3
+     ],
+     "c4-it-flags-that-refunds-move": [
+      3,
+      3
+     ],
+     "c5-it-states-at-least-one": [
+      3,
+      3
+     ],
+     "skill-fired": [
+      3,
+      3
+     ]
+    },
+    "without": {
+     "c1-before-going-deep-into-implementation": [
+      0,
+      3
+     ],
+     "c2-it-says-how-success-would": [
+      0,
+      3
+     ],
+     "c3-it-names-at-least-one": [
+      2,
+      3
+     ],
+     "c4-it-flags-that-refunds-move": [
+      3,
+      3
+     ],
+     "c5-it-states-at-least-one": [
+      3,
+      3
+     ]
+    }
+   }
+  },
+  "delegate-contractor-invoice": {
+   "plugin": "foundations",
+   "with": 0.93,
+   "without": 0.93,
+   "criteria": {
+    "with": {
+     "c1-it-says-the-contractor-s": [
+      3,
+      3
+     ],
+     "c2-it-proposes-independent-checks-such": [
+      3,
+      3
+     ],
+     "c3-it-proposes-checking-side-effects": [
+      3,
+      3
+     ],
+     "c4-it-proposes-checking-the-application": [
+      3,
+      3
+     ],
+     "c5-it-checks-the-result-against": [
+      2,
+      3
+     ],
+     "skill-fired": [
+      3,
+      3
+     ]
+    },
+    "without": {
+     "c1-it-says-the-contractor-s": [
+      3,
+      3
+     ],
+     "c2-it-proposes-independent-checks-such": [
+      3,
+      3
+     ],
+     "c3-it-proposes-checking-side-effects": [
+      2,
+      3
+     ],
+     "c4-it-proposes-checking-the-application": [
+      3,
+      3
+     ],
+     "c5-it-checks-the-result-against": [
+      3,
+      3
+     ]
+    }
+   }
+  },
+  "delegating-work-migration": {
+   "plugin": "foundations",
+   "with": 1,
+   "without": 1,
+   "criteria": {
+    "with": {
+     "c1-each-of-the-three-briefs": [
+      3,
+      3
+     ],
+     "c2-the-response-notices-that-the": [
+      3,
+      3
+     ],
+     "c3-acceptance-relies-on-independent-checks": [
+      3,
+      3
+     ],
+     "c4-it-checks-for-side-effects": [
+      3,
+      3
+     ],
+     "c5-at-least-one-brief-names": [
+      3,
+      3
+     ],
+     "skill-fired": [
+      3,
+      3
+     ]
+    },
+    "without": {
+     "c1-each-of-the-three-briefs": [
+      3,
+      3
+     ],
+     "c2-the-response-notices-that-the": [
+      3,
+      3
+     ],
+     "c3-acceptance-relies-on-independent-checks": [
+      3,
+      3
+     ],
+     "c4-it-checks-for-side-effects": [
+      3,
+      3
+     ],
+     "c5-at-least-one-brief-names": [
+      3,
+      3
+     ]
+    }
+   }
+  },
+  "done-weekly-sales-report": {
+   "plugin": "foundations",
+   "with": 0.73,
+   "without": 0.2,
+   "criteria": {
+    "with": {
+     "c1-it-identifies-or-asks-what": [
+      2,
+      3
+     ],
+     "c2-it-defines-how-success-will": [
+      3,
+      3
+     ],
+     "c3-it-names-at-least-one": [
+      3,
+      3
+     ],
+     "c4-it-lists-decisions-that-stay": [
+      3,
+      3
+     ],
+     "c5-it-keeps-the-up-front": [
+      0,
+      3
+     ],
+     "skill-fired": [
+      3,
+      3
+     ]
+    },
+    "without": {
+     "c1-it-identifies-or-asks-what": [
+      0,
+      3
+     ],
+     "c2-it-defines-how-success-will": [
+      0,
+      3
+     ],
+     "c3-it-names-at-least-one": [
+      0,
+      3
+     ],
+     "c4-it-lists-decisions-that-stay": [
+      3,
+      3
+     ],
+     "c5-it-keeps-the-up-front": [
+      0,
+      3
+     ]
+    }
+   }
+  }
+ }
+}
