@@ -1,1 +1,1 @@
-Skills from the professional-craft plugin: analyzing-data, briefing-decisions, building-presentations, researching-topics, writing-documents, writing-emails. When one covers the task, load it before answering, even if the task looks simple.
+Skills from the professional-craft plugin: briefing-decisions, building-presentations, researching-topics, writing-documents, writing-emails. When one covers the task, load it before answering, even if the task looks simple.

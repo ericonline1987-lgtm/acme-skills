@@ -1,4 +1,0 @@
-interface:
-  display_name: "Analyzing Data"
-  short_description: "Check the data, compute, chart it honestly"
-  default_prompt: "Use $analyzing-data to answer this question from the data."
