@@ -41,7 +41,19 @@ Core rules (optional): Claude Code uses the `core-rules` plugin (a session-start
 | Every skill works when its folder is copied alone | Verified by `tests/test_portability.py` |
 | Installer targets, idempotent rules, user skills protected | Verified by `tests/test_install.py` |
 | Skill triggering in Claude Code | Measured: see `benchmarks/RESULTS.md` |
-| Codex and Antigravity load and trigger the skills | **Not verified here**: no Codex or Antigravity CLI was available. Manifests follow the vendors' published formats. Please report anything that doesn't load. |
+| Codex and Antigravity load and trigger the skills | **Not verified here**: neither CLI could be installed in the build environment (package registries unreachable), and both need their own sign-in. Manifests follow the vendors' published formats. Run the check below and report anything that doesn't load. |
+
+## Check a runtime yourself
+
+`tools/smoke_check.py` installs every skill into a scratch project, asks the agent which skills it can see, and lists any that are missing. It costs one agent session.
+
+```
+python3 tools/smoke_check.py --runtime codex --command 'codex exec {prompt}'
+python3 tools/smoke_check.py --runtime claude --command 'claude -p {prompt}'
+python3 tools/smoke_check.py --runtime antigravity --command '<agy non-interactive command> {prompt}'
+```
+
+Exit status 0 means every skill was seen; 1 lists the missing ones.
 
 ## Sources
 
