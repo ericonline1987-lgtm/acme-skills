@@ -42,6 +42,9 @@ Challenge:   <objection → ruling>, one per line
 Decision:    <choice, who decided, first step that proves the direction>
 ```
 
+Asked for one line? Give the pick, the constraint that would flip it, and the cheap check
+that would settle it, in one or two sentences.
+
 ## Quality bar
 
 - At least two options were compared on identical fields.

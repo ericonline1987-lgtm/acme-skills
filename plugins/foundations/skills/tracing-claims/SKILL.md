@@ -26,7 +26,8 @@ someone said or decided.
 2. **Prefer primary sources.** A search snippet, a summary or "it's already done" is a
    lead to verify against the original, not a fact.
 3. **Keep qualifiers attached.** A number keeps its scope (period, population,
-   environment, sample) even when moved into a table or headline.
+   environment, sample) even when moved into a table or headline. It keeps its strength
+   too: "fell after" doesn't become "cut" or "caused" in the headline.
 4. **Never fill gaps by invention.** Unknown names, owners, dates and figures are
    written TBD or left out.
 5. **Cite in the reader's format**: links for web sources, file paths and line numbers

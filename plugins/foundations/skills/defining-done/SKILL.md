@@ -13,6 +13,8 @@ the outcome, not the output.
 1. **Name the outcome, not the deliverable.** "Customers stop abandoning checkout at the
    payment step" is an outcome; "a PR that fixes the timeout" is a deliverable. Ask
    "so that what?" until the answer is something someone could observe in the world.
+   For a report or dashboard, the outcome is the decision it feeds ("reps choose which
+   deals to chase each Monday"), not its delivery ("arrives every Monday").
 2. **Name the evidence.** What would show the outcome happened: a metric and threshold,
    a person's confirmation, a behaviour seen in real use. If nothing could show it, the
    outcome is too vague; sharpen it.
@@ -31,7 +33,7 @@ the outcome, not the output.
 | Task size | Contract |
 |---|---|
 | Small (minutes, easy to redo) | One sentence: outcome + how you will know |
-| Medium (hours, or shared with others) | One line per template heading, about 150 words, then start or ask the one question that blocks you |
+| Medium (hours, or shared with others) | Five lines: outcome, evidence, out of scope, decisions reserved, and the one question that blocks you (if any) |
 | Large or irreversible | The full template, confirmed before work starts |
 
 Template: `assets/outcome-contract.md`. Check a filled one with
