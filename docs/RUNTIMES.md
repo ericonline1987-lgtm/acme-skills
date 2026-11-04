@@ -6,9 +6,9 @@
 
 | Runtime | Plugin route | Copy route (`tools/install.py`) |
 |---|---|---|
-| Claude Code | `/plugin marketplace add ericonline1987-lgtm/acme-skills`, then `/plugin install foundations@acme-skills` (and the others) | `--runtime claude` → `~/.claude/skills` or `.claude/skills` |
+| Claude Code | `/plugin marketplace add ericonline1987-lgtm/acme-skills`, then `/plugin install engineering-lifecycle@acme-skills` and `professional-craft@acme-skills` | `--runtime claude` → `~/.claude/skills` or `.claude/skills` |
 | Codex | `codex plugin marketplace add ericonline1987-lgtm/acme-skills`, then install from the Plugins Directory | `--runtime codex` → `~/.agents/skills` or `.agents/skills` (`--codex-legacy` → `$CODEX_HOME/skills`) |
-| Antigravity | Clone, then `agy plugin install ./plugins/foundations` (and the others) | `--runtime antigravity` → `~/.gemini/config/skills` or `.agents/skills` |
+| Antigravity | Clone, then `agy plugin install ./plugins/engineering-lifecycle` and `./plugins/professional-craft` | `--runtime antigravity` → `~/.gemini/config/skills` or `.agents/skills` |
 
 `.agents/skills` is the project folder for both Codex and Antigravity, so `tools/install.py --runtime all --scope project` installs once for both.
 

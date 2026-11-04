@@ -6,7 +6,7 @@ A change is accepted when it is measured, not when it reads well.
 
 1. **Start from a case.** Write the eval case first, from a real task or failure:
    ```
-   python3 plugins/foundations/skills/capturing-learning/scripts/add_eval_case.py \
+   python3 tools/add_eval_case.py \
      --plugin-dir plugins/<plugin> --name <case> --prompt "..." \
      --criteria "..." --criteria "..." --skill <skill> --source "<what happened>"
    ```

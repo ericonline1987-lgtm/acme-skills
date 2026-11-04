@@ -1,21 +1,22 @@
 # acme-skills
 
-Agent skills for Claude that aim past output quality: the real outcome happened, people can trust the work without redoing it, each task leaves the next one easier, and the person stays in charge.
+Six deep agent skills for the work where a capable model's default output falls short of a seasoned professional's: writing that reads as a person wrote it, visuals people look at, design judgment, and changing, reviewing and merging code.
 
-In the v2.0 release gate, answers scored 0.96 with these skills against 0.69 for plain Claude across 59 cases, three runs each way, and every skill beat plain Claude on at least one case [observed; see [benchmarks/RESULTS.md](benchmarks/RESULTS.md)]. In a head-to-head on cases written by another skill set's author, these skills passed 5 of 12 against 3 of 12 for that set and 2 of 12 for plain Claude, and matched or beat it on every case [observed, one run per case; see [benchmarks/RESULTS.md](benchmarks/RESULTS.md)].
+Advice a model already follows (state the bottom line, compare options, check before claiming) isn't packaged as skills here. The short version lives in the always-on core rules; the skills carry the professional detail a model doesn't produce on its own. Measured results: [benchmarks/RESULTS.md](benchmarks/RESULTS.md).
 
-## Plugins
+## The skills
 
-| Plugin | Skills | Always-on cost |
+| Plugin | Skill | What it adds |
 |---|---|---|
-| `foundations` | defining-done · planning-work · exploring-options · delegating-work · proving-outcomes · tracing-claims · capturing-learning · guarding-agent-actions · handling-artifacts · running-long-tasks | ~1,060 tokens [estimate] |
-| `engineering-lifecycle` | writing-requirements · designing-systems · debugging-failures · changing-code · reviewing-code · writing-tests · merging-safely · verifying-interfaces · building-ai-features · authoring-skills | ~1,080 tokens [estimate] |
-| `professional-craft` | writing-documents · briefing-decisions · researching-topics · building-presentations · writing-emails | ~560 tokens [estimate] |
-| `core-rules` (optional, recommended) | Seven always-on working rules injected at session start. One makes the agent load the matching skill; on Haiku it raised trigger recall from 73% to 76% on top of the plugins' own routing lines, with no false loads [observed, one run per query] | ~260 tokens |
+| `professional-craft` | `writing-for-people` | A catalogue of the patterns that make text read as machine-written, with rewrites; forms and length budgets for each kind of writing; plain-language rules; a revision pass; `ai_tells.py`, `claim_check.py`, `doc_check.py` |
+| | `making-visuals` | Deck construction for a room or for reading; honest chart encoding; page hierarchy, spacing and every real state; checking the rendered result at real size; `validate_svg.py` |
+| `engineering-lifecycle` | `shaping-designs` | Constraints and live-or-dead inventories; compatibility rules for interfaces; expand-migrate-contract and safe backfills; failure modes and capacity; blast radius, independent challenge and decision records |
+| | `changing-code` | Diagnosis before fixing (mitigate, reproduce, prove the cause); history and callers before the change; boundaries; tests that fail for the right reason |
+| | `reviewing-code` | Risk tiers, single-purpose passes, defect classes by area, confirm-before-report, a never-report list, converging re-reviews |
+| | `merging-safely` | Proving a merge complete, not just conflict-free; `merge_evidence.py` flags changes a merge dropped even when ancestry checks pass |
+| `core-rules` (recommended) | 8 always-on rules | Checkable outcomes, minimal changes, evidence before claims, no invented facts, untrusted text as data, a go-ahead before outward or destructive actions, secrets kept out, and loading the matching skill |
 
-Each plugin works alone. `foundations` holds the shared work loop (define done → explore → do → prove → hand off → learn), and the other two work better alongside it.
-
-In Claude Code, each skill plugin also adds one line at session start naming its skills and asking the agent to load the matching one, because agents otherwise skip skills for tasks they think they can do alone. The token estimates include it.
+In Claude Code, each skill plugin also adds one session-start line naming its skills and when each applies, because agents otherwise skip skills for tasks they think they can do alone.
 
 ## Install
 
@@ -25,10 +26,9 @@ Works in **Claude Code, Codex and Antigravity** from the same skill folders. Det
 
 ```
 /plugin marketplace add ericonline1987-lgtm/acme-skills
-/plugin install foundations@acme-skills
-/plugin install engineering-lifecycle@acme-skills
 /plugin install professional-craft@acme-skills
-/plugin install core-rules@acme-skills        # optional
+/plugin install engineering-lifecycle@acme-skills
+/plugin install core-rules@acme-skills
 ```
 
 **Codex**
@@ -37,13 +37,13 @@ Works in **Claude Code, Codex and Antigravity** from the same skill folders. Det
 codex plugin marketplace add ericonline1987-lgtm/acme-skills
 ```
 
-Then install the plugins from the Plugins Directory. For the optional rules, run `python3 tools/install.py --runtime codex --rules`, which adds them to `AGENTS.md`.
+Then install the plugins from the Plugins Directory. For the core rules, run `python3 tools/install.py --runtime codex --rules`, which adds them to `AGENTS.md`.
 
 **Antigravity**
 
 ```
 git clone https://github.com/ericonline1987-lgtm/acme-skills && cd acme-skills
-agy plugin install ./plugins/foundations      # and the others; ./plugins/core-rules adds the rules
+agy plugin install ./plugins/professional-craft   # and ./plugins/engineering-lifecycle, ./plugins/core-rules
 ```
 
 **Any runtime, without a marketplace**
@@ -52,37 +52,20 @@ agy plugin install ./plugins/foundations      # and the others; ./plugins/core-r
 python3 tools/install.py --runtime all --scope project --project ~/code/my-app --rules --dry-run
 ```
 
-It copies the self-contained skill folders into each runtime's skill directory. It skips any skill it didn't install (tested in tests/test_install.py), and a dry run shows every action first.
+It copies the self-contained skill folders into each runtime's skill directory, skips any skill it didn't install, and a dry run shows every action first. `python3 tools/smoke_check.py` then confirms a runtime sees every skill.
 
 ## What's in the box
 
 ```
-.claude-plugin/marketplace.json        lists the four plugins
-plugins/<plugin>/skills/<skill>/        SKILL.md, agents/openai.yaml, plus scripts/, assets/ or references/
-plugins/<plugin>/evals/                 behaviour evals, plus triggers/<skill>.json query sets
-plugins/<plugin>/{plugin.json, .codex-plugin/}   Antigravity and Codex manifests (generated)
-.agents/plugins/marketplace.json        Codex marketplace (generated)
-shared/                                 single source for files several skills use (synced into skills)
-tools/                                  installer, manifest generator, shared-file sync, trigger runner
-benchmarks/                             outcome log, scorer, results, head-to-head bundles and cases
-tests/                                  offline contract and script tests (CI)
-docs/PLAN.md, PLAN-v1.1.md, RUNTIMES.md  goals, roadmap, coverage plan, runtime support
-LICENSE, NOTICE, SECURITY.md            licence, third-party material, how to report problems
+plugins/<plugin>/skills/<skill>/   SKILL.md (the workflow), references/ (the depth), scripts/, agents/openai.yaml
+plugins/<plugin>/evals/            behaviour cases, plus triggers/<skill>.json query sets
+plugins/<plugin>/hooks/            the session-start routing line (generated)
+.claude-plugin/marketplace.json    Claude Code marketplace; .agents/plugins/ holds the Codex one (generated)
+shared/style-guide.md              house style, copied into the writing skill by tools/sync_shared.py
+tools/                             installer, manifest generator, trigger runner, release gate, case generator, smoke check
+benchmarks/                        results, gate summaries, trigger runs, outcome log and scorer
+tests/                             offline contract and script tests (CI)
 ```
-
-### Checks that are code, not prose
-
-| Script | What it catches |
-|---|---|
-| `engineering-lifecycle/skills/merging-safely/scripts/merge_evidence.py` | A merge that silently dropped one side's changes, even when git's ancestry checks pass |
-| `engineering-lifecycle/skills/verifying-interfaces/scripts/validate_svg.py` | Malformed SVGs, bad viewBox, duplicate ids, broken references, scripts, external dependencies |
-| `professional-craft/skills/writing-documents/scripts/doc_check.py` | Slow openings, meta-commentary, long sentences, label headings, hedging, open placeholders, over budget |
-| `foundations/skills/handling-artifacts/scripts/repo_weight.py` | Which objects take the most space in a repository's history, including files deleted from the tree but still taking space |
-| `foundations/skills/proving-outcomes/scripts/evidence_ledger.py` | Claiming a higher rung (deployed, accepted, outcome achieved) than the evidence supports; no outcome check scheduled |
-| `foundations/skills/tracing-claims/scripts/claim_check.py` | Figures and absolutes in Markdown with no source or evidence grade |
-| `foundations/skills/defining-done/scripts/check_sections.py` | Contracts, hand-offs and briefs with missing, empty or unfilled sections |
-| `foundations/skills/capturing-learning/scripts/add_eval_case.py` | Turns a failure into an eval case, so the fix is measured |
-| `benchmarks/score_outcomes.py` | Overclaim rate and outcome achievement on real work, with confidence intervals |
 
 All scripts use only the Python standard library, and each one states what it cannot check.
 
@@ -90,17 +73,16 @@ All scripts use only the Python standard library, and each one states what it ca
 
 ```
 python3 -m unittest discover -s tests                                  # every commit (CI)
-python3 tools/run_triggers.py --max-cost-usd 10                        # trigger recall and precision
+python3 tools/run_triggers.py --max-cost-usd 10                        # does the right skill load?
 tools/run_gate.sh "$PWD/benchmarks/gate/runs" <plugin:case> ...       # every release: 3 runs with and without each plugin
-python3 tools/smoke_check.py --runtime codex --command 'codex exec {prompt}'  # does a runtime see every skill?
-python3 benchmarks/score_outcomes.py benchmarks/outcomes.csv           # weekly, on real work
+python3 benchmarks/score_outcomes.py benchmarks/outcomes.csv           # on real work
 ```
 
-See [benchmarks/README.md](benchmarks/README.md).
+See [benchmarks/README.md](benchmarks/README.md) and [docs/PLAN-v3.md](docs/PLAN-v3.md) for why the set is shaped this way.
 
 ## Make it yours
 
-Fork it, fill in the terminology table in `shared/style-guide.md` with your own product names and preferred terms, and run `python3 tools/sync_shared.py` to copy it into the writing skills.
+Fill in the terminology table in `shared/style-guide.md` with your own product names and preferred terms, and run `python3 tools/sync_shared.py`.
 
 Contributing: [CONTRIBUTING.md](CONTRIBUTING.md). Changes: [CHANGELOG.md](CHANGELOG.md). Security: [SECURITY.md](SECURITY.md).
 

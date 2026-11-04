@@ -19,7 +19,7 @@ class SmokeCheckTests(unittest.TestCase):
         names = " ".join(smoke.expected_skills())
         fake = f"{sys.executable} -c \"import sys; print('\\n'.join(sys.argv[2:]))\" {{prompt}} {names}"
         self.assertEqual(smoke.main(["--runtime", "codex", "--command", fake]), 0)
-        partial = f"{sys.executable} -c \"print('defining-done')\" {{prompt}}"
+        partial = f"{sys.executable} -c \"print('changing-code')\" {{prompt}}"
         self.assertEqual(smoke.main(["--runtime", "codex", "--command", partial]), 1)
 
     def test_command_needs_a_prompt_slot(self):

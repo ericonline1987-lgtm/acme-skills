@@ -9,13 +9,11 @@ from pathlib import Path
 
 from helpers import PLUGINS_DIR, ROOT, load_module
 
-FOUNDATIONS = PLUGINS_DIR / "foundations"
+WRITING = PLUGINS_DIR / "professional-craft/skills/writing-for-people"
 TEMPLATES = ROOT / "shared" / "templates"
 
-ledger = load_module(FOUNDATIONS / "skills/proving-outcomes/scripts/evidence_ledger.py", "evidence_ledger")
-sections = load_module(ROOT / "shared/scripts/check_sections.py", "check_sections")
-claims = load_module(FOUNDATIONS / "skills/tracing-claims/scripts/claim_check.py", "claim_check")
-add_case = load_module(FOUNDATIONS / "skills/capturing-learning/scripts/add_eval_case.py", "add_eval_case")
+claims = load_module(WRITING / "scripts/claim_check.py", "claim_check")
+add_case = load_module(ROOT / "tools/add_eval_case.py", "add_eval_case")
 outcomes = load_module(ROOT / "benchmarks/score_outcomes.py", "score_outcomes")
 
 TODAY = dt.date(2026, 10, 13)
@@ -30,116 +28,6 @@ def ev(rung, **overrides):
 def quiet(func, *args):
     with redirect_stdout(io.StringIO()), redirect_stderr(io.StringIO()):
         return func(*args)
-
-
-class EvidenceLedgerTests(unittest.TestCase):
-    def base(self, claimed, evidence, follow_up=None):
-        return {
-            "claim": "x is done",
-            "claimed_rung": claimed,
-            "evidence": evidence,
-            "follow_up": follow_up or {"due": "2026-10-27", "check": "metric", "owner": "me"},
-        }
-
-    def test_shipped_example_is_consistent(self):
-        data = json.loads((TEMPLATES / "evidence-ledger.example.json").read_text())
-        report = ledger.evaluate(data, TODAY)
-        self.assertTrue(report["consistent"], report["errors"])
-        self.assertEqual(report["supported_rung"], 3)
-
-    def test_overclaim_is_an_error(self):
-        report = ledger.evaluate(self.base(3, [ev(1), ev(2)]), TODAY)
-        self.assertFalse(report["consistent"])
-        self.assertEqual(report["supported_rung"], 2)
-        self.assertTrue(any("overclaim" in e for e in report["errors"]))
-
-    def test_rungs_must_be_contiguous(self):
-        report = ledger.evaluate(self.base(1, [ev(1), ev(3)]), TODAY)
-        self.assertEqual(report["supported_rung"], 1)
-
-    def test_failing_result_does_not_count(self):
-        report = ledger.evaluate(self.base(1, [ev(1, result="41 passed, 2 failed")]), TODAY)
-        self.assertEqual(report["supported_rung"], 0)
-        self.assertFalse(report["consistent"])
-
-    def test_zero_failures_counts(self):
-        report = ledger.evaluate(self.base(1, [ev(1, result="41 passed, 0 failed")]), TODAY)
-        self.assertEqual(report["supported_rung"], 1)
-
-    def test_missing_source_does_not_count(self):
-        report = ledger.evaluate(self.base(1, [ev(1, source="")]), TODAY)
-        self.assertEqual(report["supported_rung"], 0)
-
-    def test_not_applicable_rung_counts_with_reason(self):
-        report = ledger.evaluate(self.base(2, [{"rung": 1, "na": "no automated checks for an email"}, ev(2)]), TODAY)
-        self.assertEqual(report["supported_rung"], 2)
-        self.assertTrue(report["consistent"])
-
-    def test_follow_up_required_below_rung_five(self):
-        data = self.base(1, [ev(1)])
-        del data["follow_up"]
-        report = ledger.evaluate(data, TODAY)
-        self.assertFalse(report["consistent"])
-
-    def test_explicit_no_follow_up_is_allowed_but_warned(self):
-        report = ledger.evaluate(self.base(1, [ev(1)], {"none": "one-off reply"}), TODAY)
-        self.assertTrue(report["consistent"])
-        self.assertTrue(report["warnings"])
-
-    def test_overdue_follow_up_is_reported(self):
-        report = ledger.evaluate(self.base(1, [ev(1)], {"due": "2026-10-01", "check": "c", "owner": "o"}), TODAY)
-        self.assertTrue(report["follow_up_overdue"])
-
-    def test_rung_five_needs_no_follow_up(self):
-        data = self.base(5, [ev(1), ev(2), ev(3), ev(4), ev(5)])
-        del data["follow_up"]
-        self.assertTrue(ledger.evaluate(data, TODAY)["consistent"])
-
-    def test_cli_exit_codes(self):
-        with tempfile.TemporaryDirectory() as tmp:
-            good = Path(tmp, "good.json")
-            good.write_text(json.dumps(self.base(1, [ev(1)])))
-            bad = Path(tmp, "bad.json")
-            bad.write_text(json.dumps(self.base(4, [ev(1)])))
-            self.assertEqual(quiet(ledger.main, [str(good), "--today", "2026-10-13"]), 0)
-            self.assertEqual(quiet(ledger.main, [str(bad), "--today", "2026-10-13"]), 1)
-            self.assertEqual(quiet(ledger.main, [str(Path(tmp, "missing.json"))]), 2)
-
-
-class CheckSectionsTests(unittest.TestCase):
-    REQUIRED = ["Outcome", "Follow-up check"]
-
-    def status(self, text):
-        return {r["section"]: r["status"] for r in sections.check(text, self.REQUIRED)}
-
-    def test_complete_document_passes(self):
-        text = "# T\n\n## Outcome\nRefunds take under a day.\n\n## Follow-up check\nOct 27, Dana, dashboard.\n"
-        self.assertEqual(set(self.status(text).values()), {"pass"})
-
-    def test_missing_empty_placeholder_and_todo_fail(self):
-        self.assertEqual(self.status("## Outcome\nok\n")["Follow-up check"], "fail")
-        self.assertEqual(self.status("## Outcome\n\n## Follow-up check\nok")["Outcome"], "fail")
-        self.assertEqual(self.status("## Outcome\n<The change in the world>\n## Follow-up check\nok")["Outcome"], "fail")
-        self.assertEqual(self.status("## Outcome\nTODO\n## Follow-up check\nok")["Outcome"], "fail")
-
-    def test_tbd_warns(self):
-        self.assertEqual(self.status("## Outcome\nok\n## Follow-up check\nTBD, owner Sam")["Follow-up check"], "warn")
-
-    def test_html_tags_are_not_placeholders(self):
-        self.assertEqual(self.status("## Outcome\nline one<br>line two\n## Follow-up check\nok")["Outcome"], "pass")
-
-    def test_headings_inside_code_fences_are_ignored(self):
-        text = "## Outcome\n```\n## Follow-up check\n```\n"
-        self.assertEqual(self.status(text)["Follow-up check"], "fail")
-
-    def test_every_template_fails_until_filled(self):
-        for template in TEMPLATES.glob("*.md"):
-            with self.subTest(template=template.name):
-                required = sections.required_from_template(template)
-                self.assertTrue(required)
-                results = sections.check(template.read_text(), required)
-                self.assertTrue(all(r["status"] == "fail" for r in results),
-                                "an unfilled template must not pass")
 
 
 class ClaimCheckTests(unittest.TestCase):
@@ -214,7 +102,7 @@ class AddEvalCaseTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as tmp:
             plugin = self.make_plugin(tmp)
             self.run_tool("--plugin-dir", str(plugin), "--name", "neg", "--prompt", "hi",
-                          "--criteria", "Short.", "--skill", "defining-done", "--should-not-fire")
+                          "--criteria", "Short.", "--skill", "changing-code", "--should-not-fire")
             text = (plugin / "evals/neg/graders/skill-not-used.md").read_text()
             for line in ("max: 0", "min: 0", "arm: both"):
                 self.assertIn(line, text)

@@ -22,7 +22,7 @@ see every action first.
 
 Usage:
   tools/install.py --runtime codex [--scope user|project] [--project DIR]
-                   [--plugins foundations engineering-lifecycle ...] [--rules]
+                   [--plugins engineering-lifecycle professional-craft] [--rules]
                    [--codex-legacy] [--force] [--dry-run]
   tools/install.py --runtime all --scope project --project ~/code/myapp --rules
 
@@ -37,7 +37,7 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-PLUGINS = ["foundations", "engineering-lifecycle", "professional-craft"]
+PLUGINS = ["engineering-lifecycle", "professional-craft"]
 MARKER_FILE = ".acme-skills"
 BEGIN = "<!-- acme-skills core-rules: begin (managed by tools/install.py) -->"
 END = "<!-- acme-skills core-rules: end -->"

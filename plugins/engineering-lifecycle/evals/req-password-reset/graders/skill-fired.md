@@ -1,5 +1,5 @@
 ---
 type: tool_used
 tool: Skill
-input_match: writing-requirements
+input_match: shaping-designs
 ---

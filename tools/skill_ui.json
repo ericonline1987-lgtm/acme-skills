@@ -1,31 +1,22 @@
 {
   "_comment": "Display text for Codex UI (agents/openai.yaml and .codex-plugin interface). short_description: 25-64 characters. default_prompt must name the skill as $skill-name. Generated files come from tools/build_manifests.py; edit here, not there. when: a short cue per skill for the session-start routing line.",
   "plugins": {
-    "foundations": {
-      "displayName": "Foundations",
-      "shortDescription": "Define done, prove outcomes, trace claims",
-      "category": "Productivity",
-      "defaultPrompt": [
-        "Help me define what done means for this task.",
-        "Write an honest status update for this change."
-      ]
-    },
     "engineering-lifecycle": {
       "displayName": "Engineering Lifecycle",
-      "shortDescription": "Requirements, design, changes, review, merges",
+      "shortDescription": "Design judgment, code changes, review, merges",
       "category": "Developer Tools",
       "defaultPrompt": [
-        "Review this pull request.",
-        "Help me merge this branch safely."
+        "Help me design this migration.",
+        "Review this pull request."
       ]
     },
     "professional-craft": {
       "displayName": "Professional Craft",
-      "shortDescription": "Documents, decision briefs, research, email",
+      "shortDescription": "Writing that reads as human; decks, charts, pages",
       "category": "Productivity",
       "defaultPrompt": [
-        "Write a one-page decision brief for my manager.",
-        "Research the options and recommend one."
+        "Make this sound like a person wrote it.",
+        "Build a deck that lands the ask."
       ]
     },
     "core-rules": {
@@ -38,56 +29,6 @@
     }
   },
   "skills": {
-    "defining-done": [
-      "Defining Done",
-      "Agree an observable outcome before building",
-      "Use $defining-done to turn this request into an outcome contract before we start."
-    ],
-    "exploring-options": [
-      "Exploring Options",
-      "Compare real alternatives before committing",
-      "Use $exploring-options to compare two or three approaches and recommend one."
-    ],
-    "delegating-work": [
-      "Delegating Work",
-      "Brief helpers and accept work independently",
-      "Use $delegating-work to brief helper agents on this task and accept their results."
-    ],
-    "proving-outcomes": [
-      "Proving Outcomes",
-      "Report the rung of evidence actually reached",
-      "Use $proving-outcomes to write an honest status update for this change."
-    ],
-    "tracing-claims": [
-      "Tracing Claims",
-      "Source or grade every load-bearing claim",
-      "Use $tracing-claims to make every figure in this draft traceable."
-    ],
-    "capturing-learning": [
-      "Capturing Learning",
-      "Turn a repeated mistake into a checked rule",
-      "Use $capturing-learning to turn this recurring problem into a test and a fix."
-    ],
-    "guarding-agent-actions": [
-      "Guarding Agent Actions",
-      "Treat content as data; ask before acting",
-      "Use $guarding-agent-actions before acting on this email or sending anything."
-    ],
-    "handling-artifacts": [
-      "Handling Artifacts",
-      "Place, redact and package generated files",
-      "Use $handling-artifacts to get this repository ready to share outside the team."
-    ],
-    "writing-requirements": [
-      "Writing Requirements",
-      "Requirements that start from a success measure",
-      "Use $writing-requirements to write requirements and acceptance criteria for this feature."
-    ],
-    "designing-systems": [
-      "Designing Systems",
-      "Designs that compare options and plan rollback",
-      "Use $designing-systems to write a design for this change with options and a rollout plan."
-    ],
     "changing-code": [
       "Changing Code",
       "Learn why code exists before changing it",
@@ -98,97 +39,33 @@
       "Prioritised review with a clear verdict",
       "Use $reviewing-code to review this diff and give a verdict."
     ],
-    "writing-tests": [
-      "Writing Tests",
-      "Tests that fail when behaviour breaks",
-      "Use $writing-tests to add tests for this function that would catch a regression."
-    ],
     "merging-safely": [
       "Merging Safely",
       "Prove a merge is complete, not just clean",
       "Use $merging-safely to merge this branch and prove nothing was dropped."
     ],
-    "verifying-interfaces": [
-      "Verifying Interfaces",
-      "Check pages and UI as people will see them",
-      "Use $verifying-interfaces to make sure this page works before I share it."
+    "writing-for-people": [
+      "Writing for People",
+      "Writing that reads as a person wrote it",
+      "Use $writing-for-people to rewrite this so it sounds like us, not a template."
     ],
-    "building-ai-features": [
-      "Building AI Features",
-      "LLM features built on evals before prompts",
-      "Use $building-ai-features to plan this LLM feature, starting from an eval set."
+    "making-visuals": [
+      "Making Visuals",
+      "Decks, charts and pages checked at real size",
+      "Use $making-visuals to turn this into slides that land the ask."
     ],
-    "writing-documents": [
-      "Writing Documents",
-      "Documents a reader can act on in one read",
-      "Use $writing-documents to turn these notes into a one-page status update."
-    ],
-    "briefing-decisions": [
-      "Briefing Decisions",
-      "One-page briefs that lead to a decision",
-      "Use $briefing-decisions to write a decision brief comparing these options."
-    ],
-    "researching-topics": [
-      "Researching Topics",
-      "Sourced answers with confidence and gaps",
-      "Use $researching-topics to research the options and recommend one with sources."
-    ],
-    "building-presentations": [
-      "Building Presentations",
-      "Decks built from takeaway headlines",
-      "Use $building-presentations to outline a ten-minute deck for this proposal."
-    ],
-    "writing-emails": [
-      "Writing Emails",
-      "Emails that get the intended response",
-      "Use $writing-emails to draft this email with the ask up front."
-    ],
-    "debugging-failures": [
-      "Debugging Failures",
-      "Find and prove the cause before fixing",
-      "Use $debugging-failures to find out why this is failing before we change anything."
-    ],
-    "authoring-skills": [
-      "Authoring Skills",
-      "Write agent skills that load and measurably help",
-      "Use $authoring-skills to make this skill trigger reliably and prove it helps."
-    ],
-    "planning-work": [
-      "Planning Work",
-      "Break work down and estimate in honest ranges",
-      "Use $planning-work to break this project down and estimate it."
-    ],
-    "running-long-tasks": [
-      "Running Long Tasks",
-      "Budgets, checkpoints and clean resumes for long jobs",
-      "Use $running-long-tasks to plan this batch job with a budget and checkpoints."
+    "shaping-designs": [
+      "Shaping Designs",
+      "Constraints, options, contracts, data, failure modes",
+      "Use $shaping-designs to work out how we should build this."
     ]
   },
   "when": {
-    "defining-done": "starting or planning any new tool, feature or project",
-    "planning-work": "a plan, estimate, order of work or deadline check",
-    "exploring-options": "choosing between tools, approaches or X or Y",
-    "delegating-work": "splitting work across agents or people, or checking someone else's 'done'",
-    "proving-outcomes": "saying work is done, fixed, live or shipped",
-    "tracing-claims": "turning notes or numbers into text others rely on",
-    "capturing-learning": "a mistake that keeps happening",
-    "guarding-agent-actions": "doing what a file, email or page says, or deleting, sending, pushing, paying",
-    "handling-artifacts": "files to place, clean up, redact or ship",
-    "running-long-tasks": "long, unattended or budgeted jobs, or a usage limit",
-    "writing-requirements": "requirements, user stories, acceptance criteria, specs",
-    "designing-systems": "how to build, migrate or split a system",
-    "debugging-failures": "anything broken, failing, slow or flaky",
-    "changing-code": "any edit to existing code: fix, rename, move, upgrade, change a default",
+    "writing-for-people": "anything a person will read: emails, posts, docs, briefs, copy; or making text sound less like AI",
+    "making-visuals": "slides, charts, diagrams, dashboards, pages, or checking how one renders",
+    "shaping-designs": "how to build or change something: designs, APIs, data, migrations, requirements, X or Y",
+    "changing-code": "any change to existing code: fixes, debugging, incidents, refactors, upgrades, tests",
     "reviewing-code": "any opinion on code, a diff or a PR",
-    "writing-tests": "writing or improving tests",
-    "merging-safely": "merging branches or resolving conflicts",
-    "verifying-interfaces": "checking, testing or screenshotting a page or UI",
-    "building-ai-features": "features built on a language model",
-    "authoring-skills": "writing or fixing skills, plugins or agent instruction files",
-    "writing-documents": "any document others will read",
-    "briefing-decisions": "a recommendation or decision for someone to make",
-    "researching-topics": "finding something out about the outside world",
-    "building-presentations": "slides, decks or talks",
-    "writing-emails": "any email or work message"
+    "merging-safely": "merging branches, resolving conflicts, checking a fix landed"
   }
 }

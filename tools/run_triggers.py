@@ -33,7 +33,7 @@ import threading
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-SKILL_PLUGINS = ["foundations", "engineering-lifecycle", "professional-craft"]
+SKILL_PLUGINS = ["engineering-lifecycle", "professional-craft"]
 
 
 def load_queries(only: set[str] | None) -> list[dict]:

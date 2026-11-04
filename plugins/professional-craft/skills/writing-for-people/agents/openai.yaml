@@ -1,0 +1,4 @@
+interface:
+  display_name: "Writing for People"
+  short_description: "Writing that reads as a person wrote it"
+  default_prompt: "Use $writing-for-people to rewrite this so it sounds like us, not a template."

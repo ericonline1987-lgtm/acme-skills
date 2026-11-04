@@ -1,5 +1,23 @@
 # Changelog
 
+## 3.0.0 (unreleased)
+
+Fewer skills, deeper. Six skills in the four areas where a capable model's default output falls short of a professional's, in place of 25 that mostly restated practice the model already follows. See docs/PLAN-v3.md.
+
+### Added
+- `writing-for-people` (professional-craft): writing that reads as a person wrote it for a real reader. References: a catalogue of machine-written patterns with rewrites, built from the Wikipedia editors' field guide and from samples of this model's own output (`voice.md`); forms and length budgets for each kind of writing (`forms.md`); plain language (`accessible.md`); a revision pass (`revision.md`). New `ai_tells.py` counts the countable tells.
+- `making-visuals` (professional-craft): decks, charts and diagrams, pages and interfaces, and checking the rendered result. References: `decks.md`, `charts-and-diagrams.md`, `pages.md`, plus the rendered checks and Playwright guide from `verifying-interfaces`.
+- `shaping-designs` (engineering-lifecycle): design judgment. References: `interfaces.md` (compatibility, idempotency, pagination, errors, events), `data-and-migrations.md` (expand-migrate-contract, backfills, moving data), `failure-and-capacity.md`, `requirements.md`, `ai-features.md`, `design-review.md`.
+- `changing-code` gains `references/diagnosis.md` and `references/tests.md`; `reviewing-code` gains `references/defect-classes.md`.
+- A core rule against inventing names, figures, dates, quotes or details.
+
+### Removed
+- The `foundations` plugin and 17 skills whose advice a capable model already follows, or whose detail now lives in the six skills above: defining-done, planning-work, exploring-options, delegating-work, proving-outcomes, tracing-claims, capturing-learning, guarding-agent-actions, handling-artifacts, running-long-tasks, writing-requirements, designing-systems, debugging-failures, writing-tests, verifying-interfaces, building-ai-features, authoring-skills, writing-documents, briefing-decisions, researching-topics, building-presentations and writing-emails. They remain in git history.
+- Eval cases where the old skill showed little or no lift over plain Claude; the rest were moved to the skill that now covers them.
+
+### Changed
+- `tools/add_eval_case.py` moved out of the skills into `tools/`.
+
 ## 2.0.0 (2026-11-02)
 
 Toward a full-score set: four new skills, a second case plain Claude is likely to fail for every skill, and a release-gate run of every case (three runs per arm). Results: benchmarks/RESULTS.md.

@@ -10,9 +10,8 @@ from helpers import PLUGINS_DIR, load_module
 
 ENG = PLUGINS_DIR / "engineering-lifecycle" / "skills"
 merge = load_module(ENG / "merging-safely/scripts/merge_evidence.py", "merge_evidence")
-svg = load_module(ENG / "verifying-interfaces/scripts/validate_svg.py", "validate_svg")
-doc = load_module(PLUGINS_DIR / "professional-craft/skills/writing-documents/scripts/doc_check.py", "doc_check")
-weight = load_module(PLUGINS_DIR / "foundations/skills/handling-artifacts/scripts/repo_weight.py", "repo_weight")
+svg = load_module(PLUGINS_DIR / "professional-craft/skills/making-visuals/scripts/validate_svg.py", "validate_svg")
+doc = load_module(PLUGINS_DIR / "professional-craft/skills/writing-for-people/scripts/doc_check.py", "doc_check")
 
 
 def sh(repo, *args):
@@ -174,26 +173,6 @@ class DocCheckTests(unittest.TestCase):
     def test_sentence_after_lowercase_start_is_split(self):
         text = "# T\n\n" + "Short one here. " + "v1.1 then starts a sentence. " * 3 + "\n"
         self.assertNotIn("long sentence", self.kinds(text))
-
-
-class RepoWeightTests(unittest.TestCase):
-    def test_deleted_binary_is_reported_as_not_in_head(self):
-        with tempfile.TemporaryDirectory() as tmp:
-            repo = new_repo(tmp)
-            Path(repo, "video.bin").write_bytes(bytes(range(256)) * 400)
-            write(repo, "README", "hi\n")
-            sh(repo, "add", "-A"); sh(repo, "commit", "-qm", "add")
-            sh(repo, "rm", "-q", "video.bin"); sh(repo, "commit", "-qm", "remove")
-            blobs = weight.largest_blobs(repo, 5, 0)
-            self.assertEqual(blobs[0]["path"], "video.bin")
-            self.assertFalse(blobs[0]["in_head"])
-            self.assertTrue(next(b for b in blobs if b["path"] == "README")["in_head"])
-            self.assertEqual(weight.largest_blobs(repo, 5, 50)[0]["path"], "video.bin")
-            self.assertEqual(len(weight.largest_blobs(repo, 5, 50)), 1, "min size filters small files")
-
-    def test_not_a_repo_errors(self):
-        with tempfile.TemporaryDirectory() as tmp:
-            self.assertEqual(quiet(weight.main, ["--repo", tmp]), 2)
 
 
 if __name__ == "__main__":

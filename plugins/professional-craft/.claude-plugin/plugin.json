@@ -1,16 +1,18 @@
 {
   "name": "professional-craft",
-  "version": "2.0.0",
-  "description": "Professional writing aimed at the reader's next action: documents within a page budget, decision briefs, trustworthy research, presentations and emails, in house style.",
+  "version": "3.0.0",
+  "description": "Writing that reads as a person wrote it for a real reader, with the machine-written patterns removed and every fact traced; decks, charts, diagrams and pages designed honestly and checked at real size.",
   "author": {
     "name": "ericonline1987-lgtm"
   },
   "keywords": [
     "writing",
-    "documents",
-    "decisions",
-    "research",
+    "voice",
+    "plain-language",
+    "editing",
     "presentations",
-    "email"
+    "charts",
+    "ui",
+    "accessibility"
   ]
 }

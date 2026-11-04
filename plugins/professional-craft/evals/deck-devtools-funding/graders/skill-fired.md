@@ -1,5 +1,5 @@
 ---
 type: tool_used
 tool: Skill
-input_match: building-presentations
+input_match: making-visuals
 ---

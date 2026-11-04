@@ -103,4 +103,4 @@ requires, and the person who asked for the change owns the outcome.
 
 ## After the review
 
-When a bug escapes review, add it as an eval case (see `capturing-learning`).
+When a bug escapes review, add it as an eval case for this skill.

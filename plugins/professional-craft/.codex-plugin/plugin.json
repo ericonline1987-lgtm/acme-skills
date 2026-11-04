@@ -1,7 +1,7 @@
 {
   "name": "professional-craft",
-  "version": "2.0.0",
-  "description": "Professional writing aimed at the reader's next action: documents within a page budget, decision briefs, trustworthy research, presentations and emails, in house style.",
+  "version": "3.0.0",
+  "description": "Writing that reads as a person wrote it for a real reader, with the machine-written patterns removed and every fact traced; decks, charts, diagrams and pages designed honestly and checked at real size.",
   "author": {
     "name": "ericonline1987-lgtm",
     "url": "https://github.com/ericonline1987-lgtm"
@@ -11,17 +11,19 @@
   "license": "MIT",
   "keywords": [
     "writing",
-    "documents",
-    "decisions",
-    "research",
+    "voice",
+    "plain-language",
+    "editing",
     "presentations",
-    "email"
+    "charts",
+    "ui",
+    "accessibility"
   ],
   "skills": "./skills/",
   "interface": {
     "displayName": "Professional Craft",
-    "shortDescription": "Documents, decision briefs, research, email",
-    "longDescription": "Professional writing aimed at the reader's next action: documents within a page budget, decision briefs, trustworthy research, presentations and emails, in house style.",
+    "shortDescription": "Writing that reads as human; decks, charts, pages",
+    "longDescription": "Writing that reads as a person wrote it for a real reader, with the machine-written patterns removed and every fact traced; decks, charts, diagrams and pages designed honestly and checked at real size.",
     "developerName": "ericonline1987-lgtm",
     "category": "Productivity",
     "capabilities": [
@@ -30,8 +32,8 @@
       "Write"
     ],
     "defaultPrompt": [
-      "Write a one-page decision brief for my manager.",
-      "Research the options and recommend one."
+      "Make this sound like a person wrote it.",
+      "Build a deck that lands the ask."
     ],
     "websiteURL": "https://github.com/ericonline1987-lgtm/acme-skills"
   }

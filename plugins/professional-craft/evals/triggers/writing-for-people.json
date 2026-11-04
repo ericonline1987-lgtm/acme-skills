@@ -1,0 +1,186 @@
+[
+  {
+    "query": "what's 15% of 240?",
+    "should_trigger": false
+  },
+  {
+    "query": "define 'single sign-on' in one sentence",
+    "should_trigger": false
+  },
+  {
+    "query": "summarise this article I pasted",
+    "should_trigger": false
+  },
+  {
+    "query": "explain what SOC 2 is in two sentences",
+    "should_trigger": false
+  },
+  {
+    "query": "help me write something so our COO can decide between renewing Salesforce or moving to HubSpot by Nov 15",
+    "should_trigger": true
+  },
+  {
+    "query": "I need a go/no-go doc for launching in Germany next quarter.",
+    "should_trigger": true
+  },
+  {
+    "query": "should we take on this client project? write it up for my boss",
+    "should_trigger": true
+  },
+  {
+    "query": "what is a decision matrix?",
+    "should_trigger": false
+  },
+  {
+    "query": "book a meeting with the COO for Friday",
+    "should_trigger": false
+  },
+  {
+    "query": "what's the capital of Germany?",
+    "should_trigger": false
+  },
+  {
+    "query": "should we renew Datadog or move to Grafana? my boss wants a recommendation",
+    "should_trigger": true
+  },
+  {
+    "query": "write up a go/no-go on launching in Germany this quarter for the exec team",
+    "should_trigger": true
+  },
+  {
+    "query": "we need to pick between two candidate vendors for payroll, help me present it to the CFO",
+    "should_trigger": true
+  },
+  {
+    "query": "help me write up whether we should hire a contractor or a full-timer for this",
+    "should_trigger": true
+  },
+  {
+    "query": "write a status update for leadership: 14 of 20 services moved, billing blocked by vendor licence (Priya, answer by Oct 20), $12k over, now Nov 14",
+    "should_trigger": true
+  },
+  {
+    "query": "Turn these meeting scribbles into a one-pager I can send to the VP.",
+    "should_trigger": true
+  },
+  {
+    "query": "this proposal is 6 pages and nobody reads it, can you fix it",
+    "should_trigger": true
+  },
+  {
+    "query": "give me three synonyms for 'important'",
+    "should_trigger": false
+  },
+  {
+    "query": "fix the grammar: 'me and him goes to the store'",
+    "should_trigger": false
+  },
+  {
+    "query": "convert this markdown to a PDF",
+    "should_trigger": false
+  },
+  {
+    "query": "write up yesterday's outage for the wider team: checkout down 40 min, bad config push, rolled back, alerting gap",
+    "should_trigger": true
+  },
+  {
+    "query": "draft a one-page proposal for moving our internal docs to Notion",
+    "should_trigger": true
+  },
+  {
+    "query": "clean up these onboarding notes into a how-to for new hires: laptop, accounts, VPN, first PR",
+    "should_trigger": true
+  },
+  {
+    "query": "what's a good font for printed reports?",
+    "should_trigger": false
+  },
+  {
+    "query": "write a one-page summary of Q3 for the board",
+    "should_trigger": true
+  },
+  {
+    "query": "write an email telling a client their launch slips two weeks because their API keys came late",
+    "should_trigger": true
+  },
+  {
+    "query": "Reply to this recruiter and politely decline.",
+    "should_trigger": true
+  },
+  {
+    "query": "chase the vendor who hasn't answered in a week, nicely",
+    "should_trigger": true
+  },
+  {
+    "query": "what's the difference between CC and BCC?",
+    "should_trigger": false
+  },
+  {
+    "query": "set up email forwarding in Gmail",
+    "should_trigger": false
+  },
+  {
+    "query": "write a regex to validate email addresses",
+    "should_trigger": false
+  },
+  {
+    "query": "draft a message to my manager asking to move our 1:1 to Thursday",
+    "should_trigger": true
+  },
+  {
+    "query": "customer is angry their refund is two weeks late, help me reply",
+    "should_trigger": true
+  },
+  {
+    "query": "write a follow-up to the investor I met on Tuesday",
+    "should_trigger": true
+  },
+  {
+    "query": "what's the difference between reply and reply-all?",
+    "should_trigger": false
+  },
+  {
+    "query": "tell the landlord we're not renewing the office lease",
+    "should_trigger": true
+  },
+  {
+    "query": "turn these notes into a board update: churn down maybe 30%, Sam said tickets halved, we're the fastest growing in the segment",
+    "should_trigger": true
+  },
+  {
+    "query": "Write the 'Results' paragraph for our case study from these numbers our sales lead sent.",
+    "should_trigger": true
+  },
+  {
+    "query": "polish this investor update, it has a bunch of stats in it",
+    "should_trigger": true
+  },
+  {
+    "query": "what's a good citation style for a computer science paper?",
+    "should_trigger": false
+  },
+  {
+    "query": "convert this table of numbers to CSV",
+    "should_trigger": false
+  },
+  {
+    "query": "fix the typos in this paragraph, don't change anything else",
+    "should_trigger": false
+  },
+  {
+    "query": "polish this case study line: Acme cut deploy time 90% with our tool",
+    "should_trigger": true
+  },
+  {
+    "query": "write the investor update from these notes, include the growth numbers",
+    "should_trigger": true
+  },
+  {
+    "query": "turn these sales call notes into a customer quote for the website",
+    "should_trigger": true
+  },
+  {
+    "query": "tidy up these customer interview notes into stats for the pitch deck",
+    "should_trigger": true
+  }
+]

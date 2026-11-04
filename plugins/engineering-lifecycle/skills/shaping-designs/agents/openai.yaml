@@ -1,0 +1,4 @@
+interface:
+  display_name: "Shaping Designs"
+  short_description: "Constraints, options, contracts, data, failure modes"
+  default_prompt: "Use $shaping-designs to work out how we should build this."

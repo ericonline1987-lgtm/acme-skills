@@ -1,4 +1,0 @@
-interface:
-  display_name: "Planning Work"
-  short_description: "Break work down and estimate in honest ranges"
-  default_prompt: "Use $planning-work to break this project down and estimate it."

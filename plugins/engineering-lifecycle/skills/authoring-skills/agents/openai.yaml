@@ -1,4 +1,0 @@
-interface:
-  display_name: "Authoring Skills"
-  short_description: "Write agent skills that load and measurably help"
-  default_prompt: "Use $authoring-skills to make this skill trigger reliably and prove it helps."

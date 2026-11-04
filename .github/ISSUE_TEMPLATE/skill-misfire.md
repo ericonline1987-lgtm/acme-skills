@@ -18,4 +18,4 @@ labels: eval-case
 -
 -
 
-Fixes start by turning this into an eval case with `plugins/foundations/skills/capturing-learning/scripts/add_eval_case.py`, so the fix is measured.
+Fixes start by turning this into an eval case with `tools/add_eval_case.py`, so the fix is measured.

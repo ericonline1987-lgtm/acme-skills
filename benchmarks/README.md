@@ -15,14 +15,14 @@ Offline and standard-library only. They check structure, naming, size caps, link
 Each plugin has an `evals/` folder: at least two should-fire cases per skill, written to find something plain Claude skips, and should-not-fire cases, with one LLM grader per success criterion.
 
 ```
-claude plugin eval plugins/foundations --runs 3 -j 8 --judge-model sonnet
+claude plugin eval plugins/engineering-lifecycle --runs 3 -j 8 --judge-model sonnet
 ```
 
 The runner adds a no-plugin baseline arm and reports the delta. Every run uses the credential of the account running it and costs money; see RESULTS.md for typical totals.
 
 For a release, run every case, resumably, with `tools/run_gate.sh` (see [gate/README.md](gate/README.md)); `MODEL=haiku` runs the same cases on a smaller model.
 
-**To add a case from a real failure:** use `plugins/foundations/skills/capturing-learning/scripts/add_eval_case.py`.
+**To add a case from a real failure:** use `tools/add_eval_case.py`.
 
 **To compare with another skill set:** package its skills as a plugin (a folder with `.claude-plugin/plugin.json` and `skills/`), copy one of our `evals/` folders into it, and run the same command against it. Same prompts and same graders keep the comparison fair.
 

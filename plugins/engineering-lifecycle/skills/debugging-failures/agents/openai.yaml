@@ -1,4 +1,0 @@
-interface:
-  display_name: "Debugging Failures"
-  short_description: "Find and prove the cause before fixing"
-  default_prompt: "Use $debugging-failures to find out why this is failing before we change anything."

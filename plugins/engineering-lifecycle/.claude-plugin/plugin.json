@@ -1,21 +1,19 @@
 {
   "name": "engineering-lifecycle",
-  "version": "2.0.0",
-  "description": "Engineering skills aimed at outcomes: requirements with success measures, designs that compare real options, debugging that proves the cause, safe code changes, reviews, tests that catch regressions, provably complete merges, AI features built on evals, and skills that measurably help.",
+  "version": "3.0.0",
+  "description": "Engineering judgment where models fall short: designs that hold up (interfaces and contracts, data and migrations, failure modes, rollout), code changes that diagnose before fixing and test what matters, reviews that confirm before reporting, and merges proven complete.",
   "author": {
     "name": "ericonline1987-lgtm"
   },
   "keywords": [
-    "requirements",
     "design",
+    "architecture",
+    "migrations",
+    "api-design",
     "code-change",
-    "code-review",
-    "testing",
-    "merge",
-    "llm",
-    "evals",
     "debugging",
-    "incidents",
-    "agent-skills"
+    "testing",
+    "code-review",
+    "merge"
   ]
 }

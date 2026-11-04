@@ -1,0 +1,174 @@
+[
+  {
+    "query": "design how we should move our nightly 4-hour billing cron to something reliable",
+    "should_trigger": true
+  },
+  {
+    "query": "We need an RFC for splitting the monolith's notification code into its own service.",
+    "should_trigger": true
+  },
+  {
+    "query": "how should we architect multi-region failover for the API?",
+    "should_trigger": true
+  },
+  {
+    "query": "what is the CAP theorem?",
+    "should_trigger": false
+  },
+  {
+    "query": "draw me a logo for our system",
+    "should_trigger": false
+  },
+  {
+    "query": "rename the class SystemDesigner to Architect",
+    "should_trigger": false
+  },
+  {
+    "query": "design an event-driven replacement for our nightly cron export",
+    "should_trigger": true
+  },
+  {
+    "query": "how should we split this monolith?",
+    "should_trigger": true
+  },
+  {
+    "query": "write an RFC for moving file storage to S3",
+    "should_trigger": true
+  },
+  {
+    "query": "we need to move from a single Postgres to sharded, how would you approach it?",
+    "should_trigger": true
+  },
+  {
+    "query": "we want an LLM to auto-sort support tickets into 12 categories, how should we build it",
+    "should_trigger": true
+  },
+  {
+    "query": "Our RAG chatbot gives wrong answers sometimes. How do we make it reliably better?",
+    "should_trigger": true
+  },
+  {
+    "query": "pick a model for summarising sales calls, cost matters",
+    "should_trigger": true
+  },
+  {
+    "query": "what is a transformer in machine learning?",
+    "should_trigger": false
+  },
+  {
+    "query": "write a Python function that calls the OpenAI API",
+    "should_trigger": false
+  },
+  {
+    "query": "explain what tokens are",
+    "should_trigger": false
+  },
+  {
+    "query": "our RAG chatbot gives wrong answers sometimes, how do we fix it?",
+    "should_trigger": true
+  },
+  {
+    "query": "which model should we use for our ticket triage feature?",
+    "should_trigger": true
+  },
+  {
+    "query": "help me improve the prompt for our summariser, users say it misses key points",
+    "should_trigger": true
+  },
+  {
+    "query": "we want to add an LLM that drafts replies to support tickets",
+    "should_trigger": true
+  },
+  {
+    "query": "write requirements for letting users export their data as CSV",
+    "should_trigger": true
+  },
+  {
+    "query": "Turn this Slack thread about 'saved searches' into user stories with acceptance criteria.",
+    "should_trigger": true
+  },
+  {
+    "query": "PM is out, I need a PRD section for team invites by tomorrow",
+    "should_trigger": true
+  },
+  {
+    "query": "what's the difference between functional and non-functional requirements?",
+    "should_trigger": false
+  },
+  {
+    "query": "install the requirements.txt for this project",
+    "should_trigger": false
+  },
+  {
+    "query": "pin the versions in requirements.txt",
+    "should_trigger": false
+  },
+  {
+    "query": "write acceptance criteria for password reset",
+    "should_trigger": true
+  },
+  {
+    "query": "turn this Slack thread into a spec the team can build",
+    "should_trigger": true
+  },
+  {
+    "query": "write user stories for exporting invoices to CSV",
+    "should_trigger": true
+  },
+  {
+    "query": "we're adding team billing, write up what it needs to do",
+    "should_trigger": true
+  },
+  {
+    "query": "should we use Postgres full text search or Elasticsearch for 2M products, team of 4",
+    "should_trigger": true
+  },
+  {
+    "query": "We need background jobs in our Django app. What should we use?",
+    "should_trigger": true
+  },
+  {
+    "query": "I'm torn between rewriting the billing service in Go or just fixing the Python one. thoughts?",
+    "should_trigger": true
+  },
+  {
+    "query": "list the options for the `git log` command",
+    "should_trigger": false
+  },
+  {
+    "query": "explain what a feature flag is",
+    "should_trigger": false
+  },
+  {
+    "query": "I already chose Redis; write the docker-compose service for it",
+    "should_trigger": false
+  },
+  {
+    "query": "Postgres or Mongo for our new app?",
+    "should_trigger": true
+  },
+  {
+    "query": "should we rewrite the billing service or keep patching it?",
+    "should_trigger": true
+  },
+  {
+    "query": "what should we use for feature flags?",
+    "should_trigger": true
+  },
+  {
+    "query": "Redis or Memcached for session storage?",
+    "should_trigger": true
+  },
+  {
+    "query": "what's the difference between a definition of done and acceptance criteria in scrum?",
+    "should_trigger": false
+  },
+  {
+    "query": "mark this jira ticket as done and close the sprint",
+    "should_trigger": false
+  },
+  {
+    "query": "rename the variable `done` to `isComplete` in this function",
+    "should_trigger": false
+  }
+]

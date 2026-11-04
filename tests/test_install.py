@@ -47,8 +47,8 @@ class InstallTests(unittest.TestCase):
         self.assertEqual(code, 0)
         skills = self.project / ".agents" / "skills"
         self.assertEqual(len([p for p in skills.iterdir() if (p / "SKILL.md").is_file()]), len(skill_dirs()))
-        self.assertTrue((skills / "defining-done" / "assets" / "outcome-contract.md").is_file())
-        self.assertTrue((skills / "defining-done" / "scripts" / "check_sections.py").is_file())
+        self.assertTrue((skills / "writing-for-people" / "references" / "style-guide.md").is_file())
+        self.assertTrue((skills / "writing-for-people" / "scripts" / "ai_tells.py").is_file())
 
     def test_users_own_skill_is_never_replaced_without_force(self):
         own = self.project / ".agents" / "skills" / "reviewing-code"

@@ -1,5 +1,89 @@
 [
   {
+    "query": "write pytest tests for this parse_duration function",
+    "should_trigger": true
+  },
+  {
+    "query": "Add a test that reproduces the bug where empty carts can be submitted.",
+    "should_trigger": true
+  },
+  {
+    "query": "coverage on utils/dates.py is 20%, can you fix that",
+    "should_trigger": true
+  },
+  {
+    "query": "what is TDD?",
+    "should_trigger": false
+  },
+  {
+    "query": "fix this failing test by updating the snapshot",
+    "should_trigger": false
+  },
+  {
+    "query": "set up GitHub Actions to run our tests",
+    "should_trigger": false
+  },
+  {
+    "query": "write tests for this parse_percent function",
+    "should_trigger": true
+  },
+  {
+    "query": "coverage on the billing module is 40%, fix it",
+    "should_trigger": true
+  },
+  {
+    "query": "add a test that reproduces this bug before I fix it",
+    "should_trigger": true
+  },
+  {
+    "query": "I need unit tests for the slugify helper",
+    "should_trigger": true
+  },
+  {
+    "query": "our checkout API is throwing 500s since this morning, help",
+    "should_trigger": true
+  },
+  {
+    "query": "this test passes locally but fails on CI about one time in ten",
+    "should_trigger": true
+  },
+  {
+    "query": "the dashboard got really slow after yesterday's release, why?",
+    "should_trigger": true
+  },
+  {
+    "query": "TypeError: Cannot read properties of undefined (reading 'map') — what's going on?",
+    "should_trigger": true
+  },
+  {
+    "query": "it worked yesterday and now the import job just hangs",
+    "should_trigger": true
+  },
+  {
+    "query": "prod is down, users can't log in",
+    "should_trigger": true
+  },
+  {
+    "query": "what's the difference between a stack trace and a core dump?",
+    "should_trigger": false
+  },
+  {
+    "query": "write a function that retries an HTTP request three times",
+    "should_trigger": false
+  },
+  {
+    "query": "explain what a 500 status code means",
+    "should_trigger": false
+  },
+  {
+    "query": "set up Sentry for a Next.js app",
+    "should_trigger": false
+  },
+  {
+    "query": "memory keeps climbing on the worker until it gets killed",
+    "should_trigger": true
+  },
+  {
     "query": "test_sanitize_filename fails because ';' isn't stripped anymore. should I just add it back?",
     "should_trigger": true
   },

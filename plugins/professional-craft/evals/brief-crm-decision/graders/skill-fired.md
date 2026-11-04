@@ -1,5 +1,5 @@
 ---
 type: tool_used
 tool: Skill
-input_match: briefing-decisions
+input_match: writing-for-people
 ---

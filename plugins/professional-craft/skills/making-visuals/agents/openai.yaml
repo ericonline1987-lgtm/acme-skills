@@ -1,0 +1,4 @@
+interface:
+  display_name: "Making Visuals"
+  short_description: "Decks, charts and pages checked at real size"
+  default_prompt: "Use $making-visuals to turn this into slides that land the ask."
