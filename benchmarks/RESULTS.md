@@ -57,13 +57,28 @@ The core rules scored 0.91 against 0.70 on their seven cases [observed]. Merging
 2. **Dropping `handling-artifacts` was a mistake.** The reference author's artifact cases scored 1.00 for the reference and 0 to 0.67 for plain Claude; the skill was restored and v3 then passed the first case in every run [observed].
 3. **A skill description that says "editing" catches one-line grammar fixes.** `writing-for-people` loaded on one in every run until its description excluded them [observed].
 
-### Triggering (partial)
+### Triggering (all skill plugins, each with its routing line; one run per query)
 
-The Sonnet trigger run stopped at the usage limit after the engineering skills: 54 of 65 should-fire queries loaded the right skill, and 28 of 29 near misses loaded none [observed: benchmarks/triggers/2026-11-03-5-v3-sonnet.json]. The writing and visuals skills, and the Haiku run, follow after the reset.
+| Skill | Sonnet | Haiku |
+|---|---|---|
+| writing-for-people | 33 of 38 | 37 of 38 [observed] |
+| making-visuals | 18 of 26 | 20 of 26 [observed] |
+| shaping-designs | 34 of 36 | 36 of 36 [observed] |
+| changing-code | 22 of 24 | 24 of 24 [observed] |
+| reviewing-code | 5 of 7 | 5 of 7 [observed] |
+| merging-safely | 7 of 7 | 7 of 7 [observed] |
+| handling-artifacts | 7 of 7 | 7 of 7 [observed] |
+| **All should-fire** | **126 of 145 (87%)** | **136 of 145 (94%)** [observed] |
+| Near misses left alone | 59 of 63 | 56 of 63 [observed] |
+
+- The first full Sonnet run loaded the professional-craft skills on only 31 of 54 queries and `shaping-designs` on 13 of 21: merging skills had shortened the descriptions and dropped the phrasings the old ones carried (pitches and talks, write-ups for a boss, declines, user stories, prompts) [observed]. Descriptions and routing cues now name those request categories.
+- To keep that from being tuned to the test, 15 fresh held-out queries were committed before the change. They loaded the right skill 13 of 15 times on Sonnet and 14 of 15 on Haiku [observed].
+- Most false loads are definitional questions next to a skill's territory ("what is the CAP theorem?", "what's the best font for slides?") [observed].
+- Results combine runs from 2026-11-03 and 2026-11-04 (`benchmarks/triggers/2026-11-0[34]-*-v3-*.json`); the engineering rows other than `shaping-designs` come from the run before the last description changes [observed].
 
 ### Spend
 
-About $145 of eval runs for v3 [estimate]. The saved results account for $109 [observed]; earlier runs of re-run cases were overwritten.
+About $165 of eval runs for v3 [estimate]. The saved results account for $129 [observed]; earlier runs of re-run cases were overwritten.
 
 
 ## v2.0: release gate (2026-11-02)

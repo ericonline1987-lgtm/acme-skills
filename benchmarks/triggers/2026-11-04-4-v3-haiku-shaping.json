@@ -1,0 +1,542 @@
+{
+  "model": "haiku",
+  "with_rules": false,
+  "spent_usd": 0.29,
+  "stopped_early": false,
+  "results": [
+    {
+      "skill": "shaping-designs",
+      "query": "what is the CAP theorem?",
+      "should_trigger": false,
+      "invoked": [
+        "writing-for-people",
+        "shaping-designs"
+      ],
+      "cost": 0.004209259999999999,
+      "error": null
+    },
+    {
+      "skill": "shaping-designs",
+      "query": "rename the class SystemDesigner to Architect",
+      "should_trigger": false,
+      "invoked": [
+        "changing-code"
+      ],
+      "cost": 0.00463391,
+      "error": null
+    },
+    {
+      "skill": "shaping-designs",
+      "query": "design how we should move our nightly 4-hour billing cron to something reliable",
+      "should_trigger": true,
+      "invoked": [
+        "shaping-designs"
+      ],
+      "cost": 0.00565112,
+      "error": null
+    },
+    {
+      "skill": "shaping-designs",
+      "query": "how should we architect multi-region failover for the API?",
+      "should_trigger": true,
+      "invoked": [
+        "shaping-designs"
+      ],
+      "cost": 0.00527072,
+      "error": null
+    },
+    {
+      "skill": "shaping-designs",
+      "query": "draw me a logo for our system",
+      "should_trigger": false,
+      "invoked": [],
+      "cost": 0.00822026,
+      "error": null
+    },
+    {
+      "skill": "shaping-designs",
+      "query": "how should we split this monolith?",
+      "should_trigger": true,
+      "invoked": [
+        "shaping-designs"
+      ],
+      "cost": 0.0063599,
+      "error": null
+    },
+    {
+      "skill": "shaping-designs",
+      "query": "design an event-driven replacement for our nightly cron export",
+      "should_trigger": true,
+      "invoked": [
+        "shaping-designs"
+      ],
+      "cost": 0.006613580000000001,
+      "error": null
+    },
+    {
+      "skill": "shaping-designs",
+      "query": "we need to move from a single Postgres to sharded, how would you approach it?",
+      "should_trigger": true,
+      "invoked": [
+        "shaping-designs"
+      ],
+      "cost": 0.00589691,
+      "error": null
+    },
+    {
+      "skill": "shaping-designs",
+      "query": "We need an RFC for splitting the monolith's notification code into its own service.",
+      "should_trigger": true,
+      "invoked": [
+        "shaping-designs"
+      ],
+      "cost": 0.010316929999999998,
+      "error": null
+    },
+    {
+      "skill": "shaping-designs",
+      "query": "Our RAG chatbot gives wrong answers sometimes. How do we make it reliably better?",
+      "should_trigger": true,
+      "invoked": [
+        "shaping-designs"
+      ],
+      "cost": 0.00511513,
+      "error": null
+    },
+    {
+      "skill": "shaping-designs",
+      "query": "we want an LLM to auto-sort support tickets into 12 categories, how should we build it",
+      "should_trigger": true,
+      "invoked": [
+        "shaping-designs",
+        "claude-api"
+      ],
+      "cost": 0.005663429999999999,
+      "error": null
+    },
+    {
+      "skill": "shaping-designs",
+      "query": "write a Python function that calls the OpenAI API",
+      "should_trigger": false,
+      "invoked": [],
+      "cost": 0.00318277,
+      "error": null
+    },
+    {
+      "skill": "shaping-designs",
+      "query": "pick a model for summarising sales calls, cost matters",
+      "should_trigger": true,
+      "invoked": [
+        "claude-api",
+        "shaping-designs",
+        "product-self-knowledge"
+      ],
+      "cost": 0.0055069,
+      "error": null
+    },
+    {
+      "skill": "shaping-designs",
+      "query": "what is a transformer in machine learning?",
+      "should_trigger": false,
+      "invoked": [
+        "writing-for-people"
+      ],
+      "cost": 0.0040568800000000006,
+      "error": null
+    },
+    {
+      "skill": "shaping-designs",
+      "query": "explain what tokens are",
+      "should_trigger": false,
+      "invoked": [
+        "writing-for-people"
+      ],
+      "cost": 0.00401791,
+      "error": null
+    },
+    {
+      "skill": "shaping-designs",
+      "query": "which model should we use for our ticket triage feature?",
+      "should_trigger": true,
+      "invoked": [
+        "shaping-designs",
+        "claude-api"
+      ],
+      "cost": 0.0056951599999999995,
+      "error": null
+    },
+    {
+      "skill": "shaping-designs",
+      "query": "help me improve the prompt for our summariser, users say it misses key points",
+      "should_trigger": true,
+      "invoked": [
+        "shaping-designs"
+      ],
+      "cost": 0.0053129,
+      "error": null
+    },
+    {
+      "skill": "shaping-designs",
+      "query": "our RAG chatbot gives wrong answers sometimes, how do we fix it?",
+      "should_trigger": true,
+      "invoked": [
+        "shaping-designs"
+      ],
+      "cost": 0.0054259700000000004,
+      "error": null
+    },
+    {
+      "skill": "shaping-designs",
+      "query": "write an RFC for moving file storage to S3",
+      "should_trigger": true,
+      "invoked": [
+        "shaping-designs",
+        "writing-for-people"
+      ],
+      "cost": 0.01104855,
+      "error": null
+    },
+    {
+      "skill": "shaping-designs",
+      "query": "Turn this Slack thread about 'saved searches' into user stories with acceptance criteria.",
+      "should_trigger": true,
+      "invoked": [
+        "shaping-designs"
+      ],
+      "cost": 0.008081860000000001,
+      "error": null
+    },
+    {
+      "skill": "shaping-designs",
+      "query": "what's the difference between functional and non-functional requirements?",
+      "should_trigger": false,
+      "invoked": [
+        "writing-for-people"
+      ],
+      "cost": 0.00383747,
+      "error": null
+    },
+    {
+      "skill": "shaping-designs",
+      "query": "we want to add an LLM that drafts replies to support tickets",
+      "should_trigger": true,
+      "invoked": [
+        "shaping-designs"
+      ],
+      "cost": 0.00724459,
+      "error": null
+    },
+    {
+      "skill": "shaping-designs",
+      "query": "install the requirements.txt for this project",
+      "should_trigger": false,
+      "invoked": [],
+      "cost": 0.00569317,
+      "error": null
+    },
+    {
+      "skill": "shaping-designs",
+      "query": "turn this Slack thread into a spec the team can build",
+      "should_trigger": true,
+      "invoked": [
+        "shaping-designs"
+      ],
+      "cost": 0.00379957,
+      "error": null
+    },
+    {
+      "skill": "shaping-designs",
+      "query": "write requirements for letting users export their data as CSV",
+      "should_trigger": true,
+      "invoked": [
+        "shaping-designs"
+      ],
+      "cost": 0.006095059999999999,
+      "error": null
+    },
+    {
+      "skill": "shaping-designs",
+      "query": "PM is out, I need a PRD section for team invites by tomorrow",
+      "should_trigger": true,
+      "invoked": [
+        "shaping-designs",
+        "writing-for-people"
+      ],
+      "cost": 0.005841880000000001,
+      "error": null
+    },
+    {
+      "skill": "shaping-designs",
+      "query": "pin the versions in requirements.txt",
+      "should_trigger": false,
+      "invoked": [
+        "changing-code"
+      ],
+      "cost": 0.00605024,
+      "error": null
+    },
+    {
+      "skill": "shaping-designs",
+      "query": "should we use Postgres full text search or Elasticsearch for 2M products, team of 4",
+      "should_trigger": true,
+      "invoked": [
+        "shaping-designs"
+      ],
+      "cost": 0.0038204800000000002,
+      "error": null
+    },
+    {
+      "skill": "shaping-designs",
+      "query": "write acceptance criteria for password reset",
+      "should_trigger": true,
+      "invoked": [
+        "shaping-designs"
+      ],
+      "cost": 0.00534177,
+      "error": null
+    },
+    {
+      "skill": "shaping-designs",
+      "query": "we're adding team billing, write up what it needs to do",
+      "should_trigger": true,
+      "invoked": [
+        "shaping-designs",
+        "writing-for-people"
+      ],
+      "cost": 0.00532781,
+      "error": null
+    },
+    {
+      "skill": "shaping-designs",
+      "query": "We need background jobs in our Django app. What should we use?",
+      "should_trigger": true,
+      "invoked": [
+        "shaping-designs"
+      ],
+      "cost": 0.00487316,
+      "error": null
+    },
+    {
+      "skill": "shaping-designs",
+      "query": "I'm torn between rewriting the billing service in Go or just fixing the Python one. thoughts?",
+      "should_trigger": true,
+      "invoked": [
+        "shaping-designs"
+      ],
+      "cost": 0.00467762,
+      "error": null
+    },
+    {
+      "skill": "shaping-designs",
+      "query": "write user stories for exporting invoices to CSV",
+      "should_trigger": true,
+      "invoked": [
+        "shaping-designs"
+      ],
+      "cost": 0.00588241,
+      "error": null
+    },
+    {
+      "skill": "shaping-designs",
+      "query": "explain what a feature flag is",
+      "should_trigger": false,
+      "invoked": [
+        "writing-for-people"
+      ],
+      "cost": 0.0039781600000000005,
+      "error": null
+    },
+    {
+      "skill": "shaping-designs",
+      "query": "list the options for the `git log` command",
+      "should_trigger": false,
+      "invoked": [],
+      "cost": 0.00364392,
+      "error": null
+    },
+    {
+      "skill": "shaping-designs",
+      "query": "Postgres or Mongo for our new app?",
+      "should_trigger": true,
+      "invoked": [
+        "shaping-designs"
+      ],
+      "cost": 0.00368431,
+      "error": null
+    },
+    {
+      "skill": "shaping-designs",
+      "query": "mark this jira ticket as done and close the sprint",
+      "should_trigger": false,
+      "invoked": [],
+      "cost": 0.005272220000000001,
+      "error": null
+    },
+    {
+      "skill": "shaping-designs",
+      "query": "Redis or Memcached for session storage?",
+      "should_trigger": true,
+      "invoked": [
+        "shaping-designs"
+      ],
+      "cost": 0.0038979900000000005,
+      "error": null
+    },
+    {
+      "skill": "shaping-designs",
+      "query": "should we rewrite the billing service or keep patching it?",
+      "should_trigger": true,
+      "invoked": [
+        "shaping-designs"
+      ],
+      "cost": 0.00614409,
+      "error": null
+    },
+    {
+      "skill": "shaping-designs",
+      "query": "I already chose Redis; write the docker-compose service for it",
+      "should_trigger": false,
+      "invoked": [],
+      "cost": 0.00635088,
+      "error": null
+    },
+    {
+      "skill": "shaping-designs",
+      "query": "what should we use for feature flags?",
+      "should_trigger": true,
+      "invoked": [
+        "shaping-designs"
+      ],
+      "cost": 0.006038410000000001,
+      "error": null
+    },
+    {
+      "skill": "shaping-designs",
+      "query": "what's the difference between a definition of done and acceptance criteria in scrum?",
+      "should_trigger": false,
+      "invoked": [
+        "shaping-designs"
+      ],
+      "cost": 0.00401504,
+      "error": null
+    },
+    {
+      "skill": "shaping-designs",
+      "query": "what does idempotent mean?",
+      "should_trigger": false,
+      "invoked": [
+        "writing-for-people"
+      ],
+      "cost": 0.00385981,
+      "error": null
+    },
+    {
+      "skill": "shaping-designs",
+      "query": "we want to change the amount field in our API from dollars to cents, how?",
+      "should_trigger": true,
+      "invoked": [
+        "changing-code",
+        "shaping-designs"
+      ],
+      "cost": 0.00670161,
+      "error": null
+    },
+    {
+      "skill": "shaping-designs",
+      "query": "how should we add retries to our payment calls?",
+      "should_trigger": true,
+      "invoked": [
+        "shaping-designs"
+      ],
+      "cost": 0.00540157,
+      "error": null
+    },
+    {
+      "skill": "shaping-designs",
+      "query": "rename the variable `done` to `isComplete` in this function",
+      "should_trigger": false,
+      "invoked": [
+        "changing-code"
+      ],
+      "cost": 0.007398420000000001,
+      "error": null
+    },
+    {
+      "skill": "shaping-designs",
+      "query": "rename a column in our production Postgres table safely",
+      "should_trigger": true,
+      "invoked": [
+        "changing-code",
+        "shaping-designs"
+      ],
+      "cost": 0.00549584,
+      "error": null
+    },
+    {
+      "skill": "shaping-designs",
+      "query": "draft user stories for a team calendar feature",
+      "should_trigger": true,
+      "invoked": [
+        "shaping-designs"
+      ],
+      "cost": 0.005408980000000001,
+      "error": null
+    },
+    {
+      "skill": "shaping-designs",
+      "query": "our support bot keeps hallucinating policy details, what should we change?",
+      "should_trigger": true,
+      "invoked": [
+        "shaping-designs"
+      ],
+      "cost": 0.006777880000000001,
+      "error": null
+    },
+    {
+      "skill": "shaping-designs",
+      "query": "turn these customer complaints into a spec for the refund flow",
+      "should_trigger": true,
+      "invoked": [
+        "shaping-designs"
+      ],
+      "cost": 0.0054407100000000005,
+      "error": null
+    },
+    {
+      "skill": "shaping-designs",
+      "query": "write the requirements for adding two-factor login",
+      "should_trigger": true,
+      "invoked": [
+        "shaping-designs"
+      ],
+      "cost": 0.006811600000000001,
+      "error": null
+    },
+    {
+      "skill": "shaping-designs",
+      "query": "which model should we use for classifying support tickets?",
+      "should_trigger": true,
+      "invoked": [
+        "shaping-designs",
+        "claude-api",
+        "claude-api"
+      ],
+      "cost": 0.00606689,
+      "error": null
+    }
+  ],
+  "summary": {
+    "shaping-designs": {
+      "pos": 36,
+      "hit": 36,
+      "neg": 16,
+      "clean": 14,
+      "instead": {
+        "claude-api": 5,
+        "product-self-knowledge": 1,
+        "writing-for-people": 3,
+        "changing-code": 2
+      }
+    }
+  }
+}
