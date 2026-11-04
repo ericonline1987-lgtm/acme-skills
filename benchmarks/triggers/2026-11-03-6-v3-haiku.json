@@ -1,65 +1,1890 @@
 {
   "model": "haiku",
   "with_rules": false,
-  "spent_usd": 0.0,
-  "stopped_early": true,
+  "spent_usd": 1.04,
+  "stopped_early": false,
   "results": [
     {
       "skill": "changing-code",
       "query": "what is TDD?",
       "should_trigger": false,
       "invoked": [],
-      "cost": 0.0,
-      "error": "usage limit"
+      "cost": 0.0082628,
+      "error": null
     },
     {
       "skill": "changing-code",
       "query": "fix this failing test by updating the snapshot",
       "should_trigger": false,
-      "invoked": [],
-      "cost": 0.0,
-      "error": "usage limit"
+      "invoked": [
+        "changing-code"
+      ],
+      "cost": 0.01248868,
+      "error": null
+    },
+    {
+      "skill": "changing-code",
+      "query": "coverage on utils/dates.py is 20%, can you fix that",
+      "should_trigger": true,
+      "invoked": [
+        "changing-code"
+      ],
+      "cost": 0.01146785,
+      "error": null
     },
     {
       "skill": "changing-code",
       "query": "Add a test that reproduces the bug where empty carts can be submitted.",
       "should_trigger": true,
-      "invoked": [],
-      "cost": 0.0,
-      "error": "usage limit"
+      "invoked": [
+        "changing-code"
+      ],
+      "cost": 0.011975580000000001,
+      "error": null
+    },
+    {
+      "skill": "changing-code",
+      "query": "write pytest tests for this parse_duration function",
+      "should_trigger": true,
+      "invoked": [
+        "changing-code"
+      ],
+      "cost": 0.010985290000000002,
+      "error": null
+    },
+    {
+      "skill": "changing-code",
+      "query": "write tests for this parse_percent function",
+      "should_trigger": true,
+      "invoked": [
+        "changing-code"
+      ],
+      "cost": 0.00548455,
+      "error": null
     },
     {
       "skill": "changing-code",
       "query": "set up GitHub Actions to run our tests",
       "should_trigger": false,
       "invoked": [],
-      "cost": 0.0,
-      "error": "usage limit"
+      "cost": 0.01401879,
+      "error": null
     },
     {
       "skill": "changing-code",
-      "query": "coverage on utils/dates.py is 20%, can you fix that",
+      "query": "add a test that reproduces this bug before I fix it",
       "should_trigger": true,
-      "invoked": [],
-      "cost": 0.0,
-      "error": "usage limit"
+      "invoked": [
+        "changing-code"
+      ],
+      "cost": 0.0065021,
+      "error": null
     },
     {
       "skill": "changing-code",
-      "query": "write pytest tests for this parse_duration function",
+      "query": "coverage on the billing module is 40%, fix it",
+      "should_trigger": true,
+      "invoked": [
+        "changing-code"
+      ],
+      "cost": 0.005260900000000001,
+      "error": null
+    },
+    {
+      "skill": "changing-code",
+      "query": "this test passes locally but fails on CI about one time in ten",
+      "should_trigger": true,
+      "invoked": [
+        "changing-code"
+      ],
+      "cost": 0.008556900000000001,
+      "error": null
+    },
+    {
+      "skill": "changing-code",
+      "query": "I need unit tests for the slugify helper",
+      "should_trigger": true,
+      "invoked": [
+        "changing-code"
+      ],
+      "cost": 0.006859210000000001,
+      "error": null
+    },
+    {
+      "skill": "changing-code",
+      "query": "our checkout API is throwing 500s since this morning, help",
+      "should_trigger": true,
+      "invoked": [
+        "changing-code"
+      ],
+      "cost": 0.00720436,
+      "error": null
+    },
+    {
+      "skill": "changing-code",
+      "query": "TypeError: Cannot read properties of undefined (reading 'map') \u2014 what's going on?",
+      "should_trigger": true,
+      "invoked": [
+        "changing-code"
+      ],
+      "cost": 0.00550947,
+      "error": null
+    },
+    {
+      "skill": "changing-code",
+      "query": "the dashboard got really slow after yesterday's release, why?",
+      "should_trigger": true,
+      "invoked": [
+        "changing-code"
+      ],
+      "cost": 0.007274480000000001,
+      "error": null
+    },
+    {
+      "skill": "changing-code",
+      "query": "what's the difference between a stack trace and a core dump?",
+      "should_trigger": false,
+      "invoked": [],
+      "cost": 0.00303385,
+      "error": null
+    },
+    {
+      "skill": "changing-code",
+      "query": "write a function that retries an HTTP request three times",
+      "should_trigger": false,
+      "invoked": [],
+      "cost": 0.00450921,
+      "error": null
+    },
+    {
+      "skill": "changing-code",
+      "query": "it worked yesterday and now the import job just hangs",
+      "should_trigger": true,
+      "invoked": [
+        "changing-code"
+      ],
+      "cost": 0.00591427,
+      "error": null
+    },
+    {
+      "skill": "changing-code",
+      "query": "explain what a 500 status code means",
+      "should_trigger": false,
+      "invoked": [],
+      "cost": 0.00298985,
+      "error": null
+    },
+    {
+      "skill": "changing-code",
+      "query": "prod is down, users can't log in",
+      "should_trigger": true,
+      "invoked": [
+        "changing-code"
+      ],
+      "cost": 0.0067966599999999995,
+      "error": null
+    },
+    {
+      "skill": "changing-code",
+      "query": "what does this function do?",
+      "should_trigger": false,
+      "invoked": [],
+      "cost": 0.00279815,
+      "error": null
+    },
+    {
+      "skill": "changing-code",
+      "query": "set up Sentry for a Next.js app",
+      "should_trigger": false,
+      "invoked": [],
+      "cost": 0.00608854,
+      "error": null
+    },
+    {
+      "skill": "changing-code",
+      "query": "extract a generic RequestContext so other services can reuse it later, only orders uses it now",
+      "should_trigger": true,
+      "invoked": [
+        "changing-code"
+      ],
+      "cost": 0.00571582,
+      "error": null
+    },
+    {
+      "skill": "changing-code",
+      "query": "test_sanitize_filename fails because ';' isn't stripped anymore. should I just add it back?",
+      "should_trigger": true,
+      "invoked": [
+        "changing-code"
+      ],
+      "cost": 0.0055979,
+      "error": null
+    },
+    {
+      "skill": "changing-code",
+      "query": "memory keeps climbing on the worker until it gets killed",
+      "should_trigger": true,
+      "invoked": [
+        "changing-code"
+      ],
+      "cost": 0.007342979999999999,
+      "error": null
+    },
+    {
+      "skill": "changing-code",
+      "query": "explain the difference between refactoring and rewriting",
+      "should_trigger": false,
+      "invoked": [],
+      "cost": 0.0029810500000000003,
+      "error": null
+    },
+    {
+      "skill": "changing-code",
+      "query": "Change the default page size from 50 to 100 in our API.",
+      "should_trigger": true,
+      "invoked": [
+        "changing-code"
+      ],
+      "cost": 0.00746349,
+      "error": null
+    },
+    {
+      "skill": "changing-code",
+      "query": "rename this function everywhere it's used",
+      "should_trigger": true,
+      "invoked": [
+        "changing-code"
+      ],
+      "cost": 0.00390268,
+      "error": null
+    },
+    {
+      "skill": "changing-code",
+      "query": "move this helper into utils.py and fix the imports",
+      "should_trigger": true,
+      "invoked": [
+        "changing-code"
+      ],
+      "cost": 0.00454165,
+      "error": null
+    },
+    {
+      "skill": "changing-code",
+      "query": "change the default page size from 50 to 200",
+      "should_trigger": true,
+      "invoked": [
+        "changing-code"
+      ],
+      "cost": 0.0055644100000000005,
+      "error": null
+    },
+    {
+      "skill": "changing-code",
+      "query": "bump the requests library to the latest major version",
+      "should_trigger": true,
+      "invoked": [
+        "changing-code"
+      ],
+      "cost": 0.006501259999999999,
+      "error": null
+    },
+    {
+      "skill": "changing-code",
+      "query": "write a brand new CLI tool that converts JSON to YAML",
+      "should_trigger": false,
+      "invoked": [],
+      "cost": 0.00598628,
+      "error": null
+    },
+    {
+      "skill": "changing-code",
+      "query": "change the HTTP client timeout from 30 to 60 seconds",
+      "should_trigger": true,
+      "invoked": [
+        "changing-code"
+      ],
+      "cost": 0.006932460000000001,
+      "error": null
+    },
+    {
+      "skill": "changing-code",
+      "query": "upgrade React from 17 to 18 in our app",
+      "should_trigger": true,
+      "invoked": [
+        "changing-code"
+      ],
+      "cost": 0.0073716799999999985,
+      "error": null
+    },
+    {
+      "skill": "handling-artifacts",
+      "query": "Playwright left traces and videos everywhere after debugging. Should any of this be committed?",
+      "should_trigger": true,
+      "invoked": [
+        "handling-artifacts"
+      ],
+      "cost": 0.007249810000000001,
+      "error": null
+    },
+    {
+      "skill": "handling-artifacts",
+      "query": "package this HTML report so my colleague can open it on their laptop",
+      "should_trigger": true,
+      "invoked": [
+        "handling-artifacts"
+      ],
+      "cost": 0.0052252900000000005,
+      "error": null
+    },
+    {
+      "skill": "handling-artifacts",
+      "query": "what's the difference between .gitignore and .git/info/exclude?",
+      "should_trigger": false,
+      "invoked": [],
+      "cost": 0.00311845,
+      "error": null
+    },
+    {
+      "skill": "changing-code",
+      "query": "swap the deprecated datetime.utcnow calls for timezone-aware ones",
+      "should_trigger": true,
+      "invoked": [
+        "changing-code"
+      ],
+      "cost": 0.005693350000000001,
+      "error": null
+    },
+    {
+      "skill": "handling-artifacts",
+      "query": "how do I take a screenshot on a Mac?",
+      "should_trigger": false,
+      "invoked": [],
+      "cost": 0.0029738499999999997,
+      "error": null
+    },
+    {
+      "skill": "handling-artifacts",
+      "query": "write a function that zips a folder in Python",
+      "should_trigger": false,
+      "invoked": [],
+      "cost": 0.0030484500000000003,
+      "error": null
+    },
+    {
+      "skill": "handling-artifacts",
+      "query": "we're giving our demo repo to an outside agency, it has admin screenshots and is 2GB, help me get it ready",
+      "should_trigger": true,
+      "invoked": [
+        "handling-artifacts"
+      ],
+      "cost": 0.00860094,
+      "error": null
+    },
+    {
+      "skill": "handling-artifacts",
+      "query": "zip up this debugging folder so I can send it to the vendor",
+      "should_trigger": true,
+      "invoked": [
+        "handling-artifacts"
+      ],
+      "cost": 0.0058848400000000006,
+      "error": null
+    },
+    {
+      "skill": "handling-artifacts",
+      "query": "where should I put these screenshots from the test run?",
+      "should_trigger": true,
+      "invoked": [
+        "handling-artifacts"
+      ],
+      "cost": 0.00563139,
+      "error": null
+    },
+    {
+      "skill": "merging-safely",
+      "query": "Is feature/tenant-migration ready to merge into main?",
+      "should_trigger": true,
+      "invoked": [
+        "merging-safely"
+      ],
+      "cost": 0.0052132,
+      "error": null
+    },
+    {
+      "skill": "handling-artifacts",
+      "query": "I need to hand the client these test recordings, some show real user data",
+      "should_trigger": true,
+      "invoked": [
+        "handling-artifacts"
+      ],
+      "cost": 0.005860349999999999,
+      "error": null
+    },
+    {
+      "skill": "merging-safely",
+      "query": "merge release/2.4 into main, I resolved the conflict by taking main's version, can I push?",
+      "should_trigger": true,
+      "invoked": [
+        "merging-safely"
+      ],
+      "cost": 0.00568604,
+      "error": null
+    },
+    {
+      "skill": "handling-artifacts",
+      "query": "our repo is 3GB now, how do I shrink it?",
+      "should_trigger": true,
+      "invoked": [
+        "handling-artifacts"
+      ],
+      "cost": 0.0088158,
+      "error": null
+    },
+    {
+      "skill": "merging-safely",
+      "query": "check that the hotfix from last week actually landed on the 3.1 release branch",
+      "should_trigger": true,
+      "invoked": [
+        "merging-safely"
+      ],
+      "cost": 0.006090410000000001,
+      "error": null
+    },
+    {
+      "skill": "merging-safely",
+      "query": "merge these two Python dictionaries",
+      "should_trigger": false,
+      "invoked": [],
+      "cost": 0.00429995,
+      "error": null
+    },
+    {
+      "skill": "merging-safely",
+      "query": "combine these two CSV files into one",
+      "should_trigger": false,
+      "invoked": [],
+      "cost": 0.00453838,
+      "error": null
+    },
+    {
+      "skill": "merging-safely",
+      "query": "what's the difference between merge and rebase?",
+      "should_trigger": false,
+      "invoked": [
+        "merging-safely"
+      ],
+      "cost": 0.00405068,
+      "error": null
+    },
+    {
+      "skill": "merging-safely",
+      "query": "I merged main into my branch and took ours on settings.py, safe to push?",
+      "should_trigger": true,
+      "invoked": [
+        "merging-safely"
+      ],
+      "cost": 0.00601838,
+      "error": null
+    },
+    {
+      "skill": "merging-safely",
+      "query": "is this branch ready to merge?",
+      "should_trigger": true,
+      "invoked": [
+        "merging-safely"
+      ],
+      "cost": 0.0069628500000000005,
+      "error": null
+    },
+    {
+      "skill": "merging-safely",
+      "query": "I'm about to merge the release branch back into main, anything I should watch for?",
+      "should_trigger": true,
+      "invoked": [
+        "merging-safely"
+      ],
+      "cost": 0.0059425300000000006,
+      "error": null
+    },
+    {
+      "skill": "merging-safely",
+      "query": "check whether the hotfix landed on release-2.4",
+      "should_trigger": true,
+      "invoked": [
+        "merging-safely"
+      ],
+      "cost": 0.0065691000000000005,
+      "error": null
+    },
+    {
+      "skill": "reviewing-code",
+      "query": "review this PR: ```diff +rows = db.execute(f\"SELECT * FROM orders WHERE email = '{email}'\")```",
+      "should_trigger": true,
+      "invoked": [
+        "reviewing-code"
+      ],
+      "cost": 0.00520486,
+      "error": null
+    },
+    {
+      "skill": "reviewing-code",
+      "query": "is this OK? <pastes a 40-line patch>",
       "should_trigger": true,
       "invoked": [],
-      "cost": 0.0,
-      "error": "usage limit"
+      "cost": 0.00281575,
+      "error": null
+    },
+    {
+      "skill": "reviewing-code",
+      "query": "Can you look over my changes before I merge? Anything wrong?",
+      "should_trigger": true,
+      "invoked": [
+        "reviewing-code",
+        "merging-safely"
+      ],
+      "cost": 0.005829600000000001,
+      "error": null
+    },
+    {
+      "skill": "reviewing-code",
+      "query": "format this file with black",
+      "should_trigger": false,
+      "invoked": [],
+      "cost": 0.00409619,
+      "error": null
+    },
+    {
+      "skill": "reviewing-code",
+      "query": "what makes a good code review culture?",
+      "should_trigger": false,
+      "invoked": [
+        "writing-for-people"
+      ],
+      "cost": 0.004074390000000001,
+      "error": null
+    },
+    {
+      "skill": "reviewing-code",
+      "query": "how do I request a reviewer on a GitHub pull request?",
+      "should_trigger": false,
+      "invoked": [],
+      "cost": 0.00282135,
+      "error": null
+    },
+    {
+      "skill": "reviewing-code",
+      "query": "Here's my function, anything I missed?\n```python\ndef avg(xs):\n    return sum(xs) / len(xs)\n```",
+      "should_trigger": true,
+      "invoked": [
+        "reviewing-code"
+      ],
+      "cost": 0.00441276,
+      "error": null
+    },
+    {
+      "skill": "reviewing-code",
+      "query": "quick look at this before I push? def total(items): return sum(i.price for i in items)",
+      "should_trigger": true,
+      "invoked": [
+        "reviewing-code"
+      ],
+      "cost": 0.0041575100000000005,
+      "error": null
+    },
+    {
+      "skill": "reviewing-code",
+      "query": "can you give my PR a once-over before I ask the team? It adds retry logic to the webhook sender.",
+      "should_trigger": true,
+      "invoked": [
+        "reviewing-code"
+      ],
+      "cost": 0.0069368400000000005,
+      "error": null
+    },
+    {
+      "skill": "reviewing-code",
+      "query": "sanity check this migration before I run it: ALTER TABLE users DROP COLUMN legacy_id;",
+      "should_trigger": true,
+      "invoked": [
+        "shaping-designs"
+      ],
+      "cost": 0.00582733,
+      "error": null
+    },
+    {
+      "skill": "shaping-designs",
+      "query": "what is the CAP theorem?",
+      "should_trigger": false,
+      "invoked": [],
+      "cost": 0.0029781499999999997,
+      "error": null
+    },
+    {
+      "skill": "shaping-designs",
+      "query": "We need an RFC for splitting the monolith's notification code into its own service.",
+      "should_trigger": true,
+      "invoked": [
+        "shaping-designs",
+        "writing-for-people"
+      ],
+      "cost": 0.007806,
+      "error": null
+    },
+    {
+      "skill": "reviewing-code",
+      "query": "write a pull request description for these commits",
+      "should_trigger": false,
+      "invoked": [
+        "writing-for-people"
+      ],
+      "cost": 0.01332554,
+      "error": null
+    },
+    {
+      "skill": "shaping-designs",
+      "query": "design how we should move our nightly 4-hour billing cron to something reliable",
+      "should_trigger": true,
+      "invoked": [
+        "shaping-designs"
+      ],
+      "cost": 0.005919559999999999,
+      "error": null
+    },
+    {
+      "skill": "shaping-designs",
+      "query": "how should we architect multi-region failover for the API?",
+      "should_trigger": true,
+      "invoked": [
+        "shaping-designs"
+      ],
+      "cost": 0.00632224,
+      "error": null
+    },
+    {
+      "skill": "shaping-designs",
+      "query": "draw me a logo for our system",
+      "should_trigger": false,
+      "invoked": [
+        "making-visuals"
+      ],
+      "cost": 0.007995809999999999,
+      "error": null
+    },
+    {
+      "skill": "shaping-designs",
+      "query": "rename the class SystemDesigner to Architect",
+      "should_trigger": false,
+      "invoked": [
+        "changing-code"
+      ],
+      "cost": 0.00560843,
+      "error": null
+    },
+    {
+      "skill": "shaping-designs",
+      "query": "how should we split this monolith?",
+      "should_trigger": true,
+      "invoked": [
+        "shaping-designs"
+      ],
+      "cost": 0.00880656,
+      "error": null
+    },
+    {
+      "skill": "shaping-designs",
+      "query": "we need to move from a single Postgres to sharded, how would you approach it?",
+      "should_trigger": true,
+      "invoked": [
+        "shaping-designs"
+      ],
+      "cost": 0.0053107300000000005,
+      "error": null
+    },
+    {
+      "skill": "shaping-designs",
+      "query": "Our RAG chatbot gives wrong answers sometimes. How do we make it reliably better?",
+      "should_trigger": true,
+      "invoked": [
+        "shaping-designs"
+      ],
+      "cost": 0.005663920000000001,
+      "error": null
+    },
+    {
+      "skill": "shaping-designs",
+      "query": "design an event-driven replacement for our nightly cron export",
+      "should_trigger": true,
+      "invoked": [
+        "shaping-designs"
+      ],
+      "cost": 0.0073123400000000005,
+      "error": null
+    },
+    {
+      "skill": "shaping-designs",
+      "query": "write an RFC for moving file storage to S3",
+      "should_trigger": true,
+      "invoked": [
+        "shaping-designs"
+      ],
+      "cost": 0.0080034,
+      "error": null
+    },
+    {
+      "skill": "shaping-designs",
+      "query": "what is a transformer in machine learning?",
+      "should_trigger": false,
+      "invoked": [],
+      "cost": 0.00300135,
+      "error": null
+    },
+    {
+      "skill": "shaping-designs",
+      "query": "we want an LLM to auto-sort support tickets into 12 categories, how should we build it",
+      "should_trigger": true,
+      "invoked": [
+        "shaping-designs",
+        "claude-api"
+      ],
+      "cost": 0.00535634,
+      "error": null
+    },
+    {
+      "skill": "shaping-designs",
+      "query": "explain what tokens are",
+      "should_trigger": false,
+      "invoked": [
+        "writing-for-people"
+      ],
+      "cost": 0.003995459999999999,
+      "error": null
+    },
+    {
+      "skill": "shaping-designs",
+      "query": "pick a model for summarising sales calls, cost matters",
+      "should_trigger": true,
+      "invoked": [
+        "claude-api",
+        "product-self-knowledge",
+        "product-self-knowledge"
+      ],
+      "cost": 0.009577175,
+      "error": null
+    },
+    {
+      "skill": "shaping-designs",
+      "query": "our RAG chatbot gives wrong answers sometimes, how do we fix it?",
+      "should_trigger": true,
+      "invoked": [],
+      "cost": 0.00463982,
+      "error": null
+    },
+    {
+      "skill": "shaping-designs",
+      "query": "write a Python function that calls the OpenAI API",
+      "should_trigger": false,
+      "invoked": [],
+      "cost": 0.0033186500000000002,
+      "error": null
+    },
+    {
+      "skill": "shaping-designs",
+      "query": "help me improve the prompt for our summariser, users say it misses key points",
+      "should_trigger": true,
+      "invoked": [],
+      "cost": 0.00645837,
+      "error": null
+    },
+    {
+      "skill": "shaping-designs",
+      "query": "which model should we use for our ticket triage feature?",
+      "should_trigger": true,
+      "invoked": [
+        "shaping-designs",
+        "claude-api"
+      ],
+      "cost": 0.00683624,
+      "error": null
+    },
+    {
+      "skill": "shaping-designs",
+      "query": "Turn this Slack thread about 'saved searches' into user stories with acceptance criteria.",
+      "should_trigger": true,
+      "invoked": [],
+      "cost": 0.00813563,
+      "error": null
+    },
+    {
+      "skill": "shaping-designs",
+      "query": "PM is out, I need a PRD section for team invites by tomorrow",
+      "should_trigger": true,
+      "invoked": [
+        "shaping-designs",
+        "writing-for-people"
+      ],
+      "cost": 0.00493768,
+      "error": null
+    },
+    {
+      "skill": "shaping-designs",
+      "query": "write requirements for letting users export their data as CSV",
+      "should_trigger": true,
+      "invoked": [
+        "shaping-designs",
+        "writing-for-people"
+      ],
+      "cost": 0.00582447,
+      "error": null
+    },
+    {
+      "skill": "shaping-designs",
+      "query": "what's the difference between functional and non-functional requirements?",
+      "should_trigger": false,
+      "invoked": [
+        "writing-for-people"
+      ],
+      "cost": 0.0039385900000000005,
+      "error": null
+    },
+    {
+      "skill": "shaping-designs",
+      "query": "we want to add an LLM that drafts replies to support tickets",
+      "should_trigger": true,
+      "invoked": [
+        "shaping-designs"
+      ],
+      "cost": 0.00769822,
+      "error": null
+    },
+    {
+      "skill": "shaping-designs",
+      "query": "install the requirements.txt for this project",
+      "should_trigger": false,
+      "invoked": [],
+      "cost": 0.005983560000000001,
+      "error": null
+    },
+    {
+      "skill": "shaping-designs",
+      "query": "pin the versions in requirements.txt",
+      "should_trigger": false,
+      "invoked": [],
+      "cost": 0.00471476,
+      "error": null
+    },
+    {
+      "skill": "shaping-designs",
+      "query": "should we use Postgres full text search or Elasticsearch for 2M products, team of 4",
+      "should_trigger": true,
+      "invoked": [
+        "shaping-designs"
+      ],
+      "cost": 0.004056860000000001,
+      "error": null
+    },
+    {
+      "skill": "shaping-designs",
+      "query": "write user stories for exporting invoices to CSV",
+      "should_trigger": true,
+      "invoked": [
+        "writing-for-people"
+      ],
+      "cost": 0.00440501,
+      "error": null
+    },
+    {
+      "skill": "shaping-designs",
+      "query": "turn this Slack thread into a spec the team can build",
+      "should_trigger": true,
+      "invoked": [
+        "shaping-designs",
+        "writing-for-people"
+      ],
+      "cost": 0.006646210000000001,
+      "error": null
+    },
+    {
+      "skill": "shaping-designs",
+      "query": "write acceptance criteria for password reset",
+      "should_trigger": true,
+      "invoked": [
+        "shaping-designs",
+        "writing-for-people"
+      ],
+      "cost": 0.00513669,
+      "error": null
+    },
+    {
+      "skill": "shaping-designs",
+      "query": "we're adding team billing, write up what it needs to do",
+      "should_trigger": true,
+      "invoked": [
+        "shaping-designs"
+      ],
+      "cost": 0.00663678,
+      "error": null
+    },
+    {
+      "skill": "shaping-designs",
+      "query": "explain what a feature flag is",
+      "should_trigger": false,
+      "invoked": [],
+      "cost": 0.00294075,
+      "error": null
+    },
+    {
+      "skill": "shaping-designs",
+      "query": "We need background jobs in our Django app. What should we use?",
+      "should_trigger": true,
+      "invoked": [
+        "shaping-designs"
+      ],
+      "cost": 0.00461545,
+      "error": null
+    },
+    {
+      "skill": "shaping-designs",
+      "query": "list the options for the `git log` command",
+      "should_trigger": false,
+      "invoked": [],
+      "cost": 0.0037025499999999998,
+      "error": null
+    },
+    {
+      "skill": "shaping-designs",
+      "query": "I already chose Redis; write the docker-compose service for it",
+      "should_trigger": false,
+      "invoked": [],
+      "cost": 0.00501741,
+      "error": null
+    },
+    {
+      "skill": "shaping-designs",
+      "query": "I'm torn between rewriting the billing service in Go or just fixing the Python one. thoughts?",
+      "should_trigger": true,
+      "invoked": [
+        "shaping-designs"
+      ],
+      "cost": 0.004915040000000001,
+      "error": null
+    },
+    {
+      "skill": "shaping-designs",
+      "query": "Postgres or Mongo for our new app?",
+      "should_trigger": true,
+      "invoked": [
+        "shaping-designs"
+      ],
+      "cost": 0.0038006199999999998,
+      "error": null
+    },
+    {
+      "skill": "shaping-designs",
+      "query": "should we rewrite the billing service or keep patching it?",
+      "should_trigger": true,
+      "invoked": [
+        "shaping-designs"
+      ],
+      "cost": 0.00471917,
+      "error": null
+    },
+    {
+      "skill": "shaping-designs",
+      "query": "what's the difference between a definition of done and acceptance criteria in scrum?",
+      "should_trigger": false,
+      "invoked": [],
+      "cost": 0.00315815,
+      "error": null
+    },
+    {
+      "skill": "shaping-designs",
+      "query": "Redis or Memcached for session storage?",
+      "should_trigger": true,
+      "invoked": [
+        "shaping-designs"
+      ],
+      "cost": 0.00381037,
+      "error": null
+    },
+    {
+      "skill": "shaping-designs",
+      "query": "mark this jira ticket as done and close the sprint",
+      "should_trigger": false,
+      "invoked": [],
+      "cost": 0.0076831,
+      "error": null
+    },
+    {
+      "skill": "shaping-designs",
+      "query": "what does idempotent mean?",
+      "should_trigger": false,
+      "invoked": [],
+      "cost": 0.00284615,
+      "error": null
+    },
+    {
+      "skill": "shaping-designs",
+      "query": "what should we use for feature flags?",
+      "should_trigger": true,
+      "invoked": [
+        "shaping-designs"
+      ],
+      "cost": 0.00610318,
+      "error": null
+    },
+    {
+      "skill": "shaping-designs",
+      "query": "rename the variable `done` to `isComplete` in this function",
+      "should_trigger": false,
+      "invoked": [
+        "changing-code"
+      ],
+      "cost": 0.00656534,
+      "error": null
+    },
+    {
+      "skill": "shaping-designs",
+      "query": "how should we add retries to our payment calls?",
+      "should_trigger": true,
+      "invoked": [
+        "shaping-designs"
+      ],
+      "cost": 0.0052418099999999995,
+      "error": null
+    },
+    {
+      "skill": "shaping-designs",
+      "query": "rename a column in our production Postgres table safely",
+      "should_trigger": true,
+      "invoked": [
+        "changing-code",
+        "shaping-designs"
+      ],
+      "cost": 0.00498083,
+      "error": null
+    },
+    {
+      "skill": "making-visuals",
+      "query": "what CSS property makes text bold?",
+      "should_trigger": false,
+      "invoked": [],
+      "cost": 0.00267965,
+      "error": null
+    },
+    {
+      "skill": "shaping-designs",
+      "query": "we want to change the amount field in our API from dollars to cents, how?",
+      "should_trigger": true,
+      "invoked": [
+        "shaping-designs"
+      ],
+      "cost": 0.00616443,
+      "error": null
+    },
+    {
+      "skill": "making-visuals",
+      "query": "I built an HTML dashboard I'm emailing to leadership tomorrow, make sure it actually works",
+      "should_trigger": true,
+      "invoked": [
+        "making-visuals"
+      ],
+      "cost": 0.00627254,
+      "error": null
+    },
+    {
+      "skill": "making-visuals",
+      "query": "screenshot the order status page in the admin panel as proof it shows 'shipped'",
+      "should_trigger": true,
+      "invoked": [
+        "making-visuals"
+      ],
+      "cost": 0.005747060000000001,
+      "error": null
+    },
+    {
+      "skill": "making-visuals",
+      "query": "make sure the new pricing page works on phones before we launch",
+      "should_trigger": true,
+      "invoked": [
+        "making-visuals"
+      ],
+      "cost": 0.0052723200000000005,
+      "error": null
+    },
+    {
+      "skill": "making-visuals",
+      "query": "Write a Playwright test that an empty cart can't be submitted at checkout.",
+      "should_trigger": true,
+      "invoked": [
+        "changing-code"
+      ],
+      "cost": 0.00719084,
+      "error": null
+    },
+    {
+      "skill": "making-visuals",
+      "query": "design a colour palette for our dashboard",
+      "should_trigger": false,
+      "invoked": [
+        "dataviz"
+      ],
+      "cost": 0.006718,
+      "error": null
+    },
+    {
+      "skill": "making-visuals",
+      "query": "my screenshot shows the cards overlapping, should I revert the CSS?",
+      "should_trigger": true,
+      "invoked": [],
+      "cost": 0.006298140000000001,
+      "error": null
+    },
+    {
+      "skill": "making-visuals",
+      "query": "write an end-to-end test for the signup flow",
+      "should_trigger": true,
+      "invoked": [
+        "changing-code"
+      ],
+      "cost": 0.006854279999999999,
+      "error": null
+    },
+    {
+      "skill": "making-visuals",
+      "query": "write the HTML for a contact form",
+      "should_trigger": false,
+      "invoked": [
+        "making-visuals"
+      ],
+      "cost": 0.00544764,
+      "error": null
+    },
+    {
+      "skill": "making-visuals",
+      "query": "the checkout button looks cut off on my phone, can you check the page?",
+      "should_trigger": true,
+      "invoked": [
+        "making-visuals"
+      ],
+      "cost": 0.004918800000000001,
+      "error": null
+    },
+    {
+      "skill": "making-visuals",
+      "query": "take a screenshot of the new settings page so I can show my manager it works",
+      "should_trigger": true,
+      "invoked": [
+        "making-visuals",
+        "handling-artifacts",
+        "run"
+      ],
+      "cost": 0.00543596,
+      "error": null
+    },
+    {
+      "skill": "making-visuals",
+      "query": "how do I add a slide number in PowerPoint?",
+      "should_trigger": false,
+      "invoked": [],
+      "cost": 0.00288185,
+      "error": null
+    },
+    {
+      "skill": "making-visuals",
+      "query": "I have to pitch this idea to the board Thursday, help",
+      "should_trigger": true,
+      "invoked": [],
+      "cost": 0.0029195500000000004,
+      "error": null
+    },
+    {
+      "skill": "making-visuals",
+      "query": "can you confirm the signup form still works after my change?",
+      "should_trigger": true,
+      "invoked": [
+        "changing-code"
+      ],
+      "cost": 0.0054343,
+      "error": null
+    },
+    {
+      "skill": "making-visuals",
+      "query": "does our landing page pass basic accessibility checks?",
+      "should_trigger": true,
+      "invoked": [],
+      "cost": 0.006654320000000001,
+      "error": null
+    },
+    {
+      "skill": "making-visuals",
+      "query": "Make slides for my talk on our migration at the engineering all-hands.",
+      "should_trigger": true,
+      "invoked": [
+        "making-visuals"
+      ],
+      "cost": 0.00554472,
+      "error": null
+    },
+    {
+      "skill": "making-visuals",
+      "query": "outline a 10 minute deck to get leadership to fund a 2 person dev tooling team",
+      "should_trigger": true,
+      "invoked": [
+        "making-visuals",
+        "writing-for-people"
+      ],
+      "cost": 0.004882860000000001,
+      "error": null
+    },
+    {
+      "skill": "making-visuals",
+      "query": "convert this PPTX to PDF",
+      "should_trigger": false,
+      "invoked": [],
+      "cost": 0.00391672,
+      "error": null
+    },
+    {
+      "skill": "making-visuals",
+      "query": "I have a 10-minute talk to the board on Thursday, help me build the deck",
+      "should_trigger": true,
+      "invoked": [],
+      "cost": 0.00457902,
+      "error": null
+    },
+    {
+      "skill": "making-visuals",
+      "query": "what's the best font for slides?",
+      "should_trigger": false,
+      "invoked": [
+        "making-visuals"
+      ],
+      "cost": 0.004682800000000001,
+      "error": null
+    },
+    {
+      "skill": "making-visuals",
+      "query": "turn this report into slides for the all-hands",
+      "should_trigger": true,
+      "invoked": [],
+      "cost": 0.006353899999999999,
+      "error": null
+    },
+    {
+      "skill": "making-visuals",
+      "query": "make a bar chart of our monthly revenue",
+      "should_trigger": true,
+      "invoked": [],
+      "cost": 0.00567818,
+      "error": null
+    },
+    {
+      "skill": "making-visuals",
+      "query": "I'm giving a 5-minute demo at the all-hands Friday, help me prep slides",
+      "should_trigger": true,
+      "invoked": [
+        "making-visuals"
+      ],
+      "cost": 0.0076982299999999995,
+      "error": null
+    },
+    {
+      "skill": "writing-for-people",
+      "query": "what's 15% of 240?",
+      "should_trigger": false,
+      "invoked": [],
+      "cost": 0.0026266500000000003,
+      "error": null
+    },
+    {
+      "skill": "making-visuals",
+      "query": "what's the difference between SVG and PNG?",
+      "should_trigger": false,
+      "invoked": [],
+      "cost": 0.00301295,
+      "error": null
+    },
+    {
+      "skill": "writing-for-people",
+      "query": "define 'single sign-on' in one sentence",
+      "should_trigger": false,
+      "invoked": [],
+      "cost": 0.00264825,
+      "error": null
+    },
+    {
+      "skill": "making-visuals",
+      "query": "design the layout for an on-call dashboard",
+      "should_trigger": true,
+      "invoked": [
+        "making-visuals"
+      ],
+      "cost": 0.00585245,
+      "error": null
+    },
+    {
+      "skill": "writing-for-people",
+      "query": "summarise this article I pasted",
+      "should_trigger": false,
+      "invoked": [],
+      "cost": 0.00267885,
+      "error": null
+    },
+    {
+      "skill": "writing-for-people",
+      "query": "explain what SOC 2 is in two sentences",
+      "should_trigger": false,
+      "invoked": [],
+      "cost": 0.0026919500000000002,
+      "error": null
+    },
+    {
+      "skill": "making-visuals",
+      "query": "make a pitch deck for our seed round",
+      "should_trigger": true,
+      "invoked": [
+        "making-visuals",
+        "writing-for-people"
+      ],
+      "cost": 0.011508200000000001,
+      "error": null
+    },
+    {
+      "skill": "making-visuals",
+      "query": "our pricing page looks broken on mobile, check it",
+      "should_trigger": true,
+      "invoked": [
+        "making-visuals"
+      ],
+      "cost": 0.006019930000000001,
+      "error": null
+    },
+    {
+      "skill": "writing-for-people",
+      "query": "what is a decision matrix?",
+      "should_trigger": false,
+      "invoked": [],
+      "cost": 0.0029193500000000002,
+      "error": null
+    },
+    {
+      "skill": "writing-for-people",
+      "query": "what's the capital of Germany?",
+      "should_trigger": false,
+      "invoked": [],
+      "cost": 0.00263005,
+      "error": null
+    },
+    {
+      "skill": "writing-for-people",
+      "query": "should we take on this client project? write it up for my boss",
+      "should_trigger": true,
+      "invoked": [],
+      "cost": 0.005180779999999999,
+      "error": null
+    },
+    {
+      "skill": "writing-for-people",
+      "query": "I need a go/no-go doc for launching in Germany next quarter.",
+      "should_trigger": true,
+      "invoked": [
+        "writing-for-people"
+      ],
+      "cost": 0.00564889,
+      "error": null
+    },
+    {
+      "skill": "writing-for-people",
+      "query": "book a meeting with the COO for Friday",
+      "should_trigger": false,
+      "invoked": [],
+      "cost": 0.00468389,
+      "error": null
+    },
+    {
+      "skill": "writing-for-people",
+      "query": "help me write something so our COO can decide between renewing Salesforce or moving to HubSpot by Nov 15",
+      "should_trigger": true,
+      "invoked": [
+        "writing-for-people"
+      ],
+      "cost": 0.0044014,
+      "error": null
+    },
+    {
+      "skill": "making-visuals",
+      "query": "draw a diagram of our system architecture in Mermaid",
+      "should_trigger": true,
+      "invoked": [
+        "making-visuals"
+      ],
+      "cost": 0.01289237,
+      "error": null
+    },
+    {
+      "skill": "writing-for-people",
+      "query": "we need to pick between two candidate vendors for payroll, help me present it to the CFO",
+      "should_trigger": true,
+      "invoked": [],
+      "cost": 0.0036727300000000004,
+      "error": null
+    },
+    {
+      "skill": "writing-for-people",
+      "query": "should we renew Datadog or move to Grafana? my boss wants a recommendation",
+      "should_trigger": true,
+      "invoked": [
+        "shaping-designs"
+      ],
+      "cost": 0.004229640000000001,
+      "error": null
+    },
+    {
+      "skill": "writing-for-people",
+      "query": "help me write up whether we should hire a contractor or a full-timer for this",
+      "should_trigger": true,
+      "invoked": [
+        "shaping-designs",
+        "writing-for-people"
+      ],
+      "cost": 0.0045818000000000005,
+      "error": null
+    },
+    {
+      "skill": "writing-for-people",
+      "query": "give me three synonyms for 'important'",
+      "should_trigger": false,
+      "invoked": [],
+      "cost": 0.00264085,
+      "error": null
+    },
+    {
+      "skill": "writing-for-people",
+      "query": "write up a go/no-go on launching in Germany this quarter for the exec team",
+      "should_trigger": true,
+      "invoked": [
+        "writing-for-people"
+      ],
+      "cost": 0.006514569999999999,
+      "error": null
+    },
+    {
+      "skill": "writing-for-people",
+      "query": "Turn these meeting scribbles into a one-pager I can send to the VP.",
+      "should_trigger": true,
+      "invoked": [
+        "writing-for-people"
+      ],
+      "cost": 0.00407811,
+      "error": null
+    },
+    {
+      "skill": "writing-for-people",
+      "query": "fix the grammar: 'me and him goes to the store'",
+      "should_trigger": false,
+      "invoked": [],
+      "cost": 0.00270485,
+      "error": null
+    },
+    {
+      "skill": "writing-for-people",
+      "query": "write a status update for leadership: 14 of 20 services moved, billing blocked by vendor licence (Priya, answer by Oct 20), $12k over, now Nov 14",
+      "should_trigger": true,
+      "invoked": [
+        "writing-for-people"
+      ],
+      "cost": 0.0042099500000000005,
+      "error": null
+    },
+    {
+      "skill": "writing-for-people",
+      "query": "this proposal is 6 pages and nobody reads it, can you fix it",
+      "should_trigger": true,
+      "invoked": [
+        "writing-for-people"
+      ],
+      "cost": 0.0065272,
+      "error": null
+    },
+    {
+      "skill": "writing-for-people",
+      "query": "clean up these onboarding notes into a how-to for new hires: laptop, accounts, VPN, first PR",
+      "should_trigger": true,
+      "invoked": [
+        "writing-for-people"
+      ],
+      "cost": 0.005650850000000001,
+      "error": null
+    },
+    {
+      "skill": "writing-for-people",
+      "query": "what's a good font for printed reports?",
+      "should_trigger": false,
+      "invoked": [],
+      "cost": 0.00319645,
+      "error": null
+    },
+    {
+      "skill": "writing-for-people",
+      "query": "convert this markdown to a PDF",
+      "should_trigger": false,
+      "invoked": [
+        "pdf"
+      ],
+      "cost": 0.00731033,
+      "error": null
+    },
+    {
+      "skill": "writing-for-people",
+      "query": "draft a one-page proposal for moving our internal docs to Notion",
+      "should_trigger": true,
+      "invoked": [
+        "writing-for-people"
+      ],
+      "cost": 0.0042686600000000005,
+      "error": null
+    },
+    {
+      "skill": "writing-for-people",
+      "query": "write up yesterday's outage for the wider team: checkout down 40 min, bad config push, rolled back, alerting gap",
+      "should_trigger": true,
+      "invoked": [
+        "writing-for-people"
+      ],
+      "cost": 0.00536114,
+      "error": null
+    },
+    {
+      "skill": "writing-for-people",
+      "query": "write a one-page summary of Q3 for the board",
+      "should_trigger": true,
+      "invoked": [
+        "writing-for-people"
+      ],
+      "cost": 0.00465309,
+      "error": null
+    },
+    {
+      "skill": "writing-for-people",
+      "query": "what's the difference between CC and BCC?",
+      "should_trigger": false,
+      "invoked": [],
+      "cost": 0.00287675,
+      "error": null
+    },
+    {
+      "skill": "writing-for-people",
+      "query": "write an email telling a client their launch slips two weeks because their API keys came late",
+      "should_trigger": true,
+      "invoked": [
+        "writing-for-people"
+      ],
+      "cost": 0.00415832,
+      "error": null
+    },
+    {
+      "skill": "writing-for-people",
+      "query": "chase the vendor who hasn't answered in a week, nicely",
+      "should_trigger": true,
+      "invoked": [
+        "writing-for-people"
+      ],
+      "cost": 0.00410081,
+      "error": null
+    },
+    {
+      "skill": "writing-for-people",
+      "query": "Reply to this recruiter and politely decline.",
+      "should_trigger": true,
+      "invoked": [
+        "writing-for-people"
+      ],
+      "cost": 0.00529167,
+      "error": null
+    },
+    {
+      "skill": "writing-for-people",
+      "query": "set up email forwarding in Gmail",
+      "should_trigger": false,
+      "invoked": [],
+      "cost": 0.00303575,
+      "error": null
+    },
+    {
+      "skill": "writing-for-people",
+      "query": "draft a message to my manager asking to move our 1:1 to Thursday",
+      "should_trigger": true,
+      "invoked": [
+        "writing-for-people"
+      ],
+      "cost": 0.0036842000000000003,
+      "error": null
+    },
+    {
+      "skill": "writing-for-people",
+      "query": "write a regex to validate email addresses",
+      "should_trigger": false,
+      "invoked": [],
+      "cost": 0.0031112500000000003,
+      "error": null
+    },
+    {
+      "skill": "writing-for-people",
+      "query": "what's the difference between reply and reply-all?",
+      "should_trigger": false,
+      "invoked": [],
+      "cost": 0.00270595,
+      "error": null
+    },
+    {
+      "skill": "writing-for-people",
+      "query": "write a follow-up to the investor I met on Tuesday",
+      "should_trigger": true,
+      "invoked": [
+        "writing-for-people"
+      ],
+      "cost": 0.00376963,
+      "error": null
+    },
+    {
+      "skill": "writing-for-people",
+      "query": "tell the landlord we're not renewing the office lease",
+      "should_trigger": true,
+      "invoked": [],
+      "cost": 0.00297595,
+      "error": null
+    },
+    {
+      "skill": "writing-for-people",
+      "query": "convert this table of numbers to CSV",
+      "should_trigger": false,
+      "invoked": [],
+      "cost": 0.00268905,
+      "error": null
+    },
+    {
+      "skill": "writing-for-people",
+      "query": "customer is angry their refund is two weeks late, help me reply",
+      "should_trigger": true,
+      "invoked": [
+        "writing-for-people"
+      ],
+      "cost": 0.00418673,
+      "error": null
+    },
+    {
+      "skill": "writing-for-people",
+      "query": "turn these notes into a board update: churn down maybe 30%, Sam said tickets halved, we're the fastest growing in the segment",
+      "should_trigger": true,
+      "invoked": [
+        "writing-for-people"
+      ],
+      "cost": 0.00408748,
+      "error": null
+    },
+    {
+      "skill": "writing-for-people",
+      "query": "Write the 'Results' paragraph for our case study from these numbers our sales lead sent.",
+      "should_trigger": true,
+      "invoked": [
+        "writing-for-people"
+      ],
+      "cost": 0.0056134,
+      "error": null
+    },
+    {
+      "skill": "writing-for-people",
+      "query": "what's a good citation style for a computer science paper?",
+      "should_trigger": false,
+      "invoked": [],
+      "cost": 0.00294405,
+      "error": null
+    },
+    {
+      "skill": "writing-for-people",
+      "query": "polish this investor update, it has a bunch of stats in it",
+      "should_trigger": true,
+      "invoked": [
+        "writing-for-people"
+      ],
+      "cost": 0.0045925,
+      "error": null
+    },
+    {
+      "skill": "writing-for-people",
+      "query": "fix the typos in this paragraph, don't change anything else",
+      "should_trigger": false,
+      "invoked": [],
+      "cost": 0.00271245,
+      "error": null
+    },
+    {
+      "skill": "writing-for-people",
+      "query": "turn these sales call notes into a customer quote for the website",
+      "should_trigger": true,
+      "invoked": [],
+      "cost": 0.0034614500000000005,
+      "error": null
+    },
+    {
+      "skill": "writing-for-people",
+      "query": "write the investor update from these notes, include the growth numbers",
+      "should_trigger": true,
+      "invoked": [
+        "writing-for-people"
+      ],
+      "cost": 0.00394103,
+      "error": null
+    },
+    {
+      "skill": "writing-for-people",
+      "query": "polish this case study line: Acme cut deploy time 90% with our tool",
+      "should_trigger": true,
+      "invoked": [
+        "writing-for-people"
+      ],
+      "cost": 0.00395761,
+      "error": null
+    },
+    {
+      "skill": "writing-for-people",
+      "query": "this reads like ChatGPT wrote it, can you make it sound like me?",
+      "should_trigger": true,
+      "invoked": [
+        "writing-for-people"
+      ],
+      "cost": 0.00383374,
+      "error": null
+    },
+    {
+      "skill": "writing-for-people",
+      "query": "tidy up these customer interview notes into stats for the pitch deck",
+      "should_trigger": true,
+      "invoked": [],
+      "cost": 0.0055095000000000005,
+      "error": null
+    },
+    {
+      "skill": "writing-for-people",
+      "query": "rewrite this LinkedIn post so it doesn't sound like AI",
+      "should_trigger": true,
+      "invoked": [
+        "writing-for-people"
+      ],
+      "cost": 0.0036975000000000003,
+      "error": null
+    },
+    {
+      "skill": "writing-for-people",
+      "query": "make our About page sound less corporate",
+      "should_trigger": true,
+      "invoked": [
+        "writing-for-people"
+      ],
+      "cost": 0.00546829,
+      "error": null
+    },
+    {
+      "skill": "writing-for-people",
+      "query": "is 'delve' an AI word?",
+      "should_trigger": false,
+      "invoked": [],
+      "cost": 0.0029358500000000003,
+      "error": null
+    },
+    {
+      "skill": "writing-for-people",
+      "query": "explain to my grandmother what the cloud is",
+      "should_trigger": true,
+      "invoked": [
+        "writing-for-people"
+      ],
+      "cost": 0.00371303,
+      "error": null
+    },
+    {
+      "skill": "writing-for-people",
+      "query": "translate this sentence into Spanish",
+      "should_trigger": false,
+      "invoked": [],
+      "cost": 0.00266735,
+      "error": null
+    },
+    {
+      "skill": "writing-for-people",
+      "query": "write a 150-word product description for our new backpack",
+      "should_trigger": true,
+      "invoked": [
+        "writing-for-people"
+      ],
+      "cost": 0.0043125,
+      "error": null
     }
   ],
   "summary": {
     "changing-code": {
-      "pos": 3,
-      "hit": 0,
+      "pos": 24,
+      "hit": 24,
+      "neg": 10,
+      "clean": 9,
+      "instead": {}
+    },
+    "handling-artifacts": {
+      "pos": 7,
+      "hit": 7,
       "neg": 3,
       "clean": 3,
       "instead": {}
+    },
+    "merging-safely": {
+      "pos": 7,
+      "hit": 7,
+      "neg": 3,
+      "clean": 2,
+      "instead": {}
+    },
+    "reviewing-code": {
+      "pos": 7,
+      "hit": 5,
+      "neg": 4,
+      "clean": 4,
+      "instead": {
+        "merging-safely": 1,
+        "shaping-designs": 1
+      }
+    },
+    "shaping-designs": {
+      "pos": 31,
+      "hit": 26,
+      "neg": 16,
+      "clean": 16,
+      "instead": {
+        "writing-for-people": 6,
+        "claude-api": 3,
+        "product-self-knowledge": 2,
+        "changing-code": 1
+      }
+    },
+    "making-visuals": {
+      "pos": 21,
+      "hit": 12,
+      "neg": 7,
+      "clean": 5,
+      "instead": {
+        "changing-code": 3,
+        "handling-artifacts": 1,
+        "run": 1,
+        "writing-for-people": 2
+      }
+    },
+    "writing-for-people": {
+      "pos": 33,
+      "hit": 27,
+      "neg": 20,
+      "clean": 20,
+      "instead": {
+        "shaping-designs": 2
+      }
     }
   }
 }

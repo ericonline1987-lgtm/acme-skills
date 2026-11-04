@@ -1,6 +1,6 @@
 ---
 name: making-visuals
-description: Always use this skill when making or fixing something people look at — slides, a chart, a diagram, a dashboard, an HTML page or app screen — or when checking one or capturing a screenshot as proof ("make sure it works", "does it look right on a phone", "screenshot it for QA"), even a quick one. It designs from the point to land, encodes data honestly, and checks the result at real size.
+description: Always use this skill whenever someone needs slides, a deck, a pitch or a talk someone will give (even "help, I'm presenting Thursday"), for a chart, diagram, dashboard, page or app screen, and for checking one works, renders or is accessible, or capturing a screenshot as proof, even a quick one. It designs from the point to land, encodes data honestly, and checks the result at real size.
 ---
 
 # Making visuals

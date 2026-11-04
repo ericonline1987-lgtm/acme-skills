@@ -1,6 +1,6 @@
 ---
 name: writing-for-people
-description: Always use this skill when writing or rewriting anything a person will read — an email, post, memo, brief, status update, report, web or product copy, an explanation — or when asked to make text sound less like AI, more human or plainer, even a short one. Not for a one-line grammar fix or a translation. It writes from specifics, strips machine-written patterns and checks facts.
+description: Always use this skill whenever someone needs anything a person will read — an email or reply (a decline, a chaser, bad news), a post, a memo or one-pager, a recommendation written up for a boss, a status or investor update, a case study, web or product copy, an explanation — or to make text sound like a person, not AI. Not for one-line grammar fixes. It writes from specifics and checks every fact.
 ---
 
 # Writing for people
