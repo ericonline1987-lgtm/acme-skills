@@ -24,7 +24,9 @@ are real; say what waiting costs. Unknown figures are shown as unknown, never fi
 
 **Status update** (one page). Takeaway in the first two sentences → blockers and risks,
 each with its owner and date → numbers with their basis → next actions with owner and
-date, only those the source gives. No actions given: no actions section.
+date, only those the source gives. No actions given: no actions section. Case: drafts
+of one migration update added "Nov 14 depends on that answer", a year, and a next
+action for the owner; none were in the notes, and a reader can't tell them from facts.
 
 **Incident review** (one page). Impact in one line (who, how many, how long) → what
 happened, with times → cause and its evidence → what was done → what remains, each with

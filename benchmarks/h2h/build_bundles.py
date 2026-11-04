@@ -26,7 +26,7 @@ import sys
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parents[2]
-SKILL_PLUGINS = ["foundations", "engineering-lifecycle", "professional-craft"]
+SKILL_PLUGINS = ["engineering-lifecycle", "professional-craft"]
 
 
 def bundle(out: Path, name: str, description: str) -> Path:

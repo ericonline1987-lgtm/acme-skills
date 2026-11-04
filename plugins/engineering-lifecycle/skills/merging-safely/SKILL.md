@@ -6,6 +6,10 @@ description: Use this skill whenever someone merges branches, resolves merge con
 # Merging safely
 
 "Git merged it" and "the merge is right" are different claims. Prove the second.
+For any non-trivial merge, readiness check or audit, read `references/merge-workflow.md`:
+it has the commands and decision tables for each step below, including conflicts in
+lockfiles, migrations and renames, three ways to prove a squash complete, and undoing a
+merge.
 
 ## 1. Stabilise
 

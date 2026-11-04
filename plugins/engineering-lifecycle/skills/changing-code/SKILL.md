@@ -26,7 +26,9 @@ cause with `references/diagnosis.md` before changing code.
    another agent's diagnosis says where to look. Decide direction from history and the
    real contract: if the code is a later deliberate decision, the test is stale; update it.
    Whichever way you go, the commit message says why and cites the evidence (the commit
-   or issue that made the test stale, or that shows the code regressed).
+   or issue that made the test stale, or that shows the code regressed). Case: answers
+   that found the test stale cited the commit, but when the code had regressed they
+   restored it with no reason recorded, leaving the next reader the same puzzle.
 3. **Confirm the cause** with two independent lines of evidence (a reproduction and a
    trace, or a trace and the code path) before a non-obvious or large fix. If the cause
    isn't known yet, or something is broken, slow or flaky, diagnose it first with

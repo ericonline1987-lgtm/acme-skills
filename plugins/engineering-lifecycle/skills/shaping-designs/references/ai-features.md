@@ -23,6 +23,8 @@ quality as something you measure on every change, like latency.
 
 - **Check the grader.** Grade a sample by hand and compare. A small judge model, or a
   rubric word like "briefly", can flip results at the margin; grade what matters.
+  Case: in this project's evals, a judge failed "at 320px wide there should be no
+  horizontal scroll" three times out of three on a criterion asking for exactly that.
 - **Check the outputs exist.** A rate limit, timeout or crash leaves empty or cut-off
   answers that score as failures, and can break the judge's own calls inside runs that
   otherwise finished. Look for both before reading any score.
@@ -32,6 +34,9 @@ quality as something you measure on every change, like latency.
   case too, it can't show the change helped; add one the baseline fails.
 - **Test routing on its own.** If the model chooses between tools, prompts or skills,
   measure that choice with should-fire queries and near misses that share keywords.
+  Case: routing hints written after seeing which queries missed raised a small model's
+  recall from 73% to 90%; only 25 fresh queries written afterwards (24 of 25 loaded)
+  showed the gain wasn't tuned to the test.
 
 ## 2. Design the context, not just the prompt
 

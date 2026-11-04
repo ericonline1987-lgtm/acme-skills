@@ -1,5 +1,9 @@
 # Third-party material
 
+## plugins/engineering-lifecycle/skills/merging-safely/references/merge-workflow.md
+
+The step structure and several commands (the strategy matrix, the disposable-worktree trial merge, and the three squash-completeness methods) follow `skills/safe-merge-review/references/merge-workflow.md` in [ly87ing/agent-skills](https://github.com/ly87ing/agent-skills), rewritten and extended here. Same MIT licence as below.
+
 ## benchmarks/h2h/cases/b-*
 
 The prompts and expected-behaviour text in the twelve `b-*` cases are taken from the eval files of
