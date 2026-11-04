@@ -1,0 +1,131 @@
+{
+ "date": "2026-11-03",
+ "runs_per_arm": 3,
+ "judge": "sonnet",
+ "ours": "acme-skills v3 (7 skills) as one plugin, with its session-start routing line",
+ "reference": "ly87ing/agent-skills skills/ (6 skills), as one plugin; it ships no routing line",
+ "pool_B": "12 cases by the reference author, graded against his expected-behaviour text",
+ "pool_C": "12 acme-skills v3 cases, outcome graders only",
+ "cases": {
+  "b-artifact-hygiene-1": {
+   "ours": 1,
+   "reference": 1,
+   "plain": 0
+  },
+  "b-artifact-hygiene-2": {
+   "ours": 0.33,
+   "reference": 1,
+   "plain": 0
+  },
+  "b-change-discipline-1": {
+   "ours": 0,
+   "reference": 0,
+   "plain": 0
+  },
+  "b-change-discipline-2": {
+   "ours": 0,
+   "reference": 0,
+   "plain": 0
+  },
+  "b-reader-facing-writing-1": {
+   "ours": 1,
+   "reference": 0.67,
+   "plain": 0
+  },
+  "b-reader-facing-writing-2": {
+   "ours": 0,
+   "reference": 0,
+   "plain": 0
+  },
+  "b-safe-merge-review-1": {
+   "ours": 0.33,
+   "reference": 0,
+   "plain": 0
+  },
+  "b-safe-merge-review-2": {
+   "ours": 1,
+   "reference": 0.67,
+   "plain": 0
+  },
+  "b-solution-shaping-1": {
+   "ours": 0,
+   "reference": 0,
+   "plain": 0
+  },
+  "b-solution-shaping-2": {
+   "ours": 0,
+   "reference": 0,
+   "plain": 0
+  },
+  "b-verification-1": {
+   "ours": 0,
+   "reference": 0.33,
+   "plain": 0.33
+  },
+  "b-verification-2": {
+   "ours": 0.33,
+   "reference": 0,
+   "plain": 0
+  },
+  "c-debug-checkout-500s": {
+   "ours": 1,
+   "reference": 0.47,
+   "plain": 0.27
+  },
+  "c-design-amount-units": {
+   "ours": 0.75,
+   "reference": 0.83,
+   "plain": 0.92
+  },
+  "c-design-payment-retries": {
+   "ours": 0.92,
+   "reference": 1,
+   "plain": 0.92
+  },
+  "c-design-rename-column": {
+   "ours": 1,
+   "reference": 0.83,
+   "plain": 0.75
+  },
+  "c-merge-lockfile-conflict": {
+   "ours": 1,
+   "reference": 1,
+   "plain": 1
+  },
+  "c-merge-remerge-after-revert": {
+   "ours": 1,
+   "reference": 1,
+   "plain": 0.89
+  },
+  "c-visual-mermaid-two-paths": {
+   "ours": 1,
+   "reference": 0.67,
+   "plain": 0.67
+  },
+  "c-visual-oncall-dashboard": {
+   "ours": 0.93,
+   "reference": 0.87,
+   "plain": 0.8
+  },
+  "c-voice-bakery-about": {
+   "ours": 1,
+   "reference": 0.33,
+   "plain": 0.33
+  },
+  "c-voice-humanize-rewrite": {
+   "ours": 0.92,
+   "reference": 0.25,
+   "plain": 0.33
+  },
+  "c-voice-product-copy": {
+   "ours": 0.93,
+   "reference": 0.2,
+   "plain": 0.2
+  },
+  "c-voice-seed-post": {
+   "ours": 0.87,
+   "reference": 0.13,
+   "plain": 0.07
+  }
+ }
+}
