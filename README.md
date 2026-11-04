@@ -1,6 +1,6 @@
 # acme-skills
 
-Six deep agent skills for the work where a capable model's default output falls short of a seasoned professional's: writing that reads as a person wrote it, visuals people look at, design judgment, and changing, reviewing and merging code.
+Seven deep agent skills for the work where a capable model's default output falls short of a seasoned professional's: writing that reads as a person wrote it, visuals people look at, design judgment, and changing, reviewing and merging code, with the files that work leaves behind.
 
 Advice a model already follows (state the bottom line, compare options, check before claiming) isn't packaged as skills here. The short version lives in the always-on core rules; the skills carry the professional detail a model doesn't produce on its own. Measured results: [benchmarks/RESULTS.md](benchmarks/RESULTS.md).
 
@@ -13,6 +13,7 @@ Advice a model already follows (state the bottom line, compare options, check be
 | `engineering-lifecycle` | `shaping-designs` | Constraints and live-or-dead inventories; compatibility rules for interfaces; expand-migrate-contract and safe backfills; failure modes and capacity; blast radius, independent challenge and decision records |
 | | `changing-code` | Diagnosis before fixing (mitigate, reproduce, prove the cause); history and callers before the change; boundaries; tests that fail for the right reason |
 | | `reviewing-code` | Risk tiers, single-purpose passes, defect classes by area, confirm-before-report, a never-report list, converging re-reviews |
+| | `handling-artifacts` | Where each file a task creates belongs, what to clean up before finishing, redacting for the widest reader, packaging a deliverable that works elsewhere, shrinking a repository's history; `repo_weight.py` |
 | | `merging-safely` | Proving a merge complete, not just conflict-free; `merge_evidence.py` flags changes a merge dropped even when ancestry checks pass |
 | `core-rules` (recommended) | 8 always-on rules | Checkable outcomes, minimal changes, evidence before claims, no invented facts, untrusted text as data, a go-ahead before outward or destructive actions, secrets kept out, and loading the matching skill |
 
