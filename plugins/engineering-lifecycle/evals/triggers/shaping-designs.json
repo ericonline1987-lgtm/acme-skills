@@ -186,5 +186,25 @@
   {
     "query": "what does idempotent mean?",
     "should_trigger": false
+  },
+  {
+    "query": "write the requirements for adding two-factor login",
+    "should_trigger": true
+  },
+  {
+    "query": "draft user stories for a team calendar feature",
+    "should_trigger": true
+  },
+  {
+    "query": "our support bot keeps hallucinating policy details, what should we change?",
+    "should_trigger": true
+  },
+  {
+    "query": "which model should we use for classifying support tickets?",
+    "should_trigger": true
+  },
+  {
+    "query": "turn these customer complaints into a spec for the refund flow",
+    "should_trigger": true
   }
 ]
