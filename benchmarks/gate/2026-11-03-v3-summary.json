@@ -1,0 +1,345 @@
+{
+ "date": "2026-11-03",
+ "judge": "sonnet",
+ "runs_per_arm": 3,
+ "agent_model": "session default (Opus class)",
+ "cases": {
+  "ai-ticket-classifier": {
+   "plugin": "engineering-lifecycle",
+   "skill": "shaping-designs",
+   "with": 1,
+   "without": 0.73
+  },
+  "no-fire-gitignore-question": {
+   "plugin": "engineering-lifecycle",
+   "skill": null,
+   "with": 1,
+   "without": 1
+  },
+  "review-third-round": {
+   "plugin": "engineering-lifecycle",
+   "skill": "reviewing-code",
+   "with": 1,
+   "without": 0.92
+  },
+  "rule-piped-exit-code": {
+   "plugin": "core-rules",
+   "skill": null,
+   "with": 1,
+   "without": 1
+  },
+  "changing-code-stale-test": {
+   "plugin": "engineering-lifecycle",
+   "skill": "changing-code",
+   "with": 0.93,
+   "without": 0.67
+  },
+  "no-fire-grammar": {
+   "plugin": "professional-craft",
+   "skill": null,
+   "with": 0.89,
+   "without": 1
+  },
+  "design-cron-to-kafka": {
+   "plugin": "engineering-lifecycle",
+   "skill": "shaping-designs",
+   "with": 1,
+   "without": 0.47
+  },
+  "email-partial-commitment": {
+   "plugin": "professional-craft",
+   "skill": "writing-for-people",
+   "with": 0.87,
+   "without": 0.47
+  },
+  "defining-done-refund-tool": {
+   "plugin": "engineering-lifecycle",
+   "skill": "shaping-designs",
+   "with": 0.67,
+   "without": 0.6
+  },
+  "no-fire-translation": {
+   "plugin": "professional-craft",
+   "skill": null,
+   "with": 1,
+   "without": 1
+  },
+  "requirements-csv-export": {
+   "plugin": "engineering-lifecycle",
+   "skill": "shaping-designs",
+   "with": 0.93,
+   "without": 0.4
+  },
+  "rule-hearsay-claim": {
+   "plugin": "core-rules",
+   "skill": null,
+   "with": 0.78,
+   "without": 0.67
+  },
+  "review-sql-diff": {
+   "plugin": "engineering-lifecycle",
+   "skill": "reviewing-code",
+   "with": 1,
+   "without": 0.8
+  },
+  "artifacts-vendor-zip": {
+   "plugin": "engineering-lifecycle",
+   "skill": "handling-artifacts",
+   "with": 1,
+   "without": 0.75
+  },
+  "voice-product-copy": {
+   "plugin": "professional-craft",
+   "skill": "writing-for-people",
+   "with": 0.93,
+   "without": 0.2
+  },
+  "rule-no-bloat-arithmetic": {
+   "plugin": "core-rules",
+   "skill": null,
+   "with": 1,
+   "without": 1
+  },
+  "prove-email-template": {
+   "plugin": "core-rules",
+   "skill": null,
+   "with": 0.92,
+   "without": 0.58
+  },
+  "merge-took-ours": {
+   "plugin": "engineering-lifecycle",
+   "skill": "merging-safely",
+   "with": 1,
+   "without": 1
+  },
+  "debug-checkout-500s": {
+   "plugin": "engineering-lifecycle",
+   "skill": "changing-code",
+   "with": 1,
+   "without": 0.47
+  },
+  "review-cache-key-leak": {
+   "plugin": "engineering-lifecycle",
+   "skill": "reviewing-code",
+   "with": 1,
+   "without": 1
+  },
+  "claims-headline-scope": {
+   "plugin": "professional-craft",
+   "skill": "writing-for-people",
+   "with": 1,
+   "without": 0.5
+  },
+  "voice-seed-post": {
+   "plugin": "professional-craft",
+   "skill": "writing-for-people",
+   "with": 0.87,
+   "without": 0.13
+  },
+  "design-payment-retries": {
+   "plugin": "engineering-lifecycle",
+   "skill": "shaping-designs",
+   "with": 0.83,
+   "without": 0.75
+  },
+  "design-amount-units": {
+   "plugin": "engineering-lifecycle",
+   "skill": "shaping-designs",
+   "with": 0.83,
+   "without": 0.75
+  },
+  "rule-outcome-first": {
+   "plugin": "core-rules",
+   "skill": null,
+   "with": 1,
+   "without": 0.56
+  },
+  "exploring-options-search": {
+   "plugin": "engineering-lifecycle",
+   "skill": "shaping-designs",
+   "with": 0.8,
+   "without": 0.6
+  },
+  "guard-temp-admin-token": {
+   "plugin": "core-rules",
+   "skill": null,
+   "with": 1,
+   "without": 0.67
+  },
+  "email-vendor-chaser": {
+   "plugin": "professional-craft",
+   "skill": "writing-for-people",
+   "with": 1,
+   "without": 0.08
+  },
+  "merge-lockfile-conflict": {
+   "plugin": "engineering-lifecycle",
+   "skill": "merging-safely",
+   "with": 1,
+   "without": 0.89
+  },
+  "documents-migration-status": {
+   "plugin": "professional-craft",
+   "skill": "writing-for-people",
+   "with": 0.87,
+   "without": 0.53
+  },
+  "proving-outcomes-status": {
+   "plugin": "core-rules",
+   "skill": null,
+   "with": 0.67,
+   "without": 0.4
+  },
+  "brief-observability-vendor": {
+   "plugin": "professional-craft",
+   "skill": "writing-for-people",
+   "with": 0.93,
+   "without": 0.6
+  },
+  "merge-defaults-conflict": {
+   "plugin": "engineering-lifecycle",
+   "skill": "merging-safely",
+   "with": 0.93,
+   "without": 0.93
+  },
+  "visual-mermaid-two-paths": {
+   "plugin": "professional-craft",
+   "skill": "making-visuals",
+   "with": 1,
+   "without": 0.67
+  },
+  "no-fire-css-bold": {
+   "plugin": "engineering-lifecycle",
+   "skill": null,
+   "with": 1,
+   "without": 1
+  },
+  "change-page-size-default": {
+   "plugin": "engineering-lifecycle",
+   "skill": "changing-code",
+   "with": 0.92,
+   "without": 0.5
+  },
+  "no-fire-git-question": {
+   "plugin": "engineering-lifecycle",
+   "skill": null,
+   "with": 1,
+   "without": 1
+  },
+  "no-fire-python-question": {
+   "plugin": "engineering-lifecycle",
+   "skill": null,
+   "with": 1,
+   "without": 1
+  },
+  "no-fire-synonyms": {
+   "plugin": "professional-craft",
+   "skill": null,
+   "with": 1,
+   "without": 1
+  },
+  "req-password-reset": {
+   "plugin": "engineering-lifecycle",
+   "skill": "shaping-designs",
+   "with": 0.73,
+   "without": 0.73
+  },
+  "voice-explain-parents": {
+   "plugin": "professional-craft",
+   "skill": "writing-for-people",
+   "with": 0.73,
+   "without": 0.13
+  },
+  "visual-screenshot-proof": {
+   "plugin": "professional-craft",
+   "skill": "making-visuals",
+   "with": 1,
+   "without": 0.47
+  },
+  "options-db-one-line": {
+   "plugin": "engineering-lifecycle",
+   "skill": "shaping-designs",
+   "with": 1,
+   "without": 0.56
+  },
+  "doc-vp-status": {
+   "plugin": "professional-craft",
+   "skill": "writing-for-people",
+   "with": 1,
+   "without": 0.93
+  },
+  "design-rename-column": {
+   "plugin": "engineering-lifecycle",
+   "skill": "shaping-designs",
+   "with": 0.92,
+   "without": 0.75
+  },
+  "voice-humanize-rewrite": {
+   "plugin": "professional-craft",
+   "skill": "writing-for-people",
+   "with": 0.92,
+   "without": 0.25
+  },
+  "visual-oncall-dashboard": {
+   "plugin": "professional-craft",
+   "skill": "making-visuals",
+   "with": 0.93,
+   "without": 0.93
+  },
+  "verify-dashboard-before-sending": {
+   "plugin": "professional-craft",
+   "skill": "making-visuals",
+   "with": 0.92,
+   "without": 0.5
+  },
+  "review-project-rule": {
+   "plugin": "engineering-lifecycle",
+   "skill": "reviewing-code",
+   "with": 1,
+   "without": 1
+  },
+  "review-preexisting-bug": {
+   "plugin": "engineering-lifecycle",
+   "skill": "reviewing-code",
+   "with": 1,
+   "without": 1
+  },
+  "deck-devtools-funding": {
+   "plugin": "professional-craft",
+   "skill": "making-visuals",
+   "with": 0.87,
+   "without": 0.8
+  },
+  "no-fire-regex": {
+   "plugin": "engineering-lifecycle",
+   "skill": null,
+   "with": 1,
+   "without": 1
+  },
+  "brief-crm-decision": {
+   "plugin": "professional-craft",
+   "skill": "writing-for-people",
+   "with": 0.93,
+   "without": 0.6
+  },
+  "voice-bakery-about": {
+   "plugin": "professional-craft",
+   "skill": "writing-for-people",
+   "with": 1,
+   "without": 0.22
+  },
+  "merge-remerge-after-revert": {
+   "plugin": "engineering-lifecycle",
+   "skill": "merging-safely",
+   "with": 1,
+   "without": 0.89
+  },
+  "artifacts-repo-for-agency": {
+   "plugin": "engineering-lifecycle",
+   "skill": "handling-artifacts",
+   "with": 0.93,
+   "without": 0.47
+  }
+ },
+ "missing": []
+}
