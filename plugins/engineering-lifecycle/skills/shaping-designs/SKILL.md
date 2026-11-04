@@ -1,6 +1,6 @@
 ---
 name: shaping-designs
-description: Always use this skill when deciding how something should be built or changed before coding — a design doc or RFC, an architecture, API or data model, a migration or split, requirements, an LLM feature, or "X or Y, which should we use", even a quick question. It collects constraints, compares real options, works through interfaces, data, failure modes and rollout, and challenges its pick.
+description: Always use this skill when deciding how something should be built or changed — a design doc or RFC, an architecture, API or data model, a migration; requirements, user stories, acceptance criteria or a spec; an LLM feature (a prompt, a model choice, a chatbot that gets things wrong); or "X or Y", even a quick question. It compares real options and works through contracts, data, failure, rollout.
 ---
 
 # Shaping designs
