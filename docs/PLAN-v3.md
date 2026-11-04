@@ -23,7 +23,7 @@ Removed: the `foundations` plugin (its proof ladder, outcome-first and safety ru
 
 ## How depth is judged
 
-- Each skill has at least three cases, written and run without the skill first, and kept only where plain Claude falls short.
+- Each skill has at least two cases (most have five or more), run without the skill as well as with it, and kept only where plain Claude falls short.
 - Writing cases use deterministic graders where a tell is countable (regex for the phrases and structures in the catalogue) and LLM graders for whether a reader would take the text for a person's.
 - Release gate as in v2.0: three runs per arm, every case, failing answers read by hand.
 
