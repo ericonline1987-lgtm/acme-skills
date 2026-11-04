@@ -1,0 +1,4 @@
+interface:
+  display_name: "Handling Artifacts"
+  short_description: "Where files go, cleanup, redaction and packaging"
+  default_prompt: "Use $handling-artifacts to decide where these files belong and what to clean up."

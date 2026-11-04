@@ -70,6 +70,15 @@ side.
 Push only when asked. If the merge references something published elsewhere (a package,
 submodule pin, skill), confirm it exists on the exact ref that will be resolved.
 
+## Auditing a merge that's already done
+
+When someone doubts a merge already committed ("Git merged it, but is it wired up
+right?"), audit it; don't merge again. Rebuild the expected change from the pre-merge
+target (`HEAD^1`) and the source (`HEAD^2`), re-run the evidence script with
+`--pre-merge-ref HEAD^1`, and review the hotspots that fail silently first: deploy and
+environment config, schemas and migrations, initialisation and wiring, shared
+boundaries. End with green, yellow or red.
+
 ## Several repositories
 
 When corresponding branches must be merged across a set of repositories, run every step
@@ -81,5 +90,6 @@ source ref, context or a test command stops the set until resolved.
 
 repo · target · source ref · merge base · left/right counts · hotspots · conflicts and
 reasoning · completeness proof and method · tests run · push status · residual risks.
-A readiness check ends with the same verdicts as `reviewing-code`: **merge**, **merge
-after fixes** (naming each), or **don't merge yet** (naming what blocks it).
+A readiness check or audit ends **green** (merge, or the merge is sound), **yellow**
+(merge after the named fixes), or **red** (don't merge yet, or the merge must be
+corrected), naming each fix or blocker.

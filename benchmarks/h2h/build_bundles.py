@@ -59,6 +59,18 @@ def main(argv: list[str] | None = None) -> int:
         if shared.is_dir():
             shutil.copytree(shared, ours / "shared", dirs_exist_ok=True)
 
+    # Ship our bundle as the plugins ship: with the session-start routing line naming each
+    # skill and when it applies (tools/build_manifests.py writes the same line per plugin).
+    ui = json.loads((REPO / "tools" / "skill_ui.json").read_text(encoding="utf-8"))
+    names = sorted(p.name for p in (ours / "skills").iterdir())
+    cues = "; ".join(f"{n} ({ui['when'][n]})" for n in names)
+    (ours / "hooks").mkdir()
+    (ours / "hooks" / "routing.md").write_text(
+        f"Skills from the acme-all plugin, and when each applies: {cues}. When one covers the task, "
+        "load it before answering, even if the task looks simple.\n")
+    (ours / "hooks" / "hooks.json").write_text(json.dumps({"hooks": {"SessionStart": [{"hooks": [
+        {"type": "command", "command": 'cat "${CLAUDE_PLUGIN_ROOT}/hooks/routing.md"'}]}]}}, indent=2))
+
     ref = bundle(args.out, "ref-all", "Reference skill set, bundled for comparison only")
     for skill in args.ref_skills.iterdir():
         if (skill / "SKILL.md").is_file():

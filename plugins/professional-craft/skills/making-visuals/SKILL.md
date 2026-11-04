@@ -50,7 +50,9 @@ settings.
    and where each came from. If that environment can't be reached, or not in the right
    login state, say so and stop: results from a look-alike are discarded. Confirm the
    change is in what you're looking at (version, hash, a hard reload with cache off).
-2. **Pick the tool by intent.** Repeatable assertions and regression coverage: Playwright
+2. **Pick the tool by intent.** For a test that must run in CI, first write down the page,
+   its starting state and the user-visible success criteria, then write it in
+   Playwright. Repeatable assertions and regression coverage: Playwright
    (`references/playwright.md`). A one-off look at layout or network: browser developer
    tools. Acting as the logged-in person: their browser session. Search the project for
    an existing test harness first. If a browser tool can't start, report that as a tool

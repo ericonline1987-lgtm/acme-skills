@@ -58,6 +58,11 @@
       "Shaping Designs",
       "Constraints, options, contracts, data, failure modes",
       "Use $shaping-designs to work out how we should build this."
+    ],
+    "handling-artifacts": [
+      "Handling Artifacts",
+      "Where files go, cleanup, redaction and packaging",
+      "Use $handling-artifacts to decide where these files belong and what to clean up."
     ]
   },
   "when": {
@@ -66,6 +71,7 @@
     "shaping-designs": "how to build or change something: designs, APIs, data, migrations, requirements, X or Y",
     "changing-code": "any change to existing code: fixes, debugging, incidents, refactors, upgrades, tests",
     "reviewing-code": "any opinion on code, a diff or a PR",
-    "merging-safely": "merging branches, resolving conflicts, checking a fix landed"
+    "merging-safely": "merging branches, resolving conflicts, checking a fix landed",
+    "handling-artifacts": "files a task creates or ships: scratch scripts, dumps, screenshots, exports; cleanup, redaction, packaging, repo size"
   }
 }
