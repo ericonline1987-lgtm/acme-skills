@@ -38,5 +38,9 @@
   {
     "query": "install the Playwright plugin for Claude Code",
     "should_trigger": false
+  },
+  {
+    "query": "our CLAUDE.md is 400 lines and the agent ignores half of it, help",
+    "should_trigger": true
   }
 ]

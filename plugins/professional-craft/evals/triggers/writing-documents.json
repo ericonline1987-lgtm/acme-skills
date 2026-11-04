@@ -38,5 +38,9 @@
   {
     "query": "what's a good font for printed reports?",
     "should_trigger": false
+  },
+  {
+    "query": "write a one-page summary of Q3 for the board",
+    "should_trigger": true
   }
 ]

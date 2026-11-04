@@ -38,5 +38,9 @@
   {
     "query": "set up Sentry for a Next.js app",
     "should_trigger": false
+  },
+  {
+    "query": "memory keeps climbing on the worker until it gets killed",
+    "should_trigger": true
   }
 ]

@@ -38,5 +38,9 @@
   {
     "query": "what's the difference between reply and reply-all?",
     "should_trigger": false
+  },
+  {
+    "query": "tell the landlord we're not renewing the office lease",
+    "should_trigger": true
   }
 ]

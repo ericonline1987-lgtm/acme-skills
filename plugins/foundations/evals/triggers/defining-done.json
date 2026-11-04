@@ -34,5 +34,9 @@
   {
     "query": "where do I even start with automating our onboarding?",
     "should_trigger": true
+  },
+  {
+    "query": "my manager wants a tool that tracks contractor hours, how should I kick this off?",
+    "should_trigger": true
   }
 ]

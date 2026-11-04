@@ -34,5 +34,9 @@
   {
     "query": "turn these sales call notes into a customer quote for the website",
     "should_trigger": true
+  },
+  {
+    "query": "tidy up these customer interview notes into stats for the pitch deck",
+    "should_trigger": true
   }
 ]

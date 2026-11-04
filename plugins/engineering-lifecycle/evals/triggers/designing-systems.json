@@ -34,5 +34,9 @@
   {
     "query": "write an RFC for moving file storage to S3",
     "should_trigger": true
+  },
+  {
+    "query": "we need to move from a single Postgres to sharded, how would you approach it?",
+    "should_trigger": true
   }
 ]

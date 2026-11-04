@@ -34,5 +34,9 @@
   {
     "query": "where should I put these screenshots from the test run?",
     "should_trigger": true
+  },
+  {
+    "query": "I need to hand the client these test recordings, some show real user data",
+    "should_trigger": true
   }
 ]

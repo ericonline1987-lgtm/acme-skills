@@ -38,5 +38,9 @@
   {
     "query": "set a reminder for 3pm",
     "should_trigger": false
+  },
+  {
+    "query": "we have six weeks and four engineers for the billing revamp, is that enough?",
+    "should_trigger": true
   }
 ]

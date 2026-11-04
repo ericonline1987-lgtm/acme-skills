@@ -34,5 +34,9 @@
   {
     "query": "you keep overclaiming deploy status, fix it for good",
     "should_trigger": true
+  },
+  {
+    "query": "the agent overwrote my config again, how do we stop it for good?",
+    "should_trigger": true
   }
 ]

@@ -34,5 +34,9 @@
   {
     "query": "can I close this ticket? the deploy finished",
     "should_trigger": true
+  },
+  {
+    "query": "draft the message saying the login outage is resolved",
+    "should_trigger": true
   }
 ]

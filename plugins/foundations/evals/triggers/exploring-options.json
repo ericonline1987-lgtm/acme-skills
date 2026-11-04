@@ -34,5 +34,9 @@
   {
     "query": "what should we use for feature flags?",
     "should_trigger": true
+  },
+  {
+    "query": "Redis or Memcached for session storage?",
+    "should_trigger": true
   }
 ]

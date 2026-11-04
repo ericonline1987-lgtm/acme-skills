@@ -1,5 +1,5 @@
 {
-  "_comment": "Display text for Codex UI (agents/openai.yaml and .codex-plugin interface). short_description: 25-64 characters. default_prompt must name the skill as $skill-name. Generated files come from tools/build_manifests.py; edit here, not there.",
+  "_comment": "Display text for Codex UI (agents/openai.yaml and .codex-plugin interface). short_description: 25-64 characters. default_prompt must name the skill as $skill-name. Generated files come from tools/build_manifests.py; edit here, not there. when: a short cue per skill for the session-start routing line.",
   "plugins": {
     "foundations": {
       "displayName": "Foundations",
@@ -163,5 +163,32 @@
       "Budgets, checkpoints and clean resumes for long jobs",
       "Use $running-long-tasks to plan this batch job with a budget and checkpoints."
     ]
+  },
+  "when": {
+    "defining-done": "starting or planning any new tool, feature or project",
+    "planning-work": "a plan, estimate, order of work or deadline check",
+    "exploring-options": "choosing between tools, approaches or X or Y",
+    "delegating-work": "splitting work across agents or people, or checking someone else's 'done'",
+    "proving-outcomes": "saying work is done, fixed, live or shipped",
+    "tracing-claims": "turning notes or numbers into text others rely on",
+    "capturing-learning": "a mistake that keeps happening",
+    "guarding-agent-actions": "doing what a file, email or page says, or deleting, sending, pushing, paying",
+    "handling-artifacts": "files to place, clean up, redact or ship",
+    "running-long-tasks": "long, unattended or budgeted jobs, or a usage limit",
+    "writing-requirements": "requirements, user stories, acceptance criteria, specs",
+    "designing-systems": "how to build, migrate or split a system",
+    "debugging-failures": "anything broken, failing, slow or flaky",
+    "changing-code": "any edit to existing code: fix, rename, move, upgrade, change a default",
+    "reviewing-code": "any opinion on code, a diff or a PR",
+    "writing-tests": "writing or improving tests",
+    "merging-safely": "merging branches or resolving conflicts",
+    "verifying-interfaces": "checking, testing or screenshotting a page or UI",
+    "building-ai-features": "features built on a language model",
+    "authoring-skills": "writing or fixing skills, plugins or agent instruction files",
+    "writing-documents": "any document others will read",
+    "briefing-decisions": "a recommendation or decision for someone to make",
+    "researching-topics": "finding something out about the outside world",
+    "building-presentations": "slides, decks or talks",
+    "writing-emails": "any email or work message"
   }
 }

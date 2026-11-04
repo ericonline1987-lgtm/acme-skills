@@ -38,5 +38,9 @@
   {
     "query": "explain what a cron job is",
     "should_trigger": false
+  },
+  {
+    "query": "embed all 40k documents with the API overnight, stop if it costs more than $50",
+    "should_trigger": true
   }
 ]

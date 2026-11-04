@@ -34,5 +34,9 @@
   {
     "query": "make a pitch deck for our seed round",
     "should_trigger": true
+  },
+  {
+    "query": "I'm giving a 5-minute demo at the all-hands Friday, help me prep slides",
+    "should_trigger": true
   }
 ]

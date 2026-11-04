@@ -38,5 +38,9 @@
   {
     "query": "how do I request a reviewer on a GitHub pull request?",
     "should_trigger": false
+  },
+  {
+    "query": "quick look at this before I push? def total(items): return sum(i.price for i in items)",
+    "should_trigger": true
   }
 ]

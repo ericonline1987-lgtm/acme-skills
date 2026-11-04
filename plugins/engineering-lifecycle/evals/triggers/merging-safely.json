@@ -34,5 +34,9 @@
   {
     "query": "check whether the hotfix landed on release-2.4",
     "should_trigger": true
+  },
+  {
+    "query": "I'm about to merge the release branch back into main, anything I should watch for?",
+    "should_trigger": true
   }
 ]

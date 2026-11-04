@@ -46,5 +46,9 @@
   {
     "query": "does our landing page pass basic accessibility checks?",
     "should_trigger": true
+  },
+  {
+    "query": "can you confirm the signup form still works after my change?",
+    "should_trigger": true
   }
 ]

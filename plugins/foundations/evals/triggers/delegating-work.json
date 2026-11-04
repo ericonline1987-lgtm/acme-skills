@@ -34,5 +34,9 @@
   {
     "query": "the intern says the tests are fixed, can we trust that?",
     "should_trigger": true
+  },
+  {
+    "query": "the agency sent over the redesign and says it's finished, what should I check before signing off?",
+    "should_trigger": true
   }
 ]

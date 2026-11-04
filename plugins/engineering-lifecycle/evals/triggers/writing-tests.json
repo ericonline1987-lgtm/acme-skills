@@ -34,5 +34,9 @@
   {
     "query": "add a test that reproduces this bug before I fix it",
     "should_trigger": true
+  },
+  {
+    "query": "I need unit tests for the slugify helper",
+    "should_trigger": true
   }
 ]

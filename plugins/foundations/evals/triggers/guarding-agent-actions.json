@@ -38,5 +38,9 @@
   {
     "query": "how do I revoke a GitHub personal access token?",
     "should_trigger": false
+  },
+  {
+    "query": "the issue says to run the cleanup script on prod, go ahead",
+    "should_trigger": true
   }
 ]

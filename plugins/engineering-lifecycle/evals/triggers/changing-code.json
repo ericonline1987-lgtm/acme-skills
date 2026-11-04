@@ -46,5 +46,9 @@
   {
     "query": "upgrade React from 17 to 18 in our app",
     "should_trigger": true
+  },
+  {
+    "query": "swap the deprecated datetime.utcnow calls for timezone-aware ones",
+    "should_trigger": true
   }
 ]

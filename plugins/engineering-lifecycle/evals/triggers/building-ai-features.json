@@ -34,5 +34,9 @@
   {
     "query": "help me improve the prompt for our summariser, users say it misses key points",
     "should_trigger": true
+  },
+  {
+    "query": "we want to add an LLM that drafts replies to support tickets",
+    "should_trigger": true
   }
 ]

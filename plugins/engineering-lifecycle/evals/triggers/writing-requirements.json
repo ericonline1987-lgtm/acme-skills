@@ -34,5 +34,9 @@
   {
     "query": "write user stories for exporting invoices to CSV",
     "should_trigger": true
+  },
+  {
+    "query": "we're adding team billing, write up what it needs to do",
+    "should_trigger": true
   }
 ]

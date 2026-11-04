@@ -38,5 +38,9 @@
   {
     "query": "explain what SOC 2 is in two sentences",
     "should_trigger": false
+  },
+  {
+    "query": "what are other SaaS companies doing about price increases this year?",
+    "should_trigger": true
   }
 ]

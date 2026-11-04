@@ -92,9 +92,10 @@ def plan() -> dict[Path, str]:
         })
 
         skill_names = sorted(p.name for p in (pdir / "skills").iterdir() if (p / "SKILL.md").is_file())
+        cues = "; ".join(f"{s} ({ui['when'][s]})" for s in skill_names)
         files[pdir / "hooks" / "routing.md"] = (
-            f"Skills from the {name} plugin: {', '.join(skill_names)}. When one covers the task, "
-            "load it before answering, even if the task looks simple.\n")
+            f"Skills from the {name} plugin, and when each applies: {cues}. When one covers the "
+            "task, load it before answering, even if the task looks simple.\n")
         files[pdir / "hooks" / "hooks.json"] = dump({"hooks": {"SessionStart": [{"hooks": [
             {"type": "command", "command": 'cat "${CLAUDE_PLUGIN_ROOT}/hooks/routing.md"'}]}]}})
 
