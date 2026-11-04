@@ -110,5 +110,25 @@
   {
     "query": "what's the difference between SVG and PNG?",
     "should_trigger": false
+  },
+  {
+    "query": "I need three slides for tomorrow's standup on the outage",
+    "should_trigger": true
+  },
+  {
+    "query": "help me present our roadmap to the sales team next week",
+    "should_trigger": true
+  },
+  {
+    "query": "make a chart comparing our churn by plan",
+    "should_trigger": true
+  },
+  {
+    "query": "check whether our signup page works with a keyboard only",
+    "should_trigger": true
+  },
+  {
+    "query": "put together a quick deck for the customer kickoff",
+    "should_trigger": true
   }
 ]

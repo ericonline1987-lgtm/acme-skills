@@ -210,5 +210,25 @@
   {
     "query": "translate this sentence into Spanish",
     "should_trigger": false
+  },
+  {
+    "query": "help me say no to the conference invite without burning the bridge",
+    "should_trigger": true
+  },
+  {
+    "query": "draft the summary for our quarterly investor letter",
+    "should_trigger": true
+  },
+  {
+    "query": "my boss asked me to write up the pros and cons of moving offices",
+    "should_trigger": true
+  },
+  {
+    "query": "this paragraph sounds robotic, fix it",
+    "should_trigger": true
+  },
+  {
+    "query": "write the release announcement for our new API",
+    "should_trigger": true
   }
 ]
