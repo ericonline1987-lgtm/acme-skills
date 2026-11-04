@@ -182,5 +182,33 @@
   {
     "query": "tidy up these customer interview notes into stats for the pitch deck",
     "should_trigger": true
+  },
+  {
+    "query": "this reads like ChatGPT wrote it, can you make it sound like me?",
+    "should_trigger": true
+  },
+  {
+    "query": "make our About page sound less corporate",
+    "should_trigger": true
+  },
+  {
+    "query": "rewrite this LinkedIn post so it doesn't sound like AI",
+    "should_trigger": true
+  },
+  {
+    "query": "write a 150-word product description for our new backpack",
+    "should_trigger": true
+  },
+  {
+    "query": "explain to my grandmother what the cloud is",
+    "should_trigger": true
+  },
+  {
+    "query": "is 'delve' an AI word?",
+    "should_trigger": false
+  },
+  {
+    "query": "translate this sentence into Spanish",
+    "should_trigger": false
   }
 ]

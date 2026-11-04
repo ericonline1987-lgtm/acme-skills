@@ -170,5 +170,21 @@
   {
     "query": "rename the variable `done` to `isComplete` in this function",
     "should_trigger": false
+  },
+  {
+    "query": "we want to change the amount field in our API from dollars to cents, how?",
+    "should_trigger": true
+  },
+  {
+    "query": "how should we add retries to our payment calls?",
+    "should_trigger": true
+  },
+  {
+    "query": "rename a column in our production Postgres table safely",
+    "should_trigger": true
+  },
+  {
+    "query": "what does idempotent mean?",
+    "should_trigger": false
   }
 ]

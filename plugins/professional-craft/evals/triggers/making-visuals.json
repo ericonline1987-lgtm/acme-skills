@@ -90,5 +90,25 @@
   {
     "query": "I'm giving a 5-minute demo at the all-hands Friday, help me prep slides",
     "should_trigger": true
+  },
+  {
+    "query": "design the layout for an on-call dashboard",
+    "should_trigger": true
+  },
+  {
+    "query": "make a bar chart of our monthly revenue",
+    "should_trigger": true
+  },
+  {
+    "query": "draw a diagram of our system architecture in Mermaid",
+    "should_trigger": true
+  },
+  {
+    "query": "our pricing page looks broken on mobile, check it",
+    "should_trigger": true
+  },
+  {
+    "query": "what's the difference between SVG and PNG?",
+    "should_trigger": false
   }
 ]
