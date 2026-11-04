@@ -1,6 +1,6 @@
 ---
 name: changing-code
-description: Use this skill whenever someone asks to fix a bug or failing test, change a default, config value or signature, rename or move code, upgrade a dependency, refactor or extract an abstraction, or "just change X" in existing code, even for one-line changes. It finds out from git history why the code is the way it is, checks every caller and makes the smallest change, recording why.
+description: Use this skill whenever someone wants existing code changed, fixed or tested — a bug, a failing or flaky test, something broken or slow, an incident, a default or signature change, a rename, an upgrade, a refactor, new tests — even one line. It diagnoses before fixing, reads git history and every caller, makes the smallest change, and writes tests that fail for the right reason.
 ---
 
 # Changing code
@@ -21,7 +21,8 @@ and leaves the next person understanding more than you did when you started.
    or issue that made the test stale, or that shows the code regressed).
 3. **Confirm the cause** with two independent lines of evidence (a reproduction and a
    trace, or a trace and the code path) before a non-obvious or large fix. If the cause
-   isn't known yet, find it first (see `debugging-failures`).
+   isn't known yet, or something is broken, slow or flaky, diagnose it first with
+   `references/diagnosis.md`; if people are affected now, that starts with mitigation.
 4. **Find every caller.** Grep the symbol, config key, route or path as a literal string
    across code, scripts, manifests, docs and other repos you can reach. Check ignore
    rules didn't hide directories from the search.
@@ -45,12 +46,15 @@ and leaves the next person understanding more than you did when you started.
 - Remove only code your change made dead.
 - **Leave it more legible**: a comment saying *why* where the reason isn't obvious, a
   test that pins the behaviour, and a decision note when you chose between real options.
+- **Tests** follow `references/tests.md`: one behaviour each, outcomes not internals,
+  mocks only at boundaries, and each shown to fail without the change.
 
 ## After the change
 
 - Run the narrowest check that could fail, plus the tests of every caller you found,
   and compare with the same tests before the change ("no new failures").
-- Prove it at the rung you'll claim (see `proving-outcomes` if installed).
+- Claim only what you checked: tests passing is not deployed, and deployed is not
+  working for users. Say which you reached.
 - Re-review any fix that came out of a review round; fixes create new decisions.
 
 ## Load more only when the change needs it

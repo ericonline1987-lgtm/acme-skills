@@ -33,11 +33,10 @@ description and diff; otherwise do them in turn without letting one steer the ne
 
 1. Bugs in the diff. Code that won't compile or parse, unresolved names, and logic
    that is wrong for any input.
-2. Problems the change introduces. Wrong behaviour on edge cases (empty, null, huge,
-   concurrent, repeated), broken error handling, security (validation, injection,
-   authorisation, secrets in code or logs, unsafe deserialisation, new dependencies).
-   High tier: also name who can reach the changed code, what input they control, and
-   what they could gain, and check each path.
+2. Problems the change introduces: edge cases (empty, null, huge, concurrent,
+   repeated), error handling and security, walking the rows of
+   `references/defect-classes.md` for the areas the diff touches. High tier: also name
+   who can reach the changed code, what input they control, and what they could gain.
 3. What it touches. Grep callers of every changed signature, config key or contract;
    run `git log -L` on changed lines to catch a past fix being undone (high tier: every
    changed line).
