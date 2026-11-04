@@ -1,6 +1,6 @@
 # Changelog
 
-## 3.0.0 (unreleased)
+## 3.0.0 (2026-11-03)
 
 Fewer skills, deeper. Seven skills in the four areas where a capable model's default output falls short of a professional's, in place of 25 that mostly restated practice the model already follows. See docs/PLAN-v3.md.
 

@@ -1,5 +1,71 @@
 # Results
 
+## v3.0: seven deep skills, measured against the reference set (2026-11-03)
+
+**Bottom line:** on the 41 gate cases that test a skill, answers scored 0.93 with the v3 skills and 0.63 without [observed: benchmarks/gate/2026-11-03-v3-summary.json]. In a head-to-head with the reference set (`ly87ing/agent-skills`), v3 scored 3.99 against 3.67 on the 12 cases the reference author wrote, a near tie, and 11.32 against 7.58 on 12 v3 cases (plain Claude 0.33 and 7.15) [observed: benchmarks/h2h/results-v3/2026-11-03-summary.json]. The lead comes from writing that reads as a person wrote it, where neither the reference nor plain Claude comes close.
+
+### Gate, per skill (mean case score, three runs per arm)
+
+| Skill | Cases | With skill | Plain Claude | Largest lift |
+|---|---|---|---|---|
+| changing-code | 3 | 0.95 | 0.55 | debug-checkout-500s (1.00 vs 0.47) [observed] |
+| handling-artifacts | 2 | 0.97 | 0.61 | artifacts-repo-for-agency (0.93 vs 0.47) [observed] |
+| making-visuals | 5 | 0.94 | 0.67 | visual-screenshot-proof (1.00 vs 0.47) [observed] |
+| merging-safely | 4 | 0.98 | 0.93 | merge-lockfile-conflict (1.00 vs 0.89) [observed] |
+| reviewing-code | 5 | 1.00 | 0.94 | review-sql-diff (1.00 vs 0.80) [observed] |
+| shaping-designs | 10 | 0.87 | 0.63 | design-cron-to-kafka (1.00 vs 0.47) [observed] |
+| writing-for-people | 12 | 0.92 | 0.39 | email-vendor-chaser (1.00 vs 0.08) [observed] |
+
+The core rules scored 0.91 against 0.70 on their seven cases [observed]. Merging and review show the smallest lift because plain Claude already handles their cases well [observed].
+
+### Head-to-head (three runs per arm, judge Sonnet)
+
+| Case | v3 | Reference | Plain Claude |
+|---|---|---|---|
+| b-artifact-hygiene-1 | 1.00 | 1.00 | 0.00 [observed] |
+| b-artifact-hygiene-2 | 0.33 | 1.00 | 0.00 [observed] |
+| b-change-discipline-1 | 0.00 | 0.00 | 0.00 [observed] |
+| b-change-discipline-2 | 0.00 | 0.00 | 0.00 [observed] |
+| b-reader-facing-writing-1 | 1.00 | 0.67 | 0.00 [observed] |
+| b-reader-facing-writing-2 | 0.00 | 0.00 | 0.00 [observed] |
+| b-safe-merge-review-1 | 0.33 | 0.00 | 0.00 [observed] |
+| b-safe-merge-review-2 | 1.00 | 0.67 | 0.00 [observed] |
+| b-solution-shaping-1 | 0.00 | 0.00 | 0.00 [observed] |
+| b-solution-shaping-2 | 0.00 | 0.00 | 0.00 [observed] |
+| b-verification-1 | 0.00 | 0.33 | 0.33 [observed] |
+| b-verification-2 | 0.33 | 0.00 | 0.00 [observed] |
+| c-debug-checkout-500s | 1.00 | 0.47 | 0.27 [observed] |
+| c-design-amount-units | 0.75 | 0.83 | 0.92 [observed] |
+| c-design-payment-retries | 0.92 | 1.00 | 0.92 [observed] |
+| c-design-rename-column | 1.00 | 0.83 | 0.75 [observed] |
+| c-merge-lockfile-conflict | 1.00 | 1.00 | 1.00 [observed] |
+| c-merge-remerge-after-revert | 1.00 | 1.00 | 0.89 [observed] |
+| c-visual-mermaid-two-paths | 1.00 | 0.67 | 0.67 [observed] |
+| c-visual-oncall-dashboard | 0.93 | 0.87 | 0.80 [observed] |
+| c-voice-bakery-about | 1.00 | 0.33 | 0.33 [observed] |
+| c-voice-humanize-rewrite | 0.92 | 0.25 | 0.33 [observed] |
+| c-voice-product-copy | 0.93 | 0.20 | 0.20 [observed] |
+| c-voice-seed-post | 0.87 | 0.13 | 0.07 [observed] |
+
+- Each set ran as one plugin. v3 ran with the session-start routing line its plugins ship; the reference ships none. An earlier run, without that line and before `handling-artifacts` was restored, scored 0.67 on pool B; in several answers no skill loaded at all [observed].
+- Pool B cases have one all-or-nothing grader against long expected-behaviour text; several pass for no set. Differences of one case (0.33 to 0.67) are within run-to-run noise [inferred].
+- The reference still wins `b-artifact-hygiene-2` and `b-verification-1`. Read by hand, v3's answers to both are substantively right and miss part of a long expectation (moving files to a temporary folder; stating success criteria before choosing the tool) [observed].
+
+### What measurement changed
+
+1. **Rules that decide the outcome go in the skill file.** After the consolidation, rules that lived only in reference files weren't applied: a brief's opening Decision and Ask block appeared in 0 of 3 runs (3 of 3 in v2.0, when it was in the skill file), an incident timeline in 0 of 3. With the must-follow rules inline, those cases went from 0.33 and 0.53 to 1.00 [observed]. Reference files now hold detail only.
+2. **Dropping `handling-artifacts` was a mistake.** The reference author's artifact cases scored 1.00 for the reference and 0 to 0.67 for plain Claude; the skill was restored and v3 then passed the first case in every run [observed].
+3. **A skill description that says "editing" catches one-line grammar fixes.** `writing-for-people` loaded on one in every run until its description excluded them [observed].
+
+### Triggering (partial)
+
+The Sonnet trigger run stopped at the usage limit after the engineering skills: 54 of 65 should-fire queries loaded the right skill, and 28 of 29 near misses loaded none [observed: benchmarks/triggers/2026-11-03-5-v3-sonnet.json]. The writing and visuals skills, and the Haiku run, follow after the reset.
+
+### Spend
+
+About $145 of eval runs for v3 [estimate]. The saved results account for $109 [observed]; earlier runs of re-run cases were overwritten.
+
+
 ## v2.0: release gate (2026-11-02)
 
 **Bottom line:** on the 59 cases that test a skill, answers scored 0.96 with the skills installed and 0.69 without [observed: benchmarks/gate/2026-11-02-summary.json]. A score is the share of criteria met, averaged over cases, with three runs per arm. Every shipped skill beats plain Claude on at least one case, `writing-tests` by the least [observed]. `analyzing-data` was dropped: plain Claude passed all its cases on Opus and Haiku [observed]. On short prompts, the right skill loaded for 90% of should-fire queries on Sonnet and 73% on Haiku [observed, one run per query]. One near miss in 168 checks loaded a skill [observed].

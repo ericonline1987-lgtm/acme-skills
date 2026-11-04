@@ -1,0 +1,65 @@
+{
+  "model": "haiku",
+  "with_rules": false,
+  "spent_usd": 0.0,
+  "stopped_early": true,
+  "results": [
+    {
+      "skill": "changing-code",
+      "query": "what is TDD?",
+      "should_trigger": false,
+      "invoked": [],
+      "cost": 0.0,
+      "error": "usage limit"
+    },
+    {
+      "skill": "changing-code",
+      "query": "fix this failing test by updating the snapshot",
+      "should_trigger": false,
+      "invoked": [],
+      "cost": 0.0,
+      "error": "usage limit"
+    },
+    {
+      "skill": "changing-code",
+      "query": "Add a test that reproduces the bug where empty carts can be submitted.",
+      "should_trigger": true,
+      "invoked": [],
+      "cost": 0.0,
+      "error": "usage limit"
+    },
+    {
+      "skill": "changing-code",
+      "query": "set up GitHub Actions to run our tests",
+      "should_trigger": false,
+      "invoked": [],
+      "cost": 0.0,
+      "error": "usage limit"
+    },
+    {
+      "skill": "changing-code",
+      "query": "coverage on utils/dates.py is 20%, can you fix that",
+      "should_trigger": true,
+      "invoked": [],
+      "cost": 0.0,
+      "error": "usage limit"
+    },
+    {
+      "skill": "changing-code",
+      "query": "write pytest tests for this parse_duration function",
+      "should_trigger": true,
+      "invoked": [],
+      "cost": 0.0,
+      "error": "usage limit"
+    }
+  ],
+  "summary": {
+    "changing-code": {
+      "pos": 3,
+      "hit": 0,
+      "neg": 3,
+      "clean": 3,
+      "instead": {}
+    }
+  }
+}
