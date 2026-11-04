@@ -25,9 +25,9 @@ order and length budget. The ones that most often go wrong must open like this:
 | Form | Must |
 |---|---|
 | Decision brief | Open with four lines: `Decision:` (what, who decides, by when; slots if unknown), `Recommendation:` (and the one or two reasons), `Would change if:`, `Ask:` (what they say yes or no to). Then options on the same fields, with the best case for each one you don't recommend. |
-| Email or message | Subject states topic and ask. The ask is phrased as the small answer you want ("Can you confirm yes or no by Thursday?"), with a reply-by date or a `[reply-by date]` slot. A follow-up line for each open item: who to chase, when. Bad news: two versions, with what each trades off. |
+| Email or message | Subject states topic and ask. The ask is phrased as the small answer you want ("Can you confirm yes or no by Thursday?"), with a reply-by date or a `[reply-by date]` slot. In your note, a follow-up for each open item ("chase finance Tuesday if they haven't answered"). Bad news: two versions, with what each trades off. |
 | Status update | The takeaway in two sentences; blockers with owner and date; only the actions the source gives. |
-| Explanation for a non-expert | The answer in the first sentence. Then plain paragraphs in the order they'd ask: no headings, no bold, every term explained at first use, about 250 words. |
+| Explanation for a non-expert | The answer in the first sentence. Then plain paragraphs in the order they'd ask: no headings, no bold, under 250 words. Explain every term at first use, everyday tech words too (phishing, provider, streaming), or leave it out. |
 | Post or announcement | The news in the person's own voice in the first line; facts only they have. No "big news" formula, emoji or hashtags unless their own posts use them. |
 
 Prose when ideas depend on each other; a list for steps or items someone will scan; a
@@ -35,7 +35,7 @@ table for values compared on the same fields. No headings on a 300-word piece.
 
 ## 3. Draft from specifics, and only from given ones
 
-- Start with the fact, decision or ask. No preamble about the text itself.
+- Start with the fact, decision or ask. No preamble.
 - Use what only this subject has: names, numbers, the detail a regular would mention.
   Test a sentence by swapping in a competitor's name; if it stays true, cut or replace
   it.
@@ -43,6 +43,8 @@ table for values compared on the same fields. No headings on a 300-word piece.
   quotes or anecdotes the person didn't give. Leave a visible slot (`[how long it keeps
   drinks cold]`) and ask for it. Case: plain drafts gave a bakery's conchas a "crackly
   shell" and a bottle "24 hours" of cold, neither of them given.
+- A claim keeps its strength in every version you offer: "fell after" never becomes
+  "cut" or "caused".
 - Numbers, names, owners and dates keep the source's wording and scope. Don't add a
   year, a cause, a dependency or an action the source didn't state; a figure you work
   out (a difference, a total) is new and is labelled as yours. Unknowns are TBD.
@@ -85,10 +87,7 @@ alternatives beyond what the form calls for. Nothing is sent without their go-ah
 - The first two sentences carry the point.
 - Every specific traces to the person's material or a cited source; the rest is a slot.
 - No pattern from `references/voice.md` repeats across paragraphs.
-- Read aloud, it sounds like the person it's from, talking to the person it's for.
 
 ## Not this skill
 
-Slides, charts, page layout and checking a rendered page belong to `making-visuals`; a
-design doc's technical content belongs to `shaping-designs`, and its prose to this
-skill.
+Slides, charts and pages: `making-visuals`. A design's technical content: `shaping-designs`.
