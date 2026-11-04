@@ -12,7 +12,7 @@ Fewer skills, deeper. Six skills in the four areas where a capable model's defau
 - A core rule against inventing names, figures, dates, quotes or details.
 
 ### Removed
-- The `foundations` plugin and 17 skills whose advice a capable model already follows, or whose detail now lives in the six skills above: defining-done, planning-work, exploring-options, delegating-work, proving-outcomes, tracing-claims, capturing-learning, guarding-agent-actions, handling-artifacts, running-long-tasks, writing-requirements, designing-systems, debugging-failures, writing-tests, verifying-interfaces, building-ai-features, authoring-skills, writing-documents, briefing-decisions, researching-topics, building-presentations and writing-emails. They remain in git history.
+- The `foundations` plugin and 22 skills whose advice a capable model already follows, or whose detail now lives in the six skills above: defining-done, planning-work, exploring-options, delegating-work, proving-outcomes, tracing-claims, capturing-learning, guarding-agent-actions, handling-artifacts, running-long-tasks, writing-requirements, designing-systems, debugging-failures, writing-tests, verifying-interfaces, building-ai-features, authoring-skills, writing-documents, briefing-decisions, researching-topics, building-presentations and writing-emails. They remain in git history.
 - Eval cases where the old skill showed little or no lift over plain Claude; the rest were moved to the skill that now covers them.
 
 ### Changed
