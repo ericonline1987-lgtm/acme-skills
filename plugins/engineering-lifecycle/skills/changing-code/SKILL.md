@@ -20,7 +20,8 @@ and leaves the next person understanding more than you did when you started.
    Whichever way you go, the commit message says why and cites the evidence (the commit
    or issue that made the test stale, or that shows the code regressed).
 3. **Confirm the cause** with two independent lines of evidence (a reproduction and a
-   trace, or a trace and the code path) before a non-obvious or large fix.
+   trace, or a trace and the code path) before a non-obvious or large fix. If the cause
+   isn't known yet, find it first (see `debugging-failures`).
 4. **Find every caller.** Grep the symbol, config key, route or path as a literal string
    across code, scripts, manifests, docs and other repos you can reach. Check ignore
    rules didn't hide directories from the search.

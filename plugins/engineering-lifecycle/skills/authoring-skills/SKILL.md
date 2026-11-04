@@ -44,9 +44,10 @@ does measurably better than one without it. Everything else is weight in the con
 ## 4. Measure every change
 
 - Run each case with and without the skill, three or more times per arm, with a capable
-  judge. Check that every output exists before reading a score.
+  judge. Check that every output exists, and that no run or judge call hit a usage
+  limit, before reading a score (see `building-ai-features` for checking an eval).
 - Read failing answers yourself before believing the grader; judges fail correct
-  answers, and rubric words like "briefly" decide results at the margin.
+  answers on literal words ("ends with", "briefly", "checks" when nothing can run).
 - Change one thing at a time. Log each run with its date, result and cost.
 - Every failure that escapes becomes a new case (see `capturing-learning`).
 

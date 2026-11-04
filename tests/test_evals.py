@@ -56,15 +56,16 @@ class EvalSuiteTests(unittest.TestCase):
 
     def test_every_skill_has_a_should_fire_case(self):
         for plugin in plugin_dirs():
-            covered = set()
+            covered: dict[str, int] = {}
             for case in cases(plugin):
                 for fm, _ in graders(case).values():
                     if fm.get("type") == "tool_used" and fm.get("tool") == "Skill" \
                             and fm.get("max") != "0":
-                        covered.add(fm.get("input_match"))
+                        covered[fm.get("input_match")] = covered.get(fm.get("input_match"), 0) + 1
             for skill in skill_dirs(plugin):
                 with self.subTest(skill=skill.name):
-                    self.assertIn(skill.name, covered)
+                    # Two cases, so one non-discriminating case can't hide a skill that doesn't help.
+                    self.assertGreaterEqual(covered.get(skill.name, 0), 2)
 
     def test_every_plugin_has_should_not_fire_cases(self):
         for plugin in plugin_dirs():

@@ -26,7 +26,8 @@ quality as something you measure on every change, like latency.
 - **Check the grader.** Grade a sample by hand and compare. A small judge model, or a
   rubric word like "briefly", can flip results at the margin; grade what matters.
 - **Check the outputs exist.** A rate limit, timeout or crash leaves empty or cut-off
-  answers that score as failures. Look for them before reading any score.
+  answers that score as failures, and can break the judge's own calls inside runs that
+  otherwise finished. Look for both before reading any score.
 - **Match the eval to where the feature runs.** A case that assumes files, tools or
   context the harness doesn't provide measures the harness, not the feature.
 - **Keep cases that discriminate.** If the baseline (no change, a plain model) passes a

@@ -91,7 +91,8 @@ All scripts use only the Python standard library, and each one states what it ca
 ```
 python3 -m unittest discover -s tests                                  # every commit (CI)
 python3 tools/run_triggers.py --max-cost-usd 10                        # trigger recall and precision
-claude plugin eval plugins/foundations --runs 3 --judge-model sonnet   # every release; adds a no-plugin baseline
+tools/run_gate.sh "$PWD/benchmarks/gate/runs" <plugin:case> ...       # every release: 3 runs with and without each plugin
+python3 tools/smoke_check.py --runtime codex --command 'codex exec {prompt}'  # does a runtime see every skill?
 python3 benchmarks/score_outcomes.py benchmarks/outcomes.csv           # weekly, on real work
 ```
 

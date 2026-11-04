@@ -10,7 +10,10 @@ A change is accepted when it is measured, not when it reads well.
      --plugin-dir plugins/<plugin> --name <case> --prompt "..." \
      --criteria "..." --criteria "..." --skill <skill> --source "<what happened>"
    ```
-   Add a `--should-not-fire` case too if the change could make the skill trigger more often.
+   Run it without the skill first, and keep it only if plain Claude misses something:
+   a case the baseline already passes can't show the skill helps. Every skill needs at
+   least two such cases. Add a `--should-not-fire` case too if the change could make the
+   skill trigger more often.
 2. **Write or edit `plugins/<plugin>/skills/<skill>/SKILL.md`.**
 3. **Run the offline tests**: `python3 -m unittest discover -s tests`.
 4. **Run the evals** for the plugin with the baseline arm:
@@ -37,7 +40,7 @@ Every skill has `plugins/<plugin>/evals/triggers/<skill>.json`: realistic prompt
 - **Body:** at most 900 words. Move detail into files beside it.
 - **References** stay inside the plugin. Installed plugins can't see each other's files, so refer to other plugins' skills by name, never by path.
 - **Scripts** start with a usage docstring, use only the standard library, and say what they can't check.
-- **Evals:** every skill has a should-fire case; every plugin has should-not-fire cases scored in both arms (`min: 0`, `max: 0`, `arm: both`); every case has at least one outcome grader, not only a trigger check.
+- **Evals:** every skill has at least two should-fire cases; every plugin has should-not-fire cases scored in both arms (`min: 0`, `max: 0`, `arm: both`); every case has at least one outcome grader, not only a trigger check.
 
 ## Writing descriptions that trigger
 
