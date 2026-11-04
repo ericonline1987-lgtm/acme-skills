@@ -1,6 +1,6 @@
 ---
 name: writing-for-people
-description: Always use this skill when writing, rewriting or editing anything a person will read — an email, post, memo, brief, status update, report, web or product copy, an explanation — or when asked to make text sound less like AI, more human or plainer, even a short one. It writes from specifics for the actual reader, strips machine-written patterns and checks facts against sources.
+description: Always use this skill when writing or rewriting anything a person will read — an email, post, memo, brief, status update, report, web or product copy, an explanation — or when asked to make text sound less like AI, more human or plainer, even a short one. Not for a one-line grammar fix or a translation. It writes from specifics, strips machine-written patterns and checks facts.
 ---
 
 # Writing for people
@@ -17,13 +17,21 @@ relationship calls for (a founder's post, a manager to their team, a bakery to i
 neighbours) and, if the person has written in it before, match their voice, not a
 generic one. One piece of writing has one job.
 
-## 2. Pick the form
+## 2. Pick the form, and open its entry
 
-Choose the form from `references/forms.md` by the reader's job, with its order and
-length budget. Prose when ideas depend on each other; a list only for steps or
-parallel items someone will scan; a table for values compared on the same fields.
-Structure follows the content's size: no headings on a 300-word piece, no bold labels
-on a paragraph's worth of ideas.
+Find the form in `references/forms.md` and read its entry before drafting; it sets the
+order and length budget. The ones that most often go wrong must open like this:
+
+| Form | Must |
+|---|---|
+| Decision brief | Open with four lines: `Decision:` (what, who decides, by when; slots if unknown), `Recommendation:` (and the one or two reasons), `Would change if:`, `Ask:` (what they say yes or no to). Then options on the same fields, with the best case for each one you don't recommend. |
+| Email or message | Subject states topic and ask. The ask is phrased as the small answer you want ("Can you confirm yes or no by Thursday?"), with a reply-by date or a `[reply-by date]` slot. A follow-up line for each open item: who to chase, when. Bad news: two versions, with what each trades off. |
+| Status update | The takeaway in two sentences; blockers with owner and date; only the actions the source gives. |
+| Explanation for a non-expert | The answer in the first sentence. Then plain paragraphs in the order they'd ask: no headings, no bold, every term explained at first use, about 250 words. |
+| Post or announcement | The news in the person's own voice in the first line; facts only they have. No "big news" formula, emoji or hashtags unless their own posts use them. |
+
+Prose when ideas depend on each other; a list for steps or items someone will scan; a
+table for values compared on the same fields. No headings on a 300-word piece.
 
 ## 3. Draft from specifics, and only from given ones
 
@@ -33,10 +41,8 @@ on a paragraph's worth of ideas.
   it.
 - **Never invent specifics to make prose vivid**: no sensory details, figures, history,
   quotes or anecdotes the person didn't give. Leave a visible slot (`[how long it keeps
-  drinks cold]`) and ask for it. Case: an About page described a bakery's conchas as
-  "soft and golden with a sweet, crackly shell", and a product page promised "ice-cold
-  for up to 24 hours"; neither was given, and the figures were only admitted in a note
-  after the text.
+  drinks cold]`) and ask for it. Case: plain drafts gave a bakery's conchas a "crackly
+  shell" and a bottle "24 hours" of cold, neither of them given.
 - Numbers, names, owners and dates keep the source's wording and scope. Don't add a
   year, a cause, a dependency or an action the source didn't state; a figure you work
   out (a difference, a total) is new and is labelled as yours. Unknowns are TBD.
@@ -57,10 +63,7 @@ only where the person's own posts use them). A clean run is necessary, not suffi
 ## 5. Make it accessible
 
 For readers outside the field, in a second language, or skimming, apply
-`references/accessible.md`: the reader's words, terms defined at first use, subject and
-verb early, most sentences under 20 words, rates with their base, headings that state
-conclusions. For expert readers, the opposite risk: don't translate their daily
-vocabulary into plain speech.
+`references/accessible.md`. For experts, don't translate their daily vocabulary.
 
 ## 6. Revise
 
@@ -75,14 +78,13 @@ many you fixed.
 The artifact contains only what the reader should see. Your notes to the person go
 outside it, kept to what they must act on: slots to fill, facts you couldn't verify, a
 decision only they can make. One question if it would change the draft; no menu of
-alternative versions. Nothing is sent on the person's behalf without their go-ahead.
+alternatives beyond what the form calls for. Nothing is sent without their go-ahead.
 
 ## Quality bar
 
 - The first two sentences carry the point.
 - Every specific traces to the person's material or a cited source; the rest is a slot.
-- No paragraph has more than one pattern from `references/voice.md`, and no pattern
-  repeats across paragraphs.
+- No pattern from `references/voice.md` repeats across paragraphs.
 - Read aloud, it sounds like the person it's from, talking to the person it's for.
 
 ## Not this skill

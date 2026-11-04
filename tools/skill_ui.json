@@ -61,8 +61,8 @@
     ]
   },
   "when": {
-    "writing-for-people": "anything a person will read: emails, posts, docs, briefs, copy; or making text sound less like AI",
-    "making-visuals": "slides, charts, diagrams, dashboards, pages, or checking how one renders",
+    "writing-for-people": "anything a person will read: emails, posts, docs, briefs, copy; or making text sound less like AI (not one-line grammar fixes)",
+    "making-visuals": "slides, charts, diagrams, dashboards, pages, checking how one renders, or a screenshot as proof",
     "shaping-designs": "how to build or change something: designs, APIs, data, migrations, requirements, X or Y",
     "changing-code": "any change to existing code: fixes, debugging, incidents, refactors, upgrades, tests",
     "reviewing-code": "any opinion on code, a diff or a PR",

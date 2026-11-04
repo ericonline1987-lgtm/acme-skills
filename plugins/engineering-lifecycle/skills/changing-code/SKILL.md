@@ -8,6 +8,14 @@ description: Use this skill whenever someone wants existing code changed, fixed 
 Existing behaviour is often deliberate. The goal is a change that is correct, contained,
 and leaves the next person understanding more than you did when you started.
 
+## If something is broken right now
+
+When people are affected, before any diagnosis: mitigate (roll back the last deploy,
+turn the flag off), name who leads and who updates the people affected, and keep a
+timeline with times as you go. Afterwards, a blameless review: impact, timeline, cause
+with its evidence, and actions each with one owner and a date. Then find and prove the
+cause with `references/diagnosis.md` before changing code.
+
 ## Before the change
 
 1. **Find out why the current code exists.** Use `git log -S "<value>"`, `git log -L`
