@@ -79,6 +79,15 @@ target (`HEAD^1`) and the source (`HEAD^2`), re-run the evidence script with
 environment config, schemas and migrations, initialisation and wiring, shared
 boundaries. End with green, yellow or red.
 
+Explain why git looked reassuring, because the person will meet it again: `git branch
+--contains` and `git log` prove a commit is in the history, not that its changes
+survived, and `git show <merge>` prints no diff for a file resolved to one parent's
+version, so a side taken wholesale looks clean. The evidence is the first-parent diff
+(`git diff <merge>^1 <merge>`), which shows what the merge actually brought in, and
+`git show --remerge-diff <merge>` (Git 2.36+), which shows how each conflict was resolved.
+To restore a dropped change after the merge is pushed, re-apply it as a new commit,
+ported by hand if the code was refactored meanwhile; never rewrite the pushed merge.
+
 ## Several repositories
 
 When corresponding branches must be merged across a set of repositories, run every step

@@ -1,6 +1,6 @@
 ---
 name: shaping-designs
-description: Always use this skill when deciding how something should be built or changed — a design doc or RFC, an architecture, API or data model, a migration; requirements, user stories, acceptance criteria or a spec; an LLM feature (a prompt, a model choice, a chatbot that gets things wrong); or "X or Y", even a quick question. It compares real options and works through contracts, data, failure, rollout.
+description: Always use this skill when deciding how something should be built or changed — a design doc or RFC, an architecture, API or data model, a migration or schema change; requirements, user stories, acceptance criteria or a spec; an LLM feature (a prompt, a model choice, a chatbot that gets things wrong); or "X or Y", even a quick question. It works through contracts, data, failure and rollout.
 ---
 
 # Shaping designs
@@ -35,12 +35,9 @@ the baseline.
 
 ## 3. Options
 
-Compare two or three genuinely different options, including doing less or nothing when
-that's real, on the same fields: what it achieves against the outcome, cost, risk, how
-it's undone, and the evidence for each cell. Spike the riskiest part when argument
-can't settle it, and say which options were built and which only reasoned about.
-Asked for a one-line answer? Give the pick, the constraint that would flip it, and the
-cheap check that would settle it.
+Include doing less or nothing when that's real, and say how each option is undone. Spike
+the riskiest part when argument can't settle it. Asked for a one-line answer? Give the
+pick, the constraint that would flip it, and the cheap check that would settle it.
 
 ## 4. Detail the recommendation
 
@@ -54,6 +51,23 @@ Work through the references that apply, answering their checklists:
 - A feature built on a language model: `references/ai-features.md`.
 
 Each says what the design must state; "it won't fail" and "it scales" are not answers.
+
+Whatever the references, check these inline; capable engineers miss them by default:
+
+- **A cache never decides money or access.** Cached prices, balances or permissions are
+  for display; the amount charged or the access granted is read from the source of truth
+  (or a signed, short-lived quote) at that moment. A change known in advance (a flash sale
+  at 12:00:00) is effective-dated and pre-warmed, not left to a TTL expiring.
+- **Clients you can't update.** Old mobile apps and partner integrations live for years.
+  Strict decoders reject unknown enum values and new required fields, so add values
+  behind a capability or version check, and say what an old client sees.
+- **Locks on live tables.** In PostgreSQL, set `lock_timeout` before any `ALTER TABLE`, so
+  a queued lock can't stall every query behind it. Build indexes `CONCURRENTLY`; add NOT
+  NULL through a `CHECK ... NOT VALID` constraint validated separately. Rename by
+  expand, migrate, contract, never in one step while old code runs.
+- **Retries need idempotency.** Any retried write with side effects (charge, credit,
+  email, webhook) carries a key the receiver stores and checks in the same transaction as
+  the effect.
 
 ## 5. Blast radius, rollout and rollback
 
@@ -77,11 +91,11 @@ done. A missing row is reported as incomplete, not padded.
 
 ## Output
 
-Context and constraints → goals and non-goals → options → recommendation and challenge
-→ detailed design (interfaces, data, failure modes, capacity, security, observability)
-→ blast radius → rollout and rollback → decision → open questions with owners. The
-prose follows `writing-for-people`; a short design question gets a short answer with the
-same reasoning, not this whole skeleton.
+Answer at the size of the question. A Slack-style "thoughts?" gets the recommendation, the
+two or three points that change the design, and what to check first, not a design doc.
+A design doc asked for as such follows: context and constraints, options, recommendation
+and challenge, detailed design, blast radius, rollout and rollback, decision, open
+questions with owners. Leave out sections that would only restate the request.
 
 ## Not this skill
 

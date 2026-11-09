@@ -1,6 +1,6 @@
 ---
 name: writing-for-people
-description: Always use this skill whenever someone needs anything a person will read — an email or reply (a decline, a chaser, bad news), a post, a memo or one-pager, a recommendation written up for a boss, a status or investor update, a case study, web or product copy, an explanation — or to make text sound like a person, not AI. Not for one-line grammar fixes. It writes from specifics and checks every fact.
+description: Always use this skill whenever someone needs anything a person will read — an email or reply (a decline, a chaser, bad news), a post, a memo, summary or one-pager, a recommendation written up for a boss, a status or investor update, web or product copy, an explanation — or to make text sound like a person, not AI. Not for one-line grammar fixes. It writes from specifics and checks every fact.
 ---
 
 # Writing for people
@@ -11,11 +11,7 @@ of things like this instead of specifically true of this one.
 
 ## 1. Fix the reader and the job
 
-Name who reads it, what they already know, and what they'll do after: decide, act,
-look something up, understand, or simply hear the news. Note the register the
-relationship calls for (a founder's post, a manager to their team, a bakery to its
-neighbours) and, if the person has written in it before, match their voice, not a
-generic one. One piece of writing has one job.
+If the person has written to this reader before, match their voice, not a generic one.
 
 ## 2. Pick the form, and open its entry
 
@@ -26,6 +22,7 @@ order and length budget. The ones that most often go wrong must open like this:
 |---|---|
 | Decision brief | Open with four lines: `Decision:` (what, who decides, by when; slots if unknown), `Recommendation:` (and the one or two reasons), `Would change if:`, `Ask:` (what they say yes or no to). Then options on the same fields, with the best case for each one you don't recommend. |
 | Email or message | Subject states topic and ask. The ask is phrased as the small answer you want ("Can you confirm yes or no by Thursday?"), with a reply-by date or a `[reply-by date]` slot. In your note, a follow-up for each open item ("chase finance Tuesday if they haven't answered"). Bad news: two versions, with what each trades off. |
+| Chat reply (Slack, DM, text) | Fits on a phone screen: about 100 words at most. Own the specific thing, say what you'll do and by when, at most one question. Apologise once. No "I hear you", "thank you for sharing" or other HR register. |
 | Status update | The takeaway in two sentences; blockers with owner and date; only the actions the source gives. |
 | Explanation for a non-expert | The answer in the first sentence. Then plain paragraphs in the order they'd ask: no headings, no bold, under 250 words. Explain every term at first use, everyday tech words too (phishing, provider, streaming), or leave it out. |
 | Post or announcement | The news in the person's own voice in the first line; facts only they have. No "big news" formula, emoji or hashtags unless their own posts use them. |
@@ -81,12 +78,6 @@ The artifact contains only what the reader should see. Your notes to the person 
 outside it, kept to what they must act on: slots to fill, facts you couldn't verify, a
 decision only they can make. One question if it would change the draft; no menu of
 alternatives beyond what the form calls for. Nothing is sent without their go-ahead.
-
-## Quality bar
-
-- The first two sentences carry the point.
-- Every specific traces to the person's material or a cited source; the rest is a slot.
-- No pattern from `references/voice.md` repeats across paragraphs.
 
 ## Not this skill
 

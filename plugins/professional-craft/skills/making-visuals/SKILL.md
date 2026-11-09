@@ -11,10 +11,8 @@ are leads; what a person sees at real size is the evidence.
 
 ## 1. Name the point and the medium
 
-Write the one thing the viewer should take away, and where they'll see it: projected in
-a room, read alone on a laptop, on a phone, in print, in a Markdown file on a code host.
-The medium decides what's possible: motion needs a static fallback, print has no
-hover, a code host strips most HTML.
+The medium decides what's possible: motion needs a static fallback, print has no hover,
+a code host strips most HTML, a projected slide needs 24 pt.
 
 ## 2. Pick the form
 
@@ -71,6 +69,9 @@ settings.
 A durable, user-visible bug gets a small regression test, not only a manual look.
 
 ## Report
+
+When you rendered and checked something, report it like this; when you only read code
+or made the visual, give the findings or the visual without this block.
 
 ```
 point: <the takeaway>   medium: <where it's seen>

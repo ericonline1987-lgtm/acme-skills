@@ -1,106 +1,72 @@
 ---
 name: reviewing-code
-description: Always use this skill when someone shares code, a diff, a patch or a pull request and wants any opinion on it — "review this", "is this OK", "anything wrong", "look over my changes" — even a few lines that look fine at a glance. It confirms each finding before reporting it, checks callers, history, project rules and tests, and ends with grouped findings and a merge recommendation.
+description: Always use this skill when someone shares code, a diff, a patch or a pull request and wants any opinion on it — "review this", "is this OK", "anything wrong", "look over my changes" — even a few lines that look fine at a glance. It finds the failures tests by the same author miss (ties, retries, races, stale caches, broken contracts, undone fixes) and confirms each one before reporting it.
 ---
 
 # Reviewing code
 
-A review answers one question: what could go wrong if this goes in, and has anything
-checked for it? Report only what you can show. A false finding costs the author time and
+A capable model already reads diffs carefully. What a senior reviewer adds is the
+failure that passes the author's own tests: the input, interleaving or deploy order that
+breaks the change, shown concretely. Report only what you can show; a false finding
 costs every later finding its credibility.
 
-## 1. Frame the review
+## 1. Find the failures tests miss
 
-- **Intent.** Read the description and linked issue, and restate the change's outcome
-  in one sentence. If you can't, ask before reviewing.
-- **Risk tier**, decided by what the change touches, not by who wrote it:
+For each area the diff touches, check the classes below, then the fuller table in
+`references/defect-classes.md` (open it whenever the diff touches data access, money,
+time, concurrency, caching, an API or a migration).
 
-  | Tier | Touches | Depth | Human approval |
-  |---|---|---|---|
-  | Low | Docs, copy, tests only, additive code behind an off-by-default flag | One pass | Not required |
-  | Medium | Normal product code, caching, config | All passes below | One person |
-  | High | Auth, billing and money, data deletion or migration, security controls, CI/CD and release workflows, auto-updaters, shared code many others copy | All passes, plus history on every changed line | Two people, or a named owner |
+- **Ordering and ties.** A cursor or "since" filter on a non-unique column (timestamps
+  written in one transaction share `now()`) skips or repeats rows; key on
+  `(column, id)`. Rows from transactions that commit late appear behind a cursor that
+  already passed them. Fetch one extra row to know whether a next page exists.
+- **Retries and timeouts.** A retry around a call with side effects (charge, email,
+  write) repeats them unless an idempotency key is sent and honoured. A client timeout
+  shorter than the server's work turns success into a retry.
+- **Races.** Check-then-act, read-modify-write without a version, a lock held across a
+  network call, async work not awaited.
+- **Caches and derived values.** A key missing a dimension serves one user's data to
+  another. A cached value must never decide money or access: what is charged, granted or
+  refunded is read from the source of truth at that moment.
+- **Contracts.** Callers outside the diff: public API clients, mobile apps that never
+  update, stored data, other services. A change of name, order, default, error code or
+  identity is a design change; review it as one.
+- **Project rules.** Read the rules files (CLAUDE.md, AGENTS.md, REVIEW.md,
+  CONTRIBUTING.md) in the root and in each changed file's directories; a rule applies
+  only under its directory. A violation quotes the rule and names its file.
+- **History.** `git log -L` on changed lines: does this undo a past fix?
+- **Tests.** Would a test fail if the change were reverted?
 
-- **Project rules.** Find the rules files for the changed paths (CLAUDE.md, AGENTS.md,
-  REVIEW.md, CONTRIBUTING.md) in the root and each changed file's directories. A rule
-  applies only to files under its directory.
-- **Round.** First review or re-review? See section 4.
+## 2. Confirm before you report
 
-## 2. Find: separate passes, each with one job
+Re-read the cited code and follow the path, or run it. With helper agents, give each
+finding to one that didn't find it, with only the claim and the code. Drop anything
+unconfirmed; if you couldn't verify something, say so instead of guessing.
 
-Run each pass on its own: with helper agents, give each to a fresh one with the title,
-description and diff; otherwise do them in turn without letting one steer the next.
+Don't report: problems that existed before the change (one line under "Noticed, out of
+scope" if serious), style or anything a linter enforces, generic advice with no specific
+failure behind it, issues deliberately silenced with a reason.
 
-1. Bugs in the diff. Code that won't compile or parse, unresolved names, and logic
-   that is wrong for any input.
-2. Problems the change introduces: edge cases (empty, null, huge, concurrent,
-   repeated), error handling and security, walking the rows of
-   `references/defect-classes.md` for the areas the diff touches. High tier: also name
-   who can reach the changed code, what input they control, and what they could gain.
-3. What it touches. Grep callers of every changed signature, config key or contract;
-   run `git log -L` on changed lines to catch a past fix being undone (high tier: every
-   changed line).
-4. Project rules. Each violation quotes the exact rule and names its file.
-5. Tests. Would a test fail if the change were reverted? New behaviour with no test at
-   all is a finding; a missing edge case in otherwise tested code is a should-fix.
+## 3. Report
 
-## 3. Confirm before you report
+- **Blocking**, then **Should fix**, each with file and line, the concrete failure
+  (the input or sequence that triggers it and what the user sees), and the fix. Give a
+  ready-to-apply patch only when it fixes the problem completely.
+- **Suggestions**: a few improvements specific to this change that a senior reviewer
+  would raise, each one line.
+- **Not checked**: what you couldn't verify (didn't run, couldn't see callers).
+- End with merge, merge after fixes, or don't merge yet. Add who must approve only when
+  the person asks or the change touches money, auth, data deletion or release tooling.
 
-Every candidate finding gets a separate check before it reaches the author: re-read the
-code it cites, follow the path, run it where you can. With helper agents, give each
-finding to one that didn't find it, with only the claim and the code, and ask whether
-it is real. Drop anything not confirmed.
+Keep process out of the report: no tiers, pass names or checklists, only findings.
 
-Never report these:
+## Re-reviews
 
-- Problems that were already there before this change. Mention one in a single line
-  under "Noticed, out of scope" only if it is serious.
-- Style, naming and formatting preferences, and anything a linter or type checker
-  already enforces.
-- Pedantic points a senior engineer wouldn't raise.
-- Generic advice ("consider adding tests", "think about security") with no specific
-  failure behind it, unless a project rule requires it.
-- Issues the code deliberately silences (a lint-ignore with a reason).
-- Things that look wrong but are correct. If you can't tell, read more context or say
-  you couldn't verify it. Don't report a guess as a finding.
+From the second round, review only what changed. Never repeat a finding; say "still
+open". Name the bug class so all instances get fixed. If confirmed blocking findings keep
+appearing at round three, say the approach may be wrong.
 
-## 4. Keep re-reviews converging
+## Not this skill
 
-- From the second round on, review only what changed since the last round, plus
-  anything those changes affect.
-- Never repeat a finding. If one is still open, say "still open" with a link to the
-  first comment.
-- Name the bug class, not just the instance ("every handler builds SQL with string
-  formatting"), so the author fixes all of them at once.
-- Round three is the limit. If confirmed blocking findings are still appearing,
-  stop line-editing: say the approach may be wrong, and suggest what to rethink.
-- A fix that changes a name, an order, an identity or a concurrency property is a new
-  design decision. Review it as one.
-
-## 5. Report
-
-Group confirmed findings by severity, each with file and line:
-
-- **Blocking**: confirmed bugs, security issues, new behaviour with no test at all,
-  undone past fixes, quoted rule violations.
-- **Should fix**: confirmed problems that will cost time later.
-
-Each finding says what's wrong, why it matters, and a fix. Include a ready-to-apply
-suggestion only when applying it fixes the problem completely. Otherwise describe the
-fix. One comment per issue. Comment on the code, not the author.
-
-Keep two short sections apart from the findings: Suggestions (optional improvements,
-only if the person asked for a thorough review) and Noticed, out of scope. If nothing
-was confirmed, say so plainly: "No confirmed issues. Checked: bugs, introduced risks,
-callers and history, project rules, tests."
-
-## 6. Recommendation, not approval
-
-End with **merge**, **merge after fixes**, or **don't merge yet**, the risk tier, and
-what you verified yourself (ran tests, ran the code, read only) versus didn't check.
-This is a recommendation: an agent's review never replaces the human approval the tier
-requires, and the person who asked for the change owns the outcome.
-
-## After the review
-
-When a bug escapes review, add it as an eval case for this skill.
+How a rendered page looks or whether it is accessible: `making-visuals`. Merges:
+`merging-safely`. Making the change: `changing-code`.
