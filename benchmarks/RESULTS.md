@@ -1,5 +1,41 @@
 # Results
 
+## v4 round 2: after trimming to the specialist core (2026-11-09)
+
+**Bottom line:** after the phase 2 trim, judges preferred our answers over the reference set's in 0.60 of comparisons across all 24 cases (0.50 to 0.69). On the 12 held-out test cases, where the plan fixes the claim, the score was 0.54 (0.40 to 0.66) [observed: benchmarks/v4/results/2026-11-09-round2-sonnet.json]. By the pre-registered rule that is still **no measurable difference**. We moved from level to slightly ahead, within noise.
+
+The phase 2 changes were made from dev cases only (commit a2cabfd). All three arms were rerun under the same conditions as round 1.
+
+### Sonnet, three runs per arm
+
+| Measure | Round 1 | Round 2 |
+|---|---|---|
+| Ours against the reference, all cases | 0.51 (0.41–0.61) | 0.60 (0.50–0.69) [observed] |
+| Ours against the reference, test cases | 0.49 (0.35–0.62) | 0.54 (0.40–0.66) [observed] |
+| Ours against decoys only, test cases | 0.47 (0.31–0.63) | 0.60 (0.51–0.68) [observed] |
+| Reference against decoys only, all cases | 0.54 (0.47–0.62) | 0.48 (0.40–0.57) [observed] |
+| Criterion score: ours, reference, decoys only | 0.912, 0.912, 0.885 | 0.910, 0.897, 0.899 [observed] |
+| Our criterion lift over decoys only, test cases | 0.013 | −0.015 (−0.039 to 0.010) [observed] |
+| Runs that loaded our skill, the reference's | 47, 0 of 72 | 43, 0 of 72 [observed] |
+
+By area, ours against the reference in round 2: design 0.68 (0.54–0.83), writing 0.65, code 0.56, visuals 0.50. Code moved from 0.38 in round 1 [observed]. Each area has six cases or fewer, so none of this is claimed.
+
+### Haiku, one run per arm
+
+Criterion scores were 0.856 for ours, 0.806 for the reference and 0.873 for decoys only. Neither set's skills loaded in any of the 24 runs [observed: benchmarks/v4/results/2026-11-09-round2-haiku.json].
+
+### Reading it
+
+- **The trim helped the comparison but not the checklists.** Judges preferred our held-out answers to the decoys-only answers, at 0.60 (0.51 to 0.68). That is the only interval in this study that clears 0.5. The checklist lift on the same cases was flat. The plan's rule for "helps" uses the checklist lift, so this isn't claimed. It is consistent with the trim removing process the judges disliked, more than with new specialist points being caught [inferred].
+- **The noise floor is about ±0.06.** The reference skills never loaded in either round, so its arm differs from decoys only by its descriptions alone. Yet its score against decoys only moved from 0.54 to 0.48 between rounds [observed]. Any difference smaller than that is noise.
+- **Harm cases are mostly noise at three runs.** Seven cases scored below decoys only. In two of them our skill never loaded, and in the others the gap is one or two criterion failures out of 12 to 15 [observed]. In two dev cases the skill loaded but didn't produce the specific point (old clients' handling of non-USD amounts; `lock_timeout`) [observed].
+- **Small models need routing.** In a workspace with seven other skills and no routing line, Haiku loaded no skill from either set [observed]. Our plugins ship a session-start routing line for this reason. Without it, the skills do little for small models.
+- **The judges agree only moderately.** Each judge gave the same verdict in both orders 71% to 74% of the time, and the two judges agreed on 63% of pairs [observed].
+
+Spend for both rounds, answers and judges: about $205 [observed: sum of run and judge costs].
+
+The blind human rating of the writing pairs has no ratings yet.
+
 ## v4 round 1: a neutral pool, measured fairly (2026-11-08)
 
 **Bottom line:** on 24 neutral specialist cases, judged blind, v3 and the reference set came out level: v3 won 0.51 of pairwise comparisons against the reference, with a 95% interval of 0.41 to 0.61 [observed: benchmarks/v4/results/2026-11-08-round1-sonnet.json]. Under the rules fixed in docs/PLAN-v4.md that is "no measurable difference". Neither set showed a measurable lift over Sonnet with only the decoy skills loaded. The earlier v3 lead does not hold up under these conditions.

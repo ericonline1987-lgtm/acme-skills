@@ -1,5 +1,20 @@
 # Changelog
 
+## Unreleased (v4)
+
+Specialist, not all-encompassing, and measured on a neutral pool. See docs/PLAN-v4.md and benchmarks/RESULTS.md.
+
+### Added
+- `benchmarks/v4/`: 24 neutral cases written by an agent that never saw either skill set, a dev/test split, arms with shared decoy skills and no routing line, blind pairwise judging in both orders by two judges, bootstrap intervals, and a blind rating page for human checks.
+
+### Changed
+- `reviewing-code`: the risk-tier and approval process no longer appears in reports; the failures tests miss are inline (ties and late commits in cursors, retries without idempotency, caches deciding money, clients that never update); suggestions specific to the change are allowed.
+- `shaping-designs`: four inline checks (a cache never decides money or access, clients you can't update, locks on live tables, idempotent retries); answers sized to the question.
+- `merging-safely`: why ancestry checks look reassuring after a bad merge, and which diffs show what the merge brought in.
+- `writing-for-people`: a chat-reply form; general advice removed.
+- `making-visuals`: general advice removed; the report block only after a rendered check.
+- README states the neutral-pool result instead of the v3 head-to-head lead.
+
 ## 3.0.0 (2026-11-03)
 
 Fewer skills, deeper. Seven skills in the four areas where a capable model's default output falls short of a professional's, in place of 25 that mostly restated practice the model already follows. See docs/PLAN-v3.md.
