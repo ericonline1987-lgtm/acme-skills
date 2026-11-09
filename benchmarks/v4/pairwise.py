@@ -123,13 +123,19 @@ def judge_once(model: str, prompt: str) -> tuple[str | None, str, float, bool]:
         limit = res.get("api_error") == "usage_limit_reached" or res.get("api_error_status") == 429
         return None, f"judge error: {res.get('api_error') or res.get('subtype')}", cost, limit
     text = res.get("result") or ""
-    match = re.search(r"\{[^{}]*\"winner\"[^{}]*\}", text, re.S)
-    if not match:
+    # The reason may quote braces from the answers (Mermaid, code), so decode from each "{"
+    # rather than matching a brace-free span.
+    verdict = None
+    decoder = json.JSONDecoder()
+    for start in [m.start() for m in re.finditer(r"\{", text)]:
+        try:
+            obj, _ = decoder.raw_decode(text[start:])
+        except json.JSONDecodeError:
+            continue
+        if isinstance(obj, dict) and "winner" in obj:
+            verdict = obj
+    if verdict is None:
         return None, "no verdict in judge output", cost, False
-    try:
-        verdict = json.loads(match.group(0))
-    except json.JSONDecodeError:
-        return None, "bad verdict JSON", cost, False
     winner = str(verdict.get("winner", "")).strip().lower()
     if winner not in ("1", "2", "tie"):
         return None, f"bad winner {winner!r}", cost, False

@@ -2,7 +2,7 @@
 
 Seven deep agent skills for the work where a capable model's default output falls short of a seasoned professional's: writing that reads as a person wrote it, visuals people look at, design judgment, and changing, reviewing and merging code, with the files that work leaves behind.
 
-Advice a model already follows (state the bottom line, compare options, check before claiming) isn't packaged as skills here. The short version lives in the always-on core rules; the skills carry the professional detail a model doesn't produce on its own. In the v3 release gate, answers scored 0.93 with these skills against 0.63 without across 41 cases, three runs each way, and in a head-to-head with `ly87ing/agent-skills` they led on both its author's cases and ours [observed; see [benchmarks/RESULTS.md](benchmarks/RESULTS.md)].
+Advice a model already follows (state the bottom line, compare options, check before claiming) isn't packaged as skills here. The short version lives in the always-on core rules; the skills carry the professional detail a model doesn't produce on its own. In the v3 release gate, answers scored 0.93 with these skills against 0.63 without across 41 of our own cases [observed]. On a neutral pool written by neither side and judged blind, the set came out level with `ly87ing/agent-skills`, and neither showed a measurable lift over Sonnet alone [observed]. v4 is narrowing the skills to where they do measurably help; see [benchmarks/RESULTS.md](benchmarks/RESULTS.md) and [docs/PLAN-v4.md](docs/PLAN-v4.md).
 
 ## The skills
 

@@ -1,5 +1,36 @@
 # Results
 
+## v4 round 1: a neutral pool, measured fairly (2026-11-08)
+
+**Bottom line:** on 24 neutral specialist cases, judged blind, v3 and the reference set came out level: v3 won 0.51 of pairwise comparisons against the reference, with a 95% interval of 0.41 to 0.61 [observed: benchmarks/v4/results/2026-11-08-round1-sonnet.json]. Under the rules fixed in docs/PLAN-v4.md that is "no measurable difference". Neither set showed a measurable lift over Sonnet with only the decoy skills loaded. The earlier v3 lead does not hold up under these conditions.
+
+Method: docs/PLAN-v4.md, fixed before any run. A separate agent wrote the cases without seeing either skill set. All three arms had the same seven decoy skills and no routing line. Answers were judged pairwise in both orders by Opus and Sonnet, with skill names redacted.
+
+### Sonnet, three runs per arm
+
+| Measure | v3 (acme) | Reference | Decoys only |
+|---|---|---|---|
+| Criterion score | 0.912 | 0.912 | 0.885 [observed] |
+| Pairwise, against the reference | 0.51 (0.41–0.61) | | [observed] |
+| Pairwise, against decoys only | 0.52 (0.40–0.63) | 0.54 (0.47–0.62) | [observed] |
+| Runs that loaded the arm's own skill | 47 of 72 | 0 of 72 | [observed] |
+| Cases scoring below decoys only | 4 | 1 | [observed] |
+
+By area, against decoys only (too few cases per area to claim anything): writing 0.65, visuals 0.65, design 0.50, code 0.32 with an interval of 0.16 to 0.46 [observed].
+
+### Haiku, one run per arm
+
+Criterion scores were 0.858 for v3, 0.825 for the reference and 0.858 for decoys only [observed: benchmarks/v4/results/2026-11-08-round1-haiku.json]. Haiku loaded a v3 skill in 1 of 24 runs and a reference skill in none [observed].
+
+### What this shows
+
+- **Sonnet already does most specialist work.** With no relevant skill it scored 0.885 on criteria written to catch what generalists miss, and met every criterion on 12 of 24 cases [observed]. The space for any skill to add value is narrow, which supports the v4 aim of cutting general advice.
+- **Routing decides whether a skill matters at all.** With no routing line and seven other skills present, the reference set never loaded on Sonnet and v3 loaded in two runs of three [observed]. Haiku loaded almost nothing [observed]. The v3 head-to-head gave our bundle a routing line and the reference none, which explains part of the gap it reported [inferred].
+- **v3's code skills add process the reader doesn't value.** On the dev cases, judges preferred the decoys-only answer when the v3 answer added risk tiers and approval steps to an accessibility review, or left out points a senior reviewer raises, such as fetching one extra row to detect the last page, opaque cursors and rows from late-committing transactions [observed: judge reasons in 2026-11-08-round1-sonnet-pairs.jsonl].
+- **The judges are noisy.** Each judge gave the same verdict in both orders three times in four, and the two judges agreed on 63% of pairs [observed]. Only differences larger than the intervals above should be read as real.
+
+The blind human rating of the 18 writing pairs is open; its result will be added here.
+
 ## v3.0: seven deep skills, measured against the reference set (2026-11-03)
 
 **Bottom line:** on the 41 gate cases that test a skill, answers scored 0.93 with the v3 skills and 0.63 without [observed: benchmarks/gate/2026-11-03-v3-summary.json]. In a head-to-head with the reference set (`ly87ing/agent-skills`), v3 scored 3.99 against 3.67 on the 12 cases the reference author wrote, a near tie, and 11.32 against 7.58 on 12 v3 cases (plain Claude 0.33 and 7.15) [observed: benchmarks/h2h/results-v3/2026-11-03-summary.json]. The lead comes from writing that reads as a person wrote it, where neither the reference nor plain Claude comes close.

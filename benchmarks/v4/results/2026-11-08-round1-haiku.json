@@ -1,0 +1,282 @@
+{
+  "cases": 24,
+  "pairwise": {},
+  "criteria": {
+    "base": {
+      "score": {
+        "all": {
+          "mean": 0.858,
+          "lo": 0.787,
+          "hi": 0.923,
+          "n": 24
+        },
+        "dev": {
+          "mean": 0.892,
+          "lo": 0.829,
+          "hi": 0.95,
+          "n": 12
+        },
+        "test": {
+          "mean": 0.825,
+          "lo": 0.7,
+          "hi": 0.933,
+          "n": 12
+        },
+        "area:code": {
+          "mean": 0.9,
+          "lo": 0.814,
+          "hi": 0.971,
+          "n": 7
+        },
+        "area:design": {
+          "mean": 0.933,
+          "lo": 0.867,
+          "hi": 1.0,
+          "n": 6
+        },
+        "area:visuals": {
+          "mean": 0.88,
+          "lo": 0.8,
+          "hi": 0.96,
+          "n": 5
+        },
+        "area:writing": {
+          "mean": 0.717,
+          "lo": 0.533,
+          "hi": 0.9,
+          "n": 6
+        }
+      }
+    },
+    "acme": {
+      "score": {
+        "all": {
+          "mean": 0.858,
+          "lo": 0.794,
+          "hi": 0.921,
+          "n": 24
+        },
+        "dev": {
+          "mean": 0.888,
+          "lo": 0.796,
+          "hi": 0.967,
+          "n": 12
+        },
+        "test": {
+          "mean": 0.829,
+          "lo": 0.742,
+          "hi": 0.917,
+          "n": 12
+        },
+        "area:code": {
+          "mean": 0.871,
+          "lo": 0.714,
+          "hi": 1.0,
+          "n": 7
+        },
+        "area:design": {
+          "mean": 0.867,
+          "lo": 0.733,
+          "hi": 0.967,
+          "n": 6
+        },
+        "area:visuals": {
+          "mean": 0.84,
+          "lo": 0.72,
+          "hi": 0.96,
+          "n": 5
+        },
+        "area:writing": {
+          "mean": 0.85,
+          "lo": 0.767,
+          "hi": 0.933,
+          "n": 6
+        }
+      },
+      "lift_over_base": {
+        "all": {
+          "mean": -0.0,
+          "lo": -0.075,
+          "hi": 0.077,
+          "n": 24
+        },
+        "dev": {
+          "mean": -0.004,
+          "lo": -0.083,
+          "hi": 0.075,
+          "n": 12
+        },
+        "test": {
+          "mean": 0.004,
+          "lo": -0.117,
+          "hi": 0.137,
+          "n": 12
+        },
+        "area:code": {
+          "mean": -0.029,
+          "lo": -0.136,
+          "hi": 0.079,
+          "n": 7
+        },
+        "area:design": {
+          "mean": -0.067,
+          "lo": -0.2,
+          "hi": 0.0,
+          "n": 6
+        },
+        "area:visuals": {
+          "mean": -0.04,
+          "lo": -0.16,
+          "hi": 0.08,
+          "n": 5
+        },
+        "area:writing": {
+          "mean": 0.133,
+          "lo": -0.058,
+          "hi": 0.308,
+          "n": 6
+        }
+      },
+      "harm_cases": [
+        "d-code-merge-dropped-fix-audit",
+        "d-code-revert-of-revert-remerge",
+        "d-design-token-format-rollout",
+        "d-visuals-oncall-dashboard-spec",
+        "d-visuals-refund-flow-diagram",
+        "d-writing-reply-upset-colleague"
+      ]
+    },
+    "ref": {
+      "score": {
+        "all": {
+          "mean": 0.825,
+          "lo": 0.725,
+          "hi": 0.91,
+          "n": 24
+        },
+        "dev": {
+          "mean": 0.862,
+          "lo": 0.692,
+          "hi": 0.983,
+          "n": 12
+        },
+        "test": {
+          "mean": 0.787,
+          "lo": 0.688,
+          "hi": 0.883,
+          "n": 12
+        },
+        "area:code": {
+          "mean": 0.757,
+          "lo": 0.471,
+          "hi": 0.971,
+          "n": 7
+        },
+        "area:design": {
+          "mean": 0.9,
+          "lo": 0.767,
+          "hi": 1.0,
+          "n": 6
+        },
+        "area:visuals": {
+          "mean": 0.92,
+          "lo": 0.84,
+          "hi": 1.0,
+          "n": 5
+        },
+        "area:writing": {
+          "mean": 0.75,
+          "lo": 0.65,
+          "hi": 0.858,
+          "n": 6
+        }
+      },
+      "lift_over_base": {
+        "all": {
+          "mean": -0.033,
+          "lo": -0.131,
+          "hi": 0.05,
+          "n": 24
+        },
+        "dev": {
+          "mean": -0.029,
+          "lo": -0.188,
+          "hi": 0.092,
+          "n": 12
+        },
+        "test": {
+          "mean": -0.038,
+          "lo": -0.163,
+          "hi": 0.071,
+          "n": 12
+        },
+        "area:code": {
+          "mean": -0.143,
+          "lo": -0.393,
+          "hi": 0.071,
+          "n": 7
+        },
+        "area:design": {
+          "mean": -0.033,
+          "lo": -0.2,
+          "hi": 0.1,
+          "n": 6
+        },
+        "area:visuals": {
+          "mean": 0.04,
+          "lo": 0.0,
+          "hi": 0.12,
+          "n": 5
+        },
+        "area:writing": {
+          "mean": 0.033,
+          "lo": -0.092,
+          "hi": 0.158,
+          "n": 6
+        }
+      },
+      "harm_cases": [
+        "d-code-fix-hides-cached-failure",
+        "d-code-merge-dropped-fix-audit",
+        "d-design-token-format-rollout",
+        "d-writing-reply-upset-colleague"
+      ]
+    }
+  },
+  "routing": {
+    "base": {
+      "runs": 24,
+      "loaded_own": 0,
+      "loaded_decoy": 0
+    },
+    "acme": {
+      "runs": 24,
+      "loaded_own": 1,
+      "loaded_decoy": 0
+    },
+    "ref": {
+      "runs": 24,
+      "loaded_own": 0,
+      "loaded_decoy": 0
+    }
+  },
+  "judges": {},
+  "cost": {
+    "base": {
+      "mean_run_usd": 0.1796,
+      "usd_per_score_point": 0.2092,
+      "mean_answer_words": 565
+    },
+    "acme": {
+      "mean_run_usd": 0.1601,
+      "usd_per_score_point": 0.1865,
+      "mean_answer_words": 565
+    },
+    "ref": {
+      "mean_run_usd": 0.1903,
+      "usd_per_score_point": 0.2306,
+      "mean_answer_words": 566
+    }
+  },
+  "judge_cost_usd": 0
+}

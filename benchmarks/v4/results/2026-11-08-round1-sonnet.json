@@ -1,0 +1,456 @@
+{
+  "cases": 24,
+  "pairwise": {
+    "acme_vs_ref": {
+      "all": {
+        "mean": 0.51,
+        "lo": 0.413,
+        "hi": 0.608,
+        "n": 24
+      },
+      "dev": {
+        "mean": 0.535,
+        "lo": 0.403,
+        "hi": 0.674,
+        "n": 12
+      },
+      "test": {
+        "mean": 0.486,
+        "lo": 0.354,
+        "hi": 0.618,
+        "n": 12
+      },
+      "area:code": {
+        "mean": 0.381,
+        "lo": 0.202,
+        "hi": 0.595,
+        "n": 7
+      },
+      "area:design": {
+        "mean": 0.486,
+        "lo": 0.319,
+        "hi": 0.694,
+        "n": 6
+      },
+      "area:visuals": {
+        "mean": 0.583,
+        "lo": 0.4,
+        "hi": 0.783,
+        "n": 5
+      },
+      "area:writing": {
+        "mean": 0.625,
+        "lo": 0.486,
+        "hi": 0.722,
+        "n": 6
+      },
+      "judge:opus": {
+        "mean": 0.486,
+        "lo": 0.382,
+        "hi": 0.59,
+        "n": 24
+      },
+      "judge:sonnet": {
+        "mean": 0.535,
+        "lo": 0.424,
+        "hi": 0.646,
+        "n": 24
+      }
+    },
+    "acme_vs_base": {
+      "all": {
+        "mean": 0.517,
+        "lo": 0.399,
+        "hi": 0.632,
+        "n": 24
+      },
+      "dev": {
+        "mean": 0.562,
+        "lo": 0.382,
+        "hi": 0.736,
+        "n": 12
+      },
+      "test": {
+        "mean": 0.472,
+        "lo": 0.312,
+        "hi": 0.625,
+        "n": 12
+      },
+      "area:code": {
+        "mean": 0.321,
+        "lo": 0.155,
+        "hi": 0.464,
+        "n": 7
+      },
+      "area:design": {
+        "mean": 0.5,
+        "lo": 0.361,
+        "hi": 0.653,
+        "n": 6
+      },
+      "area:visuals": {
+        "mean": 0.65,
+        "lo": 0.367,
+        "hi": 0.9,
+        "n": 5
+      },
+      "area:writing": {
+        "mean": 0.653,
+        "lo": 0.375,
+        "hi": 0.889,
+        "n": 6
+      },
+      "judge:opus": {
+        "mean": 0.479,
+        "lo": 0.347,
+        "hi": 0.604,
+        "n": 24
+      },
+      "judge:sonnet": {
+        "mean": 0.556,
+        "lo": 0.424,
+        "hi": 0.681,
+        "n": 24
+      }
+    },
+    "ref_vs_base": {
+      "all": {
+        "mean": 0.542,
+        "lo": 0.465,
+        "hi": 0.618,
+        "n": 24
+      },
+      "dev": {
+        "mean": 0.562,
+        "lo": 0.451,
+        "hi": 0.667,
+        "n": 12
+      },
+      "test": {
+        "mean": 0.521,
+        "lo": 0.417,
+        "hi": 0.625,
+        "n": 12
+      },
+      "area:code": {
+        "mean": 0.5,
+        "lo": 0.357,
+        "hi": 0.643,
+        "n": 7
+      },
+      "area:design": {
+        "mean": 0.472,
+        "lo": 0.347,
+        "hi": 0.597,
+        "n": 6
+      },
+      "area:visuals": {
+        "mean": 0.617,
+        "lo": 0.55,
+        "hi": 0.683,
+        "n": 5
+      },
+      "area:writing": {
+        "mean": 0.597,
+        "lo": 0.417,
+        "hi": 0.778,
+        "n": 6
+      },
+      "judge:opus": {
+        "mean": 0.5,
+        "lo": 0.417,
+        "hi": 0.583,
+        "n": 24
+      },
+      "judge:sonnet": {
+        "mean": 0.583,
+        "lo": 0.486,
+        "hi": 0.681,
+        "n": 24
+      }
+    }
+  },
+  "criteria": {
+    "base": {
+      "score": {
+        "all": {
+          "mean": 0.885,
+          "lo": 0.833,
+          "hi": 0.934,
+          "n": 24
+        },
+        "dev": {
+          "mean": 0.889,
+          "lo": 0.819,
+          "hi": 0.956,
+          "n": 12
+        },
+        "test": {
+          "mean": 0.881,
+          "lo": 0.804,
+          "hi": 0.95,
+          "n": 12
+        },
+        "area:code": {
+          "mean": 0.94,
+          "lo": 0.845,
+          "hi": 1.0,
+          "n": 7
+        },
+        "area:design": {
+          "mean": 0.922,
+          "lo": 0.833,
+          "hi": 1.0,
+          "n": 6
+        },
+        "area:visuals": {
+          "mean": 0.893,
+          "lo": 0.8,
+          "hi": 0.987,
+          "n": 5
+        },
+        "area:writing": {
+          "mean": 0.775,
+          "lo": 0.683,
+          "hi": 0.85,
+          "n": 6
+        }
+      }
+    },
+    "acme": {
+      "score": {
+        "all": {
+          "mean": 0.912,
+          "lo": 0.864,
+          "hi": 0.957,
+          "n": 24
+        },
+        "dev": {
+          "mean": 0.931,
+          "lo": 0.874,
+          "hi": 0.979,
+          "n": 12
+        },
+        "test": {
+          "mean": 0.894,
+          "lo": 0.817,
+          "hi": 0.967,
+          "n": 12
+        },
+        "area:code": {
+          "mean": 0.964,
+          "lo": 0.893,
+          "hi": 1.0,
+          "n": 7
+        },
+        "area:design": {
+          "mean": 0.922,
+          "lo": 0.811,
+          "hi": 1.0,
+          "n": 6
+        },
+        "area:visuals": {
+          "mean": 0.947,
+          "lo": 0.867,
+          "hi": 1.0,
+          "n": 5
+        },
+        "area:writing": {
+          "mean": 0.814,
+          "lo": 0.728,
+          "hi": 0.911,
+          "n": 6
+        }
+      },
+      "lift_over_base": {
+        "all": {
+          "mean": 0.028,
+          "lo": -0.003,
+          "hi": 0.062,
+          "n": 24
+        },
+        "dev": {
+          "mean": 0.042,
+          "lo": -0.015,
+          "hi": 0.103,
+          "n": 12
+        },
+        "test": {
+          "mean": 0.014,
+          "lo": -0.015,
+          "hi": 0.042,
+          "n": 12
+        },
+        "area:code": {
+          "mean": 0.024,
+          "lo": 0.0,
+          "hi": 0.048,
+          "n": 7
+        },
+        "area:design": {
+          "mean": -0.0,
+          "lo": -0.078,
+          "hi": 0.089,
+          "n": 6
+        },
+        "area:visuals": {
+          "mean": 0.053,
+          "lo": -0.027,
+          "hi": 0.16,
+          "n": 5
+        },
+        "area:writing": {
+          "mean": 0.039,
+          "lo": -0.008,
+          "hi": 0.078,
+          "n": 6
+        }
+      },
+      "harm_cases": [
+        "d-design-price-cache-flash-sales",
+        "d-design-token-format-rollout",
+        "d-visuals-signup-page-a11y-review",
+        "d-writing-outage-customer-email"
+      ]
+    },
+    "ref": {
+      "score": {
+        "all": {
+          "mean": 0.912,
+          "lo": 0.869,
+          "hi": 0.952,
+          "n": 24
+        },
+        "dev": {
+          "mean": 0.936,
+          "lo": 0.883,
+          "hi": 0.979,
+          "n": 12
+        },
+        "test": {
+          "mean": 0.888,
+          "lo": 0.821,
+          "hi": 0.95,
+          "n": 12
+        },
+        "area:code": {
+          "mean": 0.952,
+          "lo": 0.881,
+          "hi": 1.0,
+          "n": 7
+        },
+        "area:design": {
+          "mean": 0.933,
+          "lo": 0.844,
+          "hi": 0.989,
+          "n": 6
+        },
+        "area:visuals": {
+          "mean": 0.933,
+          "lo": 0.867,
+          "hi": 0.987,
+          "n": 5
+        },
+        "area:writing": {
+          "mean": 0.825,
+          "lo": 0.739,
+          "hi": 0.914,
+          "n": 6
+        }
+      },
+      "lift_over_base": {
+        "all": {
+          "mean": 0.027,
+          "lo": 0.006,
+          "hi": 0.052,
+          "n": 24
+        },
+        "dev": {
+          "mean": 0.047,
+          "lo": 0.007,
+          "hi": 0.09,
+          "n": 12
+        },
+        "test": {
+          "mean": 0.007,
+          "lo": 0.0,
+          "hi": 0.021,
+          "n": 12
+        },
+        "area:code": {
+          "mean": 0.012,
+          "lo": 0.0,
+          "hi": 0.036,
+          "n": 7
+        },
+        "area:design": {
+          "mean": 0.011,
+          "lo": -0.033,
+          "hi": 0.067,
+          "n": 6
+        },
+        "area:visuals": {
+          "mean": 0.04,
+          "lo": 0.0,
+          "hi": 0.12,
+          "n": 5
+        },
+        "area:writing": {
+          "mean": 0.05,
+          "lo": 0.014,
+          "hi": 0.094,
+          "n": 6
+        }
+      },
+      "harm_cases": [
+        "d-design-api-enum-old-mobile-clients"
+      ]
+    }
+  },
+  "routing": {
+    "base": {
+      "runs": 72,
+      "loaded_own": 0,
+      "loaded_decoy": 0
+    },
+    "acme": {
+      "runs": 72,
+      "loaded_own": 47,
+      "loaded_decoy": 0
+    },
+    "ref": {
+      "runs": 72,
+      "loaded_own": 0,
+      "loaded_decoy": 0
+    }
+  },
+  "judges": {
+    "opus": {
+      "pairs": 216,
+      "position_consistent": 0.745
+    },
+    "sonnet": {
+      "pairs": 216,
+      "position_consistent": 0.755
+    },
+    "agreement": 0.634
+  },
+  "cost": {
+    "base": {
+      "mean_run_usd": 0.2333,
+      "usd_per_score_point": 0.2637,
+      "mean_answer_words": 579
+    },
+    "acme": {
+      "mean_run_usd": 0.2381,
+      "usd_per_score_point": 0.2609,
+      "mean_answer_words": 624
+    },
+    "ref": {
+      "mean_run_usd": 0.2539,
+      "usd_per_score_point": 0.2785,
+      "mean_answer_words": 592
+    }
+  },
+  "judge_cost_usd": 36.09
+}
