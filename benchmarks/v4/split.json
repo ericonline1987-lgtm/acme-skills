@@ -1,0 +1,31 @@
+{
+  "seed": 0,
+  "dev": [
+    "d-code-flaky-test-order-dependence",
+    "d-code-merge-dropped-fix-audit",
+    "d-code-review-keyset-pagination",
+    "d-design-api-enum-old-mobile-clients",
+    "d-design-price-cache-flash-sales",
+    "d-design-rename-column-live-table",
+    "d-visuals-board-update-storyline",
+    "d-visuals-chart-truncated-bars",
+    "d-visuals-signup-page-a11y-review",
+    "d-writing-exec-summary-cfo",
+    "d-writing-launch-post-offline-mode",
+    "d-writing-reply-upset-colleague"
+  ],
+  "test": [
+    "d-code-fix-hides-cached-failure",
+    "d-code-merge-conflict-both-intents",
+    "d-code-revert-of-revert-remerge",
+    "d-code-review-retry-charge",
+    "d-design-llm-support-reply-eval",
+    "d-design-token-format-rollout",
+    "d-design-webhook-credit-idempotency",
+    "d-visuals-oncall-dashboard-spec",
+    "d-visuals-refund-flow-diagram",
+    "d-writing-decline-key-account",
+    "d-writing-outage-customer-email",
+    "d-writing-rewrite-ai-announcement"
+  ]
+}

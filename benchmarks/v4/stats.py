@@ -82,6 +82,8 @@ def main(argv: list[str] | None = None) -> int:
     def subsets(values: dict[str, float]) -> dict:
         res = {"all": boot(values)}
         for name, members in splits.items():
+            if not isinstance(members, list):
+                continue
             res[name] = boot({c: v for c, v in values.items() if c in members})
         for a in sorted({area(c) for c in values}):
             res[f"area:{a}"] = boot({c: v for c, v in values.items() if area(c) == a})
