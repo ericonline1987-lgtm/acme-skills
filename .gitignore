@@ -4,3 +4,5 @@ __pycache__/
 plugins/*/evals/results/
 evals/results/
 benchmarks/gate/runs*/
+benchmarks/v4/.judge-cwd/
+benchmarks/v4/runs/
