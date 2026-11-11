@@ -18,6 +18,10 @@ Only our arm was rerun; it was paired with the round-2 answers of the two unchan
 - **Cost:** a run with our skills cost $0.26 on average, against $0.24 with decoys only [observed].
 - **Judges:** position consistency 0.75 and 0.76, agreement between the two judges 0.69 [observed].
 
+### Triggering after the 4.0.0 descriptions (2026-11-10)
+
+With the routing line, as the plugins ship, Haiku loaded the right skill on 134 of 145 queries and left 54 of 63 near-misses alone, against 136 and 56 for v3 [observed: benchmarks/triggers/2026-11-10-2-v4-haiku.json]. On Sonnet the total was 117 of 145, against 126 for v3 [observed: 2026-11-10-1 and -3]. The gap is almost all in `making-visuals`: 14 of 26, against 18 for v3 [observed]. A pushier trigger-first wording scored 13, so the wording isn't the cause [observed]. Most misses were page checks and charts that Sonnet answered without loading a skill, or browser and test requests it sent to a browser skill or `changing-code` [observed]. The writing skill now also loads for small edits, by design.
+
 ## v4 round 2: after trimming to the specialist core (2026-11-09)
 
 **Bottom line:** after the phase 2 trim, judges preferred our answers over the reference set's in 0.60 of comparisons across all 24 cases (0.50 to 0.69) [observed]. On the 12 held-out test cases, where the plan fixes the claim, the score was 0.54 (0.40 to 0.66) [observed: benchmarks/v4/results/2026-11-09-round2-sonnet.json]. By the pre-registered rule that is still **no measurable difference**. We moved from level to slightly ahead, within noise.
