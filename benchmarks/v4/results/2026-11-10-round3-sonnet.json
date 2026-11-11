@@ -1,0 +1,458 @@
+{
+  "cases": 24,
+  "pairwise": {
+    "acme_vs_ref": {
+      "all": {
+        "mean": 0.705,
+        "lo": 0.597,
+        "hi": 0.806,
+        "n": 24
+      },
+      "dev": {
+        "mean": 0.799,
+        "lo": 0.674,
+        "hi": 0.91,
+        "n": 12
+      },
+      "test": {
+        "mean": 0.611,
+        "lo": 0.451,
+        "hi": 0.757,
+        "n": 12
+      },
+      "area:code": {
+        "mean": 0.738,
+        "lo": 0.536,
+        "hi": 0.905,
+        "n": 7
+      },
+      "area:design": {
+        "mean": 0.694,
+        "lo": 0.542,
+        "hi": 0.847,
+        "n": 6
+      },
+      "area:visuals": {
+        "mean": 0.65,
+        "lo": 0.467,
+        "hi": 0.85,
+        "n": 5
+      },
+      "area:writing": {
+        "mean": 0.722,
+        "lo": 0.417,
+        "hi": 0.944,
+        "n": 6
+      },
+      "judge:opus": {
+        "mean": 0.701,
+        "lo": 0.59,
+        "hi": 0.806,
+        "n": 24
+      },
+      "judge:sonnet": {
+        "mean": 0.708,
+        "lo": 0.604,
+        "hi": 0.806,
+        "n": 24
+      }
+    },
+    "acme_vs_base": {
+      "all": {
+        "mean": 0.681,
+        "lo": 0.594,
+        "hi": 0.771,
+        "n": 24
+      },
+      "dev": {
+        "mean": 0.708,
+        "lo": 0.583,
+        "hi": 0.826,
+        "n": 12
+      },
+      "test": {
+        "mean": 0.653,
+        "lo": 0.521,
+        "hi": 0.785,
+        "n": 12
+      },
+      "area:code": {
+        "mean": 0.75,
+        "lo": 0.619,
+        "hi": 0.881,
+        "n": 7
+      },
+      "area:design": {
+        "mean": 0.569,
+        "lo": 0.417,
+        "hi": 0.736,
+        "n": 6
+      },
+      "area:visuals": {
+        "mean": 0.733,
+        "lo": 0.55,
+        "hi": 0.9,
+        "n": 5
+      },
+      "area:writing": {
+        "mean": 0.667,
+        "lo": 0.458,
+        "hi": 0.861,
+        "n": 6
+      },
+      "judge:opus": {
+        "mean": 0.688,
+        "lo": 0.583,
+        "hi": 0.792,
+        "n": 24
+      },
+      "judge:sonnet": {
+        "mean": 0.674,
+        "lo": 0.576,
+        "hi": 0.771,
+        "n": 24
+      }
+    },
+    "ref_vs_base": {
+      "all": {
+        "mean": 0.451,
+        "lo": 0.361,
+        "hi": 0.545,
+        "n": 24
+      },
+      "dev": {
+        "mean": 0.396,
+        "lo": 0.271,
+        "hi": 0.528,
+        "n": 12
+      },
+      "test": {
+        "mean": 0.507,
+        "lo": 0.382,
+        "hi": 0.625,
+        "n": 12
+      },
+      "area:code": {
+        "mean": 0.476,
+        "lo": 0.31,
+        "hi": 0.643,
+        "n": 7
+      },
+      "area:design": {
+        "mean": 0.347,
+        "lo": 0.208,
+        "hi": 0.472,
+        "n": 6
+      },
+      "area:visuals": {
+        "mean": 0.433,
+        "lo": 0.267,
+        "hi": 0.65,
+        "n": 5
+      },
+      "area:writing": {
+        "mean": 0.542,
+        "lo": 0.319,
+        "hi": 0.694,
+        "n": 6
+      },
+      "judge:opus": {
+        "mean": 0.493,
+        "lo": 0.389,
+        "hi": 0.597,
+        "n": 24
+      },
+      "judge:sonnet": {
+        "mean": 0.41,
+        "lo": 0.319,
+        "hi": 0.507,
+        "n": 24
+      }
+    }
+  },
+  "criteria": {
+    "base": {
+      "score": {
+        "all": {
+          "mean": 0.899,
+          "lo": 0.849,
+          "hi": 0.946,
+          "n": 24
+        },
+        "dev": {
+          "mean": 0.908,
+          "lo": 0.844,
+          "hi": 0.967,
+          "n": 12
+        },
+        "test": {
+          "mean": 0.889,
+          "lo": 0.811,
+          "hi": 0.961,
+          "n": 12
+        },
+        "area:code": {
+          "mean": 0.964,
+          "lo": 0.893,
+          "hi": 1.0,
+          "n": 7
+        },
+        "area:design": {
+          "mean": 0.933,
+          "lo": 0.844,
+          "hi": 0.989,
+          "n": 6
+        },
+        "area:visuals": {
+          "mean": 0.907,
+          "lo": 0.8,
+          "hi": 1.0,
+          "n": 5
+        },
+        "area:writing": {
+          "mean": 0.781,
+          "lo": 0.711,
+          "hi": 0.872,
+          "n": 6
+        }
+      }
+    },
+    "acme": {
+      "score": {
+        "all": {
+          "mean": 0.938,
+          "lo": 0.901,
+          "hi": 0.97,
+          "n": 24
+        },
+        "dev": {
+          "mean": 0.961,
+          "lo": 0.915,
+          "hi": 1.0,
+          "n": 12
+        },
+        "test": {
+          "mean": 0.914,
+          "lo": 0.858,
+          "hi": 0.967,
+          "n": 12
+        },
+        "area:code": {
+          "mean": 0.988,
+          "lo": 0.964,
+          "hi": 1.0,
+          "n": 7
+        },
+        "area:design": {
+          "mean": 0.978,
+          "lo": 0.933,
+          "hi": 1.0,
+          "n": 6
+        },
+        "area:visuals": {
+          "mean": 0.92,
+          "lo": 0.867,
+          "hi": 0.973,
+          "n": 5
+        },
+        "area:writing": {
+          "mean": 0.853,
+          "lo": 0.769,
+          "hi": 0.939,
+          "n": 6
+        }
+      },
+      "lift_over_base": {
+        "all": {
+          "mean": 0.039,
+          "lo": 0.01,
+          "hi": 0.069,
+          "n": 24
+        },
+        "dev": {
+          "mean": 0.053,
+          "lo": 0.017,
+          "hi": 0.094,
+          "n": 12
+        },
+        "test": {
+          "mean": 0.025,
+          "lo": -0.017,
+          "hi": 0.067,
+          "n": 12
+        },
+        "area:code": {
+          "mean": 0.024,
+          "lo": 0.0,
+          "hi": 0.071,
+          "n": 7
+        },
+        "area:design": {
+          "mean": 0.044,
+          "lo": 0.011,
+          "hi": 0.089,
+          "n": 6
+        },
+        "area:visuals": {
+          "mean": 0.013,
+          "lo": -0.067,
+          "hi": 0.08,
+          "n": 5
+        },
+        "area:writing": {
+          "mean": 0.072,
+          "lo": 0.011,
+          "hi": 0.139,
+          "n": 6
+        }
+      },
+      "harm_cases": [
+        "d-visuals-oncall-dashboard-spec"
+      ]
+    },
+    "ref": {
+      "score": {
+        "all": {
+          "mean": 0.897,
+          "lo": 0.858,
+          "hi": 0.934,
+          "n": 24
+        },
+        "dev": {
+          "mean": 0.893,
+          "lo": 0.832,
+          "hi": 0.947,
+          "n": 12
+        },
+        "test": {
+          "mean": 0.9,
+          "lo": 0.847,
+          "hi": 0.951,
+          "n": 12
+        },
+        "area:code": {
+          "mean": 0.917,
+          "lo": 0.821,
+          "hi": 0.988,
+          "n": 7
+        },
+        "area:design": {
+          "mean": 0.933,
+          "lo": 0.878,
+          "hi": 0.978,
+          "n": 6
+        },
+        "area:visuals": {
+          "mean": 0.907,
+          "lo": 0.853,
+          "hi": 0.96,
+          "n": 5
+        },
+        "area:writing": {
+          "mean": 0.828,
+          "lo": 0.767,
+          "hi": 0.903,
+          "n": 6
+        }
+      },
+      "lift_over_base": {
+        "all": {
+          "mean": -0.002,
+          "lo": -0.035,
+          "hi": 0.032,
+          "n": 24
+        },
+        "dev": {
+          "mean": -0.015,
+          "lo": -0.058,
+          "hi": 0.033,
+          "n": 12
+        },
+        "test": {
+          "mean": 0.011,
+          "lo": -0.039,
+          "hi": 0.053,
+          "n": 12
+        },
+        "area:code": {
+          "mean": -0.048,
+          "lo": -0.095,
+          "hi": -0.012,
+          "n": 7
+        },
+        "area:design": {
+          "mean": -0.0,
+          "lo": -0.033,
+          "hi": 0.033,
+          "n": 6
+        },
+        "area:visuals": {
+          "mean": -0.0,
+          "lo": -0.12,
+          "hi": 0.12,
+          "n": 5
+        },
+        "area:writing": {
+          "mean": 0.047,
+          "lo": 0.011,
+          "hi": 0.092,
+          "n": 6
+        }
+      },
+      "harm_cases": [
+        "d-code-fix-hides-cached-failure",
+        "d-code-merge-dropped-fix-audit",
+        "d-code-review-keyset-pagination",
+        "d-design-price-cache-flash-sales",
+        "d-visuals-oncall-dashboard-spec",
+        "d-visuals-signup-page-a11y-review"
+      ]
+    }
+  },
+  "routing": {
+    "base": {
+      "runs": 72,
+      "loaded_own": 0,
+      "loaded_decoy": 0
+    },
+    "acme": {
+      "runs": 72,
+      "loaded_own": 43,
+      "loaded_decoy": 0
+    },
+    "ref": {
+      "runs": 72,
+      "loaded_own": 0,
+      "loaded_decoy": 0
+    }
+  },
+  "judges": {
+    "opus": {
+      "pairs": 216,
+      "position_consistent": 0.745
+    },
+    "sonnet": {
+      "pairs": 216,
+      "position_consistent": 0.759
+    },
+    "agreement": 0.69
+  },
+  "cost": {
+    "base": {
+      "mean_run_usd": 0.2365,
+      "usd_per_score_point": 0.2632,
+      "mean_answer_words": 593
+    },
+    "acme": {
+      "mean_run_usd": 0.2634,
+      "usd_per_score_point": 0.281,
+      "mean_answer_words": 667
+    },
+    "ref": {
+      "mean_run_usd": 0.2591,
+      "usd_per_score_point": 0.289,
+      "mean_answer_words": 592
+    }
+  },
+  "judge_cost_usd": 36.65
+}

@@ -1,0 +1,284 @@
+{
+  "cases": 24,
+  "pairwise": {},
+  "criteria": {
+    "base": {
+      "score": {
+        "all": {
+          "mean": 0.873,
+          "lo": 0.798,
+          "hi": 0.94,
+          "n": 24
+        },
+        "dev": {
+          "mean": 0.908,
+          "lo": 0.817,
+          "hi": 0.983,
+          "n": 12
+        },
+        "test": {
+          "mean": 0.838,
+          "lo": 0.717,
+          "hi": 0.946,
+          "n": 12
+        },
+        "area:code": {
+          "mean": 0.857,
+          "lo": 0.714,
+          "hi": 1.0,
+          "n": 7
+        },
+        "area:design": {
+          "mean": 0.967,
+          "lo": 0.9,
+          "hi": 1.0,
+          "n": 6
+        },
+        "area:visuals": {
+          "mean": 0.88,
+          "lo": 0.8,
+          "hi": 0.96,
+          "n": 5
+        },
+        "area:writing": {
+          "mean": 0.792,
+          "lo": 0.625,
+          "hi": 0.933,
+          "n": 6
+        }
+      }
+    },
+    "acme": {
+      "score": {
+        "all": {
+          "mean": 0.892,
+          "lo": 0.842,
+          "hi": 0.94,
+          "n": 24
+        },
+        "dev": {
+          "mean": 0.892,
+          "lo": 0.829,
+          "hi": 0.95,
+          "n": 12
+        },
+        "test": {
+          "mean": 0.892,
+          "lo": 0.808,
+          "hi": 0.963,
+          "n": 12
+        },
+        "area:code": {
+          "mean": 0.929,
+          "lo": 0.857,
+          "hi": 1.0,
+          "n": 7
+        },
+        "area:design": {
+          "mean": 0.9,
+          "lo": 0.833,
+          "hi": 0.967,
+          "n": 6
+        },
+        "area:visuals": {
+          "mean": 0.96,
+          "lo": 0.88,
+          "hi": 1.0,
+          "n": 5
+        },
+        "area:writing": {
+          "mean": 0.783,
+          "lo": 0.692,
+          "hi": 0.883,
+          "n": 6
+        }
+      },
+      "lift_over_base": {
+        "all": {
+          "mean": 0.019,
+          "lo": -0.037,
+          "hi": 0.073,
+          "n": 24
+        },
+        "dev": {
+          "mean": -0.017,
+          "lo": -0.096,
+          "hi": 0.062,
+          "n": 12
+        },
+        "test": {
+          "mean": 0.054,
+          "lo": -0.017,
+          "hi": 0.125,
+          "n": 12
+        },
+        "area:code": {
+          "mean": 0.071,
+          "lo": 0.0,
+          "hi": 0.143,
+          "n": 7
+        },
+        "area:design": {
+          "mean": -0.067,
+          "lo": -0.133,
+          "hi": 0.0,
+          "n": 6
+        },
+        "area:visuals": {
+          "mean": 0.08,
+          "lo": -0.08,
+          "hi": 0.2,
+          "n": 5
+        },
+        "area:writing": {
+          "mean": -0.008,
+          "lo": -0.125,
+          "hi": 0.1,
+          "n": 6
+        }
+      },
+      "harm_cases": [
+        "d-design-rename-column-live-table",
+        "d-design-token-format-rollout",
+        "d-visuals-signup-page-a11y-review",
+        "d-writing-reply-upset-colleague"
+      ]
+    },
+    "ref": {
+      "score": {
+        "all": {
+          "mean": 0.806,
+          "lo": 0.708,
+          "hi": 0.896,
+          "n": 24
+        },
+        "dev": {
+          "mean": 0.808,
+          "lo": 0.638,
+          "hi": 0.95,
+          "n": 12
+        },
+        "test": {
+          "mean": 0.804,
+          "lo": 0.7,
+          "hi": 0.908,
+          "n": 12
+        },
+        "area:code": {
+          "mean": 0.8,
+          "lo": 0.586,
+          "hi": 0.964,
+          "n": 7
+        },
+        "area:design": {
+          "mean": 0.867,
+          "lo": 0.733,
+          "hi": 0.967,
+          "n": 6
+        },
+        "area:visuals": {
+          "mean": 0.88,
+          "lo": 0.72,
+          "hi": 1.0,
+          "n": 5
+        },
+        "area:writing": {
+          "mean": 0.692,
+          "lo": 0.475,
+          "hi": 0.9,
+          "n": 6
+        }
+      },
+      "lift_over_base": {
+        "all": {
+          "mean": -0.067,
+          "lo": -0.169,
+          "hi": 0.023,
+          "n": 24
+        },
+        "dev": {
+          "mean": -0.1,
+          "lo": -0.258,
+          "hi": 0.029,
+          "n": 12
+        },
+        "test": {
+          "mean": -0.033,
+          "lo": -0.158,
+          "hi": 0.087,
+          "n": 12
+        },
+        "area:code": {
+          "mean": -0.057,
+          "lo": -0.207,
+          "hi": 0.071,
+          "n": 7
+        },
+        "area:design": {
+          "mean": -0.1,
+          "lo": -0.267,
+          "hi": 0.067,
+          "n": 6
+        },
+        "area:visuals": {
+          "mean": -0.0,
+          "lo": -0.2,
+          "hi": 0.16,
+          "n": 5
+        },
+        "area:writing": {
+          "mean": -0.1,
+          "lo": -0.383,
+          "hi": 0.133,
+          "n": 6
+        }
+      },
+      "harm_cases": [
+        "d-code-merge-dropped-fix-audit",
+        "d-code-revert-of-revert-remerge",
+        "d-design-api-enum-old-mobile-clients",
+        "d-design-token-format-rollout",
+        "d-design-webhook-credit-idempotency",
+        "d-visuals-signup-page-a11y-review",
+        "d-writing-exec-summary-cfo",
+        "d-writing-rewrite-ai-announcement"
+      ]
+    }
+  },
+  "routing": {
+    "base": {
+      "runs": 24,
+      "loaded_own": 0,
+      "loaded_decoy": 0
+    },
+    "acme": {
+      "runs": 24,
+      "loaded_own": 0,
+      "loaded_decoy": 0
+    },
+    "ref": {
+      "runs": 24,
+      "loaded_own": 0,
+      "loaded_decoy": 0
+    }
+  },
+  "judges": {},
+  "cost": {
+    "base": {
+      "mean_run_usd": 0.1701,
+      "usd_per_score_point": 0.1948,
+      "mean_answer_words": 553
+    },
+    "acme": {
+      "mean_run_usd": 0.1463,
+      "usd_per_score_point": 0.1641,
+      "mean_answer_words": 556
+    },
+    "ref": {
+      "mean_run_usd": 0.1804,
+      "usd_per_score_point": 0.2237,
+      "mean_answer_words": 557
+    }
+  },
+  "judge_cost_usd": 0
+}

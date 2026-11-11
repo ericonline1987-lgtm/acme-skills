@@ -1,6 +1,6 @@
 ---
 name: making-visuals
-description: Designs and checks visuals people look at — decks built from the point to land, honest charts, pages with every real state, and the rendered result checked at real size. Use whenever someone needs slides, a pitch or a talk (even "help, I'm presenting Thursday"), a chart, diagram, dashboard, page or app screen, or wants one checked, made accessible or captured as proof.
+description: Builds slides, decks and talks, charts, diagrams, dashboards, pages and app screens that land their point, and checks the rendered result at real size. Use whenever someone needs slides or a talk (even "help, I'm presenting Thursday"), a chart, diagram, dashboard, page or screen, or wants one checked, made accessible or captured as proof, even a quick one.
 ---
 
 # Making visuals
