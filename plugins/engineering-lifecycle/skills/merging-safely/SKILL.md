@@ -101,4 +101,6 @@ repo · target · source ref · merge base · left/right counts · hotspots · c
 reasoning · completeness proof and method · tests run · push status · residual risks.
 A readiness check or audit ends **green** (merge, or the merge is sound), **yellow**
 (merge after the named fixes), or **red** (don't merge yet, or the merge must be
-corrected), naming each fix or blocker.
+corrected), naming each fix or blocker. Where a change was lost or nearly lost, propose
+the guard that would catch it next time: a test pinning the behaviour, or the evidence
+script in CI.

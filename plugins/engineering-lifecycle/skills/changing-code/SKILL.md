@@ -1,6 +1,6 @@
 ---
 name: changing-code
-description: Use this skill whenever someone wants existing code changed, fixed or tested — a bug, a failing or flaky test, something broken or slow, an incident, a default or signature change, a rename, an upgrade, a refactor, new tests — even one line. It diagnoses before fixing, reads git history and every caller, makes the smallest change, and writes tests that fail for the right reason.
+description: Use this skill whenever someone wants existing code changed, fixed or tested — a bug, a failing or flaky test, something broken or slow, an incident, a default or signature change, a rename, an upgrade, a refactor, new tests — even one line. It diagnoses before fixing, reads git history and every caller, makes the change that fully fixes it, and writes tests that fail for the right reason.
 ---
 
 # Changing code
@@ -36,24 +36,25 @@ cause with `references/diagnosis.md` before changing code.
 4. **Find every caller.** Grep the symbol, config key, route or path as a literal string
    across code, scripts, manifests, docs and other repos you can reach. Check ignore
    rules didn't hide directories from the search.
-5. **Choose the scope**: never a special case for the reported example; a general rule
-   inside the component you own; never a new obligation on teams you don't control
-   without asking.
-6. **Stop before speculative abstraction.** Asked to extract a shared abstraction, base
-   class or framework that only one place uses today? Say so first: with one user you'd
-   be guessing at the others' needs. Recommend keeping it local (or extracting only what
-   that one user needs, in place) until a second real user appears, and name what would
-   justify extracting. Build the general version only if the person still wants it.
+5. **Choose the scope that fixes the class, not the example**: a general rule inside
+   the component you own, covering every caller you found. A new obligation on teams you
+   don't control is their decision; propose it to them.
+6. **Design abstractions from real users.** Asked for a shared abstraction, base class
+   or framework that only one place uses today? An abstraction designed from one user
+   guesses at the others' needs, so say so, then build the version that serves the real
+   user best (often local first, with the seam where a second user would plug in), and
+   name what would justify extracting further. If the person still wants the general
+   version, build it well.
 
 ## The change
 
-- Make the smallest change that meets the outcome, in the local style. No speculative
-  options, unrelated cleanup, or new abstractions with one user.
+- Make the change that fully meets the outcome, in the local style, and nothing that
+  hides it in the diff: other improvements you spot go in their own commit or a note.
 - Keep refactoring and behaviour changes in separate commits.
 - Upgrading a dependency: read its changelog for every version you skip, move one major
   version at a time, run the full tests, and read the lockfile diff for unexpected
   transitive changes.
-- Remove only code your change made dead.
+- Remove the code your change made dead; list other dead code you found for the person.
 - **Leave it more legible**: a comment saying *why* where the reason isn't obvious, a
   test that pins the behaviour, and a decision note when you chose between real options.
 - **Tests** follow `references/tests.md`: one behaviour each, outcomes not internals,
@@ -66,8 +67,10 @@ cause with `references/diagnosis.md` before changing code.
 - Claim only what you checked: tests passing is not deployed, and deployed is not
   working for users. Say which you reached.
 - Re-review any fix that came out of a review round; fixes create new decisions.
+- Before you hand it over, read the diff as its next maintainer: is the cause fixed, is
+  every caller safe, and would the tests catch this coming back?
 
-## Load more only when the change needs it
+## Go deeper when the change needs it
 
 - Touches a shared function, public API, config or schema, module dependencies, a file
   copied across repositories, or a step that runs more than once: read
@@ -75,7 +78,7 @@ cause with `references/diagnosis.md` before changing code.
 - Involves formatting, naming, input validation, config file syntax, comments, or
   deleting a test or guard: read `references/style-and-validation.md`.
 
-## Stop and ask when
+## Ask first when
 
 - History shows the code sits on an unresolved design, security or contract decision.
 - The fix is large, crosses team boundaries, or the cause isn't confirmed.

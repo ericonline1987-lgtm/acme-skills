@@ -82,7 +82,7 @@ Attack your own pick (`references/design-review.md`): the best case for the runn
 the likeliest failure once built, what would overturn it, each objection ruled on. Get
 an independent challenge when reversal is hard. Then decide, or, when the choice is the
 person's (scope, cost, cross-team asks, anything irreversible), present it with a
-recommendation and stop. Record the decision beside the code.
+recommendation and wait for their call. Record the decision beside the code.
 
 ## Completeness
 
@@ -91,13 +91,17 @@ done. A missing row is reported as incomplete, not padded.
 
 ## Output
 
-Answer at the size of the question. A Slack-style "thoughts?" gets the recommendation, the
-two or three points that change the design, and what to check first, not a design doc.
-A design doc asked for as such follows: context and constraints, options, recommendation
-and challenge, detailed design, blast radius, rollout and rollback, decision, open
-questions with owners. Leave out sections that would only restate the request.
+Lead with the recommendation and the points that most change the design, then go as deep
+as the decision deserves: a quick "thoughts?" gets those points and what to check first;
+a design doc follows context and constraints, options, recommendation and challenge,
+detailed design, blast radius, rollout and rollback, decision, open questions with
+owners. Every section earns its place by changing what someone will build or decide.
 
-## Not this skill
+Before handing it over, ask what a principal engineer would add: the failure nobody
+mentioned, the cheaper option, the experiment that settles the riskiest assumption this
+week. Add it.
 
-Making the change once agreed belongs to `changing-code`; reviewing a diff to
-`reviewing-code`; merges to `merging-safely`.
+## Works with
+
+`changing-code` to build it once agreed; `reviewing-code` for the diffs;
+`merging-safely` for merges; `writing-for-people` for the prose.

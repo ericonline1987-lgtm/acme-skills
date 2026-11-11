@@ -12,6 +12,14 @@ Something goes in a skill only if at least one of these holds:
 
 General advice the model already follows ("name the point", "compare options", "state the outcome") is removed. A rule stays only if removing it makes a case fail. The set is expected to get shorter, not longer.
 
+**Raise the bar; don't cap the model (added 2026-11-10).** A skill exists to get the person's goal achieved at the standard a top practitioner would deliver, not to restrict a capable model. So:
+
+- Each skill states the result the work must achieve and what an excellent version adds beyond a correct one, and ends with a check of the output against that goal.
+- Prohibitions stay only where they protect the outcome or the person's trust: no invented facts, claims kept at their real strength, a go-ahead before outward or destructive actions, secrets kept out. Everything else is phrased as what to do.
+- Nothing useful is suppressed. Lesser findings and side improvements are ranked and separated so the important ones lead, rather than dropped (in v3, a review "never report" list and a one-step answer rule made answers narrower than plain Sonnet's).
+- Size limits are tied to the reader's goal (a chat reply readable at a glance), never imposed for their own sake.
+- "Not this skill" sections become "Works with", so skills combine instead of excluding each other.
+
 ## Why the v3 comparison isn't enough
 
 - The v3 head-to-head gave our bundle a session-start routing line and the reference none, so part of our lead may be routing, not content.

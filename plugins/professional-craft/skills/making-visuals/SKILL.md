@@ -5,9 +5,10 @@ description: Always use this skill whenever someone needs slides, a deck, a pitc
 
 # Making visuals
 
-A visual works when the viewer's eye lands on the point first and nothing on the page
-contradicts or distracts from it. Source code, DOM text and a description of a chart
-are leads; what a person sees at real size is the evidence.
+A visual works when the viewer's eye lands on the point first, nothing on the page
+contradicts or distracts from it, and they leave able to act on it. Source code, DOM
+text and a description of a chart are leads; what a person sees at real size is the
+evidence.
 
 ## 1. Name the point and the medium
 
@@ -82,7 +83,14 @@ not covered: <states, sizes, browsers, roles not exercised; anything unrendered>
 
 A screenshot proves one state at one size; say so when it's offered as proof.
 
-## Not this skill
+## Before you hand it over
 
-The words on a slide or page follow `writing-for-people`. Unit and integration tests for
-the code behind a page belong to `changing-code`.
+Look at it as the viewer would, at real size, for five seconds: is the point the first
+thing the eye lands on, and does anything contradict it? Then make the one change a
+top designer would: the sharper title, the cut element, the direct label, the state
+nobody designed.
+
+## Works with
+
+`writing-for-people` for the words on a slide or page; `changing-code` for unit and
+integration tests of the code behind it.

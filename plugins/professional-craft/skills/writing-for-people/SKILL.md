@@ -1,28 +1,30 @@
 ---
 name: writing-for-people
-description: Always use this skill whenever someone needs anything a person will read — an email or reply (a decline, a chaser, bad news), a post, a memo, summary or one-pager, a recommendation written up for a boss, a status or investor update, web or product copy, an explanation — or to make text sound like a person, not AI. Not for one-line grammar fixes. It writes from specifics and checks every fact.
+description: Always use this skill whenever someone needs anything a person will read — an email or reply (a decline, a chaser, bad news), a post, a memo, summary or one-pager, a recommendation written up for a boss, a status or investor update, web or product copy, an explanation — or to make any text sound like a person, not AI. It writes from specifics, checks every fact, and gets the reader to act.
 ---
 
 # Writing for people
 
-Text works when the intended reader gets it on one read and doesn't wonder whether a
-machine wrote it. Both failures have the same root: sentences that are generally true
+Text works when the intended reader gets it on one read, does what it needs them to do,
+and never wonders whether a machine wrote it. Both failures have the same root: sentences that are generally true
 of things like this instead of specifically true of this one.
 
 ## 1. Fix the reader and the job
 
-If the person has written to this reader before, match their voice, not a generic one.
+Decide what this reader should know, feel or do after one read; that is the bar. If the
+person has written to this reader before, match their voice,
+not a generic one.
 
 ## 2. Pick the form, and open its entry
 
-Find the form in `references/forms.md` and read its entry before drafting; it sets the
-order and length budget. The ones that most often go wrong must open like this:
+Read the form's entry in `references/forms.md` before drafting. The ones that most
+often go wrong must open like this:
 
 | Form | Must |
 |---|---|
 | Decision brief | Open with four lines: `Decision:` (what, who decides, by when; slots if unknown), `Recommendation:` (and the one or two reasons), `Would change if:`, `Ask:` (what they say yes or no to). Then options on the same fields, with the best case for each one you don't recommend. |
 | Email or message | Subject states topic and ask. The ask is phrased as the small answer you want ("Can you confirm yes or no by Thursday?"), with a reply-by date or a `[reply-by date]` slot. In your note, a follow-up for each open item ("chase finance Tuesday if they haven't answered"). Bad news: two versions, with what each trades off. |
-| Chat reply (Slack, DM, text) | Fits on a phone screen: about 100 words at most. Own the specific thing, say what you'll do and by when, at most one question. Apologise once. No "I hear you", "thank you for sharing" or other HR register. |
+| Chat reply (Slack, DM, text) | Readable in one glance on a phone (about 100 words), because a long reply to someone upset reads as defensive. Own the specific thing, say what you'll do and by when, end on one clear question if you need one. Apologise once. No "I hear you", "thank you for sharing" or other HR register. |
 | Status update | The takeaway in two sentences; blockers with owner and date; only the actions the source gives. |
 | Explanation for a non-expert | The answer in the first sentence. Then plain paragraphs in the order they'd ask: no headings, no bold, under 250 words. Explain every term at first use, everyday tech words too (phishing, provider, streaming), or leave it out. |
 | Post or announcement | The news in the person's own voice in the first line; facts only they have. No "big news" formula, emoji or hashtags unless their own posts use them. |
@@ -32,14 +34,12 @@ table for values compared on the same fields. No headings on a 300-word piece.
 
 ## 3. Draft from specifics, and only from given ones
 
-- Start with the fact, decision or ask. No preamble.
 - Use what only this subject has: names, numbers, the detail a regular would mention.
   Test a sentence by swapping in a competitor's name; if it stays true, cut or replace
   it.
 - **Never invent specifics to make prose vivid**: no sensory details, figures, history,
   quotes or anecdotes the person didn't give. Leave a visible slot (`[how long it keeps
-  drinks cold]`) and ask for it. Case: plain drafts gave a bakery's conchas a "crackly
-  shell" and a bottle "24 hours" of cold, neither of them given.
+  drinks cold]`) and ask for it.
 - A claim keeps its strength in every version you offer: "fell after" never becomes
   "cut" or "caused".
 - Numbers, names, owners and dates keep the source's wording and scope. Don't add a
@@ -62,7 +62,7 @@ only where the person's own posts use them). A clean run is necessary, not suffi
 ## 5. Make it accessible
 
 For readers outside the field, in a second language, or skimming, apply
-`references/accessible.md`. For experts, don't translate their daily vocabulary.
+`references/accessible.md`. For experts, keep their daily vocabulary; translating it talks down to them.
 
 ## 6. Revise
 
@@ -76,9 +76,14 @@ many you fixed.
 
 The artifact contains only what the reader should see. Your notes to the person go
 outside it, kept to what they must act on: slots to fill, facts you couldn't verify, a
-decision only they can make. One question if it would change the draft; no menu of
-alternatives beyond what the form calls for. Nothing is sent without their go-ahead.
+decision only they can make. Deliver your best complete draft now rather than a menu of
+options, and ask one question if its answer would change the draft. Nothing is sent
+without their go-ahead.
 
-## Not this skill
+Last, reread it as the reader and make the change that would make it the best version:
+their next question answered in advance, the detail only they have, a sentence cut.
 
-Slides, charts and pages: `making-visuals`. A design's technical content: `shaping-designs`.
+## Works with
+
+`making-visuals` for slides, charts and pages; `shaping-designs` for a design's
+technical content.
