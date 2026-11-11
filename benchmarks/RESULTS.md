@@ -18,6 +18,10 @@ Only our arm was rerun; it was paired with the round-2 answers of the two unchan
 - **Cost:** a run with our skills cost $0.26 on average, against $0.24 with decoys only [observed].
 - **Judges:** position consistency 0.75 and 0.76, agreement between the two judges 0.69 [observed].
 
+### Opus check, one run per arm (2026-11-10)
+
+On Opus, decoys only scored 0.944 on the checklists and our skills 0.940 [observed: benchmarks/v4/results/2026-11-10-opus-check.json]. Judges preferred our answers in 0.65 of comparisons (0.50 to 0.78), and in 0.52 on the test cases [observed]. Opus loaded one of our skills in 13 of 24 runs [observed]. So on Opus the skills neither measurably help nor hurt, which matches Anthropic's note that the strongest models need the least guidance.
+
 ### Triggering after the 4.0.0 descriptions (2026-11-10)
 
 With the routing line, as the plugins ship, Haiku loaded the right skill on 134 of 145 queries and left 54 of 63 near-misses alone, against 136 and 56 for v3 [observed: benchmarks/triggers/2026-11-10-2-v4-haiku.json]. On Sonnet the total was 117 of 145, against 126 for v3 [observed: 2026-11-10-1 and -3]. The gap is almost all in `making-visuals`: 14 of 26, against 18 for v3 [observed]. A pushier trigger-first wording scored 13, so the wording isn't the cause [observed]. Most misses were page checks and charts that Sonnet answered without loading a skill, or browser and test requests it sent to a browser skill or `changing-code` [observed]. The writing skill now also loads for small edits, by design.

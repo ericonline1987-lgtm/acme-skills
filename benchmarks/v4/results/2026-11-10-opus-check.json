@@ -1,0 +1,240 @@
+{
+  "cases": 24,
+  "pairwise": {
+    "acme_vs_base": {
+      "all": {
+        "mean": 0.646,
+        "lo": 0.5,
+        "hi": 0.781,
+        "n": 24
+      },
+      "dev": {
+        "mean": 0.771,
+        "lo": 0.604,
+        "hi": 0.938,
+        "n": 12
+      },
+      "test": {
+        "mean": 0.521,
+        "lo": 0.312,
+        "hi": 0.729,
+        "n": 12
+      },
+      "area:code": {
+        "mean": 0.786,
+        "lo": 0.571,
+        "hi": 0.964,
+        "n": 7
+      },
+      "area:design": {
+        "mean": 0.458,
+        "lo": 0.333,
+        "hi": 0.583,
+        "n": 6
+      },
+      "area:visuals": {
+        "mean": 0.5,
+        "lo": 0.15,
+        "hi": 0.85,
+        "n": 5
+      },
+      "area:writing": {
+        "mean": 0.792,
+        "lo": 0.458,
+        "hi": 1.0,
+        "n": 6
+      },
+      "judge:opus": {
+        "mean": 0.667,
+        "lo": 0.521,
+        "hi": 0.812,
+        "n": 24
+      },
+      "judge:sonnet": {
+        "mean": 0.625,
+        "lo": 0.458,
+        "hi": 0.771,
+        "n": 24
+      }
+    }
+  },
+  "criteria": {
+    "base": {
+      "score": {
+        "all": {
+          "mean": 0.944,
+          "lo": 0.902,
+          "hi": 0.981,
+          "n": 24
+        },
+        "dev": {
+          "mean": 0.942,
+          "lo": 0.879,
+          "hi": 1.0,
+          "n": 12
+        },
+        "test": {
+          "mean": 0.946,
+          "lo": 0.888,
+          "hi": 1.0,
+          "n": 12
+        },
+        "area:code": {
+          "mean": 0.964,
+          "lo": 0.893,
+          "hi": 1.0,
+          "n": 7
+        },
+        "area:design": {
+          "mean": 0.967,
+          "lo": 0.9,
+          "hi": 1.0,
+          "n": 6
+        },
+        "area:visuals": {
+          "mean": 1.0,
+          "lo": 1.0,
+          "hi": 1.0,
+          "n": 5
+        },
+        "area:writing": {
+          "mean": 0.85,
+          "lo": 0.767,
+          "hi": 0.933,
+          "n": 6
+        }
+      }
+    },
+    "acme": {
+      "score": {
+        "all": {
+          "mean": 0.94,
+          "lo": 0.892,
+          "hi": 0.981,
+          "n": 24
+        },
+        "dev": {
+          "mean": 1.0,
+          "lo": 1.0,
+          "hi": 1.0,
+          "n": 12
+        },
+        "test": {
+          "mean": 0.879,
+          "lo": 0.8,
+          "hi": 0.95,
+          "n": 12
+        },
+        "area:code": {
+          "mean": 1.0,
+          "lo": 1.0,
+          "hi": 1.0,
+          "n": 7
+        },
+        "area:design": {
+          "mean": 0.967,
+          "lo": 0.9,
+          "hi": 1.0,
+          "n": 6
+        },
+        "area:visuals": {
+          "mean": 0.92,
+          "lo": 0.84,
+          "hi": 1.0,
+          "n": 5
+        },
+        "area:writing": {
+          "mean": 0.858,
+          "lo": 0.725,
+          "hi": 0.967,
+          "n": 6
+        }
+      },
+      "lift_over_base": {
+        "all": {
+          "mean": -0.004,
+          "lo": -0.058,
+          "hi": 0.048,
+          "n": 24
+        },
+        "dev": {
+          "mean": 0.058,
+          "lo": 0.0,
+          "hi": 0.121,
+          "n": 12
+        },
+        "test": {
+          "mean": -0.067,
+          "lo": -0.15,
+          "hi": 0.0,
+          "n": 12
+        },
+        "area:code": {
+          "mean": 0.036,
+          "lo": 0.0,
+          "hi": 0.107,
+          "n": 7
+        },
+        "area:design": {
+          "mean": 0.0,
+          "lo": 0.0,
+          "hi": 0.0,
+          "n": 6
+        },
+        "area:visuals": {
+          "mean": -0.08,
+          "lo": -0.16,
+          "hi": 0.0,
+          "n": 5
+        },
+        "area:writing": {
+          "mean": 0.008,
+          "lo": -0.167,
+          "hi": 0.158,
+          "n": 6
+        }
+      },
+      "harm_cases": [
+        "d-visuals-oncall-dashboard-spec",
+        "d-visuals-refund-flow-diagram",
+        "d-writing-outage-customer-email"
+      ]
+    }
+  },
+  "routing": {
+    "base": {
+      "runs": 24,
+      "loaded_own": 0,
+      "loaded_decoy": 0
+    },
+    "acme": {
+      "runs": 24,
+      "loaded_own": 13,
+      "loaded_decoy": 0
+    }
+  },
+  "judges": {
+    "opus": {
+      "pairs": 24,
+      "position_consistent": 0.667
+    },
+    "sonnet": {
+      "pairs": 24,
+      "position_consistent": 0.667
+    },
+    "agreement": 0.667
+  },
+  "cost": {
+    "base": {
+      "mean_run_usd": 0.2727,
+      "usd_per_score_point": 0.2889,
+      "mean_answer_words": 731
+    },
+    "acme": {
+      "mean_run_usd": 0.2835,
+      "usd_per_score_point": 0.3018,
+      "mean_answer_words": 759
+    }
+  },
+  "judge_cost_usd": 4.43
+}
