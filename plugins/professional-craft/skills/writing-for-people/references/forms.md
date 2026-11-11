@@ -1,8 +1,11 @@
 # Forms: what each kind of writing needs, in what order, at what length
 
 Pick the form by the reader's job, then fill it from the material. A section the
-material can't fill is dropped, not padded. The budget is a ceiling: detail beyond it
-goes to an appendix or a link. One page is about 400 to 500 words.
+material can't fill is dropped, not padded. Each budget is about what this reader will
+read in one go; detail they need beyond it goes in an appendix or a link, not lost. One
+page is about 400 to 500 words.
+
+**Contents:** Decide or act · Messages · Pages people land on · Explain · Technical documents
 
 ## Decide or act
 

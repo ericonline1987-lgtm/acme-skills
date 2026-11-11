@@ -9,7 +9,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 PLUGINS_DIR = ROOT / "plugins"
 
-# Budgets from docs/PLAN.md, section 2.
+# Budgets from docs/history/PLAN-v1.md, section 2.
 DESCRIPTION_MAX_CHARS = 400
 BODY_MAX_WORDS = 900
 NAME_MAX_CHARS = 64

@@ -1,4 +1,4 @@
-"""Every skill follows the naming, size, frontmatter and linking rules in docs/PLAN.md."""
+"""Every skill follows the naming, size, frontmatter and linking rules in docs/history/PLAN-v1.md."""
 import re
 import unittest
 

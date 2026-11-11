@@ -1,6 +1,6 @@
 ---
 name: changing-code
-description: Use this skill whenever someone wants existing code changed, fixed or tested — a bug, a failing or flaky test, something broken or slow, an incident, a default or signature change, a rename, an upgrade, a refactor, new tests — even one line. It diagnoses before fixing, reads git history and every caller, makes the change that fully fixes it, and writes tests that fail for the right reason.
+description: Changes existing code so the cause is fixed and nothing else breaks — diagnoses first, reads git history and every caller, writes tests that fail for the right reason. Use whenever someone wants code changed, fixed or tested (a bug, a failing or flaky test, something broken or slow, an incident, a signature or default change, a rename, an upgrade, a refactor), even one line.
 ---
 
 # Changing code

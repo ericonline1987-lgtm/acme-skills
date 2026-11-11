@@ -1,6 +1,6 @@
 ---
 name: making-visuals
-description: Always use this skill whenever someone needs slides, a deck, a pitch or a talk someone will give (even "help, I'm presenting Thursday"), for a chart, diagram, dashboard, page or app screen, and for checking one works, renders or is accessible, or capturing a screenshot as proof, even a quick one. It designs from the point to land, encodes data honestly, and checks the result at real size.
+description: Designs and checks visuals people look at — decks built from the point to land, honest charts, pages with every real state, and the rendered result checked at real size. Use whenever someone needs slides, a pitch or a talk (even "help, I'm presenting Thursday"), a chart, diagram, dashboard, page or app screen, or wants one checked, made accessible or captured as proof.
 ---
 
 # Making visuals
@@ -9,6 +9,8 @@ A visual works when the viewer's eye lands on the point first, nothing on the pa
 contradicts or distracts from it, and they leave able to act on it. Source code, DOM
 text and a description of a chart are leads; what a person sees at real size is the
 evidence.
+
+Paths to `scripts/` and `references/` are relative to this skill's folder.
 
 ## 1. Name the point and the medium
 

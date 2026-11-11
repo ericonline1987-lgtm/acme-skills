@@ -155,6 +155,9 @@ def check(text: str, allow: set[str]) -> dict:
         "sentence_length_variation": round(cv, 2) if cv is not None else None,
         "ai_words_per_100": round(sum(h["category"] == "word" for h in hits) * 100 / n_words, 2),
     }
+    # Heuristic density thresholds, not rules: one em dash or one triad is fine; a page
+    # dense with them reads as generated. Each message states the rate it flags, so a
+    # reader can judge a borderline case.
     limits = []
     if density["em_dashes_per_100"] > 0.5:
         limits.append("em dashes: more than one per 200 words")
@@ -162,7 +165,7 @@ def check(text: str, allow: set[str]) -> dict:
         limits.append("triads: three-item lists in most paragraphs")
     if density["bold_per_100"] > 1.5 and bolds >= 4:
         limits.append("bold: more than one span per 70 words")
-    if cv is not None and cv < 0.3:
+    if cv is not None and cv < 0.3:  # stdev/mean of sentence lengths; edited prose varies more
         limits.append("rhythm: sentence lengths too uniform")
     if density["ai_words_per_100"] > 1.0 and len(words) >= 100:
         limits.append("vocabulary: tell-words cluster")

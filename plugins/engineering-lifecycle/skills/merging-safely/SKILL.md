@@ -1,6 +1,6 @@
 ---
 name: merging-safely
-description: Use this skill whenever someone merges branches, resolves merge conflicts, asks whether a branch is ready to merge or safe to push after merging, or wants to confirm a fix landed on a release line. It proves the merge is complete and correct, not merely conflict-free — modelling the diff, reviewing files both sides changed and flagging changes the merge dropped.
+description: Proves a merge is complete and correct, not merely conflict-free — models the diff, reviews files both sides changed, and flags changes the merge silently dropped. Use whenever someone merges branches, resolves conflicts, asks whether a branch is ready or safe to push after merging, audits a merge already done, or wants to confirm a fix landed on a release line.
 ---
 
 # Merging safely
@@ -10,6 +10,8 @@ For any non-trivial merge, readiness check or audit, read `references/merge-work
 it has the commands and decision tables for each step below, including conflicts in
 lockfiles, migrations and renames, three ways to prove a squash complete, and undoing a
 merge.
+
+Paths to `scripts/` and `references/` are relative to this skill's folder.
 
 ## 1. Stabilise
 

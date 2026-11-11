@@ -80,7 +80,7 @@ def human(n: int) -> str:
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     parser.add_argument("--repo", type=Path, default=Path("."))
-    parser.add_argument("--top", type=int, default=20)
+    parser.add_argument("--top", type=int, default=20, help="how many of the largest blobs to list (default 20, enough to find what dominates)")
     parser.add_argument("--min-kb", type=int, default=0)
     parser.add_argument("--json", action="store_true")
     args = parser.parse_args(argv)

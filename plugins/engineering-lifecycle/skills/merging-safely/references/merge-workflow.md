@@ -3,6 +3,8 @@
 Read this for any non-trivial merge, a readiness check, or an audit of a merge already
 done. `SKILL.md` gives the order; this gives the commands and the decisions at each step.
 
+**Contents:** 1. Scope and a clean tree · 2. Pin the refs · 3. Model the diff · 4. Hotspots · 5. Choose the strategy · 6. Resolve conflicts · 7. Prove completeness · 8. Verify and gate the push · 9. Undoing a merge
+
 ## 1. Scope and a clean tree
 
 ```bash

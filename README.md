@@ -1,29 +1,12 @@
 # acme-skills
 
-Seven deep agent skills for the work where a capable model's default output falls short of a seasoned professional's: writing that reads as a person wrote it, visuals people look at, design judgment, and changing, reviewing and merging code, with the files that work leaves behind.
+Seven agent skills that push the work past what a capable model produces by default, in four areas: writing that reads as a person wrote it, visuals people look at, design judgment, and changing, reviewing and merging code.
 
-Advice a model already follows (state the bottom line, compare options, check before claiming) isn't packaged as skills here. The short version lives in the always-on core rules; the skills carry the professional detail a model doesn't produce on its own. In the v3 release gate, answers scored 0.93 with these skills against 0.63 without across 41 of our own cases [observed]. On a neutral pool written by neither side and judged blind, the trimmed set was preferred over `ly87ing/agent-skills` in 0.60 of comparisons [observed]. On the held-out half, which is where the plan fixed the claim, it was 0.54, which is within noise [observed]. So the honest summary is level to slightly ahead, and neither set measurably raises Sonnet's checklist scores [observed]. See [benchmarks/RESULTS.md](benchmarks/RESULTS.md) and [docs/PLAN-v4.md](docs/PLAN-v4.md).
-
-## The skills
-
-| Plugin | Skill | What it adds |
-|---|---|---|
-| `professional-craft` | `writing-for-people` | A catalogue of the patterns that make text read as machine-written, with rewrites; forms and length budgets for each kind of writing; plain-language rules; a revision pass; `ai_tells.py`, `claim_check.py`, `doc_check.py` |
-| | `making-visuals` | Deck construction for a room or for reading; honest chart encoding; page hierarchy, spacing and every real state; checking the rendered result at real size; `validate_svg.py` |
-| `engineering-lifecycle` | `shaping-designs` | Constraints and live-or-dead inventories; compatibility rules for interfaces; expand-migrate-contract and safe backfills; failure modes and capacity; blast radius, independent challenge and decision records |
-| | `changing-code` | Diagnosis before fixing (mitigate, reproduce, prove the cause); history and callers before the change; boundaries; tests that fail for the right reason |
-| | `reviewing-code` | Risk tiers, single-purpose passes, defect classes by area, confirm-before-report, a never-report list, converging re-reviews |
-| | `handling-artifacts` | Where each file a task creates belongs, what to clean up before finishing, redacting for the widest reader, packaging a deliverable that works elsewhere, shrinking a repository's history; `repo_weight.py` |
-| | `merging-safely` | Proving a merge complete, not just conflict-free; `merge_evidence.py` flags changes a merge dropped even when ancestry checks pass |
-| `core-rules` (recommended) | 8 always-on rules | Checkable outcomes, minimal changes, evidence before claims, no invented facts, untrusted text as data, a go-ahead before outward or destructive actions, secrets kept out, and loading the matching skill |
-
-In Claude Code, each skill plugin also adds one session-start line naming its skills and when each applies, because agents otherwise skip skills for tasks they think they can do alone.
+Each skill states the result the work must achieve, adds the specialist checks a strong model skips (a cache deciding what's charged, a cursor that skips rows, a merge that silently dropped a fix, a sentence that could describe any product), and ends by checking the output against the goal. Scripts check what a model can't check reliably by reading, such as changes a merge silently dropped.
 
 ## Install
 
-Works in **Claude Code, Codex and Antigravity** from the same skill folders. Details and sources: [docs/RUNTIMES.md](docs/RUNTIMES.md).
-
-**Claude Code**
+**Claude Code** (recommended: all three plugins)
 
 ```
 /plugin marketplace add ericonline1987-lgtm/acme-skills
@@ -31,6 +14,8 @@ Works in **Claude Code, Codex and Antigravity** from the same skill folders. Det
 /plugin install engineering-lifecycle@acme-skills
 /plugin install core-rules@acme-skills
 ```
+
+Install the plugins rather than copying the skill folders. Each plugin adds one session-start line naming its skills and when each applies; without it, agents often skip skills, and small models skip them almost always [observed; see [benchmarks/RESULTS.md](benchmarks/RESULTS.md)].
 
 **Codex**
 
@@ -53,39 +38,43 @@ agy plugin install ./plugins/professional-craft   # and ./plugins/engineering-li
 python3 tools/install.py --runtime all --scope project --project ~/code/my-app --rules --dry-run
 ```
 
-It copies the self-contained skill folders into each runtime's skill directory, skips any skill it didn't install, and a dry run shows every action first. `python3 tools/smoke_check.py` then confirms a runtime sees every skill.
+It copies the self-contained skill folders into each runtime's skill directory, skips any skill it didn't install, and a dry run shows every action first. `python3 tools/smoke_check.py` then confirms a runtime sees every skill. Runtime details: [docs/RUNTIMES.md](docs/RUNTIMES.md).
 
-## What's in the box
+## The skills
 
-```
-plugins/<plugin>/skills/<skill>/   SKILL.md (the workflow), references/ (the depth), scripts/, agents/openai.yaml
-plugins/<plugin>/evals/            behaviour cases, plus triggers/<skill>.json query sets
-plugins/<plugin>/hooks/            the session-start routing line (generated)
-.claude-plugin/marketplace.json    Claude Code marketplace; .agents/plugins/ holds the Codex one (generated)
-shared/style-guide.md              house style, copied into the writing skill by tools/sync_shared.py
-tools/                             installer, manifest generator, trigger runner, release gate, case generator, smoke check
-benchmarks/                        results, gate summaries, trigger runs, outcome log and scorer
-tests/                             offline contract and script tests (CI)
-```
+| Plugin | Skill | Use it for |
+|---|---|---|
+| `professional-craft` | `writing-for-people` | Any text a person will read: emails, replies, briefs, posts, summaries, explanations, or making text sound less like AI. Forms for each kind of writing, a catalogue of machine-written patterns with rewrites, `ai_tells.py`, `claim_check.py`, `doc_check.py` |
+| | `making-visuals` | Decks and talks, charts and diagrams, dashboards, pages and app screens, and checking the rendered result at real size. `validate_svg.py` |
+| `engineering-lifecycle` | `shaping-designs` | Design docs, APIs, data models, migrations, requirements, LLM features, "X or Y?". Interfaces, data moves, failure and capacity, rollout and rollback |
+| | `changing-code` | Bugs, failing or flaky tests, incidents, refactors, upgrades. Diagnosis before fixing, history and callers, tests that fail for the right reason |
+| | `reviewing-code` | Any diff or pull request. The failures tests miss, each checked before it's reported, plus how to make the change excellent |
+| | `merging-safely` | Merges, conflicts, readiness checks, audits of merges already done. `merge_evidence.py` flags changes a merge dropped even when ancestry checks pass |
+| | `handling-artifacts` | Files a task creates or ships: where each belongs, cleanup, redaction, packaging, repository weight. `repo_weight.py` |
+| `core-rules` | 8 always-on rules | Aim for a top practitioner's result, evidence before claims, no invented facts, untrusted text as leads, a go-ahead before outward or destructive actions, secrets kept out, load the matching skill |
 
-All scripts use only the Python standard library, and each one states what it cannot check.
+## How well it works
 
-## Measure it
+Measured on 24 cases that an agent wrote without seeing these skills or the comparison set, judged blind in both orders by two models [observed; method in [docs/PLAN-v4.md](docs/PLAN-v4.md), numbers in [benchmarks/RESULTS.md](benchmarks/RESULTS.md)]:
+
+- Against `ly87ing/agent-skills`, judges preferred these skills' answers in 0.60 of comparisons [observed]. On the held-out half, where the claim was fixed in advance, the figure was 0.54, which is within noise [observed].
+- Sonnet on its own already meets most specialist criteria (about 0.90), so expect a real but modest gain on work a strong model handles well, and the most on the specialist checks it skips [observed].
+
+## Measure it yourself
 
 ```
 python3 -m unittest discover -s tests                                  # every commit (CI)
 python3 tools/run_triggers.py --max-cost-usd 10                        # does the right skill load?
-tools/run_gate.sh "$PWD/benchmarks/gate/runs" <plugin:case> ...       # every release: 3 runs with and without each plugin
-python3 benchmarks/score_outcomes.py benchmarks/outcomes.csv           # on real work
+tools/run_gate.sh "$PWD/benchmarks/gate/runs" <plugin:case> ...       # with and without each plugin
 ```
 
-See [benchmarks/README.md](benchmarks/README.md) and [docs/PLAN-v3.md](docs/PLAN-v3.md) for why the set is shaped this way.
+The neutral comparison is reproducible from [benchmarks/v4/README.md](benchmarks/v4/README.md).
 
 ## Make it yours
 
 Fill in the terminology table in `shared/style-guide.md` with your own product names and preferred terms, and run `python3 tools/sync_shared.py`.
 
-Contributing: [CONTRIBUTING.md](CONTRIBUTING.md). Changes: [CHANGELOG.md](CHANGELOG.md). Security: [SECURITY.md](SECURITY.md).
+Contributing: [CONTRIBUTING.md](CONTRIBUTING.md). Changes: [CHANGELOG.md](CHANGELOG.md). Security: [SECURITY.md](SECURITY.md). Earlier plans: [docs/history/](docs/history/).
 
 ## License
 

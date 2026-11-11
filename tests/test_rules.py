@@ -7,7 +7,7 @@ from helpers import PLUGINS_DIR
 
 PLUGIN = PLUGINS_DIR / "core-rules"
 RULES = PLUGIN / "rules" / "core.md"
-# Every line is paid for in every session; raise only with a measured reason (docs/PLAN-v1.1.md).
+# Every line is paid for in every session; raise only with a measured reason (docs/history/PLAN-v1.1.md).
 MAX_RULE_CHARS = 1200
 MAX_RULES = 8
 

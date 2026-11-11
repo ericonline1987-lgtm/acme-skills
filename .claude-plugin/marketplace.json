@@ -4,29 +4,29 @@
     "name": "ericonline1987-lgtm"
   },
   "metadata": {
-    "description": "Six deep skills for the work where a capable model's default falls short: writing that reads as human, visuals, design judgment, and code change, review and merge.",
-    "version": "3.0.0"
+    "description": "Seven skills that push work past a capable model's default: writing that reads as human, visuals, design judgment, and code change, review and merge.",
+    "version": "4.0.0"
   },
   "plugins": [
     {
       "name": "engineering-lifecycle",
       "source": "./plugins/engineering-lifecycle",
       "description": "Design judgment (contracts, data and migrations, failure modes), code changes with diagnosis and tests, review, and provably complete merges.",
-      "version": "3.0.0",
+      "version": "4.0.0",
       "category": "development"
     },
     {
       "name": "professional-craft",
       "source": "./plugins/professional-craft",
       "description": "Writing that reads as a person wrote it, and decks, charts and pages checked at real size.",
-      "version": "3.0.0",
+      "version": "4.0.0",
       "category": "productivity"
     },
     {
       "name": "core-rules",
       "source": "./plugins/core-rules",
-      "description": "Recommended: eight always-on working rules (outcomes, evidence, untrusted text, go-ahead, secrets, skill routing) injected at session start.",
-      "version": "2.0.0",
+      "description": "Recommended: eight always-on working rules (a top practitioner's result, evidence, no invented facts, untrusted text, go-ahead, secrets, skill routing) injected at session start.",
+      "version": "3.0.0",
       "category": "productivity"
     }
   ]

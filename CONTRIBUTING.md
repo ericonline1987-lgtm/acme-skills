@@ -36,7 +36,7 @@ Every skill has `plugins/<plugin>/evals/triggers/<skill>.json`: realistic prompt
 ## Rules the tests enforce
 
 - **Name:** lowercase-hyphenated with no double hyphens, matches the folder, at most 64 characters, unique across plugins, no "claude" or "anthropic".
-- **Frontmatter:** `name` and `description`, plus only the optional fields the Agent Skills specification allows. The description is plain YAML (no `: ` inside it), at most 400 characters, and leads with when to use the skill ("Use this skill whenever…").
+- **Frontmatter:** `name` and `description`, plus only the optional fields the Agent Skills specification allows. The description is plain YAML (no `: ` inside it), at most 400 characters. It says what the skill produces first, then when to use it ("Use whenever…"), as Anthropic's Claude Code docs recommend.
 - **Body:** at most 900 words. Move detail into files beside it.
 - **References** stay inside the plugin. Installed plugins can't see each other's files, so refer to other plugins' skills by name, never by path.
 - **Scripts** start with a usage docstring, use only the standard library, and say what they can't check.

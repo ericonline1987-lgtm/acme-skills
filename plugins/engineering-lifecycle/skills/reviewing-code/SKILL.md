@@ -1,6 +1,6 @@
 ---
 name: reviewing-code
-description: Always use this skill when someone shares code, a diff, a patch or a pull request and wants any opinion on it ("review this", "is this OK", "anything wrong", "look over my changes"), even a few lines that look fine. It finds the failures tests by the same author miss (ties, retries, races, stale caches, broken contracts, undone fixes), proves each, and shows how to make the change excellent.
+description: Reviews code the way a senior engineer does — finds the failures the author's tests miss (ties, retries, races, stale caches, broken contracts, undone fixes), proves each, and shows how to make the change excellent. Use whenever someone shares code, a diff, a patch or a pull request and wants any opinion ("review this", "is this OK", "anything wrong"), even a few lines that look fine.
 ---
 
 # Reviewing code

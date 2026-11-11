@@ -131,7 +131,8 @@ def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     parser.add_argument("file", type=Path)
     parser.add_argument("--budget", type=int, default=500, help="main-path word budget (default 500, about one page)")
-    parser.add_argument("--max-sentence", type=int, default=35)
+    parser.add_argument("--max-sentence", type=int, default=35,
+                        help="flag sentences longer than this (default 35 words; plain-language guides put the comfortable average near 15 to 20)")
     parser.add_argument("--json", action="store_true")
     parser.add_argument("--warn-only", action="store_true")
     args = parser.parse_args(argv)

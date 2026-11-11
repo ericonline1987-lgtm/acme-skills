@@ -146,7 +146,7 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--source-ref", required=True)
     parser.add_argument("--target-ref", default="HEAD")
     parser.add_argument("--pre-merge-ref", help="the target before the merge (post-merge audit)")
-    parser.add_argument("--max-list", type=int, default=30)
+    parser.add_argument("--max-list", type=int, default=30, help="incoming commits listed before the rest are counted (default 30)")
     parser.add_argument("--json", action="store_true")
     args = parser.parse_args(argv)
     try:

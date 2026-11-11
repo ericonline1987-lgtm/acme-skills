@@ -1,18 +1,20 @@
 ---
 name: writing-for-people
-description: Always use this skill whenever someone needs anything a person will read — an email or reply (a decline, a chaser, bad news), a post, a memo, summary or one-pager, a recommendation written up for a boss, a status or investor update, web or product copy, an explanation — or to make any text sound like a person, not AI. It writes from specifics, checks every fact, and gets the reader to act.
+description: Writes and revises text a person will read so it reads as a person wrote it — from specifics, every fact checked, in the form the reader needs to act. Use whenever someone needs an email or reply (a decline, a chaser, bad news), a post, memo, summary or one-pager, a brief for a boss, a status or investor update, web or product copy, or an explanation, or wants any text to sound less like AI.
 ---
 
 # Writing for people
 
 Text works when the intended reader gets it on one read, does what it needs them to do,
-and never wonders whether a machine wrote it. Both failures have the same root: sentences that are generally true
-of things like this instead of specifically true of this one.
+and never wonders whether a machine wrote it. Both failures have the same root:
+sentences generally true of things like this instead of specifically true of this one.
+
+Paths to `scripts/` and `references/` are relative to this skill's folder.
 
 ## 1. Fix the reader and the job
 
-Decide what this reader should know, feel or do after one read; that is the bar. If the
-person has written to this reader before, match their voice,
+Decide what this reader should know, feel or do after one read; that is the bar. If
+the person has written to this reader before, match their voice,
 not a generic one.
 
 ## 2. Pick the form, and open its entry
@@ -29,14 +31,13 @@ often go wrong must open like this:
 | Explanation for a non-expert | The answer in the first sentence. Then plain paragraphs in the order they'd ask: no headings, no bold, under 250 words. Explain every term at first use, everyday tech words too (phishing, provider, streaming), or leave it out. |
 | Post or announcement | The news in the person's own voice in the first line; facts only they have. No "big news" formula, emoji or hashtags unless their own posts use them. |
 
-Prose when ideas depend on each other; a list for steps or items someone will scan; a
-table for values compared on the same fields. No headings on a 300-word piece.
+Prose for ideas that depend on each other, a list for steps to scan, a table for values
+compared on the same fields; no headings on a 300-word piece.
 
 ## 3. Draft from specifics, and only from given ones
 
 - Use what only this subject has: names, numbers, the detail a regular would mention.
-  Test a sentence by swapping in a competitor's name; if it stays true, cut or replace
-  it.
+  Swap in a competitor's name: if a sentence stays true, cut or replace it.
 - **Never invent specifics to make prose vivid**: no sensory details, figures, history,
   quotes or anecdotes the person didn't give. Leave a visible slot (`[how long it keeps
   drinks cold]`) and ask for it.
@@ -54,8 +55,8 @@ table for values compared on the same fields. No headings on a 300-word piece.
 Walk `references/voice.md` against the draft: generic and inflated content first, then
 constructions (reflexive triads, "not X but Y", "Whether you… or…"), tell-words in
 clusters, structure heavier than the content, and framing (announcing openers,
-summaries, closing offers). Rewrite the sentence around a specific fact; swapping one
-tell-word for a synonym leaves it as hollow. Then run
+summaries, closing offers). Rewrite the sentence around a specific fact; a synonym
+leaves it as hollow. Then run
 `python3 scripts/ai_tells.py <file>` for the countable tells (`--allow emoji,hashtags`
 only where the person's own posts use them). A clean run is necessary, not sufficient.
 

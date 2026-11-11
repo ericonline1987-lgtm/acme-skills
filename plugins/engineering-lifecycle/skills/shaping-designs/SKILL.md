@@ -1,6 +1,6 @@
 ---
 name: shaping-designs
-description: Always use this skill when deciding how something should be built or changed — a design doc or RFC, an architecture, API or data model, a migration or schema change; requirements, user stories, acceptance criteria or a spec; an LLM feature (a prompt, a model choice, a chatbot that gets things wrong); or "X or Y", even a quick question. It works through contracts, data, failure and rollout.
+description: Shapes how something should be built — real options, then contracts, data, failure modes and a rollout that can be undone. Use whenever someone is deciding how to build or change something (a design doc or RFC, an architecture, API or data model, a migration or schema change, requirements or acceptance criteria, an LLM feature, or "X or Y?"), even a quick question.
 ---
 
 # Shaping designs

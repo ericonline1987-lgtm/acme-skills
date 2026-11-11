@@ -6,7 +6,7 @@ from contextlib import redirect_stdout
 from helpers import ROOT, load_module
 
 claim_check = load_module(ROOT / "plugins/professional-craft/skills/writing-for-people/scripts/claim_check.py", "claim_check_docs")
-DOCS = ["docs/PLAN.md", "docs/PLAN-v1.1.md", "docs/RUNTIMES.md", "README.md", "benchmarks/RESULTS.md", "benchmarks/README.md"]
+DOCS = ["docs/history/PLAN-v1.md", "docs/history/PLAN-v1.1.md", "docs/RUNTIMES.md", "README.md", "benchmarks/RESULTS.md", "benchmarks/README.md"]
 
 
 class DocsClaimTests(unittest.TestCase):

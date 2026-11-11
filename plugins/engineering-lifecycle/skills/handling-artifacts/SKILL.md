@@ -1,12 +1,14 @@
 ---
 name: handling-artifacts
-description: Use this skill whenever work produces or ships files — screenshots, recordings, traces, exports, debug scripts, reports — or a repository or deliverable is about to be shared outside the team or has grown too large. It decides where each file belongs, what to clean up, what to redact for the widest reader, and how to package a deliverable so it works elsewhere.
+description: Decides where each file a task creates belongs, what to clean up, what to redact for the widest reader, and how to package a deliverable that works elsewhere. Use whenever work produces or ships files (screenshots, recordings, traces, exports, debug scripts, reports), or a repository or deliverable is about to be shared outside the team or has grown too large.
 ---
 
 # Handling artifacts
 
 Files outlive the task that made them. Put each one where its next reader will look,
 remove what nobody needs, and never let a file carry more than its widest reader may see.
+
+Paths to `scripts/` and `references/` are relative to this skill's folder.
 
 ## 1. Classify every file you create
 

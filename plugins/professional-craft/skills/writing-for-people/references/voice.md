@@ -10,6 +10,8 @@ away is density and combination: three tells in a paragraph, the same constructi
 every paragraph, structure that is more regular than the content. Fix the pattern, not
 the word: swapping "crucial" for "vital" leaves the sentence exactly as hollow.
 
+**Contents:** 1. Content: the root problem · 2. Constructions · 3. Words · 4. Shape and format · 5. Framing around the text · 6. What human writing does instead · Rewrites
+
 ## 1. Content: the root problem
 
 Most tells are symptoms of one fault: the text says what is generally true of things

@@ -1,11 +1,18 @@
 # Changelog
 
-## Unreleased (v4)
+## 4.0.0 (2026-11-10)
 
-Specialist, not all-encompassing, and measured on a neutral pool. See docs/PLAN-v4.md and benchmarks/RESULTS.md.
+Skills that raise the bar instead of capping the model, measured on a neutral pool. See docs/PLAN-v4.md and benchmarks/RESULTS.md.
 
 ### Added
 - `benchmarks/v4/`: 24 neutral cases written by an agent that never saw either skill set, a dev/test split, arms with shared decoy skills and no routing line, blind pairwise judging in both orders by two judges, bootstrap intervals, and a blind rating page for human checks.
+
+### Changed (final review)
+- Every skill states the result the work must achieve and what an excellent version adds, and ends with a check of the output against that goal. Prohibitions remain only where they protect the outcome or trust; lesser findings are ranked rather than dropped; "Not this skill" sections became "Works with".
+- Core rules (3.0.0): aim for a top practitioner's result; the change that fully achieves the outcome, with other improvements offered separately; the check most likely to catch a failure.
+- Descriptions follow Anthropic's guidance: what the skill produces first, then when to use it.
+- References over 100 lines open with a contents line; skills with scripts say paths are relative to the skill's folder; script thresholds and defaults are explained.
+- Earlier plans moved to `docs/history/`; the README leads with installation and the neutral result.
 
 ### Changed
 - `reviewing-code`: the risk-tier and approval process no longer appears in reports; the failures tests miss are inline (ties and late commits in cursors, retries without idempotency, caches deciding money, clients that never update); suggestions specific to the change are allowed.
@@ -17,7 +24,7 @@ Specialist, not all-encompassing, and measured on a neutral pool. See docs/PLAN-
 
 ## 3.0.0 (2026-11-03)
 
-Fewer skills, deeper. Seven skills in the four areas where a capable model's default output falls short of a professional's, in place of 25 that mostly restated practice the model already follows. See docs/PLAN-v3.md.
+Fewer skills, deeper. Seven skills in the four areas where a capable model's default output falls short of a professional's, in place of 25 that mostly restated practice the model already follows. See docs/history/PLAN-v3.md.
 
 ### Added
 - `writing-for-people` (professional-craft): writing that reads as a person wrote it for a real reader. References: a catalogue of machine-written patterns with rewrites, built from the Wikipedia editors' field guide and from samples of this model's own output (`voice.md`); forms and length budgets for each kind of writing (`forms.md`); plain language (`accessible.md`); a revision pass (`revision.md`). New `ai_tells.py` counts the countable tells.
@@ -125,7 +132,7 @@ Pre-publication audit.
 
 ## 1.1.0 (2026-10-14)
 
-Full coverage of the reference set (`ly87ing/agent-skills`), measured head-to-head. See docs/PLAN-v1.1.md and benchmarks/RESULTS.md.
+Full coverage of the reference set (`ly87ing/agent-skills`), measured head-to-head. See docs/history/PLAN-v1.1.md and benchmarks/RESULTS.md.
 
 ### Added
 - `verifying-interfaces` (engineering-lifecycle): browser and rendered-UI evidence, Playwright practice, rendered-surface checks, `validate_svg.py`.
@@ -142,7 +149,7 @@ Full coverage of the reference set (`ly87ing/agent-skills`), measured head-to-he
 
 ## 1.0.0 (2026-10-13)
 
-Goals move from output quality to outcomes, trust, compounding learning and human decision rights. See docs/PLAN.md.
+Goals move from output quality to outcomes, trust, compounding learning and human decision rights. See docs/history/PLAN-v1.md.
 
 ### Added
 - `foundations` plugin: defining-done, exploring-options, delegating-work, proving-outcomes, tracing-claims, capturing-learning, guarding-agent-actions.
