@@ -1,5 +1,23 @@
 # Results
 
+## v4 round 3: skills that raise the bar (2026-11-10)
+
+**Bottom line:** after rewriting every skill around the result to achieve, instead of rules that capped the model, judges preferred our answers over the reference set's in 0.71 of comparisons (0.60 to 0.81) and over decoys only in 0.68 (0.59 to 0.77) [observed: benchmarks/v4/results/2026-11-10-round3-sonnet.json]. The checklist score rose to 0.938 against 0.899 for decoys only, a lift of 0.039 (0.01 to 0.07), the first checklist lift in this study whose interval is above zero [observed]. On the 12 held-out test cases the pairwise score against the reference was 0.61 (0.45 to 0.76) [observed]. That interval still includes 0.5 [observed], so by the pre-registered rule the claim against the reference remains unproven.
+
+Only our arm was rerun; it was paired with the round-2 answers of the two unchanged arms. Those are independent samples of the same setups, so the comparison holds [inferred].
+
+| Ours against | All cases | Test cases | Dev cases |
+|---|---|---|---|
+| The reference | 0.71 (0.60–0.81) | 0.61 (0.45–0.76) | 0.80 (0.67–0.91) [observed] |
+| Decoys only | 0.68 (0.59–0.77) | 0.65 (0.52–0.79) | 0.71 (0.58–0.83) [observed] |
+
+- **What changed it:** the rewrite stopped suppressing useful content. Answers grew from 627 to 667 words on average, against 593 for decoys only [observed]. The judges were told not to prefer length, but a length effect can't be ruled out [inferred].
+- **Harm:** one case scored below decoys only, down from seven in round 2 [observed].
+- **By area against decoys only:** code 0.75 (0.62–0.88), visuals 0.73, writing 0.67, design 0.57 [observed]. Code went from the weakest area in round 1 (0.32) to the strongest [observed].
+- **Haiku:** 0.892 for ours against 0.873 for decoys only, with no skill loaded in any run, so this is noise [observed].
+- **Cost:** a run with our skills cost $0.26 on average, against $0.24 with decoys only [observed].
+- **Judges:** position consistency 0.75 and 0.76, agreement between the two judges 0.69 [observed].
+
 ## v4 round 2: after trimming to the specialist core (2026-11-09)
 
 **Bottom line:** after the phase 2 trim, judges preferred our answers over the reference set's in 0.60 of comparisons across all 24 cases (0.50 to 0.69) [observed]. On the 12 held-out test cases, where the plan fixes the claim, the score was 0.54 (0.40 to 0.66) [observed: benchmarks/v4/results/2026-11-09-round2-sonnet.json]. By the pre-registered rule that is still **no measurable difference**. We moved from level to slightly ahead, within noise.

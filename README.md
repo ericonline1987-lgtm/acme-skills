@@ -57,8 +57,9 @@ It copies the self-contained skill folders into each runtime's skill directory, 
 
 Measured on 24 cases that an agent wrote without seeing these skills or the comparison set, judged blind in both orders by two models [observed; method in [docs/PLAN-v4.md](docs/PLAN-v4.md), numbers in [benchmarks/RESULTS.md](benchmarks/RESULTS.md)]:
 
-- Against `ly87ing/agent-skills`, judges preferred these skills' answers in 0.60 of comparisons [observed]. On the held-out half, where the claim was fixed in advance, the figure was 0.54, which is within noise [observed].
-- Sonnet on its own already meets most specialist criteria (about 0.90), so expect a real but modest gain on work a strong model handles well, and the most on the specialist checks it skips [observed].
+- Judges preferred these skills' answers over `ly87ing/agent-skills` in 0.71 of comparisons (0.60 to 0.81), and over Sonnet with only unrelated skills loaded in 0.68 (0.59 to 0.77) [observed].
+- On the checklists the case author wrote, the score rose from 0.899 to 0.938 [observed]. Sonnet alone already meets most specialist criteria, so expect a solid but not dramatic gain, mostly on the checks a strong model skips [inferred].
+- On the held-out half of the cases, the lead over the reference set was 0.61 (0.45 to 0.76), which is not yet enough to call it proven [observed].
 
 ## Measure it yourself
 
