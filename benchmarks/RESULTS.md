@@ -1,5 +1,13 @@
 # Results
 
+## v4.1 check: visuals and design cases (2026-11-13)
+
+**Bottom line:** with the 4.1 guidance added and the trigger-first descriptions restored, on the 11 visuals and design cases judges preferred our answers over Sonnet with decoys only in 0.70 of comparisons (0.58 to 0.82), and over the reference set in 0.64 (0.52 to 0.77) [observed: benchmarks/v4/results/2026-11-13-v4.1-visuals-design.json]. On the 5 held-out cases among them, the score against decoys only was 0.68 (0.60 to 0.79) [observed]. The checklist score was 0.964 against 0.945 for decoys only [observed].
+
+The run also caught a regression from the 4.0.0 descriptions. With "what it does" first ("Builds slides, decks and talks…") and no routing line, our skills loaded in 9 of 33 runs, and the visuals skill never loaded on a visuals case [observed: 2026-11-13-v4.1-visuals-design-whatfirst.json]. Judges then preferred our answers in 0.63 of comparisons against decoys only [observed]. Restoring the "Always use this skill whenever…" opening raised loading to 15 of 33 [observed]. The routing line the plugins ship covers Claude Code, but Codex, Antigravity and copied skill folders rely on the description alone, so the trigger-first form stays.
+
+All three arms ran three times on Sonnet at the model's default effort. Only our arm was rerun after the description fix; it was judged against the same decoys-only and reference answers.
+
 ## v4 round 3: skills that raise the bar (2026-11-10)
 
 **Bottom line:** after rewriting every skill around the result to achieve, instead of rules that capped the model, judges preferred our answers over the reference set's in 0.71 of comparisons (0.60 to 0.81) and over decoys only in 0.68 (0.59 to 0.77) [observed: benchmarks/v4/results/2026-11-10-round3-sonnet.json]. The checklist score rose to 0.938 against 0.899 for decoys only, a lift of 0.039 (0.01 to 0.07), the first checklist lift in this study whose interval is above zero [observed]. On the 12 held-out test cases the pairwise score against the reference was 0.61 (0.45 to 0.76) [observed]. That interval still includes 0.5 [observed], so by the pre-registered rule the claim against the reference remains unproven.

@@ -1,0 +1,363 @@
+{
+  "cases": 11,
+  "answer_effort": "model default",
+  "pairwise": {
+    "acme_vs_ref": {
+      "all": {
+        "mean": 0.644,
+        "lo": 0.515,
+        "hi": 0.773,
+        "n": 11
+      },
+      "dev": {
+        "mean": 0.667,
+        "lo": 0.472,
+        "hi": 0.861,
+        "n": 6
+      },
+      "test": {
+        "mean": 0.617,
+        "lo": 0.483,
+        "hi": 0.783,
+        "n": 5
+      },
+      "area:design": {
+        "mean": 0.611,
+        "lo": 0.444,
+        "hi": 0.778,
+        "n": 6
+      },
+      "area:visuals": {
+        "mean": 0.683,
+        "lo": 0.5,
+        "hi": 0.867,
+        "n": 5
+      },
+      "judge:opus": {
+        "mean": 0.636,
+        "lo": 0.515,
+        "hi": 0.758,
+        "n": 11
+      },
+      "judge:sonnet": {
+        "mean": 0.652,
+        "lo": 0.5,
+        "hi": 0.803,
+        "n": 11
+      }
+    },
+    "acme_vs_base": {
+      "all": {
+        "mean": 0.703,
+        "lo": 0.583,
+        "hi": 0.817,
+        "n": 11
+      },
+      "dev": {
+        "mean": 0.722,
+        "lo": 0.514,
+        "hi": 0.903,
+        "n": 6
+      },
+      "test": {
+        "mean": 0.68,
+        "lo": 0.6,
+        "hi": 0.79,
+        "n": 5
+      },
+      "area:design": {
+        "mean": 0.719,
+        "lo": 0.539,
+        "hi": 0.872,
+        "n": 6
+      },
+      "area:visuals": {
+        "mean": 0.683,
+        "lo": 0.567,
+        "hi": 0.85,
+        "n": 5
+      },
+      "judge:opus": {
+        "mean": 0.712,
+        "lo": 0.591,
+        "hi": 0.818,
+        "n": 11
+      },
+      "judge:sonnet": {
+        "mean": 0.697,
+        "lo": 0.576,
+        "hi": 0.833,
+        "n": 11
+      }
+    },
+    "ref_vs_base": {
+      "all": {
+        "mean": 0.515,
+        "lo": 0.432,
+        "hi": 0.606,
+        "n": 11
+      },
+      "dev": {
+        "mean": 0.472,
+        "lo": 0.403,
+        "hi": 0.556,
+        "n": 6
+      },
+      "test": {
+        "mean": 0.567,
+        "lo": 0.417,
+        "hi": 0.717,
+        "n": 5
+      },
+      "area:design": {
+        "mean": 0.583,
+        "lo": 0.444,
+        "hi": 0.708,
+        "n": 6
+      },
+      "area:visuals": {
+        "mean": 0.433,
+        "lo": 0.383,
+        "hi": 0.483,
+        "n": 5
+      },
+      "judge:opus": {
+        "mean": 0.47,
+        "lo": 0.379,
+        "hi": 0.561,
+        "n": 11
+      },
+      "judge:sonnet": {
+        "mean": 0.561,
+        "lo": 0.47,
+        "hi": 0.652,
+        "n": 11
+      }
+    }
+  },
+  "criteria": {
+    "base": {
+      "score": {
+        "all": {
+          "mean": 0.945,
+          "lo": 0.915,
+          "hi": 0.976,
+          "n": 11
+        },
+        "dev": {
+          "mean": 0.967,
+          "lo": 0.944,
+          "hi": 0.989,
+          "n": 6
+        },
+        "test": {
+          "mean": 0.92,
+          "lo": 0.867,
+          "hi": 0.973,
+          "n": 5
+        },
+        "area:design": {
+          "mean": 0.944,
+          "lo": 0.889,
+          "hi": 0.989,
+          "n": 6
+        },
+        "area:visuals": {
+          "mean": 0.947,
+          "lo": 0.907,
+          "hi": 0.987,
+          "n": 5
+        }
+      }
+    },
+    "acme": {
+      "score": {
+        "all": {
+          "mean": 0.964,
+          "lo": 0.927,
+          "hi": 1.0,
+          "n": 11
+        },
+        "dev": {
+          "mean": 0.978,
+          "lo": 0.933,
+          "hi": 1.0,
+          "n": 6
+        },
+        "test": {
+          "mean": 0.947,
+          "lo": 0.893,
+          "hi": 1.0,
+          "n": 5
+        },
+        "area:design": {
+          "mean": 0.956,
+          "lo": 0.911,
+          "hi": 1.0,
+          "n": 6
+        },
+        "area:visuals": {
+          "mean": 0.973,
+          "lo": 0.92,
+          "hi": 1.0,
+          "n": 5
+        }
+      },
+      "lift_over_base": {
+        "all": {
+          "mean": 0.018,
+          "lo": -0.03,
+          "hi": 0.061,
+          "n": 11
+        },
+        "dev": {
+          "mean": 0.011,
+          "lo": -0.022,
+          "hi": 0.044,
+          "n": 6
+        },
+        "test": {
+          "mean": 0.027,
+          "lo": -0.053,
+          "hi": 0.107,
+          "n": 5
+        },
+        "area:design": {
+          "mean": 0.011,
+          "lo": -0.033,
+          "hi": 0.067,
+          "n": 6
+        },
+        "area:visuals": {
+          "mean": 0.027,
+          "lo": -0.053,
+          "hi": 0.093,
+          "n": 5
+        }
+      },
+      "harm_cases": [
+        "d-design-rename-column-live-table",
+        "d-visuals-oncall-dashboard-spec"
+      ]
+    },
+    "ref": {
+      "score": {
+        "all": {
+          "mean": 0.921,
+          "lo": 0.885,
+          "hi": 0.958,
+          "n": 11
+        },
+        "dev": {
+          "mean": 0.944,
+          "lo": 0.911,
+          "hi": 0.978,
+          "n": 6
+        },
+        "test": {
+          "mean": 0.893,
+          "lo": 0.84,
+          "hi": 0.96,
+          "n": 5
+        },
+        "area:design": {
+          "mean": 0.933,
+          "lo": 0.9,
+          "hi": 0.967,
+          "n": 6
+        },
+        "area:visuals": {
+          "mean": 0.907,
+          "lo": 0.84,
+          "hi": 0.973,
+          "n": 5
+        }
+      },
+      "lift_over_base": {
+        "all": {
+          "mean": -0.024,
+          "lo": -0.061,
+          "hi": 0.012,
+          "n": 11
+        },
+        "dev": {
+          "mean": -0.022,
+          "lo": -0.056,
+          "hi": 0.022,
+          "n": 6
+        },
+        "test": {
+          "mean": -0.027,
+          "lo": -0.08,
+          "hi": 0.027,
+          "n": 5
+        },
+        "area:design": {
+          "mean": -0.011,
+          "lo": -0.044,
+          "hi": 0.022,
+          "n": 6
+        },
+        "area:visuals": {
+          "mean": -0.04,
+          "lo": -0.093,
+          "hi": 0.027,
+          "n": 5
+        }
+      },
+      "harm_cases": [
+        "d-design-api-enum-old-mobile-clients",
+        "d-design-price-cache-flash-sales",
+        "d-visuals-board-update-storyline",
+        "d-visuals-oncall-dashboard-spec",
+        "d-visuals-refund-flow-diagram"
+      ]
+    }
+  },
+  "routing": {
+    "base": {
+      "runs": 33,
+      "loaded_own": 0,
+      "loaded_decoy": 0
+    },
+    "acme": {
+      "runs": 33,
+      "loaded_own": 15,
+      "loaded_decoy": 0
+    },
+    "ref": {
+      "runs": 33,
+      "loaded_own": 0,
+      "loaded_decoy": 0
+    }
+  },
+  "judges": {
+    "opus": {
+      "pairs": 99,
+      "position_consistent": 0.646
+    },
+    "sonnet": {
+      "pairs": 98,
+      "position_consistent": 0.653
+    },
+    "agreement": 0.673
+  },
+  "cost": {
+    "base": {
+      "mean_run_usd": 0.2433,
+      "usd_per_score_point": 0.2573,
+      "mean_answer_words": 802
+    },
+    "acme": {
+      "mean_run_usd": 0.3087,
+      "usd_per_score_point": 0.3203,
+      "mean_answer_words": 839
+    },
+    "ref": {
+      "mean_run_usd": 0.2591,
+      "usd_per_score_point": 0.2813,
+      "mean_answer_words": 779
+    }
+  },
+  "judge_cost_usd": 18.73
+}

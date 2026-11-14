@@ -1,6 +1,6 @@
 ---
 name: making-visuals
-description: Builds slides, decks and talks, charts, diagrams, dashboards, pages and app screens that land their point, and checks the rendered result at real size. Use whenever someone needs slides or a talk (even "help, I'm presenting Thursday"), a chart, diagram, dashboard, page or screen, or wants one checked, made accessible or captured as proof, even a quick one.
+description: Always use this skill whenever someone needs slides, a deck, a pitch or a talk someone will give (even "help, I'm presenting Thursday"), for a chart, diagram, dashboard, page or app screen, and for checking one works, renders or is accessible, or capturing a screenshot as proof, even a quick one. It designs from the point to land, encodes data honestly, and checks the result at real size.
 ---
 
 # Making visuals
