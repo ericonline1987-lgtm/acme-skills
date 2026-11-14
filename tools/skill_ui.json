@@ -67,7 +67,7 @@
   },
   "when": {
     "writing-for-people": "anything a person will read: emails and replies (declines, chasers, bad news), posts, memos, one-pagers, write-ups and recommendations for a boss, status and investor updates, case studies, web and product copy, explanations; or making text sound like a person rather than AI",
-    "making-visuals": "slides, decks, pitches and talks to give; charts, diagrams, dashboards, pages and app screens; checking that a page works, renders or is accessible; screenshots as proof",
+    "making-visuals": "slides, decks, pitches and talks to give; any chart or diagram, even a quick one; dashboards, pages and app screens; checking that a page works, looks right on a phone, renders or is accessible; browser tests of a page; screenshots as proof",
     "shaping-designs": "how to build or change something: design docs, architecture, APIs, data models, migrations; requirements, user stories, acceptance criteria and specs; LLM features (prompts, model choice, a chatbot or RAG pipeline that gets things wrong); X or Y choices",
     "changing-code": "any change to existing code: fixes, debugging, incidents, refactors, upgrades, tests",
     "reviewing-code": "any opinion on code, a diff or a PR",
