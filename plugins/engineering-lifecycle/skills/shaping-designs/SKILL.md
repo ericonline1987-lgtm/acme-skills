@@ -48,7 +48,8 @@ Work through the references that apply, answering their checklists:
   `references/data-and-migrations.md`.
 - Dependencies, load, availability, security, observability:
   `references/failure-and-capacity.md`.
-- A feature built on a language model: `references/ai-features.md`.
+- A feature built on a language model, including an agent that runs on its own:
+  `references/ai-features.md`.
 
 Each says what the design must state; "it won't fail" and "it scales" are not answers.
 

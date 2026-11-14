@@ -70,6 +70,8 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--arm", action="append", required=True)
     parser.add_argument("--pairs", type=Path)
     parser.add_argument("--split", type=Path, help='{"dev": [...], "test": [...]}')
+    parser.add_argument("--effort", default="model default",
+                        help="effort level the answers ran at, recorded in the output; results depend on it")
     args = parser.parse_args(argv)
     arms = {}
     for spec in args.arm:
@@ -77,7 +79,7 @@ def main(argv: list[str] | None = None) -> int:
         arms[label] = load_arm(Path(path))
     pairs = [json.loads(l) for l in args.pairs.read_text().splitlines()] if args.pairs else []
     splits = json.loads(args.split.read_text()) if args.split else {}
-    out: dict = {"cases": len(next(iter(arms.values())))}
+    out: dict = {"cases": len(next(iter(arms.values()))), "answer_effort": args.effort}
 
     def subsets(values: dict[str, float]) -> dict:
         res = {"all": boot(values)}

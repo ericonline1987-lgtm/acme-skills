@@ -5,21 +5,21 @@
   },
   "metadata": {
     "description": "Seven skills that push work past a capable model's default: writing that reads as human, visuals, design judgment, and code change, review and merge.",
-    "version": "4.0.0"
+    "version": "4.1.0"
   },
   "plugins": [
     {
       "name": "engineering-lifecycle",
       "source": "./plugins/engineering-lifecycle",
       "description": "Design judgment (contracts, data and migrations, failure modes), code changes with diagnosis and tests, review, and provably complete merges.",
-      "version": "4.0.0",
+      "version": "4.1.0",
       "category": "development"
     },
     {
       "name": "professional-craft",
       "source": "./plugins/professional-craft",
       "description": "Writing that reads as a person wrote it, and decks, charts and pages checked at real size.",
-      "version": "4.0.0",
+      "version": "4.1.0",
       "category": "productivity"
     },
     {

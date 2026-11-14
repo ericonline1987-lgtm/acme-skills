@@ -107,12 +107,14 @@ def redactor(names: list[str]):
     return lambda text: pattern.sub("[a skill]", text)
 
 
-def judge_once(model: str, prompt: str) -> tuple[str | None, str, float, bool]:
+def judge_once(model: str, prompt: str, effort: str = "") -> tuple[str | None, str, float, bool]:
     """Return (winner '1'/'2'/'tie' or None, reason, cost, hit_limit)."""
     JUDGE_CWD.mkdir(exist_ok=True)
-    proc = subprocess.run(
-        ["claude", "-p", "--model", model, "--tools", "", "--disable-slash-commands",
-         "--strict-mcp-config", "--no-session-persistence", "--output-format", "json"],
+    cmd = ["claude", "-p", "--model", model, "--tools", "", "--disable-slash-commands",
+           "--strict-mcp-config", "--no-session-persistence", "--output-format", "json"]
+    if effort:
+        cmd += ["--effort", effort]
+    proc = subprocess.run(cmd,
         input=prompt, capture_output=True, text=True, cwd=JUDGE_CWD, timeout=600)
     try:
         res = json.loads(proc.stdout)
@@ -150,6 +152,7 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--judge", action="append", required=True)
     parser.add_argument("--out", type=Path, required=True)
     parser.add_argument("-j", type=int, default=6)
+    parser.add_argument("--judge-effort", default="", help="effort level for judge calls (default: the model's own)")
     parser.add_argument("--case", default="", help="only cases whose name starts with this")
     args = parser.parse_args(argv)
 
@@ -194,7 +197,7 @@ def main(argv: list[str] | None = None) -> int:
         if stop.is_set():
             return
         case, run, x, y, order, judge, prompt = job
-        winner, reason, cost, limit = judge_once(judge, prompt)
+        winner, reason, cost, limit = judge_once(judge, prompt, args.judge_effort)
         if limit:
             stop.set()
             return
@@ -204,7 +207,8 @@ def main(argv: list[str] | None = None) -> int:
         first, second = (x, y) if order == "xy" else (y, x)
         arm_winner = {"1": first, "2": second, "tie": "tie"}[winner]
         rec = {"case": case, "run": run, "x": x, "y": y, "order": order, "judge": judge,
-               "winner": arm_winner, "reason": reason, "cost": cost}
+               "winner": arm_winner, "reason": reason, "cost": cost,
+               "judge_effort": args.judge_effort or "default"}
         with lock, args.out.open("a") as fh:
             fh.write(json.dumps(rec) + "\n")
 

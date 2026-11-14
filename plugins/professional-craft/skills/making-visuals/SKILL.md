@@ -23,8 +23,10 @@ a code host strips most HTML, a projected slide needs 24 pt.
   the last headline is the ask, written out.
 - **Charts and diagrams**: `references/charts-and-diagrams.md`. Form from the question,
   bars from zero, direct labels, one accent colour on what the title names.
-- **Pages, dashboards, app screens**: `references/pages.md`. Hierarchy, spacing scale,
-  every real state (empty, loading, error, too much), keyboard and narrow screens.
+- **Pages, dashboards, app screens**: `references/pages.md`. With no design direction,
+  name the house-style defaults to avoid instead of asking for "not generic". Hierarchy,
+  spacing scale, every real state (empty, loading, error, too much), keyboard and narrow
+  screens.
 
 If one sentence carries the point, write the sentence instead (see
 `writing-for-people`).
@@ -35,7 +37,8 @@ If one sentence carries the point, write the sentence instead (see
 - Nothing invented to fill a gap: a missing figure or capture is marked
   `[Q3 figure from finance]` and resolved before it ships.
 - A before-and-after pair differs only in the thing claimed.
-- Every number on a visual carries its basis (source, period, n).
+- Every number on a visual carries its basis (source, period, n), and every plotted value,
+  label and total is checked against the source rows before it ships.
 - A chart that should "pop" gets a sharper title and an accent, never a truncated axis.
 
 ## 4. Build for the reader's conditions

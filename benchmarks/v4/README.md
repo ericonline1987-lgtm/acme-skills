@@ -24,3 +24,5 @@ python3 benchmarks/v4/stats.py --arm base=RUNS/base.json --arm acme=RUNS/acme.js
 ```
 
 Runs that stop at a usage limit or error are discarded and rerun before step 3.
+
+Record the effort level with every result (`stats.py --effort`, `pairwise.py --judge-effort`): on recent models it moves quality and cost a lot (Anthropic reports Opus 5.5 at medium matching Opus 5 at high). `claude plugin eval` has no effort flag, so answers run at each model's default (medium on Opus 5.5); v4 rounds 1 to 3 all ran at the default. Spot-check a result at a higher effort before relying on it.

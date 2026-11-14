@@ -4,6 +4,7 @@ Pick the rows that apply. Each says what to check and one way to check it.
 
 | Check | Pass when | How (Playwright snippet or manual) |
 |---|---|---|
+| Matches its source | Every value, label, total and period on a chart or table equals the source data | Read each value off the render and compare it with the source rows; recompute totals |
 | Loads cleanly | No console errors or failed requests | `page.on('console', m => m.type()==='error' && errors.push(m.text()))`; `page.on('requestfailed', ...)` |
 | Small screens | No horizontal scroll at 320px | `setViewportSize({width: 320, height: 800})`, then `document.documentElement.scrollWidth <= clientWidth` |
 | Zoom | Text readable, nothing clipped at 200% | Browser zoom to 200%, or `document.body.style.zoom = '2'` as an approximation; look at it |

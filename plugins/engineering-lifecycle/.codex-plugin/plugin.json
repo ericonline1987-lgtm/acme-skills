@@ -1,6 +1,6 @@
 {
   "name": "engineering-lifecycle",
-  "version": "4.0.0",
+  "version": "4.1.0",
   "description": "Engineering judgment where models fall short: designs that hold up (interfaces and contracts, data and migrations, failure modes, rollout), code changes that diagnose before fixing and test what matters, reviews that confirm before reporting, and merges proven complete.",
   "author": {
     "name": "ericonline1987-lgtm",

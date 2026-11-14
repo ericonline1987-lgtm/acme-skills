@@ -1,5 +1,14 @@
 # Changelog
 
+## 4.1.0 (2026-11-13)
+
+Adopts Anthropic's November 2026 guidance on getting more out of Claude (the Opus 5.5 prompting guide, "Using Claude Opus 5.5 as your daily driver for knowledge work" and "Building always-on agents").
+
+### Changed
+- `making-visuals`: with no design direction, name the house-style defaults to avoid (a vague "not generic" swaps one default for another), take the direction from the subject's world, and replace defaults that crept into the first render. Every plotted value, label and total is checked against the source rows; a new "Matches its source" rendered check.
+- `shaping-designs` (`ai-features.md`): a section on agents that run on their own (an inbox as the source of truth, one worker per inbox, deduplication by event ID, timers in their own store, memory that keeps only what can't be looked up, credentials outside the agent, approvals as new events, a closing task list instead of trusting "done", capped continuations, a hard timeout, start quiet, tagged pasted text). Model choice now covers effort levels and retesting workarounds written for older models.
+- `benchmarks/v4`: results record the effort level (`stats.py --effort`, `pairwise.py --judge-effort`).
+
 ## 4.0.0 (2026-11-10)
 
 Skills that raise the bar instead of capping the model, measured on a neutral pool. See docs/PLAN-v4.md and benchmarks/RESULTS.md.

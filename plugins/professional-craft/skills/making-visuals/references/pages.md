@@ -3,6 +3,22 @@
 Read this when building or reworking an HTML page, a dashboard, an app screen or a
 document meant to be read on screen.
 
+## A look of its own
+
+With no design direction from the person or the project, a model falls back on a
+recognisable house style, and "avoid a generic look" only swaps one default for another
+(Anthropic's prompting guidance for Opus 5.5). So:
+
+- Take the direction from the subject's own world: its materials, instruments and
+  conventions (a ledger's ruled columns for a finance tool, a timetable's grid for
+  transit). An existing design system or brand always comes first.
+- Name the defaults to avoid, concretely: a cream or off-white background with a serif
+  display face, italic accent words in headlines, numbered "01 / 02 / 03" section
+  labels, monospace eyebrow labels, pill-shaped buttons, a purple-to-blue gradient hero,
+  the same rounded card and shadow on every block.
+- After the first render, note which defaults crept in anyway and replace them; add
+  them to the list for the next pass.
+
 ## Hierarchy first
 
 - Decide the one thing the page must get across, and make it the first thing the eye

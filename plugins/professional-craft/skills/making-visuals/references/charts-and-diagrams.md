@@ -70,6 +70,10 @@ two or three numbers are clearer as large labelled figures than as a chart.
 
 ## Check it as the reader
 
+Compare every plotted value, label and total against the source table before anything
+else: a bar that doesn't match its row, a total that doesn't add up, or a period that
+differs from the title is the error readers catch and remember.
+
 Open the figure at its real viewing size and look: where the eye lands first, whether
 every label is legible, whether anything overlaps or is cut, whether every colour and
 line still means what the key says. Render-only defects are invisible in the source. If

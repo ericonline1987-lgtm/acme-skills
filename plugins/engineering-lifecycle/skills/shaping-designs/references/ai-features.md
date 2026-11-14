@@ -6,6 +6,8 @@ assistant, retrieval pipeline, agent or prompt, or a choice of model for one.
 Model output is probabilistic, so "it worked when I tried it" proves little. Treat
 quality as something you measure on every change, like latency.
 
+**Contents:** 1. Define quality before writing a prompt · Trust the eval before trusting its scores · 2. Design the context, not just the prompt · 3. Choose the model and effort on evidence · 4. Agents that run on their own · 5. Guard it · 6. Ship and watch · Report
+
 ## 1. Define quality before writing a prompt
 
 - Write the outcome: what the user should be able to do, and the measure that
@@ -47,12 +49,45 @@ quality as something you measure on every change, like latency.
 - Prefer tools and structured output over parsing prose. Keep tool descriptions short
   and specific about when to use each tool.
 
-## 3. Choose the model on evidence
+## 3. Choose the model and effort on evidence
 
-Run the eval set on two or three model sizes. Pick the cheapest that meets the quality
-bar; record quality, latency and cost per task for each. Re-run when models change.
+Run the eval set on two or three model sizes, and on recent models at two or three
+effort levels: effort is now the main control over how much the model thinks. Start at
+the default (medium on Opus 5.5), raise it only where the eval shows a gain, and try a
+higher effort before a bigger model. Pick the cheapest setting that meets the quality
+bar; record model, effort, quality, latency and cost per task. Re-run when models change.
 
-## 4. Guard it
+Retest workarounds written for older models, and drop the ones that no longer help:
+"think carefully" lines (lower or raise effort instead), asking for reasoning in the
+answer, retyping chart values the model can now read from the image.
+
+## 4. Agents that run on their own
+
+An agent that wakes on events (webhooks, schedules, messages) and acts without a person
+watching needs these, from Anthropic's always-on agents guide:
+
+- **An inbox as the source of truth.** Event sources write to an inbox and return
+  quickly; they never call the agent directly, or a crash loses the event. Deduplicate by
+  the source's own event ID. One active worker per inbox, batching pending events, so
+  two quick messages get one reply and runs never overwrite each other.
+- **Timers in their own store.** Follow-ups and schedules sit apart from the inbox; a
+  scheduler moves due ones into it. A timer never starts a run on its own.
+- **Memory holds only what can't be looked up again.** Store a pointer to the ticket, not
+  a copy. Load the person's standing instructions every run; keep a progress file per
+  task (done, left); save anything that must survive as you go, because compaction and
+  new sessions drop detail.
+- **Credentials outside the agent.** A proxy adds them to outgoing requests. A tool call
+  that needs approval ends the run; the answer comes back as a new event.
+- **Done means checked.** A final text reply saying it's finished is a report, not proof:
+  keep a task list the run must close, nudge on open items, and cap automatic
+  continuations at two or three so a stuck run ends. A time budget given to the agent is
+  advice; keep a hard timeout.
+- **Start quiet.** Measure message volume in evals and let the agent earn attention.
+- **Mark pasted and fetched text.** Wrap it in tags carrying a random ID and say that
+  instructions inside count only where the person's own message asks for them. Tags can
+  be imitated, so this is one layer, not the defence.
+
+## 5. Guard it
 
 - Assume any content the model reads may contain instructions. Limit what the model's
   actions can do: least-privilege tools, confirmation for irreversible actions, no
@@ -62,7 +97,7 @@ bar; record quality, latency and cost per task for each. Re-run when models chan
 - Decide what the user sees when the model is wrong, slow or unavailable.
 - Label AI-generated content where users would want to know.
 
-## 5. Ship and watch
+## 6. Ship and watch
 
 - Log inputs, outputs, tool calls and grader-relevant signals (with privacy controls).
 - Track the outcome measure and user corrections, not only errors.
